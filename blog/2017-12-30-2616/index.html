@@ -1,0 +1,1191 @@
+
+
+
+    
+
+
+
+
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "https:\/\/jyukki.github.io"
+        },
+        "articleSection" : "blog",
+        "name" : "2616 소형기관차",
+        "headline" : "2616 소형기관차",
+        "description" : "https:\/\/www.acmicpc.net\/problem\/2616\n풀이:  a[i][t] : i 번째 까지의 소형 기관차 들이 t번째 객차까지 끌 수 있는 최대 승객의 수 첫 번째 소형기관차부터 앞으로 m칸만큼 객차칸수를 증가시켜가며 최댓값을 구한다. 만약 앞에 값이 더 크다면 앞에값을 선택한다. 객차의 칸이 겹칠 수 없으므로 이번 소형기관차(a[i][t])보다 m보다 작은 객차수를 가지고 있는 이전의 소형기관차(a[i - 1][t - m])를 이번 소형기관창의 t번째 최대 승객 수에 더해준다. a[i][t] = max(a[i][t - 1], sum[t] - sum[t - m] \x2b a[i - 1][t - m];  코드: #include \x26lt;iostream\x26gt;\r#include \x26lt;algorithm\x26gt;\rusing namespace std;\rint n, m, sum[50002] = { 0 }, a[4][50002] = { 0 };\rint main(void) {\rcin \x26gt;\x26gt; n;\rfor (int i = 1; i \x26lt;= n; i\x2b\x2b) {\rcin \x26gt;\x26gt; sum[i];\rsum[i] \x2b= sum[i - 1];\r}\rcin \x26gt;\x26gt; m;\rfor (int i = 1; i \x26lt;= 3; i\x2b\x2b) {\rfor (int t = i * m; t \x26lt;= n; t\x2b\x2b) {\ra[i][t] = max(a[i][t - 1], sum[t] - sum[t - m] \x2b a[i - 1][t - m]);\r}\r}\rcout \x26lt;\x26lt; a[3][n] \x26lt;\x26lt; endl;\rreturn 0;\r}\r시간 초과 코드: #include \x26lt;iostream\x26gt;\r#include \x26lt;algorithm\x26gt;\rusing namespace std;\rint a[50001];\rint main(void) {\rint n, m;\rcin \x26gt;\x26gt; n;\rfor (int i = 0; i \x26lt; n; i\x2b\x2b) {\rcin \x26gt;\x26gt; a[i];\r}\rcin \x26gt;\x26gt; m;\rint num = 0;\rfor (int i = 0; i \x26lt;= n - 3 * m; i\x2b\x2b) {\rfor (int t = i \x2b m; t \x26lt;= n - 2 * m; t\x2b\x2b) {\rfor (int y = t \x2b m; y \x26lt;= n - m; y\x2b\x2b) {\rint cnt = 0;\rfor (int q = 0; q \x26lt; m; q\x2b\x2b) {\rcnt \x2b= a[i \x2b q] \x2b a[t \x2b q] \x2b a[y \x2b q];\r}\rnum = max(num, cnt);\r}\r}\r}\rcout \x26lt;\x26lt; num \x26lt;\x26lt; endl;\rreturn 0;\r}\r메모리 초과 코드: #include \x26lt;iostream\x26gt;\r#include \x26lt;algorithm\x26gt;\rusing namespace std;\rint n, m;\rint sum[50002] = { 0 };\rint small(int a,int b,int c) {\rif (a \x2b 3 * m \x26gt; n) return 0;\rif (b \x2b 2 * m \x26gt; n) return small(a \x2b 1, a \x2b m \x2b 1, a \x2b 2 * m \x2b 1);\rif (c \x2b m \x26gt; n)\treturn small(a, b \x2b 1, b \x2b m \x2b 1);\rint num = 0;\rnum \x2b= sum[a \x2b m] - sum[a] \x2b sum[b \x2b m] - sum[b] \x2b sum[c \x2b m] - sum[c];\rreturn num = max(num, small(a, b, c \x2b 1));\r}\rint main(void) {\rcin \x26gt;\x26gt; n;\rfor (int i = 1; i \x26lt;= n; i\x2b\x2b) {\rcin \x26gt;\x26gt; sum[i];\rsum[i] \x2b= sum[i - 1];\r}\rcin \x26gt;\x26gt; m;\rcout \x26lt;\x26lt; small(0, m, 2 * m) \x26lt;\x26lt; endl;\rreturn 0;\r}\r",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "0001",
+        "datePublished": "0001-01-01 00:00:00 \x2b0000 UTC",
+        "dateModified" : "0001-01-01 00:00:00 \x2b0000 UTC",
+        "url" : "https:\/\/jyukki.github.io\/blog\/2017-12-30-2616\/",
+        "wordCount" : "449",
+        "keywords" : [ "Blog" ]
+    }
+    </script>
+        
+            <title>2616 소형기관차 - 1 Day 1 Problem</title>
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.61.0" />
+        
+
+
+        
+        
+            
+                <meta name="description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo">
+            
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="2616 소형기관차"/>
+<meta name="twitter:description" content="https://www.acmicpc.net/problem/2616
+풀이:  a[i][t] : i 번째 까지의 소형 기관차 들이 t번째 객차까지 끌 수 있는 최대 승객의 수 첫 번째 소형기관차부터 앞으로 m칸만큼 객차칸수를 증가시켜가며 최댓값을 구한다. 만약 앞에 값이 더 크다면 앞에값을 선택한다. 객차의 칸이 겹칠 수 없으므로 이번 소형기관차(a[i][t])보다 m보다 작은 객차수를 가지고 있는 이전의 소형기관차(a[i - 1][t - m])를 이번 소형기관창의 t번째 최대 승객 수에 더해준다. a[i][t] = max(a[i][t - 1], sum[t] - sum[t - m] &#43; a[i - 1][t - m];  코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int n, m, sum[50002] = { 0 }, a[4][50002] = { 0 };int main(void) {cin &gt;&gt; n;for (int i = 1; i &lt;= n; i&#43;&#43;) {cin &gt;&gt; sum[i];sum[i] &#43;= sum[i - 1];}cin &gt;&gt; m;for (int i = 1; i &lt;= 3; i&#43;&#43;) {for (int t = i * m; t &lt;= n; t&#43;&#43;) {a[i][t] = max(a[i][t - 1], sum[t] - sum[t - m] &#43; a[i - 1][t - m]);}}cout &lt;&lt; a[3][n] &lt;&lt; endl;return 0;}시간 초과 코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int a[50001];int main(void) {int n, m;cin &gt;&gt; n;for (int i = 0; i &lt; n; i&#43;&#43;) {cin &gt;&gt; a[i];}cin &gt;&gt; m;int num = 0;for (int i = 0; i &lt;= n - 3 * m; i&#43;&#43;) {for (int t = i &#43; m; t &lt;= n - 2 * m; t&#43;&#43;) {for (int y = t &#43; m; y &lt;= n - m; y&#43;&#43;) {int cnt = 0;for (int q = 0; q &lt; m; q&#43;&#43;) {cnt &#43;= a[i &#43; q] &#43; a[t &#43; q] &#43; a[y &#43; q];}num = max(num, cnt);}}}cout &lt;&lt; num &lt;&lt; endl;return 0;}메모리 초과 코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int n, m;int sum[50002] = { 0 };int small(int a,int b,int c) {if (a &#43; 3 * m &gt; n) return 0;if (b &#43; 2 * m &gt; n) return small(a &#43; 1, a &#43; m &#43; 1, a &#43; 2 * m &#43; 1);if (c &#43; m &gt; n)	return small(a, b &#43; 1, b &#43; m &#43; 1);int num = 0;num &#43;= sum[a &#43; m] - sum[a] &#43; sum[b &#43; m] - sum[b] &#43; sum[c &#43; m] - sum[c];return num = max(num, small(a, b, c &#43; 1));}int main(void) {cin &gt;&gt; n;for (int i = 1; i &lt;= n; i&#43;&#43;) {cin &gt;&gt; sum[i];sum[i] &#43;= sum[i - 1];}cin &gt;&gt; m;cout &lt;&lt; small(0, m, 2 * m) &lt;&lt; endl;return 0;}"/>
+<meta name="twitter:site" content="@example"/>
+
+        <meta property="og:title" content="2616 소형기관차" />
+<meta property="og:description" content="https://www.acmicpc.net/problem/2616
+풀이:  a[i][t] : i 번째 까지의 소형 기관차 들이 t번째 객차까지 끌 수 있는 최대 승객의 수 첫 번째 소형기관차부터 앞으로 m칸만큼 객차칸수를 증가시켜가며 최댓값을 구한다. 만약 앞에 값이 더 크다면 앞에값을 선택한다. 객차의 칸이 겹칠 수 없으므로 이번 소형기관차(a[i][t])보다 m보다 작은 객차수를 가지고 있는 이전의 소형기관차(a[i - 1][t - m])를 이번 소형기관창의 t번째 최대 승객 수에 더해준다. a[i][t] = max(a[i][t - 1], sum[t] - sum[t - m] &#43; a[i - 1][t - m];  코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int n, m, sum[50002] = { 0 }, a[4][50002] = { 0 };int main(void) {cin &gt;&gt; n;for (int i = 1; i &lt;= n; i&#43;&#43;) {cin &gt;&gt; sum[i];sum[i] &#43;= sum[i - 1];}cin &gt;&gt; m;for (int i = 1; i &lt;= 3; i&#43;&#43;) {for (int t = i * m; t &lt;= n; t&#43;&#43;) {a[i][t] = max(a[i][t - 1], sum[t] - sum[t - m] &#43; a[i - 1][t - m]);}}cout &lt;&lt; a[3][n] &lt;&lt; endl;return 0;}시간 초과 코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int a[50001];int main(void) {int n, m;cin &gt;&gt; n;for (int i = 0; i &lt; n; i&#43;&#43;) {cin &gt;&gt; a[i];}cin &gt;&gt; m;int num = 0;for (int i = 0; i &lt;= n - 3 * m; i&#43;&#43;) {for (int t = i &#43; m; t &lt;= n - 2 * m; t&#43;&#43;) {for (int y = t &#43; m; y &lt;= n - m; y&#43;&#43;) {int cnt = 0;for (int q = 0; q &lt; m; q&#43;&#43;) {cnt &#43;= a[i &#43; q] &#43; a[t &#43; q] &#43; a[y &#43; q];}num = max(num, cnt);}}}cout &lt;&lt; num &lt;&lt; endl;return 0;}메모리 초과 코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int n, m;int sum[50002] = { 0 };int small(int a,int b,int c) {if (a &#43; 3 * m &gt; n) return 0;if (b &#43; 2 * m &gt; n) return small(a &#43; 1, a &#43; m &#43; 1, a &#43; 2 * m &#43; 1);if (c &#43; m &gt; n)	return small(a, b &#43; 1, b &#43; m &#43; 1);int num = 0;num &#43;= sum[a &#43; m] - sum[a] &#43; sum[b &#43; m] - sum[b] &#43; sum[c &#43; m] - sum[c];return num = max(num, small(a, b, c &#43; 1));}int main(void) {cin &gt;&gt; n;for (int i = 1; i &lt;= n; i&#43;&#43;) {cin &gt;&gt; sum[i];sum[i] &#43;= sum[i - 1];}cin &gt;&gt; m;cout &lt;&lt; small(0, m, 2 * m) &lt;&lt; endl;return 0;}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jyukki.github.io/blog/2017-12-30-2616/" />
+
+
+        <meta property="og:image" content="https://jyukki.github.io/images/logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        <meta itemprop="name" content="2616 소형기관차">
+<meta itemprop="description" content="https://www.acmicpc.net/problem/2616
+풀이:  a[i][t] : i 번째 까지의 소형 기관차 들이 t번째 객차까지 끌 수 있는 최대 승객의 수 첫 번째 소형기관차부터 앞으로 m칸만큼 객차칸수를 증가시켜가며 최댓값을 구한다. 만약 앞에 값이 더 크다면 앞에값을 선택한다. 객차의 칸이 겹칠 수 없으므로 이번 소형기관차(a[i][t])보다 m보다 작은 객차수를 가지고 있는 이전의 소형기관차(a[i - 1][t - m])를 이번 소형기관창의 t번째 최대 승객 수에 더해준다. a[i][t] = max(a[i][t - 1], sum[t] - sum[t - m] &#43; a[i - 1][t - m];  코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int n, m, sum[50002] = { 0 }, a[4][50002] = { 0 };int main(void) {cin &gt;&gt; n;for (int i = 1; i &lt;= n; i&#43;&#43;) {cin &gt;&gt; sum[i];sum[i] &#43;= sum[i - 1];}cin &gt;&gt; m;for (int i = 1; i &lt;= 3; i&#43;&#43;) {for (int t = i * m; t &lt;= n; t&#43;&#43;) {a[i][t] = max(a[i][t - 1], sum[t] - sum[t - m] &#43; a[i - 1][t - m]);}}cout &lt;&lt; a[3][n] &lt;&lt; endl;return 0;}시간 초과 코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int a[50001];int main(void) {int n, m;cin &gt;&gt; n;for (int i = 0; i &lt; n; i&#43;&#43;) {cin &gt;&gt; a[i];}cin &gt;&gt; m;int num = 0;for (int i = 0; i &lt;= n - 3 * m; i&#43;&#43;) {for (int t = i &#43; m; t &lt;= n - 2 * m; t&#43;&#43;) {for (int y = t &#43; m; y &lt;= n - m; y&#43;&#43;) {int cnt = 0;for (int q = 0; q &lt; m; q&#43;&#43;) {cnt &#43;= a[i &#43; q] &#43; a[t &#43; q] &#43; a[y &#43; q];}num = max(num, cnt);}}}cout &lt;&lt; num &lt;&lt; endl;return 0;}메모리 초과 코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int n, m;int sum[50002] = { 0 };int small(int a,int b,int c) {if (a &#43; 3 * m &gt; n) return 0;if (b &#43; 2 * m &gt; n) return small(a &#43; 1, a &#43; m &#43; 1, a &#43; 2 * m &#43; 1);if (c &#43; m &gt; n)	return small(a, b &#43; 1, b &#43; m &#43; 1);int num = 0;num &#43;= sum[a &#43; m] - sum[a] &#43; sum[b &#43; m] - sum[b] &#43; sum[c &#43; m] - sum[c];return num = max(num, small(a, b, c &#43; 1));}int main(void) {cin &gt;&gt; n;for (int i = 1; i &lt;= n; i&#43;&#43;) {cin &gt;&gt; sum[i];sum[i] &#43;= sum[i - 1];}cin &gt;&gt; m;cout &lt;&lt; small(0, m, 2 * m) &lt;&lt; endl;return 0;}">
+
+<meta itemprop="wordCount" content="449">
+
+
+
+<meta itemprop="keywords" content="" />
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="https://jyukki.github.io/css/main.css">
+            <link rel="stylesheet" href="https://jyukki.github.io/css/add-on.css">
+            <link rel="stylesheet" href="https://jyukki.github.io/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+<header id="header">
+    
+      <h1><a href="https://jyukki.github.io/">blog</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="https://jyukki.github.io/">
+                            <i class="fa fa-home">&nbsp;</i>Home
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://jyukki.github.io/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>About
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://jyukki.github.io/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://jyukki.github.io/itemized/">
+                            <i class="fa fa-list">&nbsp;</i>Itemized
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://jyukki.github.io/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://jyukki.github.io/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>Contact
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="https://jyukki.github.io">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="https://jyukki.github.io">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="https://jyukki.github.io/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Home
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jyukki.github.io/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>About
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jyukki.github.io/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jyukki.github.io/itemized/">
+                            <h3>
+                                <i class="fa fa-list">&nbsp;</i>Itemized
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jyukki.github.io/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jyukki.github.io/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>Contact
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://jyukki.github.io/blog/2019-06-20-11399/">[BOJ]11399 ATM</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-06-20'>
+                                    June 20, 2019</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki.github.io/blog/2019-06-20-11399/" class="image featured">
+            <img src="https://jyukki.github.io/img/2019/06/" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://jyukki.github.io/blog/2019-06-19-2609/">[BOJ]2609 최대공약수와 최소공배수</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-06-19'>
+                                    June 19, 2019</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki.github.io/blog/2019-06-19-2609/" class="image featured">
+            <img src="https://jyukki.github.io/img/2019/06/" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://jyukki.github.io/blog/2019-06-18-14490/">[BOJ]14490 백대열</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-06-18'>
+                                    June 18, 2019</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki.github.io/blog/2019-06-18-14490/" class="image featured">
+            <img src="https://jyukki.github.io/img/2019/06/" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://jyukki.github.io/blog/2019-06-17-1850/">[BOJ]1850 최대공약수</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-06-17'>
+                                    June 17, 2019</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki.github.io/blog/2019-06-17-1850/" class="image featured">
+            <img src="https://jyukki.github.io/img/2019/06/" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://jyukki.github.io/blog/creating-a-new-theme/">Creating a New Theme</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2014-09-28'>
+                                    September 28, 2014</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki.github.io/blog/creating-a-new-theme/" class="image featured">
+            <img src="https://jyukki.github.io/img/2014/09/pic03.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    
+    <div id="main">
+        <article class="post">
+            
+            <header>
+    <div class="title">
+        
+            <h1><a href="https://jyukki.github.io/blog/2017-12-30-2616/">2616 소형기관차</a></h1>
+            
+        
+        
+    </div>
+</header>
+
+            <div id="content">
+                <p><a href="http://www.acmicpc.net/problem/2616">https://www.acmicpc.net/problem/2616</a></p>
+<h4 id="heading"><strong>풀이:</strong></h4>
+<ol>
+<li>a[i][t]
+: i 번째 까지의 소형 기관차 들이 t번째 객차까지 끌 수 있는 최대 승객의 수</li>
+<li>첫 번째 소형기관차부터 앞으로 m칸만큼 객차칸수를 증가시켜가며 최댓값을 구한다. 만약 앞에 값이 더 크다면 앞에값을 선택한다.</li>
+<li>객차의 칸이 겹칠 수 없으므로 이번 소형기관차(a[i][t])보다 m보다 작은 객차수를 가지고 있는 이전의 소형기관차(a[i - 1][t - m])를 이번 소형기관창의 t번째 최대 승객 수에 더해준다.</li>
+<li>a[i][t] = max(a[i][t - 1], sum[t] - sum[t - m] + a[i - 1][t - m];</li>
+</ol>
+<h4 id="heading-1"><strong>코드:</strong></h4>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+int n, m, sum[50002] = { 0 }, a[4][50002] = { 0 };
+int main(void) {
+	cin &gt;&gt; n;
+	for (int i = 1; i &lt;= n; i++) {
+		cin &gt;&gt; sum[i];
+		sum[i] += sum[i - 1];
+	}
+	cin &gt;&gt; m;
+	for (int i = 1; i &lt;= 3; i++) {
+		for (int t = i * m; t &lt;= n; t++) {
+			a[i][t] = max(a[i][t - 1], sum[t] - sum[t - m] + a[i - 1][t - m]);
+		}
+	}
+	cout &lt;&lt; a[3][n] &lt;&lt; endl;
+	return 0;
+}
+</code></pre><h4 id="--"><strong>시간 초과 코드:</strong></h4>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+int a[50001];
+int main(void) {
+	int n, m;
+	cin &gt;&gt; n;
+	for (int i = 0; i &lt; n; i++) {
+		cin &gt;&gt; a[i];
+	}
+	cin &gt;&gt; m;
+	int num = 0;
+	for (int i = 0; i &lt;= n - 3 * m; i++) {
+		for (int t = i + m; t &lt;= n - 2 * m; t++) {
+			for (int y = t + m; y &lt;= n - m; y++) {
+				int cnt = 0;
+				for (int q = 0; q &lt; m; q++) {
+					cnt += a[i + q] + a[t + q] + a[y + q];
+				}
+				num = max(num, cnt);
+			}
+		}
+	}
+	cout &lt;&lt; num &lt;&lt; endl;
+	return 0;
+}
+</code></pre><h4 id="---1"><strong>메모리 초과 코드:</strong></h4>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+int n, m;
+int sum[50002] = { 0 };
+int small(int a,int b,int c) {
+	if (a + 3 * m &gt; n) return 0;
+	if (b + 2 * m &gt; n) return small(a + 1, a + m + 1, a + 2 * m + 1);
+	if (c + m &gt; n)	return small(a, b + 1, b + m + 1);
+	int num = 0;
+	num += sum[a + m] - sum[a] + sum[b + m] - sum[b] + sum[c + m] - sum[c];
+	return num = max(num, small(a, b, c + 1));
+}
+int main(void) {
+	cin &gt;&gt; n;
+	for (int i = 1; i &lt;= n; i++) {
+		cin &gt;&gt; sum[i];
+		sum[i] += sum[i - 1];
+	}
+	cin &gt;&gt; m;
+	cout &lt;&lt; small(0, m, 2 * m) &lt;&lt; endl;
+	return 0;
+}
+</code></pre>
+            </div>
+        </article>
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='https://jyukki.github.io/' class="logo"><img src="https://jyukki.github.io/img/main/logo.jpg" alt="Hugo Future Imperfect" /></a>
+      
+    
+    
+      <header>
+        <h2>jyukki</h2>
+        <p>1 Day 1 Problem <i class='fa fa-hand-peace-o'></i></p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+          
+    <li><a href="https://jyukki.github.io/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/jyukki97" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+  <li><a href="//facebook.com/example" target="_blank" title="Facebook" class="fa fa-facebook"></a></li>
+
+
+
+
+
+  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//instagram.com/example" target="_blank" title="Instagram" class="fa fa-instagram"></a></li>
+
+
+
+
+
+  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
+
+
+
+  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
+
+
+
+
+
+
+
+
+
+<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+  <li><a href="mailto:example" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Posts</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://jyukki.github.io/blog/2019-06-20-11399/">[BOJ]11399 ATM</a>
+              </h3>
+              
+              <time class="published" datetime='2019-06-20'>
+                June 20, 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki.github.io/blog/2019-06-20-11399/" class="image featured">
+            <img src="https://jyukki.github.io/img/2019/06/" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://jyukki.github.io/blog/2019-06-19-2609/">[BOJ]2609 최대공약수와 최소공배수</a>
+              </h3>
+              
+              <time class="published" datetime='2019-06-19'>
+                June 19, 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki.github.io/blog/2019-06-19-2609/" class="image featured">
+            <img src="https://jyukki.github.io/img/2019/06/" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://jyukki.github.io/blog/2019-06-18-14490/">[BOJ]14490 백대열</a>
+              </h3>
+              
+              <time class="published" datetime='2019-06-18'>
+                June 18, 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki.github.io/blog/2019-06-18-14490/" class="image featured">
+            <img src="https://jyukki.github.io/img/2019/06/" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://jyukki.github.io/blog/2019-06-17-1850/">[BOJ]1850 최대공약수</a>
+              </h3>
+              
+              <time class="published" datetime='2019-06-17'>
+                June 17, 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki.github.io/blog/2019-06-17-1850/" class="image featured">
+            <img src="https://jyukki.github.io/img/2019/06/" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://jyukki.github.io/blog/creating-a-new-theme/">Creating a New Theme</a>
+              </h3>
+              
+              <time class="published" datetime='2014-09-28'>
+                September 28, 2014
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki.github.io/blog/creating-a-new-theme/" class="image featured">
+            <img src="https://jyukki.github.io/img/2014/09/pic03.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="https://jyukki.github.io/categories/">Categories</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                Uncategorized
+                <span style="float:right;">4</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://jyukki.github.io/categories/boj/">boj</a>
+                <span style="float:right;">4</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://jyukki.github.io/categories/hugo/">hugo</a>
+                <span style="float:right;">3</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://jyukki.github.io/categories/go/">go</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://jyukki.github.io/categories/jekyll/">jekyll</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>About</h3>
+      <p>.1 Day 1 Problem Algorithm blog</p>
+      <a href="https://jyukki.github.io/about/" class="button">Learn More</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+          
+    <li><a href="https://jyukki.github.io/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/jyukki97" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+  <li><a href="//facebook.com/example" target="_blank" title="Facebook" class="fa fa-facebook"></a></li>
+
+
+
+
+
+  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//instagram.com/example" target="_blank" title="Instagram" class="fa fa-instagram"></a></li>
+
+
+
+
+
+  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
+
+
+
+  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
+
+
+
+
+
+
+
+
+
+<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+  <li><a href="mailto:example" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2019
+        
+          1 Day 1 Problem
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="https://jyukki.github.io/js/util.js"></script>
+      <script src="https://jyukki.github.io/js/main.js"></script>
+      <script src="https://jyukki.github.io/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+
