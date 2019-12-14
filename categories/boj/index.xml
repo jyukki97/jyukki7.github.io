@@ -1,59 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>BOJ on 1 Day 1 Problem</title>
-    <link>https://jyukki.github.io/categories/boj/</link>
-    <description>Recent content in BOJ on 1 Day 1 Problem</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>kr-ko</language>
-    <lastBuildDate>Thu, 20 Jun 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://jyukki.github.io/categories/boj/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>[BOJ]11399 ATM</title>
-      <link>https://jyukki.github.io/blog/2019-06-20-11399/</link>
-      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki.github.io/blog/2019-06-20-11399/</guid>
-      <description>https://www.acmicpc.net/problem/11399
-풀이:  돈을 인출하는데 필요한 시간을 입력받는다. 입력받은 시간을 정렬한다. 정렬한 값을 n-i를 곱해서 더해준다.  코드: 사용언어 : c++
-#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int main() {int n,r=0,a[1001];cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++)cin &amp;gt;&amp;gt; a[i];sort(&amp;amp;a[0], &amp;amp;a[n]);for (int i = 0; i &amp;lt; n; i++)r += a[i] * (n - i);cout &amp;lt;&amp;lt; r &amp;lt;&amp;lt; endl;}</description>
-    </item>
-    
-    <item>
-      <title>[BOJ]2609 최대공약수와 최소공배수</title>
-      <link>https://jyukki.github.io/blog/2019-06-19-2609/</link>
-      <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki.github.io/blog/2019-06-19-2609/</guid>
-      <description>https://www.acmicpc.net/problem/2609
-풀이:  두 수를 입력받는다. 두 수의 최대공약수와 최소공배수를 출력한다.  코드: 사용언어 : Python 3
-import matha,b=map(int,input().split())c=math.gcd(a,b)print(c,a//c*b)</description>
-    </item>
-    
-    <item>
-      <title>[BOJ]14490 백대열</title>
-      <link>https://jyukki.github.io/blog/2019-06-18-14490/</link>
-      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki.github.io/blog/2019-06-18-14490/</guid>
-      <description>https://www.acmicpc.net/problem/14490
-풀이:  두 수를 입력받는다(:을 사이에 두고 주어지므로 주의) 두 수의 최대공약수를 구한다. 두 수를 최대공약수로 나눠서 출력한다(최대한으로 약분은 최대공약수로 나누어주면 가능하다)(이때 :을 사이에 두고 출력한다.)  코드: 사용언어 : Python 3
-import matha,b=map(int,input().split(&#39;:&#39;))c=math.gcd(a,b)print(a//c,b//c,sep=&#39;:&#39;)</description>
-    </item>
-    
-    <item>
-      <title>[BOJ]1850 최대공약수</title>
-      <link>https://jyukki.github.io/blog/2019-06-17-1850/</link>
-      <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki.github.io/blog/2019-06-17-1850/</guid>
-      <description>https://www.acmicpc.net/problem/1850
-풀이:  두 수를 입력받는다 두 수의 최대공약수를 구한다. 최대공약수만큼 1을 반복해서 출력한다.  코드: 사용언어 : Python 3
-a,b=map(int,input().split())while b: a,b=b,a%bprint(&#39;1&#39;*a)</description>
-    </item>
-    
-  </channel>
-</rss>

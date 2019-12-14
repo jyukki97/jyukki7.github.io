@@ -1,1174 +1,0 @@
-
-
-
-    
-
-
-
-
-<!DOCTYPE HTML>
-
-<html>
-    <head>
-        <script type="application/ld+json">
-    {
-        "@context" : "http://schema.org",
-        "@type" : "BlogPosting",
-        "mainEntityOfPage": {
-             "@type": "WebPage",
-             "@id": "https:\/\/jyukki.github.io"
-        },
-        "articleSection" : "blog",
-        "name" : "6603 로또",
-        "headline" : "6603 로또",
-        "description" : "https:\/\/www.acmicpc.net\/problem\/6603\n풀이:  N 개의 로또 번호 중 6개를 선택하여 로또를 만드는 프로그램 6개의 번호를 사전순으로 하나씩 선택하면서 출력한다. 출력 사이사이에 빈칸을 만들어주고, 하나의 테스트 케이스가 끝나면 빈 줄을 하나 출력한다. 0이 출력되면 끝나므로 while 문 안에 if문으로 제한을 넣어준다.  코드: #include \x26lt;iostream\x26gt;\rusing namespace std;\rint a[13];\rint main(void) {\rwhile (true) {\rint n;\rcin \x26gt;\x26gt; n;\rif (n == 0)\rbreak;\rfor (int i = 0; i \x26lt; n; i\x2b\x2b) {\rcin \x26gt;\x26gt; a[i];\r}\rint b[6] = { 0,1,2,3,4,5 };\rwhile (true) {\rcout \x26lt;\x26lt; a[b[0]] \x26lt;\x26lt; \x26quot; \x26quot; \x26lt;\x26lt; a[b[1]] \x26lt;\x26lt; \x26quot; \x26quot; \x26lt;\x26lt; a[b[2]] \x26lt;\x26lt; \x26quot; \x26quot; \x26lt;\x26lt; a[b[3]] \x26lt;\x26lt; \x26quot; \x26quot; \x26lt;\x26lt; a[b[4]] \x26lt;\x26lt; \x26quot; \x26quot; \x26lt;\x26lt; a[b[5]] \x26lt;\x26lt; endl;\rif (b[0] \x26gt;= n - 6)\rbreak;\relse if (b[1] \x26gt;= n - 5) {\rb[0]\x2b\x2b;\rfor (int i = 0; i \x26lt; 5; i\x2b\x2b) {\rb[i \x2b 1] = b[i] \x2b 1;\r}\r}\relse if (b[2] \x26gt;= n - 4) {\rb[1]\x2b\x2b;\rfor (int i = 1; i \x26lt; 5; i\x2b\x2b) {\rb[i \x2b 1] = b[i] \x2b 1;\r}\r}\relse if (b[3] \x26gt;= n - 3) {\rb[2]\x2b\x2b;\rfor (int i = 2; i \x26lt; 5; i\x2b\x2b) {\rb[i \x2b 1] = b[i] \x2b 1;\r}\r}\relse if (b[4] \x26gt;= n - 2) {\rb[3]\x2b\x2b;\rfor (int i = 3; i \x26lt; 5; i\x2b\x2b) {\rb[i \x2b 1] = b[i] \x2b 1;\r}\r}\relse if (b[5] \x26gt;= n - 1) {\rb[4]\x2b\x2b;\rb[5] = b[4] \x2b 1;\r}\relse\rb[5]\x2b\x2b;\r}\rcout \x26lt;\x26lt; endl;\r}\rreturn 0;\r}\r",
-        "inLanguage" : "en",
-        "author" : "",
-        "creator" : "",
-        "publisher": "",
-        "accountablePerson" : "",
-        "copyrightHolder" : "",
-        "copyrightYear" : "0001",
-        "datePublished": "0001-01-01 00:00:00 \x2b0000 UTC",
-        "dateModified" : "0001-01-01 00:00:00 \x2b0000 UTC",
-        "url" : "https:\/\/jyukki.github.io\/blog\/2017-12-12-6603\/",
-        "wordCount" : "260",
-        "keywords" : [ "Blog" ]
-    }
-    </script>
-        
-            <title>6603 로또 - 1 Day 1 Problem</title>
-        
-
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.61.0" />
-        
-
-
-        
-        
-            
-                <meta name="description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo">
-            
-        
-
-        <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="6603 로또"/>
-<meta name="twitter:description" content="https://www.acmicpc.net/problem/6603
-풀이:  N 개의 로또 번호 중 6개를 선택하여 로또를 만드는 프로그램 6개의 번호를 사전순으로 하나씩 선택하면서 출력한다. 출력 사이사이에 빈칸을 만들어주고, 하나의 테스트 케이스가 끝나면 빈 줄을 하나 출력한다. 0이 출력되면 끝나므로 while 문 안에 if문으로 제한을 넣어준다.  코드: #include &lt;iostream&gt;using namespace std;int a[13];int main(void) {while (true) {int n;cin &gt;&gt; n;if (n == 0)break;for (int i = 0; i &lt; n; i&#43;&#43;) {cin &gt;&gt; a[i];}int b[6] = { 0,1,2,3,4,5 };while (true) {cout &lt;&lt; a[b[0]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[1]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[2]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[3]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[4]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[5]] &lt;&lt; endl;if (b[0] &gt;= n - 6)break;else if (b[1] &gt;= n - 5) {b[0]&#43;&#43;;for (int i = 0; i &lt; 5; i&#43;&#43;) {b[i &#43; 1] = b[i] &#43; 1;}}else if (b[2] &gt;= n - 4) {b[1]&#43;&#43;;for (int i = 1; i &lt; 5; i&#43;&#43;) {b[i &#43; 1] = b[i] &#43; 1;}}else if (b[3] &gt;= n - 3) {b[2]&#43;&#43;;for (int i = 2; i &lt; 5; i&#43;&#43;) {b[i &#43; 1] = b[i] &#43; 1;}}else if (b[4] &gt;= n - 2) {b[3]&#43;&#43;;for (int i = 3; i &lt; 5; i&#43;&#43;) {b[i &#43; 1] = b[i] &#43; 1;}}else if (b[5] &gt;= n - 1) {b[4]&#43;&#43;;b[5] = b[4] &#43; 1;}elseb[5]&#43;&#43;;}cout &lt;&lt; endl;}return 0;}"/>
-<meta name="twitter:site" content="@example"/>
-
-        <meta property="og:title" content="6603 로또" />
-<meta property="og:description" content="https://www.acmicpc.net/problem/6603
-풀이:  N 개의 로또 번호 중 6개를 선택하여 로또를 만드는 프로그램 6개의 번호를 사전순으로 하나씩 선택하면서 출력한다. 출력 사이사이에 빈칸을 만들어주고, 하나의 테스트 케이스가 끝나면 빈 줄을 하나 출력한다. 0이 출력되면 끝나므로 while 문 안에 if문으로 제한을 넣어준다.  코드: #include &lt;iostream&gt;using namespace std;int a[13];int main(void) {while (true) {int n;cin &gt;&gt; n;if (n == 0)break;for (int i = 0; i &lt; n; i&#43;&#43;) {cin &gt;&gt; a[i];}int b[6] = { 0,1,2,3,4,5 };while (true) {cout &lt;&lt; a[b[0]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[1]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[2]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[3]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[4]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[5]] &lt;&lt; endl;if (b[0] &gt;= n - 6)break;else if (b[1] &gt;= n - 5) {b[0]&#43;&#43;;for (int i = 0; i &lt; 5; i&#43;&#43;) {b[i &#43; 1] = b[i] &#43; 1;}}else if (b[2] &gt;= n - 4) {b[1]&#43;&#43;;for (int i = 1; i &lt; 5; i&#43;&#43;) {b[i &#43; 1] = b[i] &#43; 1;}}else if (b[3] &gt;= n - 3) {b[2]&#43;&#43;;for (int i = 2; i &lt; 5; i&#43;&#43;) {b[i &#43; 1] = b[i] &#43; 1;}}else if (b[4] &gt;= n - 2) {b[3]&#43;&#43;;for (int i = 3; i &lt; 5; i&#43;&#43;) {b[i &#43; 1] = b[i] &#43; 1;}}else if (b[5] &gt;= n - 1) {b[4]&#43;&#43;;b[5] = b[4] &#43; 1;}elseb[5]&#43;&#43;;}cout &lt;&lt; endl;}return 0;}" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jyukki.github.io/blog/2017-12-12-6603/" />
-
-
-        <meta property="og:image" content="https://jyukki.github.io/images/logo.png">
-        <meta property="og:image:type" content="image/png">
-        <meta property="og:image:width" content="512">
-        <meta property="og:image:height" content="512">
-        <meta itemprop="name" content="6603 로또">
-<meta itemprop="description" content="https://www.acmicpc.net/problem/6603
-풀이:  N 개의 로또 번호 중 6개를 선택하여 로또를 만드는 프로그램 6개의 번호를 사전순으로 하나씩 선택하면서 출력한다. 출력 사이사이에 빈칸을 만들어주고, 하나의 테스트 케이스가 끝나면 빈 줄을 하나 출력한다. 0이 출력되면 끝나므로 while 문 안에 if문으로 제한을 넣어준다.  코드: #include &lt;iostream&gt;using namespace std;int a[13];int main(void) {while (true) {int n;cin &gt;&gt; n;if (n == 0)break;for (int i = 0; i &lt; n; i&#43;&#43;) {cin &gt;&gt; a[i];}int b[6] = { 0,1,2,3,4,5 };while (true) {cout &lt;&lt; a[b[0]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[1]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[2]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[3]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[4]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[5]] &lt;&lt; endl;if (b[0] &gt;= n - 6)break;else if (b[1] &gt;= n - 5) {b[0]&#43;&#43;;for (int i = 0; i &lt; 5; i&#43;&#43;) {b[i &#43; 1] = b[i] &#43; 1;}}else if (b[2] &gt;= n - 4) {b[1]&#43;&#43;;for (int i = 1; i &lt; 5; i&#43;&#43;) {b[i &#43; 1] = b[i] &#43; 1;}}else if (b[3] &gt;= n - 3) {b[2]&#43;&#43;;for (int i = 2; i &lt; 5; i&#43;&#43;) {b[i &#43; 1] = b[i] &#43; 1;}}else if (b[4] &gt;= n - 2) {b[3]&#43;&#43;;for (int i = 3; i &lt; 5; i&#43;&#43;) {b[i &#43; 1] = b[i] &#43; 1;}}else if (b[5] &gt;= n - 1) {b[4]&#43;&#43;;b[5] = b[4] &#43; 1;}elseb[5]&#43;&#43;;}cout &lt;&lt; endl;}return 0;}">
-
-<meta itemprop="wordCount" content="260">
-
-
-
-<meta itemprop="keywords" content="" />
-        
-
-        
-            
-        
-
-        
-        
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
-            <link rel="stylesheet" href="https://jyukki.github.io/css/main.css">
-            <link rel="stylesheet" href="https://jyukki.github.io/css/add-on.css">
-            <link rel="stylesheet" href="https://jyukki.github.io/css/academicons.min.css">
-        
-
-        
-            
-                
-            
-        
-
-
-  
-    
-    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
-  
-
-
-      
-    </head>
-    <body>
-
-      
-      <div id="wrapper">
-
-    
-<header id="header">
-    
-      <h1><a href="https://jyukki.github.io/">blog</a></h1>
-    
-
-    <nav class="links">
-        <ul>
-            
-                <li>
-                    <a href="https://jyukki.github.io/">
-                            <i class="fa fa-home">&nbsp;</i>Home
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="https://jyukki.github.io/about/">
-                            <i class="fa fa-id-card-o">&nbsp;</i>About
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="https://jyukki.github.io/blog/">
-                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="https://jyukki.github.io/itemized/">
-                            <i class="fa fa-list">&nbsp;</i>Itemized
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="https://jyukki.github.io/categories/">
-                            <i class="fa fa-sitemap">&nbsp;</i>Categories
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="https://jyukki.github.io/contact/">
-                            <i class="fa fa-envelope-o">&nbsp;</i>Contact
-                    </a>
-                </li>
-            
-        </ul>
-    </nav>
-    <nav class="main">
-        <ul>
-            
-            <li class="search">
-                <a class="fa-search" href="#search">Search</a>
-                <form id="search" method="get" action="//google.com/search">
-                    <input type="text" name="q" placeholder="Search" />
-                    <input type="hidden" name="as_sitesearch" value="https://jyukki.github.io">
-                </form>
-            </li>
-            <li class="menu">
-                <a class="fa-bars" href="#menu">Menu</a>
-            </li>
-        </ul>
-    </nav>
-</header>
-
-
-<section id="menu">
-
-    
-        <section>
-            <form class="search" method="get" action="//google.com/search">
-                <input type="text" name="q" placeholder="Search" />
-                <input type="hidden" name="as_sitesearch" value="https://jyukki.github.io">
-            </form>
-        </section>
-
-    
-        <section>
-            <ul class="links">
-                
-                    <li>
-                        <a href="https://jyukki.github.io/">
-                            <h3>
-                                <i class="fa fa-home">&nbsp;</i>Home
-                            </h3>
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="https://jyukki.github.io/about/">
-                            <h3>
-                                <i class="fa fa-id-card-o">&nbsp;</i>About
-                            </h3>
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="https://jyukki.github.io/blog/">
-                            <h3>
-                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
-                            </h3>
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="https://jyukki.github.io/itemized/">
-                            <h3>
-                                <i class="fa fa-list">&nbsp;</i>Itemized
-                            </h3>
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="https://jyukki.github.io/categories/">
-                            <h3>
-                                <i class="fa fa-sitemap">&nbsp;</i>Categories
-                            </h3>
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="https://jyukki.github.io/contact/">
-                            <h3>
-                                <i class="fa fa-envelope-o">&nbsp;</i>Contact
-                            </h3>
-                        </a>
-                    </li>
-                
-            </ul>
-        </section>
-
-    
-        <section class="recent-posts">
-            <div class="mini-posts">
-                <header>
-                    <h3>Recent Posts</h3>
-                </header>
-                
-
-                
-                    
-                
-
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://jyukki.github.io/blog/2019-06-20-11399/">[BOJ]11399 ATM</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2019-06-20'>
-                                    June 20, 2019</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki.github.io/blog/2019-06-20-11399/" class="image featured">
-            <img src="https://jyukki.github.io/img/2019/06/" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://jyukki.github.io/blog/2019-06-19-2609/">[BOJ]2609 최대공약수와 최소공배수</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2019-06-19'>
-                                    June 19, 2019</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki.github.io/blog/2019-06-19-2609/" class="image featured">
-            <img src="https://jyukki.github.io/img/2019/06/" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://jyukki.github.io/blog/2019-06-18-14490/">[BOJ]14490 백대열</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2019-06-18'>
-                                    June 18, 2019</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki.github.io/blog/2019-06-18-14490/" class="image featured">
-            <img src="https://jyukki.github.io/img/2019/06/" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://jyukki.github.io/blog/2019-06-17-1850/">[BOJ]1850 최대공약수</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2019-06-17'>
-                                    June 17, 2019</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki.github.io/blog/2019-06-17-1850/" class="image featured">
-            <img src="https://jyukki.github.io/img/2019/06/" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://jyukki.github.io/blog/creating-a-new-theme/">Creating a New Theme</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2014-09-28'>
-                                    September 28, 2014</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki.github.io/blog/creating-a-new-theme/" class="image featured">
-            <img src="https://jyukki.github.io/img/2014/09/pic03.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-
-                
-                    <a href=
-                        
-                            /blog/
-                        
-                        class="button">View more posts</a>
-                
-            </div>
-        </section>
-
-    
-        
-</section>
-
-    
-    <div id="main">
-        <article class="post">
-            
-            <header>
-    <div class="title">
-        
-            <h1><a href="https://jyukki.github.io/blog/2017-12-12-6603/">6603 로또</a></h1>
-            
-        
-        
-    </div>
-</header>
-
-            <div id="content">
-                <p><a href="http://www.acmicpc.net/problem/6603">https://www.acmicpc.net/problem/6603</a></p>
-<h4 id="heading"><strong>풀이:</strong></h4>
-<ol>
-<li>N 개의 로또 번호 중 6개를 선택하여 로또를 만드는 프로그램</li>
-<li>6개의 번호를 사전순으로 하나씩 선택하면서 출력한다.</li>
-<li>출력 사이사이에 빈칸을 만들어주고, 하나의 테스트 케이스가 끝나면 빈 줄을 하나 출력한다.</li>
-<li>0이 출력되면 끝나므로 while 문 안에 if문으로 제한을 넣어준다.</li>
-</ol>
-<h4 id="heading-1"><strong>코드:</strong></h4>
-<pre><code>#include &lt;iostream&gt;
-using namespace std;
-int a[13];
-int main(void) {
-	while (true) {
-		int n;
-		cin &gt;&gt; n;
-		if (n == 0)
-			break;
-		for (int i = 0; i &lt; n; i++) {
-			cin &gt;&gt; a[i];
-		}
-		int b[6] = { 0,1,2,3,4,5 };
-		while (true) {
-			cout &lt;&lt; a[b[0]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[1]] 
-				&lt;&lt; &quot; &quot; &lt;&lt; a[b[2]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[3]] &lt;&lt; &quot; &quot; &lt;&lt; a[b[4]] 
-				&lt;&lt; &quot; &quot; &lt;&lt; a[b[5]] &lt;&lt; endl;
-			if (b[0] &gt;= n - 6)
-				break;
-			else if (b[1] &gt;= n - 5) {
-				b[0]++;
-				for (int i = 0; i &lt; 5; i++) {
-					b[i + 1] = b[i] + 1;
-				}
-			}
-			else if (b[2] &gt;= n - 4) {
-				b[1]++;
-				for (int i = 1; i &lt; 5; i++) {
-					b[i + 1] = b[i] + 1;
-				}
-			}
-			else if (b[3] &gt;= n - 3) {
-				b[2]++;
-				for (int i = 2; i &lt; 5; i++) {
-					b[i + 1] = b[i] + 1;
-				}
-			}
-			else if (b[4] &gt;= n - 2) {
-				b[3]++;
-				for (int i = 3; i &lt; 5; i++) {
-					b[i + 1] = b[i] + 1;
-				}
-			}
-			else if (b[5] &gt;= n - 1) {
-				b[4]++;
-				b[5] = b[4] + 1;
-			}
-			else
-				b[5]++;
-		}
-		cout &lt;&lt; endl;
-	}
-	return 0;
-}
-</code></pre>
-            </div>
-        </article>
-    </div>
-    
-<section id="sidebar">
-
-  
-  <section id="intro">
-    
-    
-      
-        <a href='https://jyukki.github.io/' class="logo"><img src="https://jyukki.github.io/img/main/logo.jpg" alt="Hugo Future Imperfect" /></a>
-      
-    
-    
-      <header>
-        <h2>jyukki</h2>
-        <p>1 Day 1 Problem <i class='fa fa-hand-peace-o'></i></p>
-      </header>
-    
-    
-      <ul class="icons">
-        
-          
-    <li><a href="https://jyukki.github.io/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
-
-
-        
-        
-  <li><a href="//github.com/jyukki97" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
-
-
-
-
-
-
-
-
-
-  <li><a href="//facebook.com/example" target="_blank" title="Facebook" class="fa fa-facebook"></a></li>
-
-
-
-
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <li><a href="//instagram.com/example" target="_blank" title="Instagram" class="fa fa-instagram"></a></li>
-
-
-
-
-
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
-
-
-
-
-
-
-
-
-
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
-
-
-
-  <li><a href="mailto:example" title="Email" class="fa fa-envelope"></a></li>
-
-
-      </ul>
-    
-  </section>
-
-  
-  <section class="recent-posts">
-    <div class="mini-posts">
-      <header>
-        <h3>Recent Posts</h3>
-      </header>
-      <div class="posts-container">
-        
-
-        
-          
-        
-
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://jyukki.github.io/blog/2019-06-20-11399/">[BOJ]11399 ATM</a>
-              </h3>
-              
-              <time class="published" datetime='2019-06-20'>
-                June 20, 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki.github.io/blog/2019-06-20-11399/" class="image featured">
-            <img src="https://jyukki.github.io/img/2019/06/" alt="">
-        </a>
-    
-
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://jyukki.github.io/blog/2019-06-19-2609/">[BOJ]2609 최대공약수와 최소공배수</a>
-              </h3>
-              
-              <time class="published" datetime='2019-06-19'>
-                June 19, 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki.github.io/blog/2019-06-19-2609/" class="image featured">
-            <img src="https://jyukki.github.io/img/2019/06/" alt="">
-        </a>
-    
-
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://jyukki.github.io/blog/2019-06-18-14490/">[BOJ]14490 백대열</a>
-              </h3>
-              
-              <time class="published" datetime='2019-06-18'>
-                June 18, 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki.github.io/blog/2019-06-18-14490/" class="image featured">
-            <img src="https://jyukki.github.io/img/2019/06/" alt="">
-        </a>
-    
-
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://jyukki.github.io/blog/2019-06-17-1850/">[BOJ]1850 최대공약수</a>
-              </h3>
-              
-              <time class="published" datetime='2019-06-17'>
-                June 17, 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki.github.io/blog/2019-06-17-1850/" class="image featured">
-            <img src="https://jyukki.github.io/img/2019/06/" alt="">
-        </a>
-    
-
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://jyukki.github.io/blog/creating-a-new-theme/">Creating a New Theme</a>
-              </h3>
-              
-              <time class="published" datetime='2014-09-28'>
-                September 28, 2014
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki.github.io/blog/creating-a-new-theme/" class="image featured">
-            <img src="https://jyukki.github.io/img/2014/09/pic03.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
-      </div>
-
-      
-        <a href=
-          
-            /blog/
-          
-        class="button">View more posts</a>
-      
-    </div>
-  </section>
-
-  
-  
-  
-  
-  
-    <section id="categories">
-      <header>
-        <h3>
-          <a href="https://jyukki.github.io/categories/">Categories</a>
-        </h3>
-      </header>
-        
-          
-        
-
-        
-        <p>
-          <article>
-            <header>
-              
-                Uncategorized
-                <span style="float:right;">4</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="https://jyukki.github.io/categories/boj/">boj</a>
-                <span style="float:right;">4</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="https://jyukki.github.io/categories/hugo/">hugo</a>
-                <span style="float:right;">3</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="https://jyukki.github.io/categories/go/">go</a>
-                <span style="float:right;">1</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="https://jyukki.github.io/categories/jekyll/">jekyll</a>
-                <span style="float:right;">1</span>
-              
-            </header>
-          </article>
-        </p>
-        
-    </section>
-  
-  
-
-  
-  
-    <section id="mini-bio">
-      <h3>About</h3>
-      <p>.1 Day 1 Problem Algorithm blog</p>
-      <a href="https://jyukki.github.io/about/" class="button">Learn More</a>
-    </section>
-  
-
-  
-  <section id="footer">
-    
-      <ul class="icons">
-        
-          
-    <li><a href="https://jyukki.github.io/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
-
-
-        
-        
-  <li><a href="//github.com/jyukki97" target="_blank" title="GitHub" class="fa fa-github"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
-
-
-
-
-
-
-
-
-
-  <li><a href="//facebook.com/example" target="_blank" title="Facebook" class="fa fa-facebook"></a></li>
-
-
-
-
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <li><a href="//instagram.com/example" target="_blank" title="Instagram" class="fa fa-instagram"></a></li>
-
-
-
-
-
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
-
-
-
-
-
-
-
-
-
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
-
-
-
-  <li><a href="mailto:example" title="Email" class="fa fa-envelope"></a></li>
-
-
-      </ul>
-    
-    <p class="copyright">
-      
-        &copy; 2019
-        
-          1 Day 1 Problem
-        
-      .
-      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
-    </p>
-  </section>
-</section>
-
-    </div>
-    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
-    
-
-    
-      
-    
-
-    
-      
-      
-      
-        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
-        
-        
-        
-        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
-        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
-        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
-        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
-      
-    
-    
-    
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
-      <script src="https://jyukki.github.io/js/util.js"></script>
-      <script src="https://jyukki.github.io/js/main.js"></script>
-      <script src="https://jyukki.github.io/js/backToTop.js"></script>
-    
-
-    
-      
-        
-      
-    
-
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-      <script src="//yihui.name/js/math-code.js"></script>
-<script async
-src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
-
-  </body>
-</html>
-
