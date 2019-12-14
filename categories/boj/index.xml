@@ -6,21 +6,10 @@
     <description>Recent content in BOJ on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Thu, 20 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/categories/boj/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>[BOJ]11399 ATM</title>
-      <link>https://jyukki97.github.io/blog/2019-06-20-11399/</link>
-      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2019-06-20-11399/</guid>
-      <description>https://www.acmicpc.net/problem/11399
-풀이:  돈을 인출하는데 필요한 시간을 입력받는다. 입력받은 시간을 정렬한다. 정렬한 값을 n-i를 곱해서 더해준다.  코드: 사용언어 : c++
-#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int main() {int n,r=0,a[1001];cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++)cin &amp;gt;&amp;gt; a[i];sort(&amp;amp;a[0], &amp;amp;a[n]);for (int i = 0; i &amp;lt; n; i++)r += a[i] * (n - i);cout &amp;lt;&amp;lt; r &amp;lt;&amp;lt; endl;}</description>
-    </item>
     
     <item>
       <title>[BOJ]2609 최대공약수와 최소공배수</title>

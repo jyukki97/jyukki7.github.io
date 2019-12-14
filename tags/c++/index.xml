@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on 1 Day 1 Problem</title>
+    <link>https://jyukki97.github.io/tags/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on 1 Day 1 Problem</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <lastBuildDate>Thu, 20 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jyukki97.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[백준]11399 ATM</title>
+      <link>https://jyukki97.github.io/blog/2019-06-20-11399/</link>
+      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-20-11399/</guid>
+      <description>https://www.acmicpc.net/problem/11399
+풀이:  돈을 인출하는데 필요한 시간을 입력받는다. 입력받은 시간을 정렬한다. 정렬한 값을 n-i를 곱해서 더해준다.  코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int main() {int n,r=0,a[1001];cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++)cin &amp;gt;&amp;gt; a[i];sort(&amp;amp;a[0], &amp;amp;a[n]);for (int i = 0; i &amp;lt; n; i++)r += a[i] * (n - i);cout &amp;lt;&amp;lt; r &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]10971 외판원 순회 2</title>
+      <link>https://jyukki97.github.io/blog/2019-06-09-10971/</link>
+      <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-09-10971/</guid>
+      <description>https://www.acmicpc.net/problem/10971
+풀이:  https://jyukki97.github.io/2098/ 과 같으므로 참고  코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int w[17][17],d[17][100000], n;int T(int a, int b) {if ((1 &amp;lt;&amp;lt; n) - 1 == b &amp;amp;&amp;amp; w[a][0] != 0)return w[a][0];int &amp;amp;r = d[a][b];if (r &amp;gt; 0)return r;r = 100000000;for (int i = 0; i &amp;lt; n; i++)if (w[a][i] != 0 &amp;amp;&amp;amp; (b &amp;amp; (1 &amp;lt;&amp;lt; i)) == 0)r = min(r, w[a][i] + T(i, b | (1 &amp;lt;&amp;lt; i)));return r;}int main(void) {cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++)for (int t = 0; t &amp;lt; n; t++)cin &amp;gt;&amp;gt; w[i][t];cout &amp;lt;&amp;lt; T(0, 1) &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]11047 동전 0</title>
+      <link>https://jyukki97.github.io/blog/2019-06-08-11047/</link>
+      <pubDate>Sat, 08 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-08-11047/</guid>
+      <description>https://www.acmicpc.net/problem/11047
+풀이:  동전에 가격이 높은 것 부터 내가 필요한 가격에서 빼준다. 빼준 횟수만큼 카운트를 높여준다. 카운트를 출력한다. ( i ≥ 2인 경우에 Ai는 Ai-1의 배수) 조건으로 인해 그냥 높은 것 부터 빼줘도 문제가 생기지않는다.  코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int main() {int n, k, s[12], c = 0;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; k;while (n--)cin &amp;gt;&amp;gt; s[n];while (k) {c += k / s[++n]; k %= s[n];}cout &amp;lt;&amp;lt; c &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>start</title>
+      <link>https://jyukki97.github.io/blog/2017-11-19-start/</link>
+      <pubDate>Sun, 19 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-19-start/</guid>
+      <description>안녕하세요.</description>
+    </item>
+    
+  </channel>
+</rss>

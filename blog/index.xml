@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>[BOJ]11399 ATM</title>
+      <title>[백준]11399 ATM</title>
       <link>https://jyukki97.github.io/blog/2019-06-20-11399/</link>
       <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
       
@@ -53,6 +53,114 @@ import matha,b=map(int,input().split(&#39;:&#39;))c=math.gcd(a,b)print(a//c,b
       <description>https://www.acmicpc.net/problem/1850
 풀이:  두 수를 입력받는다 두 수의 최대공약수를 구한다. 최대공약수만큼 1을 반복해서 출력한다.  코드: 사용언어 : Python 3
 a,b=map(int,input().split())while b: a,b=b,a%bprint(&#39;1&#39;*a)</description>
+    </item>
+    
+    <item>
+      <title>[백준]10757 큰 수 A&#43;B</title>
+      <link>https://jyukki97.github.io/blog/2019-06-16-10757/</link>
+      <pubDate>Sun, 16 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-16-10757/</guid>
+      <description>https://www.acmicpc.net/problem/10757
+풀이:  두 수를 입력받은 후 더해서 출력한다.  코드: 사용언어 : Python 3
+print(sum(map(int,input().split())))</description>
+    </item>
+    
+    <item>
+      <title>[백준]10826 피보나치 수 4</title>
+      <link>https://jyukki97.github.io/blog/2019-06-15-10826/</link>
+      <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-15-10826/</guid>
+      <description>https://www.acmicpc.net/problem/10826
+풀이:  n을 입력받는다 n번째 피보나치 수를 출력한다  코드: 사용언어 : Python 3
+s,t=0,1for i in range(int(input())):t,s=s,s+tprint(s)</description>
+    </item>
+    
+    <item>
+      <title>[백준]11050 이항 계수 1</title>
+      <link>https://jyukki97.github.io/blog/2019-06-14-11050/</link>
+      <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-14-11050/</guid>
+      <description>https://www.acmicpc.net/problem/11050
+풀이:  n, k 를 입력받고, nCk를 출력한다  코드: 사용언어 : Python 3
+n,k=map(int,input().split())r=1for i in range(k): r*=(n-i)/(i+1)print((int)(r))</description>
+    </item>
+    
+    <item>
+      <title>[백준]11365 !밀비 급일</title>
+      <link>https://jyukki97.github.io/blog/2019-06-13-11365/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-13-11365/</guid>
+      <description>https://www.acmicpc.net/problem/11365
+풀이:  문자열을 입력받고, 그 문자열을 뒤집어서 출력한다. 문자열이 END라면 반복을 중지한다.  코드: 사용언어 : Python 3
+while 1:a=input()if a==&#39;END&#39;:breakprint(a[::-1])</description>
+    </item>
+    
+    <item>
+      <title>[백준]10952 A&#43;B - 5</title>
+      <link>https://jyukki97.github.io/blog/2019-06-12-10952/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-12-10952/</guid>
+      <description>https://www.acmicpc.net/problem/10952
+풀이:  반복 횟수를 무한히 한 후 입력받은 두 수의 합을 출력 입력받은 두 수가 0 0 이라면 반복문을 빠져나간다.  코드: 사용언어 : Python 3
+while 1:a,b=map(int,input().split())if a==0:breakprint(a+b)</description>
+    </item>
+    
+    <item>
+      <title>[백준]15552 빠른 A&#43;B</title>
+      <link>https://jyukki97.github.io/blog/2019-06-11-15552/</link>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-11-15552/</guid>
+      <description>https://www.acmicpc.net/problem/15552
+풀이:  반복 횟수를 입력받은 후 입력받은 두 수의 합을 출력 간단한 문제이지만 매우 많은 테스트케이스의 수가 있으므로 input() 대신 sys.stdin().readline()을 사용한다.  코드: 사용언어 : Python 3
+import sysfor i in range(int(input())):print(sum(map(int,sys.stdin.readline().split())))</description>
+    </item>
+    
+    <item>
+      <title>[백준]10950 A&#43;B - 3</title>
+      <link>https://jyukki97.github.io/blog/2019-06-10-10950/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-10-10950/</guid>
+      <description>https://www.acmicpc.net/problem/10950
+풀이:  반복 횟수를 입력받은 후 입력받은 두 수의 합을 출력  코드: 사용언어 : Python 3
+for i in range(int(input())):print(sum(map(int,input().split())))</description>
+    </item>
+    
+    <item>
+      <title>[백준]10971 외판원 순회 2</title>
+      <link>https://jyukki97.github.io/blog/2019-06-09-10971/</link>
+      <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-09-10971/</guid>
+      <description>https://www.acmicpc.net/problem/10971
+풀이:  https://jyukki97.github.io/2098/ 과 같으므로 참고  코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int w[17][17],d[17][100000], n;int T(int a, int b) {if ((1 &amp;lt;&amp;lt; n) - 1 == b &amp;amp;&amp;amp; w[a][0] != 0)return w[a][0];int &amp;amp;r = d[a][b];if (r &amp;gt; 0)return r;r = 100000000;for (int i = 0; i &amp;lt; n; i++)if (w[a][i] != 0 &amp;amp;&amp;amp; (b &amp;amp; (1 &amp;lt;&amp;lt; i)) == 0)r = min(r, w[a][i] + T(i, b | (1 &amp;lt;&amp;lt; i)));return r;}int main(void) {cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++)for (int t = 0; t &amp;lt; n; t++)cin &amp;gt;&amp;gt; w[i][t];cout &amp;lt;&amp;lt; T(0, 1) &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]11047 동전 0</title>
+      <link>https://jyukki97.github.io/blog/2019-06-08-11047/</link>
+      <pubDate>Sat, 08 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-08-11047/</guid>
+      <description>https://www.acmicpc.net/problem/11047
+풀이:  동전에 가격이 높은 것 부터 내가 필요한 가격에서 빼준다. 빼준 횟수만큼 카운트를 높여준다. 카운트를 출력한다. ( i ≥ 2인 경우에 Ai는 Ai-1의 배수) 조건으로 인해 그냥 높은 것 부터 빼줘도 문제가 생기지않는다.  코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int main() {int n, k, s[12], c = 0;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; k;while (n--)cin &amp;gt;&amp;gt; s[n];while (k) {c += k / s[++n]; k %= s[n];}cout &amp;lt;&amp;lt; c &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>start</title>
+      <link>https://jyukki97.github.io/blog/2017-11-19-start/</link>
+      <pubDate>Sun, 19 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-19-start/</guid>
+      <description>안녕하세요.</description>
     </item>
     
     <item>
@@ -219,16 +327,6 @@ import mathn = int(input())f = int(input())print(&#39;%02d&#39; % (((math.cei
     </item>
     
     <item>
-      <title>10757 큰 수 A&#43;B</title>
-      <link>https://jyukki97.github.io/blog/2019-06-16-10757/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2019-06-16-10757/</guid>
-      <description>https://www.acmicpc.net/problem/10757
-풀이:  두 수를 입력받은 후 더해서 출력한다.  코드: 사용언어 : Python 3 {% highlight Python %} print(sum(map(int,input().split()))) {% endhighlight %}</description>
-    </item>
-    
-    <item>
       <title>1076 저항</title>
       <link>https://jyukki97.github.io/blog/2018-01-17-1076/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -250,16 +348,6 @@ n=input()for i in range(97,123):print(n.count(chr(i)),end=&#39; &#39;)</descr
     </item>
     
     <item>
-      <title>108226 피보나치수 4</title>
-      <link>https://jyukki97.github.io/blog/2019-06-15-10826/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2019-06-15-10826/</guid>
-      <description>https://www.acmicpc.net/problem/10826
-풀이:  n을 입력받는다 n번째 피보나치 수를 출력한다  코드: 사용언어 : Python 3 {% highlight Python %} s,t=0,1 for i in range(int(input())): t,s=s,s+t print(s) {% endhighlight %}</description>
-    </item>
-    
-    <item>
       <title>10844 쉬운 계단 수</title>
       <link>https://jyukki97.github.io/blog/2017-11-30-10844/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -277,36 +365,6 @@ n=input()for i in range(97,123):print(n.count(chr(i)),end=&#39; &#39;)</descr
       <guid>https://jyukki97.github.io/blog/2018-01-16-1094/</guid>
       <description>https://www.acmicpc.net/problem/1094
 풀이:  자른 막대기 중 주어진 막대기보다 작은 값 중 최댓값을 주어진 막대기에 계속 뺀다. 뺄때마다 카운트를 증가시키면서 반복한다  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int main(void) {int x, temp = 64, cnt = 0;cin &amp;gt;&amp;gt; x;while (x != 0) {if (x &amp;gt;= temp) {cnt++;x -= temp;}elsetemp /= 2;}cout &amp;lt;&amp;lt; cnt &amp;lt;&amp;lt; endl;return 0;}</description>
-    </item>
-    
-    <item>
-      <title>10950 A &#43; B - 3</title>
-      <link>https://jyukki97.github.io/blog/2019-06-10-10950/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2019-06-10-10950/</guid>
-      <description>https://www.acmicpc.net/problem/10950
-풀이:  반복 횟수를 입력받은 후 입력받은 두 수의 합을 출력  코드: 사용언어 : Python 3 {% highlight Python %} for i in range(int(input())): print(sum(map(int,input().split()))) {% endhighlight %}</description>
-    </item>
-    
-    <item>
-      <title>10952 A &#43; B - 5</title>
-      <link>https://jyukki97.github.io/blog/2019-06-12-10952/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2019-06-12-10952/</guid>
-      <description>https://www.acmicpc.net/problem/10952
-풀이:  반복 횟수를 무한히 한 후 입력받은 두 수의 합을 출력 입력받은 두 수가 0 0 이라면 반복문을 빠져나간다.  코드: 사용언어 : Python 3 {% highlight Python %} while 1: a,b=map(int,input().split()) if a==0:break print(a+b) {% endhighlight %}</description>
-    </item>
-    
-    <item>
-      <title>10971 외판원 순회 2</title>
-      <link>https://jyukki97.github.io/blog/2019-06-09-10971/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2019-06-09-10971/</guid>
-      <description>https://www.acmicpc.net/problem/10971
-풀이:  https://jyukki97.github.io/2098/ 과 같으므로 참고  코드: 사용언어 : c++ {% highlight c++ %} #include #include using namespace std; int w[17][17],d[17][100000], n; int T(int a, int b) { if ((1 &amp;laquo; n) - 1 == b &amp;amp;&amp;amp; w[a][0] != 0) return w[a][0]; int &amp;amp;r = d[a][b]; if (r &amp;gt; 0) return r; r = 100000000; for (int i = 0; i &amp;lt; n; i++) if (w[a][i] != 0 &amp;amp;&amp;amp; (b &amp;amp; (1 &amp;laquo; i)) == 0) r = min(r, w[a][i] + T(i, b | (1 &amp;laquo; i))); return r; } int main(void) { cin &amp;raquo; n; for (int i = 0; i &amp;lt; n; i++) for (int t = 0; t &amp;lt; n; t++) cin &amp;raquo; w[i][t]; cout &amp;laquo; T(0, 1) &amp;laquo; endl; return 0; } {% endhighlight %}</description>
     </item>
     
     <item>
@@ -342,16 +400,6 @@ t=int(input())for i in range(t):n,m=map(int,input().split())print(m*2-n,m-(m*
     </item>
     
     <item>
-      <title>11047 동전 0</title>
-      <link>https://jyukki97.github.io/blog/2019-06-08-11047/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2019-06-08-11047/</guid>
-      <description>https://www.acmicpc.net/problem/11047
-풀이:  동전에 가격이 높은 것 부터 내가 필요한 가격에서 빼준다. 빼준 횟수만큼 카운트를 높여준다. 카운트를 출력한다. ( i ≥ 2인 경우에 Ai는 Ai-1의 배수) 조건으로 인해 그냥 높은 것 부터 빼줘도 문제가 생기지않는다.  코드: 사용언어 : c++ {% highlight c++ %} #include using namespace std; int main() { int n, k, s[12], c = 0; cin &amp;raquo; n &amp;raquo; k; while (n&amp;ndash;) cin &amp;raquo; s[n]; while (k) { c += k / s[++n]; k %= s[n]; } cout &amp;laquo; c &amp;laquo; endl; return 0; }</description>
-    </item>
-    
-    <item>
       <title>11048 이동하기</title>
       <link>https://jyukki97.github.io/blog/2017-11-30-11048/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -359,16 +407,6 @@ t=int(input())for i in range(t):n,m=map(int,input().split())print(m*2-n,m-(m*
       <guid>https://jyukki97.github.io/blog/2017-11-30-11048/</guid>
       <description>https://www.acmicpc.net/problem/11048
 풀이:  a[i][t] 는 i행 t열로 갈 때 사탕의 최대 갯수 a[i][t] 는 위에서 올때와 왼쪽에서 올때 중 최대값으로 구할 수 있다. a[i][t] += max(a[i - 1][t], a[i][t - 1]);  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[1002][1002] = { 0 };int main(void) {int n, m;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;for (int i = 1; i &amp;lt;= n; i++) {for (int t = 1; t &amp;lt;= m; t++) {cin &amp;gt;&amp;gt; a[i][t];}}for (int i = 1; i &amp;lt;= n; i++) {for (int t = 1; t &amp;lt;= m; t++) {a[i][t] += max(a[i - 1][t], a[i][t - 1]);}}cout &amp;lt;&amp;lt; a[n][m] &amp;lt;&amp;lt; endl;return 0;}</description>
-    </item>
-    
-    <item>
-      <title>11050 이항 계수 1</title>
-      <link>https://jyukki97.github.io/blog/2019-06-14-11050/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2019-06-14-11050/</guid>
-      <description>https://www.acmicpc.net/problem/11050
-풀이:  n, k 를 입력받고, nCk를 출력한다  코드: 사용언어 : Python 3 {% highlight Python %} n,k=map(int,input().split()) r=1 for i in range(k): r*=(n-i)/(i+1) print((int)(r)) {% endhighlight %}</description>
     </item>
     
     <item>
@@ -430,16 +468,6 @@ t=int(input())for i in range(t):n,m=map(int,input().split())print(m*2-n,m-(m*
       <guid>https://jyukki97.github.io/blog/2017-12-10-11060/</guid>
       <description>https://www.acmicpc.net/problem/11060
 풀이:  cnt[i] 는 i번째 에서의 최소 가짓수 cnt를 모두 최댓값으로 채운 후 a[i] 이하의 값으로 점프할 때 마다 cnt[i + t] 값을 min(cnt[i + t], cnt[i] + 1) 로 해줌으로써 최소 가짓수를 찾는다 만약 도착점의 값이 처음 채운 1001과 같다면 갈 수 없는 경우이므로 -1을 출력한다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[1001], cnt[1001];int main(void) {int n;cin &amp;gt;&amp;gt; n;fill_n(cnt, n, 1001);for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];}cnt[0] = 0;for (int i = 0; i &amp;lt; n; i++) {for (int t = 1; t &amp;lt;= a[i]; t++) {cnt[i + t] = min(cnt[i + t], cnt[i] + 1);}}if (cnt[n - 1] == 1001)cout &amp;lt;&amp;lt; &amp;quot;-1&amp;quot; &amp;lt;&amp;lt; endl;elsecout &amp;lt;&amp;lt; cnt[n - 1] &amp;lt;&amp;lt; endl;return 0;}</description>
-    </item>
-    
-    <item>
-      <title>11365 !밀비 급일</title>
-      <link>https://jyukki97.github.io/blog/2019-06-13-11365/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2019-06-13-11365/</guid>
-      <description>https://www.acmicpc.net/problem/11365
-풀이:  문자열을 입력받고, 그 문자열을 뒤집어서 출력한다. 문자열이 END라면 반복을 중지한다.  코드: 사용언어 : Python 3 {% highlight Python %} while 1: a=input() if a==&#39;END&amp;rsquo;:break print(a[::-1]) {% endhighlight %}</description>
     </item>
     
     <item>
@@ -667,16 +695,6 @@ x,y=map(int,input()[::-1].split())print(int(str(x+y)[::-1]))```</description>
       <guid>https://jyukki97.github.io/blog/2017-12-01-1520/</guid>
       <description>https://www.acmicpc.net/problem/1520
 풀이:  cnt[i][t] 가 i행 t열을 골랐을 때 최대 경로의 수 이다. 왼쪽 위 부터 차례대로 방문한다. 왼쪽, 오른쪽, 위, 아래 를 모두 검사하여 지금 계단의 지점보다 낮은 지점을 찾는다. 계속 검사하면서 가다가 오른쪽 끝 즉, (n,m) 을 만나면 return 1을 해준다. 시간초과 때문에 재방문을 피하기위해 cnt의 값을 모두 -1로 바꿔놓고 0이상이면 검사를 끝내도록 하였다.  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int n, m;int a[501][501];int cnt[501][501];int downhill(int q, int w) {if (q == n &amp;amp;&amp;amp; w == m)return 1;if (cnt[q][w] &amp;gt;= 0)return cnt[q][w];cnt[q][w] = 0;int x[5] = { 0, 1, 0, -1, 0 };int y[5] = { 0, 0, 1, 0, -1 };for (int i = 0; i &amp;lt; 5; i++) {if (q + x[i] &amp;gt; 0 &amp;amp;&amp;amp; q + x[i] &amp;lt;= n &amp;amp;&amp;amp; w + y[i] &amp;gt; 0 &amp;amp;&amp;amp; w + y[i] &amp;lt;= m &amp;amp;&amp;amp; a[q + x[i]][w + y[i]] &amp;lt; a[q][w]) {cnt[q][w] += downhill(q + x[i], w + y[i]);}}return cnt[q][w];}int main(void) {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;for (int i = 1; i &amp;lt;= n; i++) {for (int t = 1; t &amp;lt;= m; t++) {cin &amp;gt;&amp;gt; a[i][t];}}fill(cnt[0],cnt[500], -1);cout &amp;lt;&amp;lt; downhill(1,1) &amp;lt;&amp;lt; endl;return 0;}</description>
-    </item>
-    
-    <item>
-      <title>15552 빠른 A &#43; B</title>
-      <link>https://jyukki97.github.io/blog/2019-06-11-15552/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2019-06-11-15552/</guid>
-      <description>https://www.acmicpc.net/problem/15552
-풀이:  반복 횟수를 입력받은 후 입력받은 두 수의 합을 출력 간단한 문제이지만 매우 많은 테스트케이스의 수가 있으므로 input() 대신 sys.stdin().readline()을 사용한다.  코드: 사용언어 : Python 3 {% highlight Python %} import sys for i in range(int(input())): print(sum(map(int,sys.stdin.readline().split()))) {% endhighlight %}</description>
     </item>
     
     <item>
@@ -1528,15 +1546,6 @@ T = int(input())for i in range(T):cnt = 0 n,k = map(int,input().split(&#39; &#
       <guid>https://jyukki97.github.io/blog/2017-12-27-9764/</guid>
       <description>https://www.acmicpc.net/problem/9764
 풀이:  a[i][t] : 정수 i를 나타낼 때, 처음 더하는 수가 t인 경우의 수 a[i][t]는 i에서 t만큼 뺀 수에서 t보다 큰 수를 더한 값과 동일하다. 예를들어 5 : 1 + 4 = 2 + 3 = 5 로 나타낼 수 있는데 맨 앞자리를 1을 고를 경우 4의 앞자리가 1보다 큰 경우의 수를 모두 더한값과 같다. 이와 동일하게 2,3,4,5를 모두 할 경우 5의 경우의 수는 3개가 나오게 된다.  주의 사항:  n의 경우의 수를 구할 때 값이 매우 커지므로 100999로 나눈 나머지로 출력한다.</description>
-    </item>
-    
-    <item>
-      <title>blog start</title>
-      <link>https://jyukki97.github.io/blog/2017-11-19-start/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2017-11-19-start/</guid>
-      <description>안녕하세요.</description>
     </item>
     
   </channel>
