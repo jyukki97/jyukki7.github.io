@@ -33,5 +33,16 @@
 #include &amp;lt;iostream&amp;gt;using namespace std;int main() {int n, k, s[12], c = 0;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; k;while (n--)cin &amp;gt;&amp;gt; s[n];while (k) {c += k / s[++n]; k %= s[n];}cout &amp;lt;&amp;lt; c &amp;lt;&amp;lt; endl;return 0;}</description>
     </item>
     
+    <item>
+      <title>[백준]2352 반도체 설계</title>
+      <link>https://jyukki97.github.io/blog/2019-06-04-2352/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-04-2352/</guid>
+      <description>https://www.acmicpc.net/problem/2352
+풀이:  맨 처음 값부터 하나 하나 입력받는다. 입력받은 값이 벡터 안에 있는 값들 보다 크다면 벡터에 맨 뒤에 넣는다. 벡터의 처음부터 검색했을 때, 입력받은 값보다 큰 값이 있다면, 그 값과 교체한다. 벡터의 원소 갯수를 출력한다. 일반적으로 for문을 두개 쓴 O(n^2)의 코드는 시간초과가 나므로 주의하자  코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;vector&amp;lt;int&amp;gt;d;int main(void) {int n, s, l;cin &amp;gt;&amp;gt; n;while(n--) {cin &amp;gt;&amp;gt; s;l = lower_bound(d.</description>
+    </item>
+    
   </channel>
 </rss>

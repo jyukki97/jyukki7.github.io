@@ -154,5 +154,49 @@ for i in range(int(input())):print(sum(map(int,input().split())))</description
 #include &amp;lt;iostream&amp;gt;using namespace std;int main() {int n, k, s[12], c = 0;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; k;while (n--)cin &amp;gt;&amp;gt; s[n];while (k) {c += k / s[++n]; k %= s[n];}cout &amp;lt;&amp;lt; c &amp;lt;&amp;lt; endl;return 0;}</description>
     </item>
     
+    <item>
+      <title>[백준]2164 카드2</title>
+      <link>https://jyukki97.github.io/blog/2019-06-07-2164/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-07-2164/</guid>
+      <description>https://www.acmicpc.net/problem/2164
+풀이:  카드의 갯수가 2 ^ i 개일 경우 남게 되는 카드의 번호는 2 ^ i 이다. 카드의 갯수가 (2 ^ i) + n 개 일 경우 남게 되는 카드의 번호는 2 * n 이다.  코드: 사용언어 : Python 3
+n,s=int(input()),1while s&amp;lt;n:s*=2print(s if s==n else 2*n-s)</description>
+    </item>
+    
+    <item>
+      <title>[백준]12015 가장 긴 증가하는 부분 수열 2</title>
+      <link>https://jyukki97.github.io/blog/2019-06-06-12015/</link>
+      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-06-12015/</guid>
+      <description>https://www.acmicpc.net/problem/12015
+풀이:  https://jyukki97.github.io/2352/ 와 같은 문제이므로 참고  코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;vector&amp;lt;int&amp;gt;d;int main(void) {int n, s, l;cin &amp;gt;&amp;gt; n;while (n--) {cin &amp;gt;&amp;gt; s;l = lower_bound(d.begin(), d.end(), s) - d.begin();if (l == d.size())d.push_back(s);elsed[l] = s;}cout &amp;lt;&amp;lt; d.size() &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1365 꼬인 전깃줄</title>
+      <link>https://jyukki97.github.io/blog/2019-06-05-1365/</link>
+      <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-05-1365/</guid>
+      <description>https://www.acmicpc.net/problem/1365
+풀이:  https://jyukki97.github.io/2352/ 와 같은 문제이므로 참고  코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;vector&amp;lt;int&amp;gt;d;int main(void) {int n, s, l;cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; s;l = lower_bound(d.begin(), d.end(), s) - d.begin();if (l == d.size())d.push_back(s);elsed[l] = s;}cout &amp;lt;&amp;lt; n - d.size() &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2352 반도체 설계</title>
+      <link>https://jyukki97.github.io/blog/2019-06-04-2352/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-04-2352/</guid>
+      <description>https://www.acmicpc.net/problem/2352
+풀이:  맨 처음 값부터 하나 하나 입력받는다. 입력받은 값이 벡터 안에 있는 값들 보다 크다면 벡터에 맨 뒤에 넣는다. 벡터의 처음부터 검색했을 때, 입력받은 값보다 큰 값이 있다면, 그 값과 교체한다. 벡터의 원소 갯수를 출력한다. 일반적으로 for문을 두개 쓴 O(n^2)의 코드는 시간초과가 나므로 주의하자  코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;vector&amp;lt;int&amp;gt;d;int main(void) {int n, s, l;cin &amp;gt;&amp;gt; n;while(n--) {cin &amp;gt;&amp;gt; s;l = lower_bound(d.</description>
+    </item>
+    
   </channel>
 </rss>
