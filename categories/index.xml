@@ -6,7 +6,7 @@
     <description>Recent content in Categories on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sun, 15 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Pro</title>
       <link>https://jyukki97.github.io/categories/pro/</link>
-      <pubDate>Sun, 15 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jyukki97.github.io/categories/pro/</guid>
       <description></description>
@@ -35,33 +35,6 @@
       <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jyukki97.github.io/categories/boj/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://jyukki97.github.io/categories/hugo/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/categories/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>https://jyukki97.github.io/categories/go/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/categories/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jekyll</title>
-      <link>https://jyukki97.github.io/categories/jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/categories/jekyll/</guid>
       <description></description>
     </item>
     

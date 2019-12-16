@@ -6,10 +6,21 @@
     <description>Recent content on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sun, 15 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Pro]문자열 내 p와 y의 개수</title>
+      <link>https://jyukki97.github.io/blog/2019-12-16-py/</link>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-16-py/</guid>
+      <description>https://programmers.co.kr
+풀이:  문자열 s의 모든 원소를 보고 p,P 이면 p의 갯수를 올리고, y,Y이면 y의 갯수를 올린다. p의 갯수와 y의 갯수가 같다면 true 다르다면 false 를 리턴한다.  코드: 사용언어 : c++
+#include &amp;lt;string&amp;gt;#include &amp;lt;iostream&amp;gt;using namespace std;bool solution(string s){bool answer = true;int p = 0;int y = 0;for (int i = 0;i &amp;lt; s.length();i++) {if (s[i] == &amp;#39;p&amp;#39; || s[i] == &amp;#39;P&amp;#39;) {p++;}if (s[i] == &amp;#39;y&amp;#39; || s[i] == &amp;#39;Y&amp;#39;) {y++;}}if (p !</description>
+    </item>
     
     <item>
       <title>[Pro]체육복</title>
@@ -21,7 +32,8 @@
 풀이:   학생 전체 중 체육복을 잃어버린 학생과 체육복을 추가로 가져온 학생을 정리한다.(체육복을 추가로 가져온 학생들 중 체육복을 잃어버린 학생이 있을 수 있기 때문에)
   체육복이 없는 학생 중 양 옆에 여벌의 체육복을 가져온 학생이 있는경우 빌려입는다.
   전체 학생 중 체육복이 1개 이상 있는 학생들의 수를 리턴한다.
-  주의 사항:  체육복을 추가로 가져온 학생들 중 체육복을 잃어버린 학생이 있을 수 있다. 체육복을 추가로 가져오지 않았을 경우, 옆 사람에게 체육복을 추가로 얻어도 다른 사람에게 양도할 수 없다.</description>
+  주의 사항:   체육복을 추가로 가져온 학생들 중 체육복을 잃어버린 학생이 있을 수 있다.
+  체육복을 추가로 가져오지 않았을 경우, 옆 사람에게 체육복을 추가로 얻어도 다른 사람에게 양도할 수 없다.</description>
     </item>
     
     <item>
@@ -265,54 +277,6 @@ n,s=int(input()),1while s&amp;lt;n:s*=2print(s if s==n else 2*n-s)</descript
       
       <guid>https://jyukki97.github.io/itemized/item4/</guid>
       <description>App 4 </description>
-    </item>
-    
-    <item>
-      <title>Creating a New Theme</title>
-      <link>https://jyukki97.github.io/blog/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&#39;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&#39;t cover using CSS to style your theme.
-We&#39;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>(Hu)go Template Primer</title>
-      <link>https://jyukki97.github.io/blog/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/goisforlovers/</guid>
-      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.</description>
-    </item>
-    
-    <item>
-      <title>Getting Started with Hugo</title>
-      <link>https://jyukki97.github.io/blog/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/hugoisforlovers/</guid>
-      <description>&lt;h2 id=&#34;step-1-install-hugo&#34;&gt;Step 1. Install Hugo&lt;/h2&gt;
-&lt;p&gt;Go to &lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;hugo releases&lt;/a&gt; and download the
-appropriate version for your os and architecture.&lt;/p&gt;
-&lt;p&gt;Save it somewhere specific as we will be using it in the next step.&lt;/p&gt;
-&lt;p&gt;More complete instructions are available at &lt;a href=&#34;https://jyukki97.github.io/overview/installing/&#34;&gt;installing hugo&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>https://jyukki97.github.io/blog/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/migrate-from-jekyll/</guid>
-      <description>&lt;h2 id=&#34;move-static-content-to-static&#34;&gt;Move static content to &lt;code&gt;static&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;Jekyll has a rule that any directory not starting with &lt;code&gt;_&lt;/code&gt; will be copied as-is to the &lt;code&gt;_site&lt;/code&gt; output. Hugo keeps all static content under &lt;code&gt;static&lt;/code&gt;. You should therefore move it all there.
-With Jekyll, something that looked like&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
-    ▾ images/
-        logo.png
-&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>

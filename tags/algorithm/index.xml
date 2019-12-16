@@ -6,10 +6,21 @@
     <description>Recent content in algorithm on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sun, 15 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Pro]문자열 내 p와 y의 개수</title>
+      <link>https://jyukki97.github.io/blog/2019-12-16-py/</link>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-16-py/</guid>
+      <description>https://programmers.co.kr
+풀이:  문자열 s의 모든 원소를 보고 p,P 이면 p의 갯수를 올리고, y,Y이면 y의 갯수를 올린다. p의 갯수와 y의 갯수가 같다면 true 다르다면 false 를 리턴한다.  코드: 사용언어 : c++
+#include &amp;lt;string&amp;gt;#include &amp;lt;iostream&amp;gt;using namespace std;bool solution(string s){bool answer = true;int p = 0;int y = 0;for (int i = 0;i &amp;lt; s.length();i++) {if (s[i] == &amp;#39;p&amp;#39; || s[i] == &amp;#39;P&amp;#39;) {p++;}if (s[i] == &amp;#39;y&amp;#39; || s[i] == &amp;#39;Y&amp;#39;) {y++;}}if (p !</description>
+    </item>
     
     <item>
       <title>[Pro]체육복</title>
@@ -21,7 +32,8 @@
 풀이:   학생 전체 중 체육복을 잃어버린 학생과 체육복을 추가로 가져온 학생을 정리한다.(체육복을 추가로 가져온 학생들 중 체육복을 잃어버린 학생이 있을 수 있기 때문에)
   체육복이 없는 학생 중 양 옆에 여벌의 체육복을 가져온 학생이 있는경우 빌려입는다.
   전체 학생 중 체육복이 1개 이상 있는 학생들의 수를 리턴한다.
-  주의 사항:  체육복을 추가로 가져온 학생들 중 체육복을 잃어버린 학생이 있을 수 있다. 체육복을 추가로 가져오지 않았을 경우, 옆 사람에게 체육복을 추가로 얻어도 다른 사람에게 양도할 수 없다.</description>
+  주의 사항:   체육복을 추가로 가져온 학생들 중 체육복을 잃어버린 학생이 있을 수 있다.
+  체육복을 추가로 가져오지 않았을 경우, 옆 사람에게 체육복을 추가로 얻어도 다른 사람에게 양도할 수 없다.</description>
     </item>
     
     <item>
