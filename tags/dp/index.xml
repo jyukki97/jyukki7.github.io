@@ -33,5 +33,155 @@
 #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;vector&amp;lt;int&amp;gt;d;int main(void) {int n, s, l;cin &amp;gt;&amp;gt; n;while(n--) {cin &amp;gt;&amp;gt; s;l = lower_bound(d.</description>
     </item>
     
+    <item>
+      <title>[백준]10844 쉬운 계단 수</title>
+      <link>https://jyukki97.github.io/blog/2017-11-30-10844/</link>
+      <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-30-10844/</guid>
+      <description>https://www.acmicpc.net/problem/10844
+풀이:  a[i][t] 는 길이가 i인 숫자에서 1의 자릿 수가 t일 때의 경우의 수 t가 0 이면 a[i][t] = a[i - 1][t + 1] t가 9 이면 a[i][t] = a[i - 1][t - 1] 둘다 아니면 a[i][t] = (a[i - 1][t - 1] + a[i - 1][t + 1]) 이 때 오버플로우가 발생하므로 각각의 계산에 1000000000을 나눠준다.  코드: #include &amp;lt;iostream&amp;gt;using namespace std;long long a[101][10] = { 0 };int main(void) {int n;cin &amp;gt;&amp;gt; n;long long cnt = 0;for (int i = 1; i &amp;lt; 10; i++) {a[0][i] = 1;}for (int i = 1; i &amp;lt; n; i++) {for (int t = 0; t &amp;lt; 10; t++) {if (t == 0)a[i][t] = a[i - 1][t + 1] % 1000000000;else if (t == 9)a[i][t] = a[i - 1][t - 1] % 1000000000;elsea[i][t] = (a[i - 1][t - 1] + a[i - 1][t + 1]) % 1000000000;}}for (int i = 0; i &amp;lt; 10; i++) {cnt += a[n - 1][i] % 1000000000;}cout &amp;lt;&amp;lt; cnt % 1000000000 &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]11057 오르막수</title>
+      <link>https://jyukki97.github.io/blog/2017-11-30-11057/</link>
+      <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-30-11057/</guid>
+      <description>https://www.acmicpc.net/problem/11057
+풀이:  a[i][t] 는 길이가 i인 수에서 1의 자리가 t인 수의 오르막 수의 개수 a[i][t] += max(a[i - 1][t], a[i][t - 1]);  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[1002][1002] = { 0 };int main(void) {int n, m;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;for (int i = 1; i &amp;lt;= n; i++) {for (int t = 1; t &amp;lt;= m; t++) {cin &amp;gt;&amp;gt; a[i][t];}}for (int i = 1; i &amp;lt;= n; i++) {for (int t = 1; t &amp;lt;= m; t++) {a[i][t] += max(a[i - 1][t], a[i][t - 1]);}}cout &amp;lt;&amp;lt; a[n][m] &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]11727 2xN 타일링2</title>
+      <link>https://jyukki97.github.io/blog/2017-11-30-11727/</link>
+      <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-30-11727/</guid>
+      <description>https://www.acmicpc.net/problem/11727
+풀이:  a[i] 는 타일이 2xi 일때의 경우의 수 a[i] = (2 * a[i - 2] + a[i - 1] 주어진 조건에서 10007으로 나눈 나머지를 출력하라고 하였으므로 나눠줌.  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int a[1001] = { 1,3,0 };int main(void) {int n;cin &amp;gt;&amp;gt; n;for (int i = 2; i &amp;lt; n; i++) {a[i] = (2 * a[i - 2] + a[i - 1])%10007;}cout &amp;lt;&amp;lt; a[n - 1] &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1699 제곱수의 합</title>
+      <link>https://jyukki97.github.io/blog/2017-11-30-1699/</link>
+      <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-30-1699/</guid>
+      <description>https://www.acmicpc.net/problem/1699
+풀이:  q[i] 는 i 일 때 제곱수로 나타낼 수 있는 최소의 경우의 수 n 이 i + t^2 으로 나타내 질 때, 최소의 경우의 수를 찾음  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;math.h&amp;gt;int q[100002] = { 0 };using namespace std;int main(void) {int n,a;cin &amp;gt;&amp;gt; n;a = sqrt(n);for (int i = 1; i &amp;lt;= n; i++){q[i] = 10001;for (int t = 1; t &amp;lt;= a; t++){if (i == t*t)q[i] = 1;}}for (int i = 1; i &amp;lt;= n; i++){for (int t = 1; t &amp;lt;= a; t++){if (i + (t*t) &amp;lt;= n &amp;amp;&amp;amp; q[i + (t*t)] &amp;gt; q[i] + 1)q[i + (t*t)] = q[i] + 1;}}cout &amp;lt;&amp;lt; q[n] &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1912 연속합</title>
+      <link>https://jyukki97.github.io/blog/2017-11-30-1912/</link>
+      <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-30-1912/</guid>
+      <description>https://www.acmicpc.net/problem/1912
+풀이:  a[i] 는 i번째를 골랐을 때, 최대값 만약 a[i-1] 이 0 보다 크다면, a[i] += a[i-1]  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[100001] = { 0 };int main(void) {int n;cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];}int temp = a[0];for (int i = 1; i &amp;lt; n; i++) {if(a[i-1] &amp;gt; 0)a[i] += a[i - 1];temp = max(temp, a[i]);}cout &amp;lt;&amp;lt; temp &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2163 초콜릿 자르기</title>
+      <link>https://jyukki97.github.io/blog/2017-11-30-2163/</link>
+      <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-30-2163/</guid>
+      <description>https://www.acmicpc.net/problem/2163
+풀이:  N x M 크기의 초콜릿을 자르는 최소의 경우의 수 N * M - 1  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int main(void) {int n, m;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;cout &amp;lt;&amp;lt; n*m - 1 &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]9461 파도반 수열</title>
+      <link>https://jyukki97.github.io/blog/2017-11-30-9461/</link>
+      <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-30-9461/</guid>
+      <description>https://www.acmicpc.net/problem/9461
+풀이:  a[i] 는 i 번째 수열 a[i] = a[i-1] + a[i-5]  코드: #include &amp;lt;iostream&amp;gt;using namespace std;long long a[101] = { 1,1,1,2,2,0 };int main(void) {int T,n;cin &amp;gt;&amp;gt; T;for (int i = 0; i &amp;lt; T; i++) {cin &amp;gt;&amp;gt; n;for (int t = 5; t &amp;lt; n; t++) {a[t] = a[t - 1] + a[t - 5];}cout &amp;lt;&amp;lt; a[n - 1] &amp;lt;&amp;lt; endl;}return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2156 포도주 시식</title>
+      <link>https://jyukki97.github.io/blog/2017-11-29-2156/</link>
+      <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-29-2156/</guid>
+      <description>https://www.acmicpc.net/problem/2156
+풀이:  b[i][0] 은 i번째를 골랐을 때, i-1번째를 안고른 경우의 수 b[i][1] 은 i번째를 골랐을 때, i-1번째를 고른 경우의 수 b[i][2] 은 i번째를 골랐을 때, i-2번째를 안고른 경우의 수  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int main(void) {int n;cin &amp;gt;&amp;gt; n;int a[10001];for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];}int b[10001][3] = { a[0],a[0],a[0],a[1],a[0] + a[1],a[1],0 };int temp;for (int i = 2; i &amp;lt; n; i++) {for (int t = 0; t &amp;lt; 3; t++) {if (t == 0) {temp = max(b[i - 2][0], b[i - 2][1]);b[i][t] = max(temp, b[i - 2][2]) + a[i];}if (t == 1)b[i][t] = max(b[i - 1][0], b[i - 1][2]) + a[i];if (t == 2)b[i][t] = b[i - 3][1] + a[i];}}temp = max(b[n - 1][0], b[n - 2][1]);temp = max(temp, b[n - 1][1]);cout &amp;lt;&amp;lt; max(temp, b[n - 1][2]) &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]11726 2×n 타일링</title>
+      <link>https://jyukki97.github.io/blog/2017-11-28-11726/</link>
+      <pubDate>Tue, 28 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-28-11726/</guid>
+      <description>https://www.acmicpc.net/problem/11726
+풀이:  정수 i를 1,2 의 조합으로 나타낼 수 있는 경우의 수 a[i-1] a[i] = a[i-1] + a[i-2] 으로 구할 수 있다.  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int main(void) {int n;int a[1001] = { 1,2,0 };cin &amp;gt;&amp;gt; n;for (int t = 2; t &amp;lt; n; t++) {a[t] = (a[t - 1] + a[t - 2]) % 10007;}cout &amp;lt;&amp;lt; a[n - 1]&amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1463 1로 만들기</title>
+      <link>https://jyukki97.github.io/blog/2017-11-28-1463/</link>
+      <pubDate>Tue, 28 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-28-1463/</guid>
+      <description>https://www.acmicpc.net/problem/1463
+풀이:  i 일때 연산 횟수를 a[i] 라고 둔다. 2와 3으로 동시에 나눠질때, 따로 나눠질때, 나눠지지 않을때로 나눠서 계산한다. n번까지 연산 후 a[n]을 출력한다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[1000002] = { 0 };int main(void) {int n;cin &amp;gt;&amp;gt; n;for (int i = 2; i &amp;lt;= n; i++) {if (i % 2 == 0 &amp;amp;&amp;amp; i % 3 == 0) {int temp = min(a[i / 2], a[i / 3]);a[i] = min(temp, a[i - 1]) + 1;}else if(i % 2 == 0 &amp;amp;&amp;amp; i % 3 !</description>
+    </item>
+    
+    <item>
+      <title>[백준]9095 1, 2, 3 더하기</title>
+      <link>https://jyukki97.github.io/blog/2017-11-28-9095/</link>
+      <pubDate>Tue, 28 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-28-9095/</guid>
+      <description>https://www.acmicpc.net/problem/9095
+풀이:  정수 i를 1,2,3의 조합으로 나타낼 수 있는 경우의 수 a[i-1] a[i] = a[i-1] + a[i-2] + a[i-3] 으로 구할 수 있다.  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int main(void) {int T,n;cin &amp;gt;&amp;gt; T;for (int i = 0; i &amp;lt; T; i++) {int a[11] = { 1,2,4,0 };cin &amp;gt;&amp;gt; n;for (int t = 3; t &amp;lt; n; t++) {a[t] = a[t - 1] + a[t - 2] + a[t - 3];}cout &amp;lt;&amp;lt; a[n - 1] &amp;lt;&amp;lt; endl;}return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]11052 붕어빵 판매하기</title>
+      <link>https://jyukki97.github.io/blog/2017-11-26-11052/</link>
+      <pubDate>Sun, 26 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-26-11052/</guid>
+      <description>https://www.acmicpc.net/problem/11052
+풀이:  붕어의 개수가 i개 일 때를 b[i] 라고 놓고 b[i] = (t개 일때 가격 + 남은 붕어 빵의 가격) 과 b[i] 개중 큰값을 넣음. 구하고자 하는 n개 즉 b[n]을 찾음.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int main(void) {int n, m, w;int a[1002];int b[1002] = { 0 };cin &amp;gt;&amp;gt; n;for (int i = 1; i &amp;lt;= n; i++) {cin &amp;gt;&amp;gt; a[i];}for (int i = 1; i &amp;lt;= n; i++) {for (int t = 0; t &amp;lt; i; t++) {b[i] = max(b[i], b[t] + a[i - t]);}}cout &amp;lt;&amp;lt; b[n] &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1010 다리놓기</title>
+      <link>https://jyukki97.github.io/blog/2017-11-25-1010/</link>
+      <pubDate>Sat, 25 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-25-1010/</guid>
+      <description>https://www.acmicpc.net/problem/1010
+풀이:  서쪽 다리(N)에서 동쪽 다리(M)로 연결 이므로 조합인 mCn 을 사용  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int Comb(int n, int r) {if (r == 0 || r == n)return 1;else if (r == n - 1 || r == 1)return n;return Comb(n - 1, r) + Comb(n - 1, r - 1);}int main(void) {int T,n,m;cin &amp;gt;&amp;gt; T;for (int i = 0; i &amp;lt; T; i++) {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;cout &amp;lt;&amp;lt; Comb(m, n) &amp;lt;&amp;lt; endl;}return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1932 숫자삼각형</title>
+      <link>https://jyukki97.github.io/blog/2017-11-24-1932/</link>
+      <pubDate>Fri, 24 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-24-1932/</guid>
+      <description>https://www.acmicpc.net/problem/1932
+풀이:  첫 줄부터 밑에줄까지 내려가면서 값을 더해감 더한 값중 제일 큰 값을 찾음  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int q[501][501];int good[501][501];int main(void){int num;int big = 0;cin &amp;gt;&amp;gt; num;for (int i = 0; i &amp;lt; num; i++){for (int t = 0; t &amp;lt; i + 1; t++){cin &amp;gt;&amp;gt; q[i][t];}}good[0][0] = q[0][0];for (int i = 1; i &amp;lt; num; i++){for (int t = 0; t &amp;lt; i+1; t++){if(t==0)good[i][t] = good[i - 1][t] + q[i][t];else if (i == t)good[i][t] = good[i - 1][t - 1] + q[i][t];else{if (good[i - 1][t - 1] &amp;gt; good[i - 1][t])good[i][t] = good[i - 1][t - 1] + q[i][t];elsegood[i][t] = good[i - 1][t] + q[i][t];}}}for (int i = 0; i &amp;lt; num; i++){if (good[num - 1][i] &amp;gt; big)big = good[num - 1][i];}cout &amp;lt;&amp;lt; big &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2293 동전1</title>
+      <link>https://jyukki97.github.io/blog/2017-11-23-2293/</link>
+      <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-23-2293/</guid>
+      <description>https://www.acmicpc.net/problem/2293
+풀이:  첫번째 동전부터 경우의 수를 더해감.  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int coin[10001] = { 0 };int main(void){int a;int num;cin &amp;gt;&amp;gt; a;cin &amp;gt;&amp;gt; num;int *q = new int[a];for (int i = 0; i &amp;lt; a; i++){cin &amp;gt;&amp;gt; q[i];}for (int i = 0; i &amp;lt;= num; i++){if (i%q[0] == 0)coin[i]++;}for (int i = 1; i &amp;lt; a; i++){for (int t = q[i]; t &amp;lt;= num; t++){coin[t] += coin[t - q[i]];}}cout &amp;lt;&amp;lt; coin[num] &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
   </channel>
 </rss>

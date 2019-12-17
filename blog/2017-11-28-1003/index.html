@@ -21,7 +21,7 @@
         "articleSection" : "blog",
         "name" : "1003 피보나치 함수",
         "headline" : "1003 피보나치 함수",
-        "description" : "https:\/\/www.acmicpc.net\/problem\/1003\n풀이:  0이 쓰이면 카운트 0을 \x2b\x2b 1이 쓰이면 카운트 1을 \x2b\x2b  코드: #include \x26lt;iostream\x26gt;\t\/\/ 재귀를 이용\rusing namespace std;\rint cnt[2] = { 0 };\rint fibonacci(int n) {\rif (n == 0) {\rcnt[0]\x2b\x2b;\rreturn 0;\r}\relse if (n == 1) {\rcnt[1]\x2b\x2b;\rreturn 1;\r}\relse\rreturn fibonacci(n-1) \x2b fibonacci(n-2);\r}\rint main(void) {\rint T,n;\rcin \x26gt;\x26gt; T;\rfor (int i = 0; i \x26lt; T; i\x2b\x2b) {\rcin \x26gt;\x26gt; n;\rcnt[0] = 0;\rcnt[1] = 0;\rfibonacci(n);\rcout \x26lt;\x26lt; cnt[0] \x26lt;\x26lt; \x26quot; \x26quot; \x26lt;\x26lt; cnt[1] \x26lt;\x26lt; endl;\r}\rreturn 0;\r}\r}\r#include \x26lt;iostream\x26gt;\t\/\/ 포문 이용\rusing namespace std;\rint main(void) {\rint T, n;\rint a[41] = { 0 };\rint b[41] = { 0 };\rcin \x26gt;\x26gt; T;\rfor (int i = 0; i \x26lt; T; i\x2b\x2b) {\rcin \x26gt;\x26gt; n;\ra[0] = 1;\ra[1] = 0;\rb[0] = 0;\rb[1] = 1;\rfor (int t = 2; t \x26lt;= n; t\x2b\x2b) {\ra[t] = a[t - 1] \x2b a[t - 2];\rb[t] = b[t - 1] \x2b b[t - 2];\r}\rcout \x26lt;\x26lt; a[n] \x26lt;\x26lt; \x26quot; \x26quot; \x26lt;\x26lt; b[n] \x26lt;\x26lt; endl;\r}\r}\r",
+        "description" : "\x2b\x2b\x2b author = \x26ldquo;jyukki\x26rdquo; categories = [\x26ldquo;백준\x26rdquo;] tags = [\x26ldquo;algorithm\x26rdquo;, \x26ldquo;C\x2b\x2b\x26rdquo;, \x26ldquo;DP\x26rdquo;] date = \x26ldquo;2017-11-28\x26rdquo; description = \x26ldquo;algorithm\x26rdquo; featured = \x26quot;\x26rdquo; featuredalt = \x26quot;\x26rdquo; featuredpath = \x26ldquo;date\x26rdquo; linktitle = \x26quot;\x26rdquo; title = \x26ldquo;[백준]1003 피보나치 함수\x26rdquo; type = \x26ldquo;post\x26rdquo;\n\x2b\x2b\x2b https:\/\/www.acmicpc.net\/problem\/1003\n풀이:  0이 쓰이면 카운트 0을 \x2b\x2b 1이 쓰이면 카운트 1을 \x2b\x2b  코드: #include \x26lt;iostream\x26gt;\t\/\/ 재귀를 이용\rusing namespace std;\rint cnt[2] = { 0 };\rint fibonacci(int n) {\rif (n == 0) {\rcnt[0]\x2b\x2b;\rreturn 0;\r}\relse if (n == 1) {\rcnt[1]\x2b\x2b;\rreturn 1;\r}\relse\rreturn fibonacci(n-1) \x2b fibonacci(n-2);\r}\rint main(void) {\rint T,n;\rcin \x26gt;\x26gt; T;\rfor (int i = 0; i \x26lt; T; i\x2b\x2b) {\rcin \x26gt;\x26gt; n;\rcnt[0] = 0;\rcnt[1] = 0;\rfibonacci(n);\rcout \x26lt;\x26lt; cnt[0] \x26lt;\x26lt; \x26#34;\x26#34; \x26lt;\x26lt; cnt[1] \x26lt;\x26lt; endl;\r}\rreturn 0;\r}\r}\r#include \x26lt;iostream\x26gt;\t\/\/ 포문 이용\rusing namespace std;\rint main(void) {\rint T, n;\rint a[41] = { 0 };\rint b[41] = { 0 };\rcin \x26gt;\x26gt; T;\rfor (int i = 0; i \x26lt; T; i\x2b\x2b) {\rcin \x26gt;\x26gt; n;\ra[0] = 1;\ra[1] = 0;\rb[0] = 0;\rb[1] = 1;\rfor (int t = 2; t \x26lt;= n; t\x2b\x2b) {\ra[t] = a[t - 1] \x2b a[t - 2];\rb[t] = b[t - 1] \x2b b[t - 2];\r}\rcout \x26lt;\x26lt; a[n] \x26lt;\x26lt; \x26#34;\x26#34; \x26lt;\x26lt; b[n] \x26lt;\x26lt; endl;\r}\r}\r",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
@@ -32,7 +32,7 @@
         "datePublished": "0001-01-01 00:00:00 \x2b0000 UTC",
         "dateModified" : "0001-01-01 00:00:00 \x2b0000 UTC",
         "url" : "https:\/\/jyukki97.github.io\/blog\/2017-11-28-1003\/",
-        "wordCount" : "194",
+        "wordCount" : "231",
         "keywords" : [ "Blog" ]
     }
     </script>
@@ -55,13 +55,15 @@
 
         <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="1003 피보나치 함수"/>
-<meta name="twitter:description" content="https://www.acmicpc.net/problem/1003
-풀이:  0이 쓰이면 카운트 0을 &#43;&#43; 1이 쓰이면 카운트 1을 &#43;&#43;  코드: #include &lt;iostream&gt;	// 재귀를 이용using namespace std;int cnt[2] = { 0 };int fibonacci(int n) {if (n == 0) {cnt[0]&#43;&#43;;return 0;}else if (n == 1) {cnt[1]&#43;&#43;;return 1;}elsereturn fibonacci(n-1) &#43; fibonacci(n-2);}int main(void) {int T,n;cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;cnt[0] = 0;cnt[1] = 0;fibonacci(n);cout &lt;&lt; cnt[0] &lt;&lt; &quot; &quot; &lt;&lt; cnt[1] &lt;&lt; endl;}return 0;}}#include &lt;iostream&gt;	// 포문 이용using namespace std;int main(void) {int T, n;int a[41] = { 0 };int b[41] = { 0 };cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;a[0] = 1;a[1] = 0;b[0] = 0;b[1] = 1;for (int t = 2; t &lt;= n; t&#43;&#43;) {a[t] = a[t - 1] &#43; a[t - 2];b[t] = b[t - 1] &#43; b[t - 2];}cout &lt;&lt; a[n] &lt;&lt; &quot; &quot; &lt;&lt; b[n] &lt;&lt; endl;}}"/>
+<meta name="twitter:description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2017-11-28&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]1003 피보나치 함수&rdquo; type = &ldquo;post&rdquo;
+&#43;&#43;&#43; https://www.acmicpc.net/problem/1003
+풀이:  0이 쓰이면 카운트 0을 &#43;&#43; 1이 쓰이면 카운트 1을 &#43;&#43;  코드: #include &lt;iostream&gt;	// 재귀를 이용using namespace std;int cnt[2] = { 0 };int fibonacci(int n) {if (n == 0) {cnt[0]&#43;&#43;;return 0;}else if (n == 1) {cnt[1]&#43;&#43;;return 1;}elsereturn fibonacci(n-1) &#43; fibonacci(n-2);}int main(void) {int T,n;cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;cnt[0] = 0;cnt[1] = 0;fibonacci(n);cout &lt;&lt; cnt[0] &lt;&lt; &#34;&#34; &lt;&lt; cnt[1] &lt;&lt; endl;}return 0;}}#include &lt;iostream&gt;	// 포문 이용using namespace std;int main(void) {int T, n;int a[41] = { 0 };int b[41] = { 0 };cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;a[0] = 1;a[1] = 0;b[0] = 0;b[1] = 1;for (int t = 2; t &lt;= n; t&#43;&#43;) {a[t] = a[t - 1] &#43; a[t - 2];b[t] = b[t - 1] &#43; b[t - 2];}cout &lt;&lt; a[n] &lt;&lt; &#34;&#34; &lt;&lt; b[n] &lt;&lt; endl;}}"/>
 <meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="1003 피보나치 함수" />
-<meta property="og:description" content="https://www.acmicpc.net/problem/1003
-풀이:  0이 쓰이면 카운트 0을 &#43;&#43; 1이 쓰이면 카운트 1을 &#43;&#43;  코드: #include &lt;iostream&gt;	// 재귀를 이용using namespace std;int cnt[2] = { 0 };int fibonacci(int n) {if (n == 0) {cnt[0]&#43;&#43;;return 0;}else if (n == 1) {cnt[1]&#43;&#43;;return 1;}elsereturn fibonacci(n-1) &#43; fibonacci(n-2);}int main(void) {int T,n;cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;cnt[0] = 0;cnt[1] = 0;fibonacci(n);cout &lt;&lt; cnt[0] &lt;&lt; &quot; &quot; &lt;&lt; cnt[1] &lt;&lt; endl;}return 0;}}#include &lt;iostream&gt;	// 포문 이용using namespace std;int main(void) {int T, n;int a[41] = { 0 };int b[41] = { 0 };cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;a[0] = 1;a[1] = 0;b[0] = 0;b[1] = 1;for (int t = 2; t &lt;= n; t&#43;&#43;) {a[t] = a[t - 1] &#43; a[t - 2];b[t] = b[t - 1] &#43; b[t - 2];}cout &lt;&lt; a[n] &lt;&lt; &quot; &quot; &lt;&lt; b[n] &lt;&lt; endl;}}" />
+<meta property="og:description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2017-11-28&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]1003 피보나치 함수&rdquo; type = &ldquo;post&rdquo;
+&#43;&#43;&#43; https://www.acmicpc.net/problem/1003
+풀이:  0이 쓰이면 카운트 0을 &#43;&#43; 1이 쓰이면 카운트 1을 &#43;&#43;  코드: #include &lt;iostream&gt;	// 재귀를 이용using namespace std;int cnt[2] = { 0 };int fibonacci(int n) {if (n == 0) {cnt[0]&#43;&#43;;return 0;}else if (n == 1) {cnt[1]&#43;&#43;;return 1;}elsereturn fibonacci(n-1) &#43; fibonacci(n-2);}int main(void) {int T,n;cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;cnt[0] = 0;cnt[1] = 0;fibonacci(n);cout &lt;&lt; cnt[0] &lt;&lt; &#34;&#34; &lt;&lt; cnt[1] &lt;&lt; endl;}return 0;}}#include &lt;iostream&gt;	// 포문 이용using namespace std;int main(void) {int T, n;int a[41] = { 0 };int b[41] = { 0 };cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;a[0] = 1;a[1] = 0;b[0] = 0;b[1] = 1;for (int t = 2; t &lt;= n; t&#43;&#43;) {a[t] = a[t - 1] &#43; a[t - 2];b[t] = b[t - 1] &#43; b[t - 2];}cout &lt;&lt; a[n] &lt;&lt; &#34;&#34; &lt;&lt; b[n] &lt;&lt; endl;}}" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jyukki97.github.io/blog/2017-11-28-1003/" />
 
@@ -71,10 +73,11 @@
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         <meta itemprop="name" content="1003 피보나치 함수">
-<meta itemprop="description" content="https://www.acmicpc.net/problem/1003
-풀이:  0이 쓰이면 카운트 0을 &#43;&#43; 1이 쓰이면 카운트 1을 &#43;&#43;  코드: #include &lt;iostream&gt;	// 재귀를 이용using namespace std;int cnt[2] = { 0 };int fibonacci(int n) {if (n == 0) {cnt[0]&#43;&#43;;return 0;}else if (n == 1) {cnt[1]&#43;&#43;;return 1;}elsereturn fibonacci(n-1) &#43; fibonacci(n-2);}int main(void) {int T,n;cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;cnt[0] = 0;cnt[1] = 0;fibonacci(n);cout &lt;&lt; cnt[0] &lt;&lt; &quot; &quot; &lt;&lt; cnt[1] &lt;&lt; endl;}return 0;}}#include &lt;iostream&gt;	// 포문 이용using namespace std;int main(void) {int T, n;int a[41] = { 0 };int b[41] = { 0 };cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;a[0] = 1;a[1] = 0;b[0] = 0;b[1] = 1;for (int t = 2; t &lt;= n; t&#43;&#43;) {a[t] = a[t - 1] &#43; a[t - 2];b[t] = b[t - 1] &#43; b[t - 2];}cout &lt;&lt; a[n] &lt;&lt; &quot; &quot; &lt;&lt; b[n] &lt;&lt; endl;}}">
+<meta itemprop="description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2017-11-28&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]1003 피보나치 함수&rdquo; type = &ldquo;post&rdquo;
+&#43;&#43;&#43; https://www.acmicpc.net/problem/1003
+풀이:  0이 쓰이면 카운트 0을 &#43;&#43; 1이 쓰이면 카운트 1을 &#43;&#43;  코드: #include &lt;iostream&gt;	// 재귀를 이용using namespace std;int cnt[2] = { 0 };int fibonacci(int n) {if (n == 0) {cnt[0]&#43;&#43;;return 0;}else if (n == 1) {cnt[1]&#43;&#43;;return 1;}elsereturn fibonacci(n-1) &#43; fibonacci(n-2);}int main(void) {int T,n;cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;cnt[0] = 0;cnt[1] = 0;fibonacci(n);cout &lt;&lt; cnt[0] &lt;&lt; &#34;&#34; &lt;&lt; cnt[1] &lt;&lt; endl;}return 0;}}#include &lt;iostream&gt;	// 포문 이용using namespace std;int main(void) {int T, n;int a[41] = { 0 };int b[41] = { 0 };cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;a[0] = 1;a[1] = 0;b[0] = 0;b[1] = 1;for (int t = 2; t &lt;= n; t&#43;&#43;) {a[t] = a[t - 1] &#43; a[t - 2];b[t] = b[t - 1] &#43; b[t - 2];}cout &lt;&lt; a[n] &lt;&lt; &#34;&#34; &lt;&lt; b[n] &lt;&lt; endl;}}">
 
-<meta itemprop="wordCount" content="194">
+<meta itemprop="wordCount" content="231">
 
 
 
@@ -274,45 +277,6 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/">[Pro]2016년</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2019-12-17'>
-                                    December 17, 2019</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/122019/12/" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
                                 <h3><a href="https://jyukki97.github.io/blog/2019-12-17-%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B8%B0%EB%B3%B8/">[Pro]문자열 다루기 기본</a></h3>
                                 
                                 <time class="published" datetime=
@@ -464,6 +428,45 @@ if (!doNotTrack) {
 
                         </article>
                 
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/">[Pro]2016년</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-12-13'>
+                                    December 13, 2019</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/" class="image featured">
+            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+        </a>
+    
+
+
+                        </article>
+                
 
                 
                     <a href=
@@ -494,64 +497,77 @@ if (!doNotTrack) {
 </header>
 
             <div id="content">
-                <p><a href="https://www.acmicpc.net/problem/1003">https://www.acmicpc.net/problem/1003</a></p>
-<h4 id="heading"><strong>풀이:</strong></h4>
+                <p>+++
+author = &ldquo;jyukki&rdquo;
+categories = [&ldquo;백준&rdquo;]
+tags = [&ldquo;algorithm&rdquo;, &ldquo;C++&rdquo;, &ldquo;DP&rdquo;]
+date = &ldquo;2017-11-28&rdquo;
+description = &ldquo;algorithm&rdquo;
+featured = &quot;&rdquo;
+featuredalt = &quot;&rdquo;
+featuredpath = &ldquo;date&rdquo;
+linktitle = &quot;&rdquo;
+title = &ldquo;[백준]1003 피보나치 함수&rdquo;
+type = &ldquo;post&rdquo;</p>
+<p>+++
+<a href="https://www.acmicpc.net/problem/1003">https://www.acmicpc.net/problem/1003</a></p>
+<h1 id="heading"><strong>풀이:</strong></h1>
 <ol>
 <li>0이 쓰이면 카운트 0을 ++</li>
 <li>1이 쓰이면 카운트 1을 ++</li>
 </ol>
-<h4 id="heading-1"><strong>코드:</strong></h4>
-<pre><code>#include &lt;iostream&gt;		// 재귀를 이용
-using namespace std;
-int cnt[2] = { 0 };
-int fibonacci(int n) {
-	if (n == 0) {
-		cnt[0]++;
-		return 0;
+<h1 id="heading-1"><strong>코드:</strong></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;		// 재귀를 이용</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#66d9ef">int</span> cnt[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> { <span style="color:#ae81ff">0</span> };
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">fibonacci</span>(<span style="color:#66d9ef">int</span> n) {
+	<span style="color:#66d9ef">if</span> (n <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>) {
+		cnt[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span><span style="color:#f92672">+</span>;
+		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 	}
-	else if (n == 1) {
-		cnt[1]++;
-		return 1;
+	<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>) {
+		cnt[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span><span style="color:#f92672">+</span>;
+		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
 	}
-	else
-		return fibonacci(n-1) + fibonacci(n-2);
+	<span style="color:#66d9ef">else</span>
+		<span style="color:#66d9ef">return</span> fibonacci(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> fibonacci(n<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>);
 }
 
-int main(void) {
-	int T,n;
-	cin &gt;&gt; T;
-	for (int i = 0; i &lt; T; i++) {
-		cin &gt;&gt; n;
-		cnt[0] = 0;
-		cnt[1] = 0;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>) {
+	<span style="color:#66d9ef">int</span> T,n;
+	cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> T;
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> T; i<span style="color:#f92672">+</span><span style="color:#f92672">+</span>) {
+		cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> n;
+		cnt[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+		cnt[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
 		fibonacci(n);
-		cout &lt;&lt; cnt[0] &lt;&lt; &quot; &quot; &lt;&lt; cnt[1] &lt;&lt; endl;
+		cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> cnt[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74"> </span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> cnt[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> endl;
 	}
-	return 0;
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 }
 }
-</code></pre><pre><code>#include &lt;iostream&gt;			// 포문 이용
-using namespace std;
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;			// 포문 이용</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 
-int main(void) {
-	int T, n;
-	int a[41] = { 0 };
-	int b[41] = { 0 };
-	cin &gt;&gt; T;
-	for (int i = 0; i &lt; T; i++) {
-		cin &gt;&gt; n;
-		a[0] = 1;
-		a[1] = 0;
-		b[0] = 0;
-		b[1] = 1;
-		for (int t = 2; t &lt;= n; t++) {
-			a[t] = a[t - 1] + a[t - 2];
-			b[t] = b[t - 1] + b[t - 2];
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>) {
+	<span style="color:#66d9ef">int</span> T, n;
+	<span style="color:#66d9ef">int</span> a[<span style="color:#ae81ff">41</span>] <span style="color:#f92672">=</span> { <span style="color:#ae81ff">0</span> };
+	<span style="color:#66d9ef">int</span> b[<span style="color:#ae81ff">41</span>] <span style="color:#f92672">=</span> { <span style="color:#ae81ff">0</span> };
+	cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> T;
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> T; i<span style="color:#f92672">+</span><span style="color:#f92672">+</span>) {
+		cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> n;
+		a[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+		a[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+		b[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+		b[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> t <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; t <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> n; t<span style="color:#f92672">+</span><span style="color:#f92672">+</span>) {
+			a[t] <span style="color:#f92672">=</span> a[t <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> a[t <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>];
+			b[t] <span style="color:#f92672">=</span> b[t <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> b[t <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>];
 		}
-		cout &lt;&lt; a[n] &lt;&lt; &quot; &quot; &lt;&lt; b[n] &lt;&lt; endl;
+		cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> a[n] <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74"> </span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> b[n] <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> endl;
 	}
 }
-</code></pre>
+</code></pre></div>
             </div>
         </article>
     </div>
@@ -703,47 +719,6 @@ int main(void) {
           <article class="mini-post">
             <header>
               <h3>
-                <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/">[Pro]2016년</a>
-              </h3>
-              
-              <time class="published" datetime='2019-12-17'>
-                December 17, 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
-        </a>
-    
-
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
                 <a href="https://jyukki97.github.io/blog/2019-12-17-%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B8%B0%EB%B3%B8/">[Pro]문자열 다루기 기본</a>
               </h3>
               
@@ -844,9 +819,6 @@ int main(void) {
 
 
   
-  
-    
-  
 
 
         
@@ -885,9 +857,6 @@ int main(void) {
 
 
   
-  
-    
-  
 
 
         
@@ -895,6 +864,44 @@ int main(void) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-14-knum/" class="image featured">
+            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/">[Pro]2016년</a>
+              </h3>
+              
+              <time class="published" datetime='2019-12-13'>
+                December 13, 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/" class="image featured">
             <img src="https://jyukki97.github.io/img/2019/12/" alt="">
         </a>
     
@@ -935,7 +942,7 @@ int main(void) {
             <header>
               
                 <a href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80/">백준</a>
-                <span style="float:right;">17</span>
+                <span style="float:right;">39</span>
               
             </header>
           </article>
@@ -958,17 +965,6 @@ int main(void) {
               
                 Uncategorized
                 <span style="float:right;">4</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="https://jyukki97.github.io/categories/boj/">boj</a>
-                <span style="float:right;">3</span>
               
             </header>
           </article>

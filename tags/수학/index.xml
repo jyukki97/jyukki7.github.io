@@ -6,7 +6,7 @@
     <description>Recent content in 수학 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Tue, 17 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EC%88%98%ED%95%99/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>[Pro]2016년</title>
       <link>https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/</link>
-      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/</guid>
       <description>https://programmers.co.kr
@@ -97,6 +97,26 @@ for i in range(int(input())):print(sum(map(int,input().split())))</description
       <description>https://www.acmicpc.net/problem/2164
 풀이:  카드의 갯수가 2 ^ i 개일 경우 남게 되는 카드의 번호는 2 ^ i 이다. 카드의 갯수가 (2 ^ i) + n 개 일 경우 남게 되는 카드의 번호는 2 * n 이다.  코드: 사용언어 : Python 3
 n,s=int(input()),1while s&amp;lt;n:s*=2print(s if s==n else 2*n-s)</description>
+    </item>
+    
+    <item>
+      <title>[백준]1912 연속합</title>
+      <link>https://jyukki97.github.io/blog/2017-11-30-1912/</link>
+      <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-30-1912/</guid>
+      <description>https://www.acmicpc.net/problem/1912
+풀이:  a[i] 는 i번째를 골랐을 때, 최대값 만약 a[i-1] 이 0 보다 크다면, a[i] += a[i-1]  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[100001] = { 0 };int main(void) {int n;cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];}int temp = a[0];for (int i = 1; i &amp;lt; n; i++) {if(a[i-1] &amp;gt; 0)a[i] += a[i - 1];temp = max(temp, a[i]);}cout &amp;lt;&amp;lt; temp &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2163 초콜릿 자르기</title>
+      <link>https://jyukki97.github.io/blog/2017-11-30-2163/</link>
+      <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-30-2163/</guid>
+      <description>https://www.acmicpc.net/problem/2163
+풀이:  N x M 크기의 초콜릿을 자르는 최소의 경우의 수 N * M - 1  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int main(void) {int n, m;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;cout &amp;lt;&amp;lt; n*m - 1 &amp;lt;&amp;lt; endl;return 0;}</description>
     </item>
     
   </channel>

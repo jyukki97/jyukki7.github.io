@@ -33,5 +33,25 @@
 while 1:a=input()if a==&#39;END&#39;:breakprint(a[::-1])</description>
     </item>
     
+    <item>
+      <title>[백준]1718 암호</title>
+      <link>https://jyukki97.github.io/blog/2017-11-25-1718/</link>
+      <pubDate>Sat, 25 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-25-1718/</guid>
+      <description>https://www.acmicpc.net/problem/1718
+풀이:  평문에서 암호문을 뺀다. 만약 뺀 값이 0 이하일경우 z로 돌아간다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;string&amp;gt;using namespace std;int main(void) {string a;getline(cin, a);string key;cin &amp;gt;&amp;gt; key;char cy[30001] = { NULL };for (int i = 0; i &amp;lt; a.length(); i++) {if (a[i] == &amp;#39;&amp;#39;)cy[i] = &amp;#39;&amp;#39;;else if ((int)a[i] - (int)key[i%key.length()] &amp;lt;= 0)cy[i] = (char)((int)a[i] - (int)key[i%key.length()] + 122);elsecy[i] = (char)((int)a[i] - (int)key[i%key.</description>
+    </item>
+    
+    <item>
+      <title>[백준]3613 Java vs C&#43;&#43;</title>
+      <link>https://jyukki97.github.io/blog/2017-11-22-3613/</link>
+      <pubDate>Wed, 22 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-22-3613/</guid>
+      <description>https://www.acmicpc.net/problem/3613
+풀이:  java 변수면 c++로 c++ 이면 java로 변경 예외처리  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;string.h&amp;gt;using namespace std;int main(void) {char a[201];char b[201] = {&amp;#39;\n&amp;#39;};bool java = false;bool cplus = false;bool ero = true;cin &amp;gt;&amp;gt; a;int t = 0;for (int i = 0; i &amp;lt; strlen(a); i++) {if (65 &amp;lt;= (int)a[i] &amp;amp;&amp;amp; (int)a[i] &amp;lt;= 90) {if (i == 0 || cplus == true) {ero = false;break;}b[t] = &amp;#39;_&amp;#39;;t++;b[t] = a[i] + 32;java = true;}else if (a[i] == &amp;#39;_&amp;#39;) {if (i == 0 || i == strlen(a)-1 || a[i + 1] == &amp;#39;_&amp;#39; || java == true || (65 &amp;lt;= (int)a[i + 1] &amp;amp;&amp;amp; (int)a[i + 1] &amp;lt;= 90)) {ero = false;break;}b[t] = a[i + 1] - 32;i++;cplus = true;}else b[t] = a[i];t++;}if (ero == false)cout &amp;lt;&amp;lt; &amp;#34;Error!</description>
+    </item>
+    
   </channel>
 </rss>

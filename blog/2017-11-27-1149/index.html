@@ -21,7 +21,7 @@
         "articleSection" : "blog",
         "name" : "1149 RGB거리",
         "headline" : "1149 RGB거리",
-        "description" : "https:\/\/www.acmicpc.net\/problem\/1149\n풀이:  r,g,b를 각각 b[0], b[1], b[2] 로 둠. r을 선택했다면 이전에서 g,b 중 작은값에 이번에 r값을 더하는 식으로 r,g,b 반복 r,g,b 최종값에서 가장 최소값 출력  코드: #include \x26lt;iostream\x26gt;\r#include \x26lt;algorithm\x26gt;\rusing namespace std;\rint main(void) {\rint n;\rcin \x26gt;\x26gt; n;\rint a[3001];\rint b[3];\rfor (int i = 0; i \x26lt; n*3; i\x2b\x2b) {\rcin \x26gt;\x26gt; a[i];\r}\rfor (int i = 1; i \x26lt; n; i\x2b\x2b) {\rb[0] = a[0];\rb[1] = a[1];\rb[2] = a[2];\ra[0] = min(b[1], b[2]) \x2b a[i * 3];\ra[1] = min(b[0], b[2]) \x2b a[(i * 3) \x2b 1];\ra[2] = min(b[0], b[1]) \x2b a[(i * 3) \x2b 2];\r}\rint temp = min(a[0], a[1]);\rcout \x26lt;\x26lt; min(temp, a[2]) \x26lt;\x26lt; endl;\rreturn 0;\r}\r",
+        "description" : "\x2b\x2b\x2b author = \x26ldquo;jyukki\x26rdquo; categories = [\x26ldquo;백준\x26rdquo;] tags = [\x26ldquo;algorithm\x26rdquo;, \x26ldquo;C\x2b\x2b\x26rdquo;, \x26ldquo;DP\x26rdquo;] date = \x26ldquo;2017-11-27\x26rdquo; description = \x26ldquo;algorithm\x26rdquo; featured = \x26quot;\x26rdquo; featuredalt = \x26quot;\x26rdquo; featuredpath = \x26ldquo;date\x26rdquo; linktitle = \x26quot;\x26rdquo; title = \x26ldquo;[백준]1149 RGB거리\x26rdquo; type = \x26ldquo;post\x26rdquo;\n\x2b\x2b\x2b\nhttps:\/\/www.acmicpc.net\/problem\/1149\n풀이:  r,g,b를 각각 b[0], b[1], b[2] 로 둠. r을 선택했다면 이전에서 g,b 중 작은값에 이번에 r값을 더하는 식으로 r,g,b 반복 r,g,b 최종값에서 가장 최소값 출력  코드: #include \x26lt;iostream\x26gt;\r#include \x26lt;algorithm\x26gt;\rusing namespace std;\rint main(void) {\rint n;\rcin \x26gt;\x26gt; n;\rint a[3001];\rint b[3];\rfor (int i = 0; i \x26lt; n*3; i\x2b\x2b) {\rcin \x26gt;\x26gt; a[i];\r}\rfor (int i = 1; i \x26lt; n; i\x2b\x2b) {\rb[0] = a[0];\rb[1] = a[1];\rb[2] = a[2];\ra[0] = min(b[1], b[2]) \x2b a[i * 3];\ra[1] = min(b[0], b[2]) \x2b a[(i * 3) \x2b 1];\ra[2] = min(b[0], b[1]) \x2b a[(i * 3) \x2b 2];\r}\rint temp = min(a[0], a[1]);\rcout \x26lt;\x26lt; min(temp, a[2]) \x26lt;\x26lt; endl;\rreturn 0;\r}\r",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
@@ -32,7 +32,7 @@
         "datePublished": "0001-01-01 00:00:00 \x2b0000 UTC",
         "dateModified" : "0001-01-01 00:00:00 \x2b0000 UTC",
         "url" : "https:\/\/jyukki97.github.io\/blog\/2017-11-27-1149\/",
-        "wordCount" : "122",
+        "wordCount" : "160",
         "keywords" : [ "Blog" ]
     }
     </script>
@@ -55,12 +55,16 @@
 
         <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="1149 RGB거리"/>
-<meta name="twitter:description" content="https://www.acmicpc.net/problem/1149
+<meta name="twitter:description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2017-11-27&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]1149 RGB거리&rdquo; type = &ldquo;post&rdquo;
+&#43;&#43;&#43;
+https://www.acmicpc.net/problem/1149
 풀이:  r,g,b를 각각 b[0], b[1], b[2] 로 둠. r을 선택했다면 이전에서 g,b 중 작은값에 이번에 r값을 더하는 식으로 r,g,b 반복 r,g,b 최종값에서 가장 최소값 출력  코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int main(void) {int n;cin &gt;&gt; n;int a[3001];int b[3];for (int i = 0; i &lt; n*3; i&#43;&#43;) {cin &gt;&gt; a[i];}for (int i = 1; i &lt; n; i&#43;&#43;) {b[0] = a[0];b[1] = a[1];b[2] = a[2];a[0] = min(b[1], b[2]) &#43; a[i * 3];a[1] = min(b[0], b[2]) &#43; a[(i * 3) &#43; 1];a[2] = min(b[0], b[1]) &#43; a[(i * 3) &#43; 2];}int temp = min(a[0], a[1]);cout &lt;&lt; min(temp, a[2]) &lt;&lt; endl;return 0;}"/>
 <meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="1149 RGB거리" />
-<meta property="og:description" content="https://www.acmicpc.net/problem/1149
+<meta property="og:description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2017-11-27&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]1149 RGB거리&rdquo; type = &ldquo;post&rdquo;
+&#43;&#43;&#43;
+https://www.acmicpc.net/problem/1149
 풀이:  r,g,b를 각각 b[0], b[1], b[2] 로 둠. r을 선택했다면 이전에서 g,b 중 작은값에 이번에 r값을 더하는 식으로 r,g,b 반복 r,g,b 최종값에서 가장 최소값 출력  코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int main(void) {int n;cin &gt;&gt; n;int a[3001];int b[3];for (int i = 0; i &lt; n*3; i&#43;&#43;) {cin &gt;&gt; a[i];}for (int i = 1; i &lt; n; i&#43;&#43;) {b[0] = a[0];b[1] = a[1];b[2] = a[2];a[0] = min(b[1], b[2]) &#43; a[i * 3];a[1] = min(b[0], b[2]) &#43; a[(i * 3) &#43; 1];a[2] = min(b[0], b[1]) &#43; a[(i * 3) &#43; 2];}int temp = min(a[0], a[1]);cout &lt;&lt; min(temp, a[2]) &lt;&lt; endl;return 0;}" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jyukki97.github.io/blog/2017-11-27-1149/" />
@@ -71,10 +75,12 @@
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         <meta itemprop="name" content="1149 RGB거리">
-<meta itemprop="description" content="https://www.acmicpc.net/problem/1149
+<meta itemprop="description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2017-11-27&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]1149 RGB거리&rdquo; type = &ldquo;post&rdquo;
+&#43;&#43;&#43;
+https://www.acmicpc.net/problem/1149
 풀이:  r,g,b를 각각 b[0], b[1], b[2] 로 둠. r을 선택했다면 이전에서 g,b 중 작은값에 이번에 r값을 더하는 식으로 r,g,b 반복 r,g,b 최종값에서 가장 최소값 출력  코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int main(void) {int n;cin &gt;&gt; n;int a[3001];int b[3];for (int i = 0; i &lt; n*3; i&#43;&#43;) {cin &gt;&gt; a[i];}for (int i = 1; i &lt; n; i&#43;&#43;) {b[0] = a[0];b[1] = a[1];b[2] = a[2];a[0] = min(b[1], b[2]) &#43; a[i * 3];a[1] = min(b[0], b[2]) &#43; a[(i * 3) &#43; 1];a[2] = min(b[0], b[1]) &#43; a[(i * 3) &#43; 2];}int temp = min(a[0], a[1]);cout &lt;&lt; min(temp, a[2]) &lt;&lt; endl;return 0;}">
 
-<meta itemprop="wordCount" content="122">
+<meta itemprop="wordCount" content="160">
 
 
 
@@ -274,45 +280,6 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/">[Pro]2016년</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2019-12-17'>
-                                    December 17, 2019</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
                                 <h3><a href="https://jyukki97.github.io/blog/2019-12-17-%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B8%B0%EB%B3%B8/">[Pro]문자열 다루기 기본</a></h3>
                                 
                                 <time class="published" datetime=
@@ -464,6 +431,45 @@ if (!doNotTrack) {
 
                         </article>
                 
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/">[Pro]2016년</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-12-13'>
+                                    December 13, 2019</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/" class="image featured">
+            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+        </a>
+    
+
+
+                        </article>
+                
 
                 
                     <a href=
@@ -494,39 +500,52 @@ if (!doNotTrack) {
 </header>
 
             <div id="content">
-                <p><a href="https://www.acmicpc.net/problem/1149">https://www.acmicpc.net/problem/1149</a></p>
-<h4 id="heading"><strong>풀이:</strong></h4>
+                <p>+++
+author = &ldquo;jyukki&rdquo;
+categories = [&ldquo;백준&rdquo;]
+tags = [&ldquo;algorithm&rdquo;, &ldquo;C++&rdquo;, &ldquo;DP&rdquo;]
+date = &ldquo;2017-11-27&rdquo;
+description = &ldquo;algorithm&rdquo;
+featured = &quot;&rdquo;
+featuredalt = &quot;&rdquo;
+featuredpath = &ldquo;date&rdquo;
+linktitle = &quot;&rdquo;
+title = &ldquo;[백준]1149 RGB거리&rdquo;
+type = &ldquo;post&rdquo;</p>
+<p>+++</p>
+<p><a href="https://www.acmicpc.net/problem/1149">https://www.acmicpc.net/problem/1149</a></p>
+<h1 id="heading"><strong>풀이:</strong></h1>
 <ol>
 <li>r,g,b를 각각 b[0], b[1], b[2] 로 둠.</li>
 <li>r을 선택했다면 이전에서 g,b 중 작은값에 이번에 r값을 더하는 식으로 r,g,b 반복</li>
 <li>r,g,b 최종값에서 가장 최소값 출력</li>
 </ol>
-<h4 id="heading-1"><strong>코드:</strong></h4>
-<pre><code>#include &lt;iostream&gt;
-#include &lt;algorithm&gt;
-using namespace std;
+<h1 id="heading-1"><strong>코드:</strong></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;algorithm&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 
-int main(void) {
-	int n;
-	cin &gt;&gt; n;
-	int a[3001];
-	int b[3];
-	for (int i = 0; i &lt; n*3; i++) {
-		cin &gt;&gt; a[i];
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>) {
+	<span style="color:#66d9ef">int</span> n;
+	cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> n;
+	<span style="color:#66d9ef">int</span> a[<span style="color:#ae81ff">3001</span>];
+	<span style="color:#66d9ef">int</span> b[<span style="color:#ae81ff">3</span>];
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">*</span><span style="color:#ae81ff">3</span>; i<span style="color:#f92672">+</span><span style="color:#f92672">+</span>) {
+		cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> a[i];
 	}
-	for (int i = 1; i &lt; n; i++) {
-		b[0] = a[0];
-		b[1] = a[1];
-		b[2] = a[2];
-		a[0] = min(b[1], b[2]) + a[i * 3];
-		a[1] = min(b[0], b[2]) + a[(i * 3) + 1];
-		a[2] = min(b[0], b[1]) + a[(i * 3) + 2];
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">+</span><span style="color:#f92672">+</span>) {
+		b[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> a[<span style="color:#ae81ff">0</span>];
+		b[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> a[<span style="color:#ae81ff">1</span>];
+		b[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> a[<span style="color:#ae81ff">2</span>];
+		a[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> min(b[<span style="color:#ae81ff">1</span>], b[<span style="color:#ae81ff">2</span>]) <span style="color:#f92672">+</span> a[i <span style="color:#f92672">*</span> <span style="color:#ae81ff">3</span>];
+		a[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> min(b[<span style="color:#ae81ff">0</span>], b[<span style="color:#ae81ff">2</span>]) <span style="color:#f92672">+</span> a[(i <span style="color:#f92672">*</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>];
+		a[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> min(b[<span style="color:#ae81ff">0</span>], b[<span style="color:#ae81ff">1</span>]) <span style="color:#f92672">+</span> a[(i <span style="color:#f92672">*</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>];
 	}
-	int temp = min(a[0], a[1]);
-	cout &lt;&lt; min(temp, a[2]) &lt;&lt; endl;
-	return 0;
+	<span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> min(a[<span style="color:#ae81ff">0</span>], a[<span style="color:#ae81ff">1</span>]);
+	cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> min(temp, a[<span style="color:#ae81ff">2</span>]) <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> endl;
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 }
-</code></pre>
+</code></pre></div>
             </div>
         </article>
     </div>
@@ -674,47 +693,6 @@ int main(void) {
           
         
 
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/">[Pro]2016년</a>
-              </h3>
-              
-              <time class="published" datetime='2019-12-17'>
-                December 17, 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
-        </a>
-    
-
-
-          </article>
         
           <article class="mini-post">
             <header>
@@ -877,6 +855,44 @@ int main(void) {
 
           </article>
         
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/">[Pro]2016년</a>
+              </h3>
+              
+              <time class="published" datetime='2019-12-13'>
+                December 13, 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/" class="image featured">
+            <img src="https://jyukki97.github.io/img//" alt="">
+        </a>
+    
+
+
+          </article>
+        
       </div>
 
       
@@ -910,7 +926,7 @@ int main(void) {
             <header>
               
                 <a href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80/">백준</a>
-                <span style="float:right;">17</span>
+                <span style="float:right;">39</span>
               
             </header>
           </article>
@@ -933,17 +949,6 @@ int main(void) {
               
                 Uncategorized
                 <span style="float:right;">4</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="https://jyukki97.github.io/categories/boj/">boj</a>
-                <span style="float:right;">3</span>
               
             </header>
           </article>

@@ -21,7 +21,7 @@
         "articleSection" : "blog",
         "name" : "9465 스티커",
         "headline" : "9465 스티커",
-        "description" : "https:\/\/www.acmicpc.net\/problem\/9465\n풀이:  a[i][t] 는 i행 t열의 스티커를 골랐을 때 최대 점수 a[t][i] \x2b= max(a[(t \x2b 1) % 2][i - 2], a[(t \x2b 1) % 2][i - 1])  코드: #include \x26lt;iostream\x26gt;\r#include \x26lt;algorithm\x26gt;\rusing namespace std;\rint a[2][100001] = { 0 };\rint main(void) {\rint T,n;\rcin \x26gt;\x26gt; T;\rfor (int y = 0; y \x26lt; T; y\x2b\x2b) {\rcin \x26gt;\x26gt; n;\rfor (int t = 0; t \x26lt; 2; t\x2b\x2b) {\rfor (int i = 0; i \x26lt; n; i\x2b\x2b) {\rcin \x26gt;\x26gt; a[t][i];\r}\r}\rfor (int i = 1; i \x26lt; n; i\x2b\x2b) {\rfor (int t = 0; t \x26lt; 2; t\x2b\x2b) {\ra[t][i] \x2b= max(a[(t \x2b 1) % 2][i - 2], a[(t \x2b 1) % 2][i - 1]);\r}\r}\rcout \x26lt;\x26lt; max(a[0][n - 1], a[1][n - 1]) \x26lt;\x26lt; endl;\r}\r}\r",
+        "description" : "\x2b\x2b\x2b author = \x26ldquo;jyukki\x26rdquo; categories = [\x26ldquo;백준\x26rdquo;] tags = [\x26ldquo;algorithm\x26rdquo;, \x26ldquo;C\x2b\x2b\x26rdquo;, \x26ldquo;DP\x26rdquo;] date = \x26ldquo;2017-11-30\x26rdquo; description = \x26ldquo;algorithm\x26rdquo; featured = \x26quot;\x26rdquo; featuredalt = \x26quot;\x26rdquo; featuredpath = \x26ldquo;date\x26rdquo; linktitle = \x26quot;\x26rdquo; title = \x26ldquo;[백준]9465 스티커\x26rdquo; type = \x26ldquo;post\x26rdquo;\n\x2b\x2b\x2b\nhttps:\/\/www.acmicpc.net\/problem\/9465\n풀이:  a[i][t] 는 i행 t열의 스티커를 골랐을 때 최대 점수 a[t][i] \x2b= max(a[(t \x2b 1) % 2][i - 2], a[(t \x2b 1) % 2][i - 1])  코드: #include \x26lt;iostream\x26gt;\r#include \x26lt;algorithm\x26gt;\rusing namespace std;\rint a[2][100001] = { 0 };\rint main(void) {\rint T,n;\rcin \x26gt;\x26gt; T;\rfor (int y = 0; y \x26lt; T; y\x2b\x2b) {\rcin \x26gt;\x26gt; n;\rfor (int t = 0; t \x26lt; 2; t\x2b\x2b) {\rfor (int i = 0; i \x26lt; n; i\x2b\x2b) {\rcin \x26gt;\x26gt; a[t][i];\r}\r}\rfor (int i = 1; i \x26lt; n; i\x2b\x2b) {\rfor (int t = 0; t \x26lt; 2; t\x2b\x2b) {\ra[t][i] \x2b= max(a[(t \x2b 1) % 2][i - 2], a[(t \x2b 1) % 2][i - 1]);\r}\r}\rcout \x26lt;\x26lt; max(a[0][n - 1], a[1][n - 1]) \x26lt;\x26lt; endl;\r}\r}\r",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
@@ -32,7 +32,7 @@
         "datePublished": "0001-01-01 00:00:00 \x2b0000 UTC",
         "dateModified" : "0001-01-01 00:00:00 \x2b0000 UTC",
         "url" : "https:\/\/jyukki97.github.io\/blog\/2017-11-30-9465\/",
-        "wordCount" : "137",
+        "wordCount" : "175",
         "keywords" : [ "Blog" ]
     }
     </script>
@@ -55,12 +55,16 @@
 
         <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="9465 스티커"/>
-<meta name="twitter:description" content="https://www.acmicpc.net/problem/9465
+<meta name="twitter:description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2017-11-30&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]9465 스티커&rdquo; type = &ldquo;post&rdquo;
+&#43;&#43;&#43;
+https://www.acmicpc.net/problem/9465
 풀이:  a[i][t] 는 i행 t열의 스티커를 골랐을 때 최대 점수 a[t][i] &#43;= max(a[(t &#43; 1) % 2][i - 2], a[(t &#43; 1) % 2][i - 1])  코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int a[2][100001] = { 0 };int main(void) {int T,n;cin &gt;&gt; T;for (int y = 0; y &lt; T; y&#43;&#43;) {cin &gt;&gt; n;for (int t = 0; t &lt; 2; t&#43;&#43;) {for (int i = 0; i &lt; n; i&#43;&#43;) {cin &gt;&gt; a[t][i];}}for (int i = 1; i &lt; n; i&#43;&#43;) {for (int t = 0; t &lt; 2; t&#43;&#43;) {a[t][i] &#43;= max(a[(t &#43; 1) % 2][i - 2], a[(t &#43; 1) % 2][i - 1]);}}cout &lt;&lt; max(a[0][n - 1], a[1][n - 1]) &lt;&lt; endl;}}"/>
 <meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="9465 스티커" />
-<meta property="og:description" content="https://www.acmicpc.net/problem/9465
+<meta property="og:description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2017-11-30&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]9465 스티커&rdquo; type = &ldquo;post&rdquo;
+&#43;&#43;&#43;
+https://www.acmicpc.net/problem/9465
 풀이:  a[i][t] 는 i행 t열의 스티커를 골랐을 때 최대 점수 a[t][i] &#43;= max(a[(t &#43; 1) % 2][i - 2], a[(t &#43; 1) % 2][i - 1])  코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int a[2][100001] = { 0 };int main(void) {int T,n;cin &gt;&gt; T;for (int y = 0; y &lt; T; y&#43;&#43;) {cin &gt;&gt; n;for (int t = 0; t &lt; 2; t&#43;&#43;) {for (int i = 0; i &lt; n; i&#43;&#43;) {cin &gt;&gt; a[t][i];}}for (int i = 1; i &lt; n; i&#43;&#43;) {for (int t = 0; t &lt; 2; t&#43;&#43;) {a[t][i] &#43;= max(a[(t &#43; 1) % 2][i - 2], a[(t &#43; 1) % 2][i - 1]);}}cout &lt;&lt; max(a[0][n - 1], a[1][n - 1]) &lt;&lt; endl;}}" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jyukki97.github.io/blog/2017-11-30-9465/" />
@@ -71,10 +75,12 @@
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         <meta itemprop="name" content="9465 스티커">
-<meta itemprop="description" content="https://www.acmicpc.net/problem/9465
+<meta itemprop="description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2017-11-30&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]9465 스티커&rdquo; type = &ldquo;post&rdquo;
+&#43;&#43;&#43;
+https://www.acmicpc.net/problem/9465
 풀이:  a[i][t] 는 i행 t열의 스티커를 골랐을 때 최대 점수 a[t][i] &#43;= max(a[(t &#43; 1) % 2][i - 2], a[(t &#43; 1) % 2][i - 1])  코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int a[2][100001] = { 0 };int main(void) {int T,n;cin &gt;&gt; T;for (int y = 0; y &lt; T; y&#43;&#43;) {cin &gt;&gt; n;for (int t = 0; t &lt; 2; t&#43;&#43;) {for (int i = 0; i &lt; n; i&#43;&#43;) {cin &gt;&gt; a[t][i];}}for (int i = 1; i &lt; n; i&#43;&#43;) {for (int t = 0; t &lt; 2; t&#43;&#43;) {a[t][i] &#43;= max(a[(t &#43; 1) % 2][i - 2], a[(t &#43; 1) % 2][i - 1]);}}cout &lt;&lt; max(a[0][n - 1], a[1][n - 1]) &lt;&lt; endl;}}">
 
-<meta itemprop="wordCount" content="137">
+<meta itemprop="wordCount" content="175">
 
 
 
@@ -274,45 +280,6 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/">[Pro]2016년</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2019-12-17'>
-                                    December 17, 2019</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
                                 <h3><a href="https://jyukki97.github.io/blog/2019-12-17-%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B8%B0%EB%B3%B8/">[Pro]문자열 다루기 기본</a></h3>
                                 
                                 <time class="published" datetime=
@@ -464,6 +431,45 @@ if (!doNotTrack) {
 
                         </article>
                 
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/">[Pro]2016년</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-12-13'>
+                                    December 13, 2019</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/" class="image featured">
+            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+        </a>
+    
+
+
+                        </article>
+                
 
                 
                     <a href=
@@ -494,36 +500,49 @@ if (!doNotTrack) {
 </header>
 
             <div id="content">
-                <p><a href="http://www.acmicpc.net/problem/9465">https://www.acmicpc.net/problem/9465</a></p>
-<h4 id="heading"><strong>풀이:</strong></h4>
+                <p>+++
+author = &ldquo;jyukki&rdquo;
+categories = [&ldquo;백준&rdquo;]
+tags = [&ldquo;algorithm&rdquo;, &ldquo;C++&rdquo;, &ldquo;DP&rdquo;]
+date = &ldquo;2017-11-30&rdquo;
+description = &ldquo;algorithm&rdquo;
+featured = &quot;&rdquo;
+featuredalt = &quot;&rdquo;
+featuredpath = &ldquo;date&rdquo;
+linktitle = &quot;&rdquo;
+title = &ldquo;[백준]9465 스티커&rdquo;
+type = &ldquo;post&rdquo;</p>
+<p>+++</p>
+<p><a href="http://www.acmicpc.net/problem/9465">https://www.acmicpc.net/problem/9465</a></p>
+<h1 id="heading"><strong>풀이:</strong></h1>
 <ol>
 <li>a[i][t] 는 i행 t열의 스티커를 골랐을 때 최대 점수</li>
 <li>a[t][i] += max(a[(t + 1) % 2][i - 2], a[(t + 1) % 2][i - 1])</li>
 </ol>
-<h4 id="heading-1"><strong>코드:</strong></h4>
-<pre><code>#include &lt;iostream&gt;
-#include &lt;algorithm&gt;
-using namespace std;
-int a[2][100001] = { 0 };
-int main(void) {
-	int T,n;
-	cin &gt;&gt; T;
-	for (int y = 0; y &lt; T; y++) {
-		cin &gt;&gt; n;
-		for (int t = 0; t &lt; 2; t++) {
-			for (int i = 0; i &lt; n; i++) {
-				cin &gt;&gt; a[t][i];
+<h1 id="heading-1"><strong>코드:</strong></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;algorithm&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#66d9ef">int</span> a[<span style="color:#ae81ff">2</span>][<span style="color:#ae81ff">100001</span>] <span style="color:#f92672">=</span> { <span style="color:#ae81ff">0</span> };
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>) {
+	<span style="color:#66d9ef">int</span> T,n;
+	cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> T;
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; y <span style="color:#f92672">&lt;</span> T; y<span style="color:#f92672">+</span><span style="color:#f92672">+</span>) {
+		cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> n;
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> t <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; t <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span>; t<span style="color:#f92672">+</span><span style="color:#f92672">+</span>) {
+			<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">+</span><span style="color:#f92672">+</span>) {
+				cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> a[t][i];
 			}
 		}
-		for (int i = 1; i &lt; n; i++) {
-			for (int t = 0; t &lt; 2; t++) {
-				a[t][i] += max(a[(t + 1) % 2][i - 2], a[(t + 1) % 2][i - 1]);
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">+</span><span style="color:#f92672">+</span>) {
+			<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> t <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; t <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span>; t<span style="color:#f92672">+</span><span style="color:#f92672">+</span>) {
+				a[t][i] <span style="color:#f92672">+</span><span style="color:#f92672">=</span> max(a[(t <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>][i <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>], a[(t <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>][i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]);
 			}
 		}
-		cout &lt;&lt; max(a[0][n - 1], a[1][n - 1]) &lt;&lt; endl;
+		cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> max(a[<span style="color:#ae81ff">0</span>][n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>], a[<span style="color:#ae81ff">1</span>][n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]) <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> endl;
 	}
 }
-</code></pre>
+</code></pre></div>
             </div>
         </article>
     </div>
@@ -671,47 +690,6 @@ int main(void) {
           
         
 
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/">[Pro]2016년</a>
-              </h3>
-              
-              <time class="published" datetime='2019-12-17'>
-                December 17, 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
-        </a>
-    
-
-
-          </article>
         
           <article class="mini-post">
             <header>
@@ -874,6 +852,47 @@ int main(void) {
 
           </article>
         
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/">[Pro]2016년</a>
+              </h3>
+              
+              <time class="published" datetime='2019-12-13'>
+                December 13, 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/" class="image featured">
+            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+        </a>
+    
+
+
+          </article>
+        
       </div>
 
       
@@ -907,7 +926,7 @@ int main(void) {
             <header>
               
                 <a href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80/">백준</a>
-                <span style="float:right;">17</span>
+                <span style="float:right;">39</span>
               
             </header>
           </article>
@@ -930,17 +949,6 @@ int main(void) {
               
                 Uncategorized
                 <span style="float:right;">4</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="https://jyukki97.github.io/categories/boj/">boj</a>
-                <span style="float:right;">3</span>
               
             </header>
           </article>
