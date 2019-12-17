@@ -257,6 +257,16 @@ n,s=int(input()),1while s&amp;lt;n:s*=2print(s if s==n else 2*n-s)</descript
     </item>
     
     <item>
+      <title>[sw]사다리</title>
+      <link>https://jyukki97.github.io/blog/2017-11-21-sw-1210/</link>
+      <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-21-sw-1210/</guid>
+      <description>https://www.swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14ABYKADACFAYh&amp;amp;
+풀이:  int[100][100] 배열에 사다리를 저장 사다리 끝에 있는 도착점을 찾음 사다리 위로 올라가며 옆에 길이 있나 확인 맨 위에 x값을 출력  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;string&amp;gt;using namespace std;int lineup(int n[100][100], int yc, int xc, bool left, bool right) {if (yc == 0)return xc;if (xc &amp;gt; 0 &amp;amp;&amp;amp; right == false &amp;amp;&amp;amp; n[yc][xc - 1] == 1)return lineup(n, yc, xc - 1,true,false);else if (xc &amp;lt; 99 &amp;amp;&amp;amp; left==false &amp;amp;&amp;amp; n[yc][xc + 1] == 1)return lineup(n, yc, xc + 1,false,true);elsereturn lineup(n, yc - 1, xc,false,false);}int main(void) {for (int t = 1; t &amp;lt; 11; t++) {int a;cin &amp;gt;&amp;gt; a;int line[100][100];int count;for (int i = 0; i &amp;lt; 100; i++) {for (int y = 0; y &amp;lt; 100; y++) {cin &amp;gt;&amp;gt; line[i][y];}}for (int i = 0; i &amp;lt; 100; i++) {if (line[99][i] == 2) {count = i;break;}}cout &amp;lt;&amp;lt; &amp;#34;#&amp;#34; &amp;lt;&amp;lt; t &amp;lt;&amp;lt; &amp;#34;&amp;#34; &amp;lt;&amp;lt; lineup(line, 98, count, false, false) &amp;lt;&amp;lt; endl;}return 0;}}</description>
+    </item>
+    
+    <item>
       <title>[백준]1065 한수</title>
       <link>https://jyukki97.github.io/blog/2017-11-20-1065/</link>
       <pubDate>Mon, 20 Nov 2017 00:00:00 +0000</pubDate>
@@ -594,16 +604,6 @@ n=input()l=[]for i in range(len(n)):l.append(n[i:])l.sort()for i in range(l
       <guid>https://jyukki97.github.io/blog/2017-11-30-11727/</guid>
       <description>https://www.acmicpc.net/problem/11727
 풀이:  a[i] 는 타일이 2xi 일때의 경우의 수 a[i] = (2 * a[i - 2] + a[i - 1] 주어진 조건에서 10007으로 나눈 나머지를 출력하라고 하였으므로 나눠줌.  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int a[1001] = { 1,3,0 };int main(void) {int n;cin &amp;gt;&amp;gt; n;for (int i = 2; i &amp;lt; n; i++) {a[i] = (2 * a[i - 2] + a[i - 1])%10007;}cout &amp;lt;&amp;lt; a[n - 1] &amp;lt;&amp;lt; endl;return 0;}</description>
-    </item>
-    
-    <item>
-      <title>1210 Ladder1</title>
-      <link>https://jyukki97.github.io/blog/2017-11-21-sw-1210/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2017-11-21-sw-1210/</guid>
-      <description>https://www.swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14ABYKADACFAYh&amp;amp;
-풀이:  int[100][100] 배열에 사다리를 저장 사다리 끝에 있는 도착점을 찾음 사다리 위로 올라가며 옆에 길이 있나 확인 맨 위에 x값을 출력  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;string&amp;gt;using namespace std;int lineup(int n[100][100], int yc, int xc, bool left, bool right) {if (yc == 0)return xc;if (xc &amp;gt; 0 &amp;amp;&amp;amp; right == false &amp;amp;&amp;amp; n[yc][xc - 1] == 1)return lineup(n, yc, xc - 1,true,false);else if (xc &amp;lt; 99 &amp;amp;&amp;amp; left==false &amp;amp;&amp;amp; n[yc][xc + 1] == 1)return lineup(n, yc, xc + 1,false,true);elsereturn lineup(n, yc - 1, xc,false,false);}int main(void) {for (int t = 1; t &amp;lt; 11; t++) {int a;cin &amp;gt;&amp;gt; a;int line[100][100];int count;for (int i = 0; i &amp;lt; 100; i++) {for (int y = 0; y &amp;lt; 100; y++) {cin &amp;gt;&amp;gt; line[i][y];}}for (int i = 0; i &amp;lt; 100; i++) {if (line[99][i] == 2) {count = i;break;}}cout &amp;lt;&amp;lt; &amp;quot;#&amp;quot; &amp;lt;&amp;lt; t &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; lineup(line, 98, count, false, false) &amp;lt;&amp;lt; endl;}return 0;}}</description>
     </item>
     
     <item>
