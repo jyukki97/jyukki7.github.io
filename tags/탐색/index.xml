@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>탐색 on 1 Day 1 Problem</title>
+    <link>https://jyukki97.github.io/tags/%ED%83%90%EC%83%89/</link>
+    <description>Recent content in 탐색 on 1 Day 1 Problem</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <lastBuildDate>Mon, 20 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jyukki97.github.io/tags/%ED%83%90%EC%83%89/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[백준]1065 한수</title>
+      <link>https://jyukki97.github.io/blog/2017-11-20-1065/</link>
+      <pubDate>Mon, 20 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-20-1065/</guid>
+      <description>https://www.acmicpc.net/problem/1065
+풀이: 한수이면 카운트를 ++ 하는 함수를 만듦
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int hannum(int n, int c) {int b = (n % 1000) / 100;int d = ((n % 1000) % 100) / 10;int f = ((n % 1000) % 100) % 10;if (n &amp;gt; 99) {if ((b - d == d - f) &amp;amp;&amp;amp; n != 1000)c++;}elsec++;if (n == 1)return c;elsereturn hannum(n - 1, c);}int main(void) {int a;cin &amp;gt;&amp;gt; a;cout &amp;lt;&amp;lt; hannum(a, 0);return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1475 방번호</title>
+      <link>https://jyukki97.github.io/blog/2017-11-20-1475/</link>
+      <pubDate>Mon, 20 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-20-1475/</guid>
+      <description>https://www.acmicpc.net/problem/1475
+풀이:  방번호를 string에 저장 string 첫번째 자릿수부터 숫자를 확인 숫자에 맞는 배열에 ++ 배열에서 가장 큰 숫자를 가지고 있는 값을 출력  코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;string&amp;gt;using namespace std;int main(void) {string a;int b[10] = { 0 };cin &amp;gt;&amp;gt; a;for (int i = 0; i &amp;lt; a.length(); i++) {if (((int)a[i] - 48) == 6 &amp;amp;&amp;amp; b[6] &amp;gt; b[9])b[9] ++;else if (((int)a[i] - 48) == 9 &amp;amp;&amp;amp; b[6] &amp;lt; b[9])b[6] ++;elseb[(int)a[i] - 48]++;}int count = 0;for (int i = 0; i &amp;lt; 10; i++) {if (b[i] &amp;gt; count)count = b[i];}cout &amp;lt;&amp;lt; count &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+  </channel>
+</rss>

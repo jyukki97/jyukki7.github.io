@@ -6,10 +6,32 @@
     <description>Recent content in algorithm on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Mon, 16 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Pro]2016년</title>
+      <link>https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/</guid>
+      <description>https://programmers.co.kr
+풀이:  매 달 날짜를 계산하여 원하는 날짜의 요일을 구한다,  주의사항:  2016년은 윤년이다. 1월 1일은 금요일이다.  코드: 사용언어 : c++
+#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdbool.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;char* solution(int a, int b) {// 리턴할 값은 메모리를 동적 할당해주세요. int m[13] = { 0,31,29,31,30,31,30,31,31,30,31,30,31 };const char *d[8]= { &amp;#34;THU&amp;#34;,&amp;#34;FRI&amp;#34;,&amp;#34;SAT&amp;#34;,&amp;#34;SUN&amp;#34;,&amp;#34;MON&amp;#34;,&amp;#34;TUE&amp;#34;,&amp;#34;WED&amp;#34; };for(int i = 1;i &amp;lt; a;i++) {b += m[i];}b %= 7;return d[b];}</description>
+    </item>
+    
+    <item>
+      <title>[Pro]문자열 다루기 기본</title>
+      <link>https://jyukki97.github.io/blog/2019-12-17-%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B8%B0%EB%B3%B8/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-17-%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B8%B0%EB%B3%B8/</guid>
+      <description>https://programmers.co.kr
+풀이:  문자열 s의 길이가 4 또는 6 이고, 숫자로만 구성되어있는지 확인 후 아니라면 false를 리턴  코드: 사용언어 : c++
+#include &amp;lt;string&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;bool solution(string s) {bool answer = true;if (s.length() != 4 &amp;amp;&amp;amp; s.length() != 6) {answer = false;}else {for (int i = 0;i &amp;lt; s.length();i++) {if (s[i] &amp;gt; &amp;#39;9&amp;#39;) {answer = false;break;}}}return answer;}</description>
+    </item>
     
     <item>
       <title>[Pro]문자열 내 p와 y의 개수</title>
@@ -232,6 +254,29 @@ n,s=int(input()),1while s&amp;lt;n:s*=2print(s if s==n else 2*n-s)</descript
       <description>https://www.acmicpc.net/problem/2352
 풀이:  맨 처음 값부터 하나 하나 입력받는다. 입력받은 값이 벡터 안에 있는 값들 보다 크다면 벡터에 맨 뒤에 넣는다. 벡터의 처음부터 검색했을 때, 입력받은 값보다 큰 값이 있다면, 그 값과 교체한다. 벡터의 원소 갯수를 출력한다. 일반적으로 for문을 두개 쓴 O(n^2)의 코드는 시간초과가 나므로 주의하자  코드: 사용언어 : c++
 #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;vector&amp;lt;int&amp;gt;d;int main(void) {int n, s, l;cin &amp;gt;&amp;gt; n;while(n--) {cin &amp;gt;&amp;gt; s;l = lower_bound(d.</description>
+    </item>
+    
+    <item>
+      <title>[백준]1065 한수</title>
+      <link>https://jyukki97.github.io/blog/2017-11-20-1065/</link>
+      <pubDate>Mon, 20 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-20-1065/</guid>
+      <description>https://www.acmicpc.net/problem/1065
+풀이: 한수이면 카운트를 ++ 하는 함수를 만듦
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int hannum(int n, int c) {int b = (n % 1000) / 100;int d = ((n % 1000) % 100) / 10;int f = ((n % 1000) % 100) % 10;if (n &amp;gt; 99) {if ((b - d == d - f) &amp;amp;&amp;amp; n != 1000)c++;}elsec++;if (n == 1)return c;elsereturn hannum(n - 1, c);}int main(void) {int a;cin &amp;gt;&amp;gt; a;cout &amp;lt;&amp;lt; hannum(a, 0);return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1475 방번호</title>
+      <link>https://jyukki97.github.io/blog/2017-11-20-1475/</link>
+      <pubDate>Mon, 20 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-20-1475/</guid>
+      <description>https://www.acmicpc.net/problem/1475
+풀이:  방번호를 string에 저장 string 첫번째 자릿수부터 숫자를 확인 숫자에 맞는 배열에 ++ 배열에서 가장 큰 숫자를 가지고 있는 값을 출력  코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;string&amp;gt;using namespace std;int main(void) {string a;int b[10] = { 0 };cin &amp;gt;&amp;gt; a;for (int i = 0; i &amp;lt; a.length(); i++) {if (((int)a[i] - 48) == 6 &amp;amp;&amp;amp; b[6] &amp;gt; b[9])b[9] ++;else if (((int)a[i] - 48) == 9 &amp;amp;&amp;amp; b[6] &amp;lt; b[9])b[6] ++;elseb[(int)a[i] - 48]++;}int count = 0;for (int i = 0; i &amp;lt; 10; i++) {if (b[i] &amp;gt; count)count = b[i];}cout &amp;lt;&amp;lt; count &amp;lt;&amp;lt; endl;return 0;}</description>
     </item>
     
   </channel>

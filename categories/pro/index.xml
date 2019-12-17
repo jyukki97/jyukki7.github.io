@@ -6,10 +6,32 @@
     <description>Recent content in Pro on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Mon, 16 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/categories/pro/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Pro]2016년</title>
+      <link>https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/</guid>
+      <description>https://programmers.co.kr
+풀이:  매 달 날짜를 계산하여 원하는 날짜의 요일을 구한다,  주의사항:  2016년은 윤년이다. 1월 1일은 금요일이다.  코드: 사용언어 : c++
+#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdbool.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;char* solution(int a, int b) {// 리턴할 값은 메모리를 동적 할당해주세요. int m[13] = { 0,31,29,31,30,31,30,31,31,30,31,30,31 };const char *d[8]= { &amp;#34;THU&amp;#34;,&amp;#34;FRI&amp;#34;,&amp;#34;SAT&amp;#34;,&amp;#34;SUN&amp;#34;,&amp;#34;MON&amp;#34;,&amp;#34;TUE&amp;#34;,&amp;#34;WED&amp;#34; };for(int i = 1;i &amp;lt; a;i++) {b += m[i];}b %= 7;return d[b];}</description>
+    </item>
+    
+    <item>
+      <title>[Pro]문자열 다루기 기본</title>
+      <link>https://jyukki97.github.io/blog/2019-12-17-%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B8%B0%EB%B3%B8/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-17-%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B8%B0%EB%B3%B8/</guid>
+      <description>https://programmers.co.kr
+풀이:  문자열 s의 길이가 4 또는 6 이고, 숫자로만 구성되어있는지 확인 후 아니라면 false를 리턴  코드: 사용언어 : c++
+#include &amp;lt;string&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;bool solution(string s) {bool answer = true;if (s.length() != 4 &amp;amp;&amp;amp; s.length() != 6) {answer = false;}else {for (int i = 0;i &amp;lt; s.length();i++) {if (s[i] &amp;gt; &amp;#39;9&amp;#39;) {answer = false;break;}}}return answer;}</description>
+    </item>
     
     <item>
       <title>[Pro]문자열 내 p와 y의 개수</title>

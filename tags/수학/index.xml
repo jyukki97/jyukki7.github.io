@@ -6,10 +6,21 @@
     <description>Recent content in 수학 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sun, 16 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EC%88%98%ED%95%99/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Pro]2016년</title>
+      <link>https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/</guid>
+      <description>https://programmers.co.kr
+풀이:  매 달 날짜를 계산하여 원하는 날짜의 요일을 구한다,  주의사항:  2016년은 윤년이다. 1월 1일은 금요일이다.  코드: 사용언어 : c++
+#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdbool.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;char* solution(int a, int b) {// 리턴할 값은 메모리를 동적 할당해주세요. int m[13] = { 0,31,29,31,30,31,30,31,31,30,31,30,31 };const char *d[8]= { &amp;#34;THU&amp;#34;,&amp;#34;FRI&amp;#34;,&amp;#34;SAT&amp;#34;,&amp;#34;SUN&amp;#34;,&amp;#34;MON&amp;#34;,&amp;#34;TUE&amp;#34;,&amp;#34;WED&amp;#34; };for(int i = 1;i &amp;lt; a;i++) {b += m[i];}b %= 7;return d[b];}</description>
+    </item>
     
     <item>
       <title>[백준]10757 큰 수 A&#43;B</title>
