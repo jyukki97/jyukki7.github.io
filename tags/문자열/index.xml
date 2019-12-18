@@ -6,13 +6,24 @@
     <description>Recent content in 문자열 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Tue, 17 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>[Pro]문자열 다루기 기본</title>
+      <title>[프로그래머스]서울에서 김서방 찾기</title>
+      <link>https://jyukki97.github.io/blog/2019-12-18-%EA%B9%80%EC%84%9C%EB%B0%A9%EC%B0%BE%EA%B8%B0/</link>
+      <pubDate>Wed, 18 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-18-%EA%B9%80%EC%84%9C%EB%B0%A9%EC%B0%BE%EA%B8%B0/</guid>
+      <description>https://programmers.co.kr
+풀이:  string 배열 seoul의 원소 중 &amp;ldquo;Kim&amp;quot;의 위치를 찾아 반환한다.  코드: 사용언어 : c++
+#include &amp;lt;string&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;string solution(vector&amp;lt;string&amp;gt; seoul) {for (int i = 0;i &amp;lt; seoul.size();i++)if (seoul[i] == &amp;#34;Kim&amp;#34;)return &amp;#34;김서방은 &amp;#34; + to_string(i) + &amp;#34;에 있다&amp;#34;;}</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]문자열 다루기 기본</title>
       <link>https://jyukki97.github.io/blog/2019-12-17-%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B8%B0%EB%B3%B8/</link>
       <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
       
