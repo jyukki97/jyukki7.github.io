@@ -13,10 +13,10 @@
     
     <item>
       <title>[프로그래머스]체육복</title>
-      <link>https://jyukki97.github.io/blog/2019-12-15-%EC%B2%B4%EC%9C%A1%EB%B3%B5/</link>
+      <link>https://jyukki97.github.io/blog/2019-12-15-gymclothes/</link>
       <pubDate>Sun, 15 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://jyukki97.github.io/blog/2019-12-15-%EC%B2%B4%EC%9C%A1%EB%B3%B5/</guid>
+      <guid>https://jyukki97.github.io/blog/2019-12-15-gymclothes/</guid>
       <description>https://programmers.co.kr
 풀이:   학생 전체 중 체육복을 잃어버린 학생과 체육복을 추가로 가져온 학생을 정리한다.(체육복을 추가로 가져온 학생들 중 체육복을 잃어버린 학생이 있을 수 있기 때문에)
   체육복이 없는 학생 중 양 옆에 여벌의 체육복을 가져온 학생이 있는경우 빌려입는다.

@@ -13,10 +13,10 @@
     
     <item>
       <title>[프로그래머스]2016년</title>
-      <link>https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/</link>
+      <link>https://jyukki97.github.io/blog/2019-12-13-2016year/</link>
       <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://jyukki97.github.io/blog/2019-12-13-2016%EB%85%84/</guid>
+      <guid>https://jyukki97.github.io/blog/2019-12-13-2016year/</guid>
       <description>https://programmers.co.kr
 풀이:  매 달 날짜를 계산하여 원하는 날짜의 요일을 구한다,  주의사항:  2016년은 윤년이다. 1월 1일은 금요일이다.  코드: 사용언어 : c++
 #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdbool.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;char* solution(int a, int b) {// 리턴할 값은 메모리를 동적 할당해주세요. int m[13] = { 0,31,29,31,30,31,30,31,31,30,31,30,31 };const char *d[8]= { &amp;#34;THU&amp;#34;,&amp;#34;FRI&amp;#34;,&amp;#34;SAT&amp;#34;,&amp;#34;SUN&amp;#34;,&amp;#34;MON&amp;#34;,&amp;#34;TUE&amp;#34;,&amp;#34;WED&amp;#34; };for(int i = 1;i &amp;lt; a;i++) {b += m[i];}b %= 7;return d[b];}</description>
@@ -97,6 +97,17 @@ for i in range(int(input())):print(sum(map(int,input().split())))</description
       <description>https://www.acmicpc.net/problem/2164
 풀이:  카드의 갯수가 2 ^ i 개일 경우 남게 되는 카드의 번호는 2 ^ i 이다. 카드의 갯수가 (2 ^ i) + n 개 일 경우 남게 되는 카드의 번호는 2 * n 이다.  코드: 사용언어 : Python 3
 n,s=int(input()),1while s&amp;lt;n:s*=2print(s if s==n else 2*n-s)</description>
+    </item>
+    
+    <item>
+      <title>[백준]2154 수 이어 쓰기 3</title>
+      <link>https://jyukki97.github.io/blog/2018-02-03-2154/</link>
+      <pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2018-02-03-2154/</guid>
+      <description>https://www.acmicpc.net/problem/2154
+풀이:  전체 수를 string타입으로 나열한다. 그 숫자 중 제시된 숫자 n이 맨 처음으로 나오는 인덱스를 출력한다.  코드: 사용언어 : Python 3
+n,s=int(input()),&amp;#34;&amp;#34;for i in range(1,n+1):s+=str(i)print(s.find(str(n))+1)</description>
     </item>
     
     <item>
