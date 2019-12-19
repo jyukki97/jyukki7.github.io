@@ -82,7 +82,6 @@
 <meta name="twitter:title" content="5069 미로에 갇힌 상근"/>
 <meta name="twitter:description" content="https://www.acmicpc.net/problem/5069
 풀이:  s[n][t][y]를 n번 이동해서 (t, y)인 방으로 다시 돌아오는 경우의 수라고 한다. 처음 상근이가 있는 방을 (10, 10)이라고 한다(n의 최대 수가 14 이므로 10칸을 넘어가지 않기 때문에) s[n][10][10] 은 n번 이동해서 상근이가 있는 방으로 돌아와야하므로 상근이의 근처에 있는 모든 n-1번 이동하여 돌아오는 경우의 수들의 합과 같다. 즉 s[n][10][10] = s[n-1][10][11] &#43; s[n-1][10][9] &#43; s[n-1][11][11] &#43; s[n-1][11][10] &#43; s[n-1][9][9] &#43; s[n-1][9][10]  코드: 사용언어 : c&#43;&#43; {% highlight c&#43;&#43; %} #include using namespace std; int s[15][21][21]; int dy[] = { 0,0,1,1,-1,-1 }; int dx[] = { 1,-1,1,0,-1,0 }; int main(void) { int T, a; cin &raquo; T; s[0][10][10] = 1; for (int i = 1; i &lt; 15; i&#43;&#43;) for (int t = 1; t &lt; 21; t&#43;&#43;) for (int y = 1; y &lt; 21; y&#43;&#43;) for (int u = 0; u &lt; 6; u&#43;&#43;) if (t &#43; dx[u] &gt; 0 &amp;&amp; t &#43; dx[u] &lt; 21 &amp;&amp; y &#43; dy[u] &gt; 0 &amp;&amp; y &#43; dy[u] &lt; 21) s[i][t][y] &#43;= s[i - 1][t &#43; dx[u]][y &#43; dy[u]]; while (T&ndash;) { cin &raquo; a; cout &laquo; s[a][10][10] &laquo; endl; } return 0; } {% endhighlight %}"/>
-<meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="5069 미로에 갇힌 상근" />
 <meta property="og:description" content="https://www.acmicpc.net/problem/5069
@@ -430,6 +429,9 @@ if (!doNotTrack) {
 
 
   
+  
+    
+  
 
 
         
@@ -437,7 +439,7 @@ if (!doNotTrack) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-15-gymclothes/" class="image featured">
-            <img src="https://jyukki97.github.io/date2019/12/" alt="">
+            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
         </a>
     
 
@@ -465,6 +467,9 @@ if (!doNotTrack) {
 
 
 
+  
+  
+    
   
 
 
@@ -589,7 +594,6 @@ return 0;
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -601,11 +605,6 @@ return 0;
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -620,8 +619,6 @@ return 0;
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -645,19 +642,6 @@ return 0;
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -667,7 +651,12 @@ return 0;
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 
@@ -874,9 +863,6 @@ return 0;
 
 
   
-  
-    
-  
 
 
         
@@ -1003,7 +989,6 @@ return 0;
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -1015,11 +1000,6 @@ return 0;
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -1034,8 +1014,6 @@ return 0;
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -1059,19 +1037,6 @@ return 0;
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -1081,7 +1046,12 @@ return 0;
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 

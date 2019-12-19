@@ -83,7 +83,6 @@
 <meta name="twitter:description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2017-11-28&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]1003 피보나치 함수&rdquo; type = &ldquo;post&rdquo;
 &#43;&#43;&#43; https://www.acmicpc.net/problem/1003
 풀이:  0이 쓰이면 카운트 0을 &#43;&#43; 1이 쓰이면 카운트 1을 &#43;&#43;  코드: #include &lt;iostream&gt;	// 재귀를 이용using namespace std;int cnt[2] = { 0 };int fibonacci(int n) {if (n == 0) {cnt[0]&#43;&#43;;return 0;}else if (n == 1) {cnt[1]&#43;&#43;;return 1;}elsereturn fibonacci(n-1) &#43; fibonacci(n-2);}int main(void) {int T,n;cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;cnt[0] = 0;cnt[1] = 0;fibonacci(n);cout &lt;&lt; cnt[0] &lt;&lt; &#34;&#34; &lt;&lt; cnt[1] &lt;&lt; endl;}return 0;}}#include &lt;iostream&gt;	// 포문 이용using namespace std;int main(void) {int T, n;int a[41] = { 0 };int b[41] = { 0 };cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;a[0] = 1;a[1] = 0;b[0] = 0;b[1] = 1;for (int t = 2; t &lt;= n; t&#43;&#43;) {a[t] = a[t - 1] &#43; a[t - 2];b[t] = b[t - 1] &#43; b[t - 2];}cout &lt;&lt; a[n] &lt;&lt; &#34;&#34; &lt;&lt; b[n] &lt;&lt; endl;}}"/>
-<meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="1003 피보나치 함수" />
 <meta property="og:description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2017-11-28&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]1003 피보나치 함수&rdquo; type = &ldquo;post&rdquo;
@@ -404,7 +403,7 @@ if (!doNotTrack) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-16-py/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+            <img src="https://jyukki97.github.io/img/2019/122019/12/" alt="">
         </a>
     
 
@@ -472,9 +471,6 @@ if (!doNotTrack) {
 
 
   
-  
-    
-  
 
 
         
@@ -482,7 +478,7 @@ if (!doNotTrack) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-14-knum/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+            <img src="https://jyukki97.github.io/date2019/12/" alt="">
         </a>
     
 
@@ -635,7 +631,6 @@ type = &ldquo;post&rdquo;</p>
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -647,11 +642,6 @@ type = &ldquo;post&rdquo;</p>
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -666,8 +656,6 @@ type = &ldquo;post&rdquo;</p>
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -691,19 +679,6 @@ type = &ldquo;post&rdquo;</p>
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -713,7 +688,12 @@ type = &ldquo;post&rdquo;</p>
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 
@@ -879,9 +859,6 @@ type = &ldquo;post&rdquo;</p>
 
 
   
-  
-    
-  
 
 
         
@@ -889,7 +866,7 @@ type = &ldquo;post&rdquo;</p>
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-15-gymclothes/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+            <img src="https://jyukki97.github.io/img//" alt="">
         </a>
     
 
@@ -920,9 +897,6 @@ type = &ldquo;post&rdquo;</p>
 
 
   
-  
-    
-  
 
 
         
@@ -930,7 +904,7 @@ type = &ldquo;post&rdquo;</p>
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-14-knum/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+            <img src="https://jyukki97.github.io/img//" alt="">
         </a>
     
 
@@ -1049,7 +1023,6 @@ type = &ldquo;post&rdquo;</p>
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -1061,11 +1034,6 @@ type = &ldquo;post&rdquo;</p>
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -1080,8 +1048,6 @@ type = &ldquo;post&rdquo;</p>
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -1105,19 +1071,6 @@ type = &ldquo;post&rdquo;</p>
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -1127,7 +1080,12 @@ type = &ldquo;post&rdquo;</p>
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 

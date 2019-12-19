@@ -82,7 +82,6 @@
 <meta name="twitter:title" content="11060 점프 점프"/>
 <meta name="twitter:description" content="https://www.acmicpc.net/problem/11060
 풀이:  cnt[i] 는 i번째 에서의 최소 가짓수 cnt를 모두 최댓값으로 채운 후 a[i] 이하의 값으로 점프할 때 마다 cnt[i &#43; t] 값을 min(cnt[i &#43; t], cnt[i] &#43; 1) 로 해줌으로써 최소 가짓수를 찾는다 만약 도착점의 값이 처음 채운 1001과 같다면 갈 수 없는 경우이므로 -1을 출력한다.  코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int a[1001], cnt[1001];int main(void) {int n;cin &gt;&gt; n;fill_n(cnt, n, 1001);for (int i = 0; i &lt; n; i&#43;&#43;) {cin &gt;&gt; a[i];}cnt[0] = 0;for (int i = 0; i &lt; n; i&#43;&#43;) {for (int t = 1; t &lt;= a[i]; t&#43;&#43;) {cnt[i &#43; t] = min(cnt[i &#43; t], cnt[i] &#43; 1);}}if (cnt[n - 1] == 1001)cout &lt;&lt; &quot;-1&quot; &lt;&lt; endl;elsecout &lt;&lt; cnt[n - 1] &lt;&lt; endl;return 0;}"/>
-<meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="11060 점프 점프" />
 <meta property="og:description" content="https://www.acmicpc.net/problem/11060
@@ -595,7 +594,6 @@ int main(void) {
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -607,11 +605,6 @@ int main(void) {
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -626,8 +619,6 @@ int main(void) {
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -651,19 +642,6 @@ int main(void) {
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -673,7 +651,12 @@ int main(void) {
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 
@@ -798,6 +781,9 @@ int main(void) {
 
 
   
+  
+    
+  
 
 
         
@@ -805,7 +791,7 @@ int main(void) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-16-py/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+            <img src="https://jyukki97.github.io/date2019/12/" alt="">
         </a>
     
 
@@ -836,6 +822,9 @@ int main(void) {
 
 
   
+  
+    
+  
 
 
         
@@ -843,7 +832,7 @@ int main(void) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-15-gymclothes/" class="image featured">
-            <img src="https://jyukki97.github.io/img//" alt="">
+            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
         </a>
     
 
@@ -1003,7 +992,6 @@ int main(void) {
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -1015,11 +1003,6 @@ int main(void) {
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -1034,8 +1017,6 @@ int main(void) {
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -1059,19 +1040,6 @@ int main(void) {
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -1081,7 +1049,12 @@ int main(void) {
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 

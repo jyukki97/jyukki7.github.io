@@ -82,7 +82,6 @@
 <meta name="twitter:title" content="1890 점프"/>
 <meta name="twitter:description" content="https://www.acmicpc.net/problem/1890
 풀이:  cnt[y] 는 x열 y행 에서의 최대 경로의 개수 시간초과를 막기위해 if (cnt[y] &gt;= 0) 를 넣어 중복을 피함  코드: #include &lt;iostream&gt;using namespace std;int n, a[101][101];long long cnt[101][101];long long jump(int x, int y) {if (x == n - 1 &amp;&amp; y == n - 1)return 1;if (cnt[x][y] &gt;= 0)return cnt[x][y];cnt[x][y] = 0;if (a[x][y] &#43; x &lt; n)cnt[x][y] &#43;= jump(a[x][y] &#43; x, y);if (a[x][y] &#43; y &lt; n)cnt[x][y] &#43;= jump(x, a[x][y] &#43; y);return cnt[x][y];}int main(void) {cin &gt;&gt; n;for (int i = 0; i &lt; n; i&#43;&#43;) {for (int t = 0; t &lt; n; t&#43;&#43;) {cin &gt;&gt; a[i][t];}}fill(cnt[0], cnt[100], -1);cout &lt;&lt; jump(0, 0) &lt;&lt; endl;return 0;}"/>
-<meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="1890 점프" />
 <meta property="og:description" content="https://www.acmicpc.net/problem/1890
@@ -596,7 +595,6 @@ int main(void) {
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -608,11 +606,6 @@ int main(void) {
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -627,8 +620,6 @@ int main(void) {
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -652,19 +643,6 @@ int main(void) {
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -674,7 +652,12 @@ int main(void) {
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 
@@ -850,7 +833,7 @@ int main(void) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-15-gymclothes/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+            <img src="https://jyukki97.github.io/img/2019/122019/12/" alt="">
         </a>
     
 
@@ -891,7 +874,7 @@ int main(void) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-14-knum/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+            <img src="https://jyukki97.github.io/img//" alt="">
         </a>
     
 
@@ -1010,7 +993,6 @@ int main(void) {
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -1022,11 +1004,6 @@ int main(void) {
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -1041,8 +1018,6 @@ int main(void) {
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -1066,19 +1041,6 @@ int main(void) {
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -1088,7 +1050,12 @@ int main(void) {
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 

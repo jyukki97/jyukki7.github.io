@@ -82,7 +82,6 @@
 <meta name="twitter:title" content="2616 소형기관차"/>
 <meta name="twitter:description" content="https://www.acmicpc.net/problem/2616
 풀이:  a[i][t] : i 번째 까지의 소형 기관차 들이 t번째 객차까지 끌 수 있는 최대 승객의 수 첫 번째 소형기관차부터 앞으로 m칸만큼 객차칸수를 증가시켜가며 최댓값을 구한다. 만약 앞에 값이 더 크다면 앞에값을 선택한다. 객차의 칸이 겹칠 수 없으므로 이번 소형기관차(a[i][t])보다 m보다 작은 객차수를 가지고 있는 이전의 소형기관차(a[i - 1][t - m])를 이번 소형기관창의 t번째 최대 승객 수에 더해준다. a[i][t] = max(a[i][t - 1], sum[t] - sum[t - m] &#43; a[i - 1][t - m];  코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int n, m, sum[50002] = { 0 }, a[4][50002] = { 0 };int main(void) {cin &gt;&gt; n;for (int i = 1; i &lt;= n; i&#43;&#43;) {cin &gt;&gt; sum[i];sum[i] &#43;= sum[i - 1];}cin &gt;&gt; m;for (int i = 1; i &lt;= 3; i&#43;&#43;) {for (int t = i * m; t &lt;= n; t&#43;&#43;) {a[i][t] = max(a[i][t - 1], sum[t] - sum[t - m] &#43; a[i - 1][t - m]);}}cout &lt;&lt; a[3][n] &lt;&lt; endl;return 0;}시간 초과 코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int a[50001];int main(void) {int n, m;cin &gt;&gt; n;for (int i = 0; i &lt; n; i&#43;&#43;) {cin &gt;&gt; a[i];}cin &gt;&gt; m;int num = 0;for (int i = 0; i &lt;= n - 3 * m; i&#43;&#43;) {for (int t = i &#43; m; t &lt;= n - 2 * m; t&#43;&#43;) {for (int y = t &#43; m; y &lt;= n - m; y&#43;&#43;) {int cnt = 0;for (int q = 0; q &lt; m; q&#43;&#43;) {cnt &#43;= a[i &#43; q] &#43; a[t &#43; q] &#43; a[y &#43; q];}num = max(num, cnt);}}}cout &lt;&lt; num &lt;&lt; endl;return 0;}메모리 초과 코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int n, m;int sum[50002] = { 0 };int small(int a,int b,int c) {if (a &#43; 3 * m &gt; n) return 0;if (b &#43; 2 * m &gt; n) return small(a &#43; 1, a &#43; m &#43; 1, a &#43; 2 * m &#43; 1);if (c &#43; m &gt; n)	return small(a, b &#43; 1, b &#43; m &#43; 1);int num = 0;num &#43;= sum[a &#43; m] - sum[a] &#43; sum[b &#43; m] - sum[b] &#43; sum[c &#43; m] - sum[c];return num = max(num, small(a, b, c &#43; 1));}int main(void) {cin &gt;&gt; n;for (int i = 1; i &lt;= n; i&#43;&#43;) {cin &gt;&gt; sum[i];sum[i] &#43;= sum[i - 1];}cin &gt;&gt; m;cout &lt;&lt; small(0, m, 2 * m) &lt;&lt; endl;return 0;}"/>
-<meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="2616 소형기관차" />
 <meta property="og:description" content="https://www.acmicpc.net/problem/2616
@@ -401,7 +400,7 @@ if (!doNotTrack) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-16-py/" class="image featured">
-            <img src="https://jyukki97.github.io/date2019/12/" alt="">
+            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
         </a>
     
 
@@ -440,7 +439,7 @@ if (!doNotTrack) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-15-gymclothes/" class="image featured">
-            <img src="https://jyukki97.github.io/date/" alt="">
+            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
         </a>
     
 
@@ -642,7 +641,6 @@ int main(void) {
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -654,11 +652,6 @@ int main(void) {
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -673,8 +666,6 @@ int main(void) {
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -698,19 +689,6 @@ int main(void) {
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -720,7 +698,12 @@ int main(void) {
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 
@@ -896,7 +879,7 @@ int main(void) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-15-gymclothes/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+            <img src="https://jyukki97.github.io/img//" alt="">
         </a>
     
 
@@ -937,7 +920,7 @@ int main(void) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-14-knum/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+            <img src="https://jyukki97.github.io/img/2019/122019/12/" alt="">
         </a>
     
 
@@ -1056,7 +1039,6 @@ int main(void) {
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -1068,11 +1050,6 @@ int main(void) {
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -1087,8 +1064,6 @@ int main(void) {
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -1112,19 +1087,6 @@ int main(void) {
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -1134,7 +1096,12 @@ int main(void) {
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 

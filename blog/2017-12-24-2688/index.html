@@ -82,7 +82,6 @@
 <meta name="twitter:title" content="2688 줄어들지 않아"/>
 <meta name="twitter:description" content="https://www.acmicpc.net/problem/2688
 풀이:  a[t][y] : t &#43; 1 개의 자릿수에서의 줄어들지 않는 수의 갯수 a[t][y] = a[t][y - 1] &#43; a[t - 1][y] 앞자리의 갯수가 1 증가할 때 마다 이전 자릿수의 개수를 더해가는 방식으로 구한다. 최종 자릿수 9가되면 모든 수가 누적되어 있으므로 출력한다.  코드: #include &lt;iostream&gt;using namespace std;long long a[65][10] = { 1,2,3,4,5,6,7,8,9,10,0 };int main(void) {int T, n;cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;for (int t = 1; t &lt; n; t&#43;&#43;) {a[t][0] = 1;for (int y = 1; y &lt; 10; y&#43;&#43;) {a[t][y] = a[t][y - 1] &#43; a[t - 1][y];}}cout &lt;&lt; a[n - 1][9] &lt;&lt; endl;}return 0;}사간 초과 풀이:  처음 풀이를 할 때 저번 1038 감소하는 수를 푸는 것처럼 하나하나 만들어 가면서 카운트를 하려 했으나 시간초과가 난다."/>
-<meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="2688 줄어들지 않아" />
 <meta property="og:description" content="https://www.acmicpc.net/problem/2688
@@ -625,7 +624,6 @@ int main(void) {
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -637,11 +635,6 @@ int main(void) {
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -656,8 +649,6 @@ int main(void) {
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -681,19 +672,6 @@ int main(void) {
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -703,7 +681,12 @@ int main(void) {
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 
@@ -828,6 +811,9 @@ int main(void) {
 
 
   
+  
+    
+  
 
 
         
@@ -835,7 +821,7 @@ int main(void) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-16-py/" class="image featured">
-            <img src="https://jyukki97.github.io/img//" alt="">
+            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
         </a>
     
 
@@ -876,7 +862,7 @@ int main(void) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-15-gymclothes/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/122019/12/" alt="">
+            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
         </a>
     
 
@@ -917,7 +903,7 @@ int main(void) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-14-knum/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/122019/12/" alt="">
+            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
         </a>
     
 
@@ -1036,7 +1022,6 @@ int main(void) {
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -1048,11 +1033,6 @@ int main(void) {
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -1067,8 +1047,6 @@ int main(void) {
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -1092,19 +1070,6 @@ int main(void) {
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -1114,7 +1079,12 @@ int main(void) {
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 

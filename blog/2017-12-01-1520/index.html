@@ -82,7 +82,6 @@
 <meta name="twitter:title" content="1520 내리막 길"/>
 <meta name="twitter:description" content="https://www.acmicpc.net/problem/1520
 풀이:  cnt[i][t] 가 i행 t열을 골랐을 때 최대 경로의 수 이다. 왼쪽 위 부터 차례대로 방문한다. 왼쪽, 오른쪽, 위, 아래 를 모두 검사하여 지금 계단의 지점보다 낮은 지점을 찾는다. 계속 검사하면서 가다가 오른쪽 끝 즉, (n,m) 을 만나면 return 1을 해준다. 시간초과 때문에 재방문을 피하기위해 cnt의 값을 모두 -1로 바꿔놓고 0이상이면 검사를 끝내도록 하였다.  코드: #include &lt;iostream&gt;using namespace std;int n, m;int a[501][501];int cnt[501][501];int downhill(int q, int w) {if (q == n &amp;&amp; w == m)return 1;if (cnt[q][w] &gt;= 0)return cnt[q][w];cnt[q][w] = 0;int x[5] = { 0, 1, 0, -1, 0 };int y[5] = { 0, 0, 1, 0, -1 };for (int i = 0; i &lt; 5; i&#43;&#43;) {if (q &#43; x[i] &gt; 0 &amp;&amp; q &#43; x[i] &lt;= n &amp;&amp; w &#43; y[i] &gt; 0 &amp;&amp; w &#43; y[i] &lt;= m &amp;&amp; a[q &#43; x[i]][w &#43; y[i]] &lt; a[q][w]) {cnt[q][w] &#43;= downhill(q &#43; x[i], w &#43; y[i]);}}return cnt[q][w];}int main(void) {cin &gt;&gt; n &gt;&gt; m;for (int i = 1; i &lt;= n; i&#43;&#43;) {for (int t = 1; t &lt;= m; t&#43;&#43;) {cin &gt;&gt; a[i][t];}}fill(cnt[0],cnt[500], -1);cout &lt;&lt; downhill(1,1) &lt;&lt; endl;return 0;}"/>
-<meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="1520 내리막 길" />
 <meta property="og:description" content="https://www.acmicpc.net/problem/1520
@@ -603,7 +602,6 @@ int main(void) {
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -615,11 +613,6 @@ int main(void) {
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -634,8 +627,6 @@ int main(void) {
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -659,19 +650,6 @@ int main(void) {
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -681,7 +659,12 @@ int main(void) {
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 
@@ -816,7 +799,7 @@ int main(void) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-16-py/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+            <img src="https://jyukki97.github.io/date2019/12/" alt="">
         </a>
     
 
@@ -857,7 +840,7 @@ int main(void) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-15-gymclothes/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+            <img src="https://jyukki97.github.io/img//" alt="">
         </a>
     
 
@@ -888,9 +871,6 @@ int main(void) {
 
 
   
-  
-    
-  
 
 
         
@@ -898,7 +878,7 @@ int main(void) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-14-knum/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+            <img src="https://jyukki97.github.io/img//" alt="">
         </a>
     
 
@@ -1017,7 +997,6 @@ int main(void) {
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -1029,11 +1008,6 @@ int main(void) {
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -1048,8 +1022,6 @@ int main(void) {
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -1073,19 +1045,6 @@ int main(void) {
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -1095,7 +1054,12 @@ int main(void) {
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 

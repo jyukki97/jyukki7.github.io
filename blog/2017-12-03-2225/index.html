@@ -82,7 +82,6 @@
 <meta name="twitter:title" content="2225 합분해"/>
 <meta name="twitter:description" content="https://www.acmicpc.net/problem/2225
 풀이:  a[i][t] 는 0~i&#43;1 까지 정수 t&#43;1 개를 더하여 그 합이 i&#43;1 이 되는 경우의 수 이다. a[i][t] = a[i-1][t] &#43; a[i][t-1] 로 나타낼 수 있다. 이때 수의 값이 너무 커져 오버플로우가 발생할 수 있으므로 1000000000으로 나눈 나머지를 출력한다.  코드: #include &lt;iostream&gt;using namespace std;long long a[201][201];int main(void) {int n, k;cin &gt;&gt; n &gt;&gt; k;for (int i = 0; i &lt; n; i&#43;&#43;) {a[i][0] = 1;for (int t = 1; t &lt; k; t&#43;&#43;) {if (i == 0)a[i][t] = t &#43; 1;elsea[i][t] = ((a[i - 1][t]) % 1000000000 &#43; (a[i][t - 1]) % 1000000000) % 1000000000;}}cout &lt;&lt; a[n - 1][k - 1] &lt;&lt; endl;return 0;}"/>
-<meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="2225 합분해" />
 <meta property="og:description" content="https://www.acmicpc.net/problem/2225
@@ -588,7 +587,6 @@ int main(void) {
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -600,11 +598,6 @@ int main(void) {
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -619,8 +612,6 @@ int main(void) {
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -644,19 +635,6 @@ int main(void) {
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -666,7 +644,12 @@ int main(void) {
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 
@@ -1002,7 +985,6 @@ int main(void) {
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -1014,11 +996,6 @@ int main(void) {
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -1033,8 +1010,6 @@ int main(void) {
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -1058,19 +1033,6 @@ int main(void) {
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -1080,7 +1042,12 @@ int main(void) {
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 

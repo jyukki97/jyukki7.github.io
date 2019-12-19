@@ -82,7 +82,6 @@
 <meta name="twitter:title" content="4781 사탕 가게"/>
 <meta name="twitter:description" content="https://www.acmicpc.net/problem/4781
 풀이:  dp[a]를 a원으로 구매할 수 있는 가장 높은 칼로리라고 한다. 사탕의 칼로리를 s, 가격을 d라고 했을 때, 현제 a원으로 구매할 수 있는 가장 높은 칼로리와 a-d원 으로 구매할 수 있는 가장높을칼로리 &#43; s 를 비교하여 높은 값으로 교체한다. 즉, dp[t] = max(dp[t], dp[t - d] &#43; s) 를 반복하여 do[m]값을 구한다.  코드: 사용언어 : c&#43;&#43; {% highlight c&#43;&#43; %} #include #include #include using namespace std; double M1, d1; int N, M, s, d, dp[10002]; int main(void) { while (1) { memset(dp, 0, sizeof(dp)); cin &raquo; N &raquo; M1; if (N == 0) break; M = M1 * 100; for (int i = 0; i &lt; N; i&#43;&#43;) { cin &raquo; s &raquo; d1; d = d1 * 100; for (int t = d; t &lt;= M; t&#43;&#43;) dp[t] = max(dp[t], dp[t - d] &#43; s); } cout &laquo; dp[M] &laquo; endl; } return 0; } {% endhighlight %}"/>
-<meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="4781 사탕 가게" />
 <meta property="og:description" content="https://www.acmicpc.net/problem/4781
@@ -597,7 +596,6 @@ return 0;
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -609,11 +607,6 @@ return 0;
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -628,8 +621,6 @@ return 0;
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -653,19 +644,6 @@ return 0;
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -675,7 +653,12 @@ return 0;
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 
@@ -800,6 +783,9 @@ return 0;
 
 
   
+  
+    
+  
 
 
         
@@ -807,7 +793,7 @@ return 0;
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-16-py/" class="image featured">
-            <img src="https://jyukki97.github.io/date2019/12/" alt="">
+            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
         </a>
     
 
@@ -838,6 +824,9 @@ return 0;
 
 
   
+  
+    
+  
 
 
         
@@ -845,7 +834,7 @@ return 0;
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-15-gymclothes/" class="image featured">
-            <img src="https://jyukki97.github.io/date2019/12/" alt="">
+            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
         </a>
     
 
@@ -876,6 +865,9 @@ return 0;
 
 
   
+  
+    
+  
 
 
         
@@ -883,7 +875,7 @@ return 0;
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-14-knum/" class="image featured">
-            <img src="https://jyukki97.github.io/img//" alt="">
+            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
         </a>
     
 
@@ -1002,7 +994,6 @@ return 0;
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -1014,11 +1005,6 @@ return 0;
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -1033,8 +1019,6 @@ return 0;
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -1058,19 +1042,6 @@ return 0;
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -1080,7 +1051,12 @@ return 0;
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 

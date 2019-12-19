@@ -82,7 +82,6 @@
 <meta name="twitter:title" content="1660 캡틴 이다솜"/>
 <meta name="twitter:description" content="https://www.acmicpc.net/problem/1660
 풀이:  b[i] : i개의 대포알의 개수로 만들 수 있는 사면체의 최소 개수 a[i] : 사면체의 사이즈가 i인 대포알의 개수 b[i] = min(b[i], b[num - a[i]] &#43; 1)  주의사항:  시간초과에 유의하여 메모이제이션을 하도록한다. min함수를 사용하므로 초기값을 매우 크게 잡아주는 것을 잊지말자.  코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int a[200] = { 0 }, b[300010] = { 0 }, q = 1;int	cap(int num) {if (num &lt;= 0 )	return 0;if (b[num])	return b[num];b[num] = 300000;for (int i = q; i &gt; 0; i--) {if (a[i] &lt;= num)b[num] = min(b[num], cap(num - a[i]) &#43; 1);}return b[num];}int main(void) {int n, cnt = 1;cin &gt;&gt; n;while(true) {a[q] = a[q - 1] &#43; cnt;cnt &#43;= q &#43; 1;if (a[q] &gt; n)break;q&#43;&#43;;}cout &lt;&lt; cap(n) &lt;&lt; endl;return 0;}"/>
-<meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="1660 캡틴 이다솜" />
 <meta property="og:description" content="https://www.acmicpc.net/problem/1660
@@ -604,7 +603,6 @@ int main(void) {
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -616,11 +614,6 @@ int main(void) {
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -635,8 +628,6 @@ int main(void) {
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -660,19 +651,6 @@ int main(void) {
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -682,7 +660,12 @@ int main(void) {
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 
@@ -817,7 +800,7 @@ int main(void) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-16-py/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+            <img src="https://jyukki97.github.io/img/2019/122019/12/" alt="">
         </a>
     
 
@@ -848,9 +831,6 @@ int main(void) {
 
 
   
-  
-    
-  
 
 
         
@@ -858,7 +838,7 @@ int main(void) {
         
 
         <a href="https://jyukki97.github.io/blog/2019-12-15-gymclothes/" class="image featured">
-            <img src="https://jyukki97.github.io/img/2019/12/" alt="">
+            <img src="https://jyukki97.github.io/img//" alt="">
         </a>
     
 
@@ -888,9 +868,6 @@ int main(void) {
 
 
 
-  
-  
-    
   
 
 
@@ -1018,7 +995,6 @@ int main(void) {
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -1030,11 +1006,6 @@ int main(void) {
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -1049,8 +1020,6 @@ int main(void) {
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -1074,19 +1043,6 @@ int main(void) {
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -1096,7 +1052,12 @@ int main(void) {
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 

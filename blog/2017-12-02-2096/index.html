@@ -83,7 +83,6 @@
 <meta name="twitter:description" content="https://www.acmicpc.net/problem/2096
 풀이:  b[i][0] 은 i번째 수를 골랐을 때의 최댓값 b[i][0] 은 i번째 수를 골랐을 때의 최솟값  참고: 1149 RGB거리 https://jyukki97.github.io/1149/
 코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int a[3],c[3];int main(void) {int n,temp;cin &gt;&gt; n;int b[2][3] = { 0 };for (int i = 0; i &lt; n; i&#43;&#43;) {cin &gt;&gt; a[0] &gt;&gt; a[1] &gt;&gt; a[2];c[0] = b[0][0];c[1] = b[0][1];c[2] = b[0][2];temp = max(c[1], c[0]);b[0][0] = a[0] &#43; temp;b[0][1] = a[1] &#43; max(temp, c[2]);b[0][2] = a[2] &#43; max(c[1], c[2]);c[0] = b[1][0];c[1] = b[1][1];c[2] = b[1][2];temp = min(c[1], c[0]);b[1][0] = a[0] &#43; temp;b[1][1] = a[1] &#43; min(temp, c[2]);b[1][2] = a[2] &#43; min(c[1], c[2]);}temp = max(b[0][1], b[0][0]);cout &lt;&lt; max(temp, b[0][2]) &lt;&lt; &quot; &quot;;temp = min(b[1][1], b[1][0]);cout &lt;&lt; min(temp, b[1][2]) &lt;&lt; endl;return 0;}"/>
-<meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="2096 내려가기" />
 <meta property="og:description" content="https://www.acmicpc.net/problem/2096
@@ -606,7 +605,6 @@ int main(void) {
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -618,11 +616,6 @@ int main(void) {
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -637,8 +630,6 @@ int main(void) {
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -662,19 +653,6 @@ int main(void) {
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -684,7 +662,12 @@ int main(void) {
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 
@@ -1020,7 +1003,6 @@ int main(void) {
 
 
 
-  <li><a href="//flickr.com/photos/example" target="_blank" title="Flickr" class="fa fa-flickr"></a></li>
 
 
 
@@ -1032,11 +1014,6 @@ int main(void) {
 
 
 
-  <li><a href="//linkedin.com/in/example" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
-
-
-
-  <li><a href="//linkedin.com/company/examplebusiness" target="_blank" title="LinkedIn Company" class="fa fa-linkedin"></a></li>
 
 
 
@@ -1051,8 +1028,6 @@ int main(void) {
 
 
 
-
-  <li><a href="//reddit.com/user/example" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
 
 
 
@@ -1076,19 +1051,6 @@ int main(void) {
 
 
 
-  <li><a href="//twitter.com/example" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-
-
-
-
-
-
-
-  <li><a href="//pinterest.com/example" target="_blank" title="Pinterest" class="fa fa-pinterest-p"></a></li>
-
-
-
-  <li><a href="//telegram.me/example" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
 
 
 
@@ -1098,7 +1060,12 @@ int main(void) {
 
 
 
-<li><a href="//researchgate.net/profile/example" target="_blank" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+
 
 
 
