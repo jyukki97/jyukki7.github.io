@@ -18,7 +18,7 @@
       
       <guid>https://jyukki97.github.io/blog/2019-06-09-10971/</guid>
       <description>https://www.acmicpc.net/problem/10971
-풀이:  https://jyukki97.github.io/2098/ 과 같으므로 참고  코드: 사용언어 : c++
+풀이:  [백준]2098 외판원순회 와 같으므로 참고  코드: 사용언어 : c++
 #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int w[17][17],d[17][100000], n;int T(int a, int b) {if ((1 &amp;lt;&amp;lt; n) - 1 == b &amp;amp;&amp;amp; w[a][0] != 0)return w[a][0];int &amp;amp;r = d[a][b];if (r &amp;gt; 0)return r;r = 100000000;for (int i = 0; i &amp;lt; n; i++)if (w[a][i] != 0 &amp;amp;&amp;amp; (b &amp;amp; (1 &amp;lt;&amp;lt; i)) == 0)r = min(r, w[a][i] + T(i, b | (1 &amp;lt;&amp;lt; i)));return r;}int main(void) {cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++)for (int t = 0; t &amp;lt; n; t++)cin &amp;gt;&amp;gt; w[i][t];cout &amp;lt;&amp;lt; T(0, 1) &amp;lt;&amp;lt; endl;return 0;}</description>
     </item>
     

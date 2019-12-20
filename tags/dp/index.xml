@@ -34,6 +34,66 @@
     </item>
     
     <item>
+      <title>[백준]1495 기타리스트</title>
+      <link>https://jyukki97.github.io/blog/2019-06-02-1495/</link>
+      <pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-02-1495/</guid>
+      <description>https://www.acmicpc.net/problem/1495
+풀이:  dp[a][b]를 a 번째 곡을 연주 할 때, b 볼륨으로 연주 할 수 있는가? 라고 하자. dp[0][S]는 0 번째 곡을 연주 할 때, S 볼륨으로 연주할 수 있으므로(시작지점) 1을 할당한다. 0번째 곡을 연주할 때, S볼륨으로 연주가 가능하다면, 1번째 곡을 연주할 때, S+s[1] or S-s[1] 볼륨도 연주 가능하다(0&amp;lt;=볼륨&amp;lt;=m 일때) 즉, dp[i][t + s[i]] = dp[i - 1][t] or dp[i][t - s[i]] = dp[i - 1][t] 마지막에 dp[N]값을 모두 순환하며, 가장 높은 값을 출력하고, 가능한 볼륨이 없다면 -1을 출력한다.</description>
+    </item>
+    
+    <item>
+      <title>[백준]1309 동물원</title>
+      <link>https://jyukki97.github.io/blog/2017-12-01-1309/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-01-1309/</guid>
+      <description>https://www.acmicpc.net/problem/1309
+풀이:  a[i] 가 2 x i 칸에 채울 수 있는 배치의 최댓값이라 하자. a[i] = 2 * a[i - 1] + a[i - 2] 로 구할 수 있다.  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int main(void) {int n;cin &amp;gt;&amp;gt; n;int a[100001] = { 3,7,0 };for (int i = 2; i &amp;lt; n; i++) {a[i] = (2* a[i - 1] + a[i - 2]) % 9901;}cout &amp;lt;&amp;lt; a[n - 1] % 9901 &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1520 내리막 길</title>
+      <link>https://jyukki97.github.io/blog/2017-12-01-1520/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-01-1520/</guid>
+      <description>https://www.acmicpc.net/problem/1520
+풀이:  cnt[i][t] 가 i행 t열을 골랐을 때 최대 경로의 수 이다. 왼쪽 위 부터 차례대로 방문한다. 왼쪽, 오른쪽, 위, 아래 를 모두 검사하여 지금 계단의 지점보다 낮은 지점을 찾는다. 계속 검사하면서 가다가 오른쪽 끝 즉, (n,m) 을 만나면 return 1을 해준다. 시간초과 때문에 재방문을 피하기위해 cnt의 값을 모두 -1로 바꿔놓고 0이상이면 검사를 끝내도록 하였다.  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int n, m;int a[501][501];int cnt[501][501];int downhill(int q, int w) {if (q == n &amp;amp;&amp;amp; w == m)return 1;if (cnt[q][w] &amp;gt;= 0)return cnt[q][w];cnt[q][w] = 0;int x[5] = { 0, 1, 0, -1, 0 };int y[5] = { 0, 0, 1, 0, -1 };for (int i = 0; i &amp;lt; 5; i++) {if (q + x[i] &amp;gt; 0 &amp;amp;&amp;amp; q + x[i] &amp;lt;= n &amp;amp;&amp;amp; w + y[i] &amp;gt; 0 &amp;amp;&amp;amp; w + y[i] &amp;lt;= m &amp;amp;&amp;amp; a[q + x[i]][w + y[i]] &amp;lt; a[q][w]) {cnt[q][w] += downhill(q + x[i], w + y[i]);}}return cnt[q][w];}int main(void) {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;for (int i = 1; i &amp;lt;= n; i++) {for (int t = 1; t &amp;lt;= m; t++) {cin &amp;gt;&amp;gt; a[i][t];}}fill(cnt[0],cnt[500], -1);cout &amp;lt;&amp;lt; downhill(1,1) &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1965 상자넣기</title>
+      <link>https://jyukki97.github.io/blog/2017-12-01-1965/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-01-1965/</guid>
+      <description>https://www.acmicpc.net/problem/1965
+풀이:  b[i] 가 i 번째 상자를 골랐을 때의 상자의 최대 갯수라고 하자. b[i] = b[i] + 0~i 번째 까지 중 가장 큰 값 이다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int main(void) {int n,temp;cin &amp;gt;&amp;gt; n;int a[1001] = { 0 };int b[1001];for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];b[i] = 1;}for (int i = 0; i &amp;lt; n; i++) {temp = 0;for (int t = 0; t &amp;lt;= i; t++) {if (a[i] &amp;gt; a[i - t])temp = max(b[i - t], temp);}b[i] += temp;}for (int i = 0; i &amp;lt; n; i++) {temp = max(b[i], temp);}cout &amp;lt;&amp;lt; temp &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2133 타일 채우기</title>
+      <link>https://jyukki97.github.io/blog/2017-12-01-2133/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-01-2133/</guid>
+      <description>https://www.acmicpc.net/problem/2133
+풀이:  N이 홀수라면 타일을 채울 수 없으므로 언제나 0을 출력한다. 짝수일경우 i를 N/2-1 로 생각하고 a[i] = 4 * a[i - 1] - a[i - 2] 로 구한다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;math.h&amp;gt;using namespace std;int main(void) {int n;long long a[30] = { 3,11,0 };cin &amp;gt;&amp;gt; n;if (n % 2 == 1)cout &amp;lt;&amp;lt; &amp;#34;0&amp;#34; &amp;lt;&amp;lt; endl;else {for (int t = 2; t &amp;lt; n/2; t++) {a[t] = 4*a[t-1] - a[t-2];}cout &amp;lt;&amp;lt; a[n/2-1] &amp;lt;&amp;lt; endl;}return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]6359 만취한 상범</title>
+      <link>https://jyukki97.github.io/blog/2017-12-01-6359/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-01-6359/</guid>
+      <description>https://www.acmicpc.net/problem/6359
+풀이:  n 개의 방이 있을 때 탈출할 수 있는 사람의 수는 sqrt(n)명이다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;math.h&amp;gt;using namespace std;int main(void) {int n,T;cin &amp;gt;&amp;gt; T;for (int i = 0; i &amp;lt; T; i++) {cin &amp;gt;&amp;gt; n;cout &amp;lt;&amp;lt; (int)sqrt(n) &amp;lt;&amp;lt; endl;}return 0;}</description>
+    </item>
+    
+    <item>
       <title>[백준]10844 쉬운 계단 수</title>
       <link>https://jyukki97.github.io/blog/2017-11-30-10844/</link>
       <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>

@@ -24,7 +24,7 @@
         "datePublished": "2019-06-09 00:00:00 \x2b0000 UTC",
         "dateModified" : "2019-06-09 00:00:00 \x2b0000 UTC",
         "url" : "https:\/\/jyukki97.github.io\/blog\/2019-06-09-10971\/",
-        "wordCount" : "124",
+        "wordCount" : "125",
         "keywords" : [ "algorithm","C\x2b\x2b","외판원 순회","Blog" ]
     }
     </script>
@@ -91,7 +91,7 @@
 <meta itemprop="description" content="algorithm">
 <meta itemprop="datePublished" content="2019-06-09T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-06-09T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="124">
+<meta itemprop="wordCount" content="125">
 
 
 
@@ -733,37 +733,37 @@ if (!doNotTrack) {
 
   <div id="content">
     <p><a href="http://www.acmicpc.net/problem/10971">https://www.acmicpc.net/problem/10971</a></p>
-<h4 id="heading"><strong>풀이:</strong></h4>
+<h1 id="heading"><strong>풀이:</strong></h1>
 <ol>
-<li><a href="https://jyukki97.github.io/2098/">https://jyukki97.github.io/2098/</a> 과 같으므로 참고</li>
+<li><a href="https://jyukki97.github.io/blog/2019-06-01-2098/">[백준]2098 외판원순회</a>  와 같으므로 참고</li>
 </ol>
-<h4 id="heading-1"><strong>코드:</strong></h4>
+<h1 id="heading-1"><strong>코드:</strong></h1>
 <p>사용언어 : c++</p>
-<pre><code class="language-{.c++}" data-lang="{.c++}">#include &lt;iostream&gt;
-#include &lt;algorithm&gt;
-using namespace std;
-int w[17][17],d[17][100000], n;
-int T(int a, int b) {
-	if ((1 &lt;&lt; n) - 1 == b &amp;&amp; w[a][0] != 0)
-		return w[a][0];
-	int &amp;r = d[a][b];
-	if (r &gt; 0)
-		return r;
-	r = 100000000;
-	for (int i = 0; i &lt; n; i++)
-		if (w[a][i] != 0 &amp;&amp; (b &amp; (1 &lt;&lt; i)) == 0)
-			r = min(r, w[a][i] + T(i, b | (1 &lt;&lt; i)));
-	return r;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;algorithm&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#66d9ef">int</span> w[<span style="color:#ae81ff">17</span>][<span style="color:#ae81ff">17</span>],d[<span style="color:#ae81ff">17</span>][<span style="color:#ae81ff">100000</span>], n;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">T</span>(<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b) {
+	<span style="color:#66d9ef">if</span> ((<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> n) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> b <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> w[a][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>)
+		<span style="color:#66d9ef">return</span> w[a][<span style="color:#ae81ff">0</span>];
+	<span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>r <span style="color:#f92672">=</span> d[a][b];
+	<span style="color:#66d9ef">if</span> (r <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>)
+		<span style="color:#66d9ef">return</span> r;
+	r <span style="color:#f92672">=</span> <span style="color:#ae81ff">100000000</span>;
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">+</span><span style="color:#f92672">+</span>)
+		<span style="color:#66d9ef">if</span> (w[a][i] <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> (b <span style="color:#f92672">&amp;</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> i)) <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>)
+			r <span style="color:#f92672">=</span> min(r, w[a][i] <span style="color:#f92672">+</span> T(i, b <span style="color:#f92672">|</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> i)));
+	<span style="color:#66d9ef">return</span> r;
 }
-int main(void) {
-	cin &gt;&gt; n;
-	for (int i = 0; i &lt; n; i++)
-		for (int t = 0; t &lt; n; t++)
-			cin &gt;&gt; w[i][t];
-	cout &lt;&lt; T(0, 1) &lt;&lt; endl;
-	return 0;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>) {
+	cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> n;
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">+</span><span style="color:#f92672">+</span>)
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> t <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; t <span style="color:#f92672">&lt;</span> n; t<span style="color:#f92672">+</span><span style="color:#f92672">+</span>)
+			cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> w[i][t];
+	cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> T(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>) <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> endl;
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 }
-</code></pre>
+</code></pre></div>
   </div>
 
   <footer>
@@ -1198,7 +1198,7 @@ int main(void) {
             <header>
               
                 <a href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80/">백준</a>
-                <span style="float:right;">40</span>
+                <span style="float:right;">46</span>
               
             </header>
           </article>
