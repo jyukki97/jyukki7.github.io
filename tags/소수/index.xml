@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>소수 on 1 Day 1 Problem</title>
+    <link>https://jyukki97.github.io/tags/%EC%86%8C%EC%88%98/</link>
+    <description>Recent content in 소수 on 1 Day 1 Problem</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <lastBuildDate>Thu, 19 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jyukki97.github.io/tags/%EC%86%8C%EC%88%98/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[프로그래머스]소수 찾기</title>
+      <link>https://jyukki97.github.io/blog/2019-12-19-findpnum/</link>
+      <pubDate>Thu, 19 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-19-findpnum/</guid>
+      <description>https://programmers.co.kr
+풀이:  2이상 n이하의 수들 중 소수의 갯수를 구하여 출력한다.  코드: 사용언어 : c++
+#include &amp;lt;string&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;math.h&amp;gt;using namespace std;int solution(int n) {vector&amp;lt;int&amp;gt; q = { 2 };for (int i = 3;i &amp;lt;= n;i++) {bool w = true;for (int t : q) {if (t &amp;gt; sqrt(i)) {break;}if (i % t == 0) {w = false;break;}}if (w == true) {q.</description>
+    </item>
+    
+  </channel>
+</rss>

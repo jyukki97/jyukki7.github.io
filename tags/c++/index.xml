@@ -6,10 +6,43 @@
     <description>Recent content in C&#43;&#43; on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Wed, 18 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[프로그래머스]같은 숫자는 싫어</title>
+      <link>https://jyukki97.github.io/blog/2019-12-19-samesum/</link>
+      <pubDate>Thu, 19 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-19-samesum/</guid>
+      <description>https://programmers.co.kr
+풀이:  배열 arr에서 연속적인 숫자는 하나를 제외하고 모두 삭제한 배열을 리턴한다.  코드: 사용언어 : c++
+#include &amp;lt;vector&amp;gt;#include &amp;lt;iostream&amp;gt;using namespace std;vector&amp;lt;int&amp;gt; solution(vector&amp;lt;int&amp;gt; arr) {vector&amp;lt;int&amp;gt; answer;for (int i : arr) {if (answer.size() &amp;gt; 0) {if (answer.back() != i) {answer.push_back(i);}}else {answer.push_back(i);}}return answer;}</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]소수 찾기</title>
+      <link>https://jyukki97.github.io/blog/2019-12-19-findpnum/</link>
+      <pubDate>Thu, 19 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-19-findpnum/</guid>
+      <description>https://programmers.co.kr
+풀이:  2이상 n이하의 수들 중 소수의 갯수를 구하여 출력한다.  코드: 사용언어 : c++
+#include &amp;lt;string&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;math.h&amp;gt;using namespace std;int solution(int n) {vector&amp;lt;int&amp;gt; q = { 2 };for (int i = 3;i &amp;lt;= n;i++) {bool w = true;for (int t : q) {if (t &amp;gt; sqrt(i)) {break;}if (i % t == 0) {w = false;break;}}if (w == true) {q.</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]수박수박수박수박수박수?</title>
+      <link>https://jyukki97.github.io/blog/2019-12-19-subaksubak/</link>
+      <pubDate>Thu, 19 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-19-subaksubak/</guid>
+      <description>https://programmers.co.kr
+풀이:  &amp;ldquo;수박수박수&amp;hellip;&amp;rdquo; 의 패턴을 유지하는 n만큼의 길이의 문자열을 리턴한다.  코드: 사용언어 : c++
+#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdbool.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;string.h&amp;gt;char* solution(int n) {bool c = true;char a[] = &amp;#34;수&amp;#34;;char b[] = &amp;#34;박&amp;#34;;char* answer = (char*)malloc(sizeof(char)*3*n + 1);for (int i = 0;i &amp;lt; 3*n;i+=3) {if (c) {strcpy(answer + i, a);c = false;}else {strcpy(answer + i, b);c = true;}}return answer;}</description>
+    </item>
     
     <item>
       <title>[프로그래머스]서울에서 김서방 찾기</title>
