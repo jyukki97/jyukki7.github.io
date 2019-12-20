@@ -34,6 +34,17 @@
     </item>
     
     <item>
+      <title>[백준]1937 욕심쟁이 판다</title>
+      <link>https://jyukki97.github.io/blog/2019-05-28-1937/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-05-28-1937/</guid>
+      <description>https://www.acmicpc.net/problem/1937
+풀이:  k[a][b]를 (a , b)지점에서 시작한 판다가 살아남은 최대 일수라고 한다. (a, b) 주변 십자가 방향 지점( (1,0), (-1, 0), (0, 1), (0, -1)) 에서 대나무의 양이 (a, b) 보다 낮다면 그 지점에 최대 일수에서 +1 한 값이 k[a][b] 값이 된다. 높은 값에서 낮은값으로 찾아가면서 최대 일수를 구한다. 시간초과가 날 수 있으므로 메모이제이션을 통해 시행횟수를 제한해준다.  코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, s[510][510], k[510][510];int dx[] = { 1,0,0,-1 };int dy[] = { 0,1,-1,0 };int panda(int a, int b){for (int y = 0; y &amp;lt; 4; y++)if (a + dy[y] &amp;gt;= 0 &amp;amp;&amp;amp; a + dy[y] &amp;lt; n &amp;amp;&amp;amp; b + dx[y] &amp;gt;= 0 &amp;amp;&amp;amp; b + dx[y] &amp;lt; n)if (s[a][b] &amp;lt; s[a + dy[y]][b + dx[y]]) {if(k[a + dy[y]][b + dx[y]] == 1)k[a][b] = max(k[a][b], panda(a + dy[y], b + dx[y]) + 1);elsek[a][b] = max(k[a][b], k[a + dy[y]][b + dx[y]] + 1);}return k[a][b];}int main(void) {cin &amp;gt;&amp;gt; n;int m = 1;fill(&amp;amp;k[0][0], &amp;amp;k[n][n], 1);for (int i = 0; i &amp;lt; n; i++)for (int t = 0; t &amp;lt; n; t++)cin &amp;gt;&amp;gt; s[i][t];for (int i = 0; i &amp;lt; n; i++)for (int t = 0; t &amp;lt; n; t++)m = max(m, panda(i, t));cout &amp;lt;&amp;lt; m &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
       <title>[백준]1965 상자넣기</title>
       <link>https://jyukki97.github.io/blog/2017-12-01-1965/</link>
       <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>

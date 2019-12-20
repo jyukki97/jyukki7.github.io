@@ -1,11 +1,3 @@
-
-
-
-    
-
-
-
-
 <!DOCTYPE HTML>
 
 <html>
@@ -19,25 +11,27 @@
              "@id": "https:\/\/jyukki97.github.io"
         },
         "articleSection" : "blog",
-        "name" : "1351 무한 수열",
-        "headline" : "1351 무한 수열",
-        "description" : "https:\/\/www.acmicpc.net\/problem\/1351\n풀이:  N번째 수열부터 차례대로 찾아나간다. N번째 수열이 map 에 존재한다면 그대로 리턴, 없다면 N = a\/b \x2b a\/c 로 돌아가서 찾기 N이 0이라면 1을 리턴 각각의 값이 매우 크므로 long long 사용 실패 코드 예시처럼 map을 쓰지않고 리턴을 할 경우 같은 수열이 여러번 중복되어 계산되기 때문에 시간초과가 날 수 있다.  코드: 사용언어 : c\x2b\x2b {% highlight c\x2b\x2b %} #include #include using namespace std; long long a, b, c; map\x26lt;long long, long long\x26gt; n; long long infi(long long q) { if (q == 0) return 1; if (n.",
+        "name" : "[백준]1351 무한 수열",
+        "headline" : "[백준]1351 무한 수열",
+        "description" : "algorithm",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
         "publisher": "",
         "accountablePerson" : "",
         "copyrightHolder" : "",
-        "copyrightYear" : "0001",
-        "datePublished": "0001-01-01 00:00:00 \x2b0000 UTC",
-        "dateModified" : "0001-01-01 00:00:00 \x2b0000 UTC",
+        "copyrightYear" : "2019",
+        "datePublished": "2019-03-29 00:00:00 \x2b0000 UTC",
+        "dateModified" : "2019-03-29 00:00:00 \x2b0000 UTC",
         "url" : "https:\/\/jyukki97.github.io\/blog\/2019-03-29-1351\/",
-        "wordCount" : "201",
-        "keywords" : [ "Blog" ]
+        "wordCount" : "190",
+        "keywords" : [ "algorithm","C\x2b\x2b","DP","Blog" ]
     }
     </script>
         
-            <title>1351 무한 수열 - 1 Day 1 Problem</title>
+            
+                <title>[백준]1351 무한 수열</title>
+            
         
 
         <meta charset="utf-8" />
@@ -72,37 +66,36 @@
 
 
         
+            <meta name="author" content="jyukki">
         
-            
-                <meta name="description" content="jyukki&#39;s algorithm blog">
-            
+        
+            <meta name="description" content="algorithm">
         
 
         <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="1351 무한 수열"/>
-<meta name="twitter:description" content="https://www.acmicpc.net/problem/1351
-풀이:  N번째 수열부터 차례대로 찾아나간다. N번째 수열이 map 에 존재한다면 그대로 리턴, 없다면 N = a/b &#43; a/c 로 돌아가서 찾기 N이 0이라면 1을 리턴 각각의 값이 매우 크므로 long long 사용 실패 코드 예시처럼 map을 쓰지않고 리턴을 할 경우 같은 수열이 여러번 중복되어 계산되기 때문에 시간초과가 날 수 있다.  코드: 사용언어 : c&#43;&#43; {% highlight c&#43;&#43; %} #include #include using namespace std; long long a, b, c; map&lt;long long, long long&gt; n; long long infi(long long q) { if (q == 0) return 1; if (n."/>
+<meta name="twitter:title" content="[백준]1351 무한 수열"/>
+<meta name="twitter:description" content="algorithm"/>
 
-        <meta property="og:title" content="1351 무한 수열" />
-<meta property="og:description" content="https://www.acmicpc.net/problem/1351
-풀이:  N번째 수열부터 차례대로 찾아나간다. N번째 수열이 map 에 존재한다면 그대로 리턴, 없다면 N = a/b &#43; a/c 로 돌아가서 찾기 N이 0이라면 1을 리턴 각각의 값이 매우 크므로 long long 사용 실패 코드 예시처럼 map을 쓰지않고 리턴을 할 경우 같은 수열이 여러번 중복되어 계산되기 때문에 시간초과가 날 수 있다.  코드: 사용언어 : c&#43;&#43; {% highlight c&#43;&#43; %} #include #include using namespace std; long long a, b, c; map&lt;long long, long long&gt; n; long long infi(long long q) { if (q == 0) return 1; if (n." />
+        <meta property="og:title" content="[백준]1351 무한 수열" />
+<meta property="og:description" content="algorithm" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jyukki97.github.io/blog/2019-03-29-1351/" />
-
+<meta property="article:published_time" content="2019-03-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-03-29T00:00:00+00:00" />
 
         <meta property="og:image" content="https://jyukki97.github.io/images/logo.png">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
-        <meta itemprop="name" content="1351 무한 수열">
-<meta itemprop="description" content="https://www.acmicpc.net/problem/1351
-풀이:  N번째 수열부터 차례대로 찾아나간다. N번째 수열이 map 에 존재한다면 그대로 리턴, 없다면 N = a/b &#43; a/c 로 돌아가서 찾기 N이 0이라면 1을 리턴 각각의 값이 매우 크므로 long long 사용 실패 코드 예시처럼 map을 쓰지않고 리턴을 할 경우 같은 수열이 여러번 중복되어 계산되기 때문에 시간초과가 날 수 있다.  코드: 사용언어 : c&#43;&#43; {% highlight c&#43;&#43; %} #include #include using namespace std; long long a, b, c; map&lt;long long, long long&gt; n; long long infi(long long q) { if (q == 0) return 1; if (n.">
+        <meta itemprop="name" content="[백준]1351 무한 수열">
+<meta itemprop="description" content="algorithm">
+<meta itemprop="datePublished" content="2019-03-29T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-03-29T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="190">
 
-<meta itemprop="wordCount" content="201">
 
 
-
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="algorithm,C&#43;&#43;,DP," />
         
 
         
@@ -154,6 +147,7 @@ if (!doNotTrack) {
       <div id="wrapper">
 
     
+    
 <header id="header">
     
       <h1><a href="https://jyukki97.github.io/">blog</a></h1>
@@ -202,6 +196,10 @@ if (!doNotTrack) {
     </nav>
     <nav class="main">
         <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
             
             <li class="search">
                 <a class="fa-search" href="#search">Search</a>
@@ -491,23 +489,251 @@ if (!doNotTrack) {
         
 </section>
 
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-03-29-1351%2f&amp;text=%5b%eb%b0%b1%ec%a4%80%5d1351%20%eb%ac%b4%ed%95%9c%20%ec%88%98%ec%97%b4&amp;via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-03-29-1351%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-03-29-1351%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-03-29-1351%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1351%20%eb%ac%b4%ed%95%9c%20%ec%88%98%ec%97%b4" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-03-29-1351%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1351%20%eb%ac%b4%ed%95%9c%20%ec%88%98%ec%97%b4" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-03-29-1351%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1351%20%eb%ac%b4%ed%95%9c%20%ec%88%98%ec%97%b4" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-03-29-1351%2f&amp;description=%5b%eb%b0%b1%ec%a4%80%5d1351%20%eb%ac%b4%ed%95%9c%20%ec%88%98%ec%97%b4" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by jyukki&amp;body=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-03-29-1351%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
     
     <div id="main">
+        
+        
         <article class="post">
-            
-            <header>
+  <header>
     <div class="title">
         
-            <h1><a href="https://jyukki97.github.io/blog/2019-03-29-1351/">1351 무한 수열</a></h1>
+            <h1><a href="https://jyukki97.github.io/blog/2019-03-29-1351/">[백준]1351 무한 수열</a></h1>
             
+        
+        
+            <p>algorithm</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2019-03-29'>
+            March 29, 2019</time>
+        <span class="author">jyukki</span>
+        
+            <p>1 minute read</p>
         
         
     </div>
 </header>
 
-            <div id="content">
-                <p><a href="http://www.acmicpc.net/problem/1351">https://www.acmicpc.net/problem/1351</a></p>
-<h4 id="heading"><strong>풀이:</strong></h4>
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-03-29-1351%2f&amp;text=%5b%eb%b0%b1%ec%a4%80%5d1351%20%eb%ac%b4%ed%95%9c%20%ec%88%98%ec%97%b4&amp;via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-03-29-1351%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-03-29-1351%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-03-29-1351%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1351%20%eb%ac%b4%ed%95%9c%20%ec%88%98%ec%97%b4" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-03-29-1351%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1351%20%eb%ac%b4%ed%95%9c%20%ec%88%98%ec%97%b4" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-03-29-1351%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1351%20%eb%ac%b4%ed%95%9c%20%ec%88%98%ec%97%b4" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-03-29-1351%2f&amp;description=%5b%eb%b0%b1%ec%a4%80%5d1351%20%eb%ac%b4%ed%95%9c%20%ec%88%98%ec%97%b4" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by jyukki&amp;body=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-03-29-1351%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki97.github.io/blog/2019-03-29-1351/" class="image featured">
+            <img src="https://jyukki97.github.io/img/2019/03/" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    <p><a href="http://www.acmicpc.net/problem/1351">https://www.acmicpc.net/problem/1351</a></p>
+<h1 id="heading"><strong>풀이:</strong></h1>
 <ol>
 <li>N번째 수열부터 차례대로 찾아나간다.</li>
 <li>N번째 수열이 map 에 존재한다면 그대로 리턴, 없다면 N = a/b + a/c 로 돌아가서 찾기</li>
@@ -515,51 +741,126 @@ if (!doNotTrack) {
 <li>각각의 값이 매우 크므로 long long 사용</li>
 <li>실패 코드 예시처럼 map을 쓰지않고 리턴을 할 경우 같은 수열이 여러번 중복되어 계산되기 때문에 시간초과가 날 수 있다.</li>
 </ol>
-<h4 id="heading-1"><strong>코드:</strong></h4>
-<p>사용언어 : c++
-{% highlight c++ %}
-#include <!-- raw HTML omitted -->
-#include <!-- raw HTML omitted -->
-using namespace std;
-long long a, b, c;
-map&lt;long long, long long&gt; n;
-long long infi(long long q) {
-if (q == 0)
-return 1;
-if (n.count(q / b) == 0) {
-n.insert(make_pair(q / b, infi(q / b)));
+<h1 id="heading-1"><strong>코드:</strong></h1>
+<p>사용언어 : c++</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;map&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> a, b, c;
+map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span>, <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span><span style="color:#f92672">&gt;</span> n;
+<span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> <span style="color:#a6e22e">infi</span>(<span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> q) {
+	<span style="color:#66d9ef">if</span> (q <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>)
+		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+	<span style="color:#66d9ef">if</span> (n.count(q <span style="color:#f92672">/</span> b) <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>) {
+		n.insert(make_pair(q <span style="color:#f92672">/</span> b, infi(q <span style="color:#f92672">/</span> b)));
+	}
+	<span style="color:#66d9ef">if</span> (n.count(q <span style="color:#f92672">/</span> c) <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>) {
+		n.insert(make_pair(q <span style="color:#f92672">/</span> c, infi(q <span style="color:#f92672">/</span> c)));
+	}
+	<span style="color:#66d9ef">return</span> n.at(q <span style="color:#f92672">/</span> b) <span style="color:#f92672">+</span> n.at(q <span style="color:#f92672">/</span> c);
 }
-if (n.count(q / c) == 0) {
-n.insert(make_pair(q / c, infi(q / c)));
-}
-return n.at(q / b) + n.at(q / c);
-}
-int main(void) {
-cin &raquo; a &raquo; b &raquo; c;
-cout &laquo; infi(a) &laquo; endl;
-return 0;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>) {
+	cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> a <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> b <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> c;
+	cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> infi(a) <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> endl;
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 }	
-{% endhighlight %}</p>
-<h4 id="-"><strong>실패 코드:</strong></h4>
-<p>사용언어 : c++
-{% highlight c++ %}
-#include <!-- raw HTML omitted -->
-using namespace std;
-double a, b, c;
-double infi(double q) {
-if (q == 0)
-return 1;
-return infi(q / b) + infi(q / c);
+</code></pre></div><h1 id="-"><strong>실패 코드:</strong></h1>
+<p>사용언어 : c++</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#66d9ef">double</span> a, b, c;
+<span style="color:#66d9ef">double</span> <span style="color:#a6e22e">infi</span>(<span style="color:#66d9ef">double</span> q) {
+	<span style="color:#66d9ef">if</span> (q <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>)
+		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+	<span style="color:#66d9ef">return</span> infi(q <span style="color:#f92672">/</span> b) <span style="color:#f92672">+</span> infi(q <span style="color:#f92672">/</span> c);
 }
-int main(void) {
-cin &raquo; a &raquo; b &raquo; c;
-cout &laquo; infi(a) &laquo; endl;
-return 0;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>) {
+	cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> a <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> b <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> c;
+	cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> infi(a) <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> endl;
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 }	
-{% endhighlight %}</p>
+</code></pre></div>
+  </div>
 
-            </div>
-        </article>
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80">백준</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="https://jyukki97.github.io/tags/algorithm">algorithm</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://jyukki97.github.io/tags/c&#43;&#43;">C&#43;&#43;</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://jyukki97.github.io/tags/dp">DP</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jyukki97" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="https://jyukki97.github.io/blog/2018-02-03-2154/"
+                class="button big previous">[백준]2154 수 이어 쓰기 3</a></li>
+    
+
+    
+        <li><a href="https://jyukki97.github.io/blog/2019-05-27-5069/"
+                class="button big next">[백준]5069 미로에 갇힌 상근</a></li>
+    
+</ul>
+
+
     </div>
     
 <section id="sidebar">
@@ -913,7 +1214,7 @@ return 0;
             <header>
               
                 <a href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80/">백준</a>
-                <span style="float:right;">47</span>
+                <span style="float:right;">51</span>
               
             </header>
           </article>

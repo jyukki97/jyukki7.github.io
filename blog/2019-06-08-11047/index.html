@@ -733,31 +733,31 @@ if (!doNotTrack) {
 
   <div id="content">
     <p><a href="http://www.acmicpc.net/problem/11047">https://www.acmicpc.net/problem/11047</a></p>
-<h4 id="heading"><strong>풀이:</strong></h4>
+<h1 id="heading"><strong>풀이:</strong></h1>
 <ol>
 <li>동전에 가격이 높은 것 부터 내가 필요한 가격에서 빼준다.</li>
 <li>빼준 횟수만큼 카운트를 높여준다.</li>
 <li>카운트를 출력한다.</li>
 <li>( i ≥ 2인 경우에 Ai는 Ai-1의 배수) 조건으로 인해 그냥 높은 것 부터 빼줘도 문제가 생기지않는다.</li>
 </ol>
-<h4 id="heading-1"><strong>코드:</strong></h4>
+<h1 id="heading-1"><strong>코드:</strong></h1>
 <p>사용언어 : c++</p>
-<pre><code class="language-{.c++}" data-lang="{.c++}">#include &lt;iostream&gt;
-using namespace std;
-int main() {
-	int n, k, s[12], c = 0;
-	cin &gt;&gt; n &gt;&gt; k;
-	while (n--)
-		cin &gt;&gt; s[n];
-	while (k) {
-		c += k / s[++n]; 
-		k %= s[n];
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> n, k, s[<span style="color:#ae81ff">12</span>], c <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> n <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> k;
+	<span style="color:#66d9ef">while</span> (n<span style="color:#f92672">-</span><span style="color:#f92672">-</span>)
+		cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> s[n];
+	<span style="color:#66d9ef">while</span> (k) {
+		c <span style="color:#f92672">+</span><span style="color:#f92672">=</span> k <span style="color:#f92672">/</span> s[<span style="color:#f92672">+</span><span style="color:#f92672">+</span>n]; 
+		k <span style="color:#f92672">%</span><span style="color:#f92672">=</span> s[n];
 	}
-	cout &lt;&lt; c &lt;&lt; endl;
-	return 0;
+	cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> c <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> endl;
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 }
 
-</code></pre>
+</code></pre></div>
   </div>
 
   <footer>
@@ -1192,7 +1192,7 @@ int main() {
             <header>
               
                 <a href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80/">백준</a>
-                <span style="float:right;">47</span>
+                <span style="float:right;">51</span>
               
             </header>
           </article>
