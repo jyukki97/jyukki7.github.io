@@ -311,6 +311,17 @@ n,s=int(input()),1while s&amp;lt;n:s*=2print(s if s==n else 2*n-s)</descript
     </item>
     
     <item>
+      <title>[백준]4781 사탕 가게</title>
+      <link>https://jyukki97.github.io/blog/2019-05-30-4781/</link>
+      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-05-30-4781/</guid>
+      <description>https://www.acmicpc.net/problem/4781
+풀이:  dp[a]를 a원으로 구매할 수 있는 가장 높은 칼로리라고 한다. 사탕의 칼로리를 s, 가격을 d라고 했을 때, 현제 a원으로 구매할 수 있는 가장 높은 칼로리와 a-d원 으로 구매할 수 있는 가장높을칼로리 + s 를 비교하여 높은 값으로 교체한다. 즉, dp[t] = max(dp[t], dp[t - d] + s) 를 반복하여 do[m]값을 구한다.  코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;cstring&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;double M1, d1;int N, M, s, d, dp[10002];int main(void) {while (1) {memset(dp, 0, sizeof(dp));cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M1;if (N == 0)break;M = M1 * 100;for (int i = 0; i &amp;lt; N; i++) {cin &amp;gt;&amp;gt; s &amp;gt;&amp;gt; d1;d = d1 * 100;for (int t = d; t &amp;lt;= M; t++) dp[t] = max(dp[t], dp[t - d] + s);}cout &amp;lt;&amp;lt; dp[M] &amp;lt;&amp;lt; endl;}return 0;}</description>
+    </item>
+    
+    <item>
       <title>[백준]2154 수 이어 쓰기 3</title>
       <link>https://jyukki97.github.io/blog/2018-02-03-2154/</link>
       <pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
@@ -1246,8 +1257,11 @@ https://www.acmicpc.net/problem/2579
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jyukki97.github.io/blog/2019-05-29-2662/</guid>
-      <description>https://www.acmicpc.net/problem/2662
-풀이:  dp[a][b]를 남은 금액이 a원 일 때, b번째 기업에 투자해서 얻을 수 있는 최대 이익이라고 하자. 첫번째 기업에 0원을 투자하는 것 부터 M번째 기업에 N원을 투자하는 것 까지 반복하여 최대 이익금을 구한다. 최대 이익금일 때 각 기업에 얼마를 투자했는지 구한 후 출력한다. 시간초과가 나기 쉬우므로 메모이제이션을 한다.  코드: 사용언어 : c++ {% highlight c++ %} #include #include using namespace std; int N, M, s[302][22], dp[302][22], x[302][22]; int q(int a, int c) { if (c &amp;gt; M) return 0; int &amp;amp;m = dp[a][c]; if (m !</description>
+      <description>+++ author = &amp;ldquo;jyukki&amp;rdquo; categories = [&amp;ldquo;백준&amp;rdquo;] tags = [&amp;ldquo;algorithm&amp;rdquo;, &amp;ldquo;C++&amp;rdquo;, &amp;ldquo;DP&amp;rdquo;] date = &amp;ldquo;2019-05-29&amp;rdquo; description = &amp;ldquo;algorithm&amp;rdquo; featured = &amp;quot;&amp;rdquo; featuredalt = &amp;quot;&amp;rdquo; featuredpath = &amp;ldquo;date&amp;rdquo; linktitle = &amp;quot;&amp;rdquo; title = &amp;ldquo;[백준]2662 기업 투자&amp;rdquo; type = &amp;ldquo;post&amp;rdquo;
+aliases = &amp;ldquo;/2662/&amp;rdquo;
++++
+https://www.acmicpc.net/problem/2662
+풀이:  dp[a][b]를 남은 금액이 a원 일 때, b번째 기업에 투자해서 얻을 수 있는 최대 이익이라고 하자. 첫번째 기업에 0원을 투자하는 것 부터 M번째 기업에 N원을 투자하는 것 까지 반복하여 최대 이익금을 구한다.</description>
     </item>
     
     <item>
@@ -1459,16 +1473,6 @@ n=int(input())while True:k=int(input())if k==0:breakif(k%n==0):print(k,&am
     </item>
     
     <item>
-      <title>4781 사탕 가게</title>
-      <link>https://jyukki97.github.io/blog/2019-05-30-4781/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2019-05-30-4781/</guid>
-      <description>https://www.acmicpc.net/problem/4781
-풀이:  dp[a]를 a원으로 구매할 수 있는 가장 높은 칼로리라고 한다. 사탕의 칼로리를 s, 가격을 d라고 했을 때, 현제 a원으로 구매할 수 있는 가장 높은 칼로리와 a-d원 으로 구매할 수 있는 가장높을칼로리 + s 를 비교하여 높은 값으로 교체한다. 즉, dp[t] = max(dp[t], dp[t - d] + s) 를 반복하여 do[m]값을 구한다.  코드: 사용언어 : c++ {% highlight c++ %} #include #include #include using namespace std; double M1, d1; int N, M, s, d, dp[10002]; int main(void) { while (1) { memset(dp, 0, sizeof(dp)); cin &amp;raquo; N &amp;raquo; M1; if (N == 0) break; M = M1 * 100; for (int i = 0; i &amp;lt; N; i++) { cin &amp;raquo; s &amp;raquo; d1; d = d1 * 100; for (int t = d; t &amp;lt;= M; t++) dp[t] = max(dp[t], dp[t - d] + s); } cout &amp;laquo; dp[M] &amp;laquo; endl; } return 0; } {% endhighlight %}</description>
-    </item>
-    
-    <item>
       <title>4883 삼각 그래프</title>
       <link>https://jyukki97.github.io/blog/2017-12-14-4883/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1484,8 +1488,11 @@ n=int(input())while True:k=int(input())if k==0:breakif(k%n==0):print(k,&am
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jyukki97.github.io/blog/2019-05-27-5069/</guid>
-      <description>https://www.acmicpc.net/problem/5069
-풀이:  s[n][t][y]를 n번 이동해서 (t, y)인 방으로 다시 돌아오는 경우의 수라고 한다. 처음 상근이가 있는 방을 (10, 10)이라고 한다(n의 최대 수가 14 이므로 10칸을 넘어가지 않기 때문에) s[n][10][10] 은 n번 이동해서 상근이가 있는 방으로 돌아와야하므로 상근이의 근처에 있는 모든 n-1번 이동하여 돌아오는 경우의 수들의 합과 같다. 즉 s[n][10][10] = s[n-1][10][11] + s[n-1][10][9] + s[n-1][11][11] + s[n-1][11][10] + s[n-1][9][9] + s[n-1][9][10]  코드: 사용언어 : c++ {% highlight c++ %} #include using namespace std; int s[15][21][21]; int dy[] = { 0,0,1,1,-1,-1 }; int dx[] = { 1,-1,1,0,-1,0 }; int main(void) { int T, a; cin &amp;raquo; T; s[0][10][10] = 1; for (int i = 1; i &amp;lt; 15; i++) for (int t = 1; t &amp;lt; 21; t++) for (int y = 1; y &amp;lt; 21; y++) for (int u = 0; u &amp;lt; 6; u++) if (t + dx[u] &amp;gt; 0 &amp;amp;&amp;amp; t + dx[u] &amp;lt; 21 &amp;amp;&amp;amp; y + dy[u] &amp;gt; 0 &amp;amp;&amp;amp; y + dy[u] &amp;lt; 21) s[i][t][y] += s[i - 1][t + dx[u]][y + dy[u]]; while (T&amp;ndash;) { cin &amp;raquo; a; cout &amp;laquo; s[a][10][10] &amp;laquo; endl; } return 0; } {% endhighlight %}</description>
+      <description>+++ author = &amp;ldquo;jyukki&amp;rdquo; categories = [&amp;ldquo;백준&amp;rdquo;] tags = [&amp;ldquo;algorithm&amp;rdquo;, &amp;ldquo;C++&amp;rdquo;, &amp;ldquo;DP&amp;rdquo;] date = &amp;ldquo;2019-05-27&amp;rdquo; description = &amp;ldquo;algorithm&amp;rdquo; featured = &amp;quot;&amp;rdquo; featuredalt = &amp;quot;&amp;rdquo; featuredpath = &amp;ldquo;date&amp;rdquo; linktitle = &amp;quot;&amp;rdquo; title = &amp;ldquo;[백준]5069 미로에 갇힌 상근&amp;rdquo; type = &amp;ldquo;post&amp;rdquo;
+aliases = &amp;ldquo;/5069/&amp;rdquo;
++++
+https://www.acmicpc.net/problem/5069
+풀이:  s[n][t][y]를 n번 이동해서 (t, y)인 방으로 다시 돌아오는 경우의 수라고 한다. 처음 상근이가 있는 방을 (10, 10)이라고 한다(n의 최대 수가 14 이므로 10칸을 넘어가지 않기 때문에) s[n][10][10] 은 n번 이동해서 상근이가 있는 방으로 돌아와야하므로 상근이의 근처에 있는 모든 n-1번 이동하여 돌아오는 경우의 수들의 합과 같다.</description>
     </item>
     
     <item>

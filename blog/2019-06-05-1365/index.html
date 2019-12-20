@@ -733,32 +733,32 @@ if (!doNotTrack) {
 
   <div id="content">
     <p><a href="http://www.acmicpc.net/problem/1365">https://www.acmicpc.net/problem/1365</a></p>
-<h4 id="heading"><strong>풀이:</strong></h4>
+<h1 id="heading"><strong>풀이:</strong></h1>
 <ol>
 <li><a href="https://jyukki97.github.io/2352/">https://jyukki97.github.io/2352/</a> 와 같은 문제이므로 참고</li>
 </ol>
-<h4 id="heading-1"><strong>코드:</strong></h4>
+<h1 id="heading-1"><strong>코드:</strong></h1>
 <p>사용언어 : c++</p>
-<pre><code class="language-{.c++}" data-lang="{.c++}">#include &lt;iostream&gt;
-#include &lt;algorithm&gt;
-#include &lt;vector&gt;
-using namespace std;
-vector&lt;int&gt;d;
-int main(void) {
-	int n, s, l;
-	cin &gt;&gt; n;
-	for (int i = 0; i &lt; n; i++) {
-		cin &gt;&gt; s;
-		l = lower_bound(d.begin(), d.end(), s) - d.begin();
-		if (l == d.size())
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;algorithm&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>d;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>) {
+	<span style="color:#66d9ef">int</span> n, s, l;
+	cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> n;
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">+</span><span style="color:#f92672">+</span>) {
+		cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> s;
+		l <span style="color:#f92672">=</span> lower_bound(d.begin(), d.end(), s) <span style="color:#f92672">-</span> d.begin();
+		<span style="color:#66d9ef">if</span> (l <span style="color:#f92672">=</span><span style="color:#f92672">=</span> d.size())
 			d.push_back(s);
-		else
-			d[l] = s;
+		<span style="color:#66d9ef">else</span>
+			d[l] <span style="color:#f92672">=</span> s;
 	}
-	cout &lt;&lt; n - d.size() &lt;&lt; endl;
-	return 0;
+	cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> n <span style="color:#f92672">-</span> d.size() <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> endl;
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 }
-</code></pre>
+</code></pre></div>
   </div>
 
   <footer>
@@ -1193,7 +1193,7 @@ int main(void) {
             <header>
               
                 <a href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80/">백준</a>
-                <span style="float:right;">46</span>
+                <span style="float:right;">47</span>
               
             </header>
           </article>

@@ -21,7 +21,7 @@
         "articleSection" : "blog",
         "name" : "5069 미로에 갇힌 상근",
         "headline" : "5069 미로에 갇힌 상근",
-        "description" : "https:\/\/www.acmicpc.net\/problem\/5069\n풀이:  s[n][t][y]를 n번 이동해서 (t, y)인 방으로 다시 돌아오는 경우의 수라고 한다. 처음 상근이가 있는 방을 (10, 10)이라고 한다(n의 최대 수가 14 이므로 10칸을 넘어가지 않기 때문에) s[n][10][10] 은 n번 이동해서 상근이가 있는 방으로 돌아와야하므로 상근이의 근처에 있는 모든 n-1번 이동하여 돌아오는 경우의 수들의 합과 같다. 즉 s[n][10][10] = s[n-1][10][11] \x2b s[n-1][10][9] \x2b s[n-1][11][11] \x2b s[n-1][11][10] \x2b s[n-1][9][9] \x2b s[n-1][9][10]  코드: 사용언어 : c\x2b\x2b {% highlight c\x2b\x2b %} #include using namespace std; int s[15][21][21]; int dy[] = { 0,0,1,1,-1,-1 }; int dx[] = { 1,-1,1,0,-1,0 }; int main(void) { int T, a; cin \x26raquo; T; s[0][10][10] = 1; for (int i = 1; i \x26lt; 15; i\x2b\x2b) for (int t = 1; t \x26lt; 21; t\x2b\x2b) for (int y = 1; y \x26lt; 21; y\x2b\x2b) for (int u = 0; u \x26lt; 6; u\x2b\x2b) if (t \x2b dx[u] \x26gt; 0 \x26amp;\x26amp; t \x2b dx[u] \x26lt; 21 \x26amp;\x26amp; y \x2b dy[u] \x26gt; 0 \x26amp;\x26amp; y \x2b dy[u] \x26lt; 21) s[i][t][y] \x2b= s[i - 1][t \x2b dx[u]][y \x2b dy[u]]; while (T\x26ndash;) { cin \x26raquo; a; cout \x26laquo; s[a][10][10] \x26laquo; endl; } return 0; } {% endhighlight %}",
+        "description" : "\x2b\x2b\x2b author = \x26ldquo;jyukki\x26rdquo; categories = [\x26ldquo;백준\x26rdquo;] tags = [\x26ldquo;algorithm\x26rdquo;, \x26ldquo;C\x2b\x2b\x26rdquo;, \x26ldquo;DP\x26rdquo;] date = \x26ldquo;2019-05-27\x26rdquo; description = \x26ldquo;algorithm\x26rdquo; featured = \x26quot;\x26rdquo; featuredalt = \x26quot;\x26rdquo; featuredpath = \x26ldquo;date\x26rdquo; linktitle = \x26quot;\x26rdquo; title = \x26ldquo;[백준]5069 미로에 갇힌 상근\x26rdquo; type = \x26ldquo;post\x26rdquo;\naliases = \x26ldquo;\/5069\/\x26rdquo;\n\x2b\x2b\x2b\nhttps:\/\/www.acmicpc.net\/problem\/5069\n풀이:  s[n][t][y]를 n번 이동해서 (t, y)인 방으로 다시 돌아오는 경우의 수라고 한다. 처음 상근이가 있는 방을 (10, 10)이라고 한다(n의 최대 수가 14 이므로 10칸을 넘어가지 않기 때문에) s[n][10][10] 은 n번 이동해서 상근이가 있는 방으로 돌아와야하므로 상근이의 근처에 있는 모든 n-1번 이동하여 돌아오는 경우의 수들의 합과 같다.",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
@@ -32,7 +32,7 @@
         "datePublished": "0001-01-01 00:00:00 \x2b0000 UTC",
         "dateModified" : "0001-01-01 00:00:00 \x2b0000 UTC",
         "url" : "https:\/\/jyukki97.github.io\/blog\/2019-05-27-5069\/",
-        "wordCount" : "186",
+        "wordCount" : "223",
         "keywords" : [ "Blog" ]
     }
     </script>
@@ -80,12 +80,18 @@
 
         <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="5069 미로에 갇힌 상근"/>
-<meta name="twitter:description" content="https://www.acmicpc.net/problem/5069
-풀이:  s[n][t][y]를 n번 이동해서 (t, y)인 방으로 다시 돌아오는 경우의 수라고 한다. 처음 상근이가 있는 방을 (10, 10)이라고 한다(n의 최대 수가 14 이므로 10칸을 넘어가지 않기 때문에) s[n][10][10] 은 n번 이동해서 상근이가 있는 방으로 돌아와야하므로 상근이의 근처에 있는 모든 n-1번 이동하여 돌아오는 경우의 수들의 합과 같다. 즉 s[n][10][10] = s[n-1][10][11] &#43; s[n-1][10][9] &#43; s[n-1][11][11] &#43; s[n-1][11][10] &#43; s[n-1][9][9] &#43; s[n-1][9][10]  코드: 사용언어 : c&#43;&#43; {% highlight c&#43;&#43; %} #include using namespace std; int s[15][21][21]; int dy[] = { 0,0,1,1,-1,-1 }; int dx[] = { 1,-1,1,0,-1,0 }; int main(void) { int T, a; cin &raquo; T; s[0][10][10] = 1; for (int i = 1; i &lt; 15; i&#43;&#43;) for (int t = 1; t &lt; 21; t&#43;&#43;) for (int y = 1; y &lt; 21; y&#43;&#43;) for (int u = 0; u &lt; 6; u&#43;&#43;) if (t &#43; dx[u] &gt; 0 &amp;&amp; t &#43; dx[u] &lt; 21 &amp;&amp; y &#43; dy[u] &gt; 0 &amp;&amp; y &#43; dy[u] &lt; 21) s[i][t][y] &#43;= s[i - 1][t &#43; dx[u]][y &#43; dy[u]]; while (T&ndash;) { cin &raquo; a; cout &laquo; s[a][10][10] &laquo; endl; } return 0; } {% endhighlight %}"/>
+<meta name="twitter:description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2019-05-27&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]5069 미로에 갇힌 상근&rdquo; type = &ldquo;post&rdquo;
+aliases = &ldquo;/5069/&rdquo;
+&#43;&#43;&#43;
+https://www.acmicpc.net/problem/5069
+풀이:  s[n][t][y]를 n번 이동해서 (t, y)인 방으로 다시 돌아오는 경우의 수라고 한다. 처음 상근이가 있는 방을 (10, 10)이라고 한다(n의 최대 수가 14 이므로 10칸을 넘어가지 않기 때문에) s[n][10][10] 은 n번 이동해서 상근이가 있는 방으로 돌아와야하므로 상근이의 근처에 있는 모든 n-1번 이동하여 돌아오는 경우의 수들의 합과 같다."/>
 
         <meta property="og:title" content="5069 미로에 갇힌 상근" />
-<meta property="og:description" content="https://www.acmicpc.net/problem/5069
-풀이:  s[n][t][y]를 n번 이동해서 (t, y)인 방으로 다시 돌아오는 경우의 수라고 한다. 처음 상근이가 있는 방을 (10, 10)이라고 한다(n의 최대 수가 14 이므로 10칸을 넘어가지 않기 때문에) s[n][10][10] 은 n번 이동해서 상근이가 있는 방으로 돌아와야하므로 상근이의 근처에 있는 모든 n-1번 이동하여 돌아오는 경우의 수들의 합과 같다. 즉 s[n][10][10] = s[n-1][10][11] &#43; s[n-1][10][9] &#43; s[n-1][11][11] &#43; s[n-1][11][10] &#43; s[n-1][9][9] &#43; s[n-1][9][10]  코드: 사용언어 : c&#43;&#43; {% highlight c&#43;&#43; %} #include using namespace std; int s[15][21][21]; int dy[] = { 0,0,1,1,-1,-1 }; int dx[] = { 1,-1,1,0,-1,0 }; int main(void) { int T, a; cin &raquo; T; s[0][10][10] = 1; for (int i = 1; i &lt; 15; i&#43;&#43;) for (int t = 1; t &lt; 21; t&#43;&#43;) for (int y = 1; y &lt; 21; y&#43;&#43;) for (int u = 0; u &lt; 6; u&#43;&#43;) if (t &#43; dx[u] &gt; 0 &amp;&amp; t &#43; dx[u] &lt; 21 &amp;&amp; y &#43; dy[u] &gt; 0 &amp;&amp; y &#43; dy[u] &lt; 21) s[i][t][y] &#43;= s[i - 1][t &#43; dx[u]][y &#43; dy[u]]; while (T&ndash;) { cin &raquo; a; cout &laquo; s[a][10][10] &laquo; endl; } return 0; } {% endhighlight %}" />
+<meta property="og:description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2019-05-27&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]5069 미로에 갇힌 상근&rdquo; type = &ldquo;post&rdquo;
+aliases = &ldquo;/5069/&rdquo;
+&#43;&#43;&#43;
+https://www.acmicpc.net/problem/5069
+풀이:  s[n][t][y]를 n번 이동해서 (t, y)인 방으로 다시 돌아오는 경우의 수라고 한다. 처음 상근이가 있는 방을 (10, 10)이라고 한다(n의 최대 수가 14 이므로 10칸을 넘어가지 않기 때문에) s[n][10][10] 은 n번 이동해서 상근이가 있는 방으로 돌아와야하므로 상근이의 근처에 있는 모든 n-1번 이동하여 돌아오는 경우의 수들의 합과 같다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jyukki97.github.io/blog/2019-05-27-5069/" />
 
@@ -95,10 +101,13 @@
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         <meta itemprop="name" content="5069 미로에 갇힌 상근">
-<meta itemprop="description" content="https://www.acmicpc.net/problem/5069
-풀이:  s[n][t][y]를 n번 이동해서 (t, y)인 방으로 다시 돌아오는 경우의 수라고 한다. 처음 상근이가 있는 방을 (10, 10)이라고 한다(n의 최대 수가 14 이므로 10칸을 넘어가지 않기 때문에) s[n][10][10] 은 n번 이동해서 상근이가 있는 방으로 돌아와야하므로 상근이의 근처에 있는 모든 n-1번 이동하여 돌아오는 경우의 수들의 합과 같다. 즉 s[n][10][10] = s[n-1][10][11] &#43; s[n-1][10][9] &#43; s[n-1][11][11] &#43; s[n-1][11][10] &#43; s[n-1][9][9] &#43; s[n-1][9][10]  코드: 사용언어 : c&#43;&#43; {% highlight c&#43;&#43; %} #include using namespace std; int s[15][21][21]; int dy[] = { 0,0,1,1,-1,-1 }; int dx[] = { 1,-1,1,0,-1,0 }; int main(void) { int T, a; cin &raquo; T; s[0][10][10] = 1; for (int i = 1; i &lt; 15; i&#43;&#43;) for (int t = 1; t &lt; 21; t&#43;&#43;) for (int y = 1; y &lt; 21; y&#43;&#43;) for (int u = 0; u &lt; 6; u&#43;&#43;) if (t &#43; dx[u] &gt; 0 &amp;&amp; t &#43; dx[u] &lt; 21 &amp;&amp; y &#43; dy[u] &gt; 0 &amp;&amp; y &#43; dy[u] &lt; 21) s[i][t][y] &#43;= s[i - 1][t &#43; dx[u]][y &#43; dy[u]]; while (T&ndash;) { cin &raquo; a; cout &laquo; s[a][10][10] &laquo; endl; } return 0; } {% endhighlight %}">
+<meta itemprop="description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2019-05-27&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]5069 미로에 갇힌 상근&rdquo; type = &ldquo;post&rdquo;
+aliases = &ldquo;/5069/&rdquo;
+&#43;&#43;&#43;
+https://www.acmicpc.net/problem/5069
+풀이:  s[n][t][y]를 n번 이동해서 (t, y)인 방으로 다시 돌아오는 경우의 수라고 한다. 처음 상근이가 있는 방을 (10, 10)이라고 한다(n의 최대 수가 14 이므로 10칸을 넘어가지 않기 때문에) s[n][10][10] 은 n번 이동해서 상근이가 있는 방으로 돌아와야하므로 상근이의 근처에 있는 모든 n-1번 이동하여 돌아오는 경우의 수들의 합과 같다.">
 
-<meta itemprop="wordCount" content="186">
+<meta itemprop="wordCount" content="223">
 
 
 
@@ -506,40 +515,52 @@ if (!doNotTrack) {
 </header>
 
             <div id="content">
-                <p><a href="http://www.acmicpc.net/problem/5069">https://www.acmicpc.net/problem/5069</a></p>
-<h4 id="heading"><strong>풀이:</strong></h4>
+                <p>+++
+author = &ldquo;jyukki&rdquo;
+categories = [&ldquo;백준&rdquo;]
+tags = [&ldquo;algorithm&rdquo;, &ldquo;C++&rdquo;, &ldquo;DP&rdquo;]
+date = &ldquo;2019-05-27&rdquo;
+description = &ldquo;algorithm&rdquo;
+featured = &quot;&rdquo;
+featuredalt = &quot;&rdquo;
+featuredpath = &ldquo;date&rdquo;
+linktitle = &quot;&rdquo;
+title = &ldquo;[백준]5069 미로에 갇힌 상근&rdquo;
+type = &ldquo;post&rdquo;</p>
+<p>aliases =  &ldquo;/5069/&rdquo;</p>
+<p>+++</p>
+<p><a href="http://www.acmicpc.net/problem/5069">https://www.acmicpc.net/problem/5069</a></p>
+<h1 id="heading"><strong>풀이:</strong></h1>
 <ol>
 <li>s[n][t][y]를 n번 이동해서 (t, y)인 방으로 다시 돌아오는 경우의 수라고 한다.</li>
 <li>처음 상근이가 있는 방을 (10, 10)이라고 한다(n의 최대 수가 14 이므로 10칸을 넘어가지 않기 때문에)</li>
 <li>s[n][10][10] 은 n번 이동해서 상근이가 있는 방으로 돌아와야하므로 상근이의 근처에 있는 모든 n-1번 이동하여 돌아오는 경우의 수들의 합과 같다.</li>
 <li>즉 s[n][10][10] = s[n-1][10][11] + s[n-1][10][9] + s[n-1][11][11] + s[n-1][11][10] + s[n-1][9][9] + s[n-1][9][10]</li>
 </ol>
-<h4 id="heading-1"><strong>코드:</strong></h4>
-<p>사용언어 : c++
-{% highlight c++ %}
-#include <!-- raw HTML omitted -->
-using namespace std;
-int s[15][21][21];
-int dy[] = { 0,0,1,1,-1,-1 };
-int dx[] = { 1,-1,1,0,-1,0 };
-int main(void) {
-int T, a;
-cin &raquo; T;
-s[0][10][10] = 1;
-for (int i = 1; i &lt; 15; i++)
-for (int t = 1; t &lt; 21; t++)
-for (int y = 1; y &lt; 21; y++)
-for (int u = 0; u &lt; 6; u++)
-if (t + dx[u] &gt; 0 &amp;&amp; t + dx[u] &lt; 21 &amp;&amp; y + dy[u] &gt; 0 &amp;&amp; y + dy[u] &lt; 21)
-s[i][t][y] += s[i - 1][t + dx[u]][y + dy[u]];
-while (T&ndash;) {
-cin &raquo; a;
-cout &laquo; s[a][10][10] &laquo; endl;
+<h1 id="heading-1"><strong>코드:</strong></h1>
+<p>사용언어 : c++</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#66d9ef">int</span> s[<span style="color:#ae81ff">15</span>][<span style="color:#ae81ff">21</span>][<span style="color:#ae81ff">21</span>];
+<span style="color:#66d9ef">int</span> dy[] <span style="color:#f92672">=</span> { <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> };
+<span style="color:#66d9ef">int</span> dx[] <span style="color:#f92672">=</span> { <span style="color:#ae81ff">1</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span> };
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>) {
+	<span style="color:#66d9ef">int</span> T, a;
+	cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> T;
+	s[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">10</span>][<span style="color:#ae81ff">10</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">15</span>; i<span style="color:#f92672">+</span><span style="color:#f92672">+</span>)
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> t <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; t <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">21</span>; t<span style="color:#f92672">+</span><span style="color:#f92672">+</span>)
+			<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; y <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">21</span>; y<span style="color:#f92672">+</span><span style="color:#f92672">+</span>)
+				<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> u <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; u <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">6</span>; u<span style="color:#f92672">+</span><span style="color:#f92672">+</span>)
+					<span style="color:#66d9ef">if</span> (t <span style="color:#f92672">+</span> dx[u] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> t <span style="color:#f92672">+</span> dx[u] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">21</span> <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> y <span style="color:#f92672">+</span> dy[u] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> y <span style="color:#f92672">+</span> dy[u] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">21</span>)
+						s[i][t][y] <span style="color:#f92672">+</span><span style="color:#f92672">=</span> s[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>][t <span style="color:#f92672">+</span> dx[u]][y <span style="color:#f92672">+</span> dy[u]];
+	<span style="color:#66d9ef">while</span> (T<span style="color:#f92672">-</span><span style="color:#f92672">-</span>) {
+		cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> a;
+		cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> s[a][<span style="color:#ae81ff">10</span>][<span style="color:#ae81ff">10</span>] <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> endl;
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 }
-return 0;
-}
-{% endhighlight %}</p>
-
+</code></pre></div>
             </div>
         </article>
     </div>
@@ -895,7 +916,7 @@ return 0;
             <header>
               
                 <a href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80/">백준</a>
-                <span style="float:right;">46</span>
+                <span style="float:right;">47</span>
               
             </header>
           </article>
