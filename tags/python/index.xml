@@ -99,5 +99,27 @@ for i in range(int(input())):print(sum(map(int,input().split())))</description
 n,s=int(input()),1while s&amp;lt;n:s*=2print(s if s==n else 2*n-s)</description>
     </item>
     
+    <item>
+      <title>[백준]1712 손익분기점</title>
+      <link>https://jyukki97.github.io/blog/2018-03-16-1712/</link>
+      <pubDate>Fri, 16 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2018-03-16-1712/</guid>
+      <description>https://www.acmicpc.net/problem/1712
+풀이:  고정비용을 노트북 가격에서 생산비인 가변 비용을 뺀 값으로 나눈 몫을 출력한다. 만약 가변비용이 노트북의 가격보다 높다면 -1을 출력한다.  코드: 사용언어 : Python 3
+a,b,c=map(int,input().split())if b&amp;gt;=c:print(&amp;#34;-1&amp;#34;)else:print(a//(c-b)+1)</description>
+    </item>
+    
+    <item>
+      <title>[백준]1919 애너그램 만들기</title>
+      <link>https://jyukki97.github.io/blog/2018-02-05-1919/</link>
+      <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2018-02-05-1919/</guid>
+      <description>https://www.acmicpc.net/problem/1919
+풀이:  a~z까지의 알파벳 중 문자열에 나온 개수를 확인 후 그 차이를 출력한다.  코드: 사용언어 : Python 3
+a,b=input(),input()print(sum(abs(b.count(chr(i))-a.count(chr(i)))for i in range(97,123)))</description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>냅색 on 1 Day 1 Problem</title>
+    <link>https://jyukki97.github.io/tags/%EB%83%85%EC%83%89/</link>
+    <description>Recent content in 냅색 on 1 Day 1 Problem</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <lastBuildDate>Wed, 10 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jyukki97.github.io/tags/%EB%83%85%EC%83%89/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[백준]3908 서로 다른 소수의 합</title>
+      <link>https://jyukki97.github.io/blog/2018-01-10-3908/</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2018-01-10-3908/</guid>
+      <description>https://www.acmicpc.net/problem/3908
+풀이:  소수를 찾는다. 소수를 하나씩 추가해가면서 a[n][k]를 찾는다. a[n][k] : 양의 정수 n을 서로 다른 k개의 소수의 합으로 나타낼 수 있는 최대의 경우의 수  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;math.h&amp;gt;#include &amp;lt;string.h&amp;gt;using namespace std;int	T, n, k, a[1122][16] = { 0 };bool isprime[1122];vector&amp;lt;int&amp;gt; b;int prime() {memset(isprime, 1, sizeof(isprime));isprime[0] = isprime[1] = false;for (int i = 2; i &amp;lt; sqrt(1122); i++)if(isprime[i])for (int t = i * i; t &amp;lt; 1122; t += i)isprime[t] = false;for (int i = 2; i &amp;lt; 1122; i++) if (isprime[i]) b.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -366,6 +366,28 @@ n,s=int(input()),1while s&amp;lt;n:s*=2print(s if s==n else 2*n-s)</descript
     </item>
     
     <item>
+      <title>[백준]1712 손익분기점</title>
+      <link>https://jyukki97.github.io/blog/2018-03-16-1712/</link>
+      <pubDate>Fri, 16 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2018-03-16-1712/</guid>
+      <description>https://www.acmicpc.net/problem/1712
+풀이:  고정비용을 노트북 가격에서 생산비인 가변 비용을 뺀 값으로 나눈 몫을 출력한다. 만약 가변비용이 노트북의 가격보다 높다면 -1을 출력한다.  코드: 사용언어 : Python 3
+a,b,c=map(int,input().split())if b&amp;gt;=c:print(&amp;#34;-1&amp;#34;)else:print(a//(c-b)+1)</description>
+    </item>
+    
+    <item>
+      <title>[백준]1919 애너그램 만들기</title>
+      <link>https://jyukki97.github.io/blog/2018-02-05-1919/</link>
+      <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2018-02-05-1919/</guid>
+      <description>https://www.acmicpc.net/problem/1919
+풀이:  a~z까지의 알파벳 중 문자열에 나온 개수를 확인 후 그 차이를 출력한다.  코드: 사용언어 : Python 3
+a,b=input(),input()print(sum(abs(b.count(chr(i))-a.count(chr(i)))for i in range(97,123)))</description>
+    </item>
+    
+    <item>
       <title>[백준]2154 수 이어 쓰기 3</title>
       <link>https://jyukki97.github.io/blog/2018-02-03-2154/</link>
       <pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
@@ -374,6 +396,53 @@ n,s=int(input()),1while s&amp;lt;n:s*=2print(s if s==n else 2*n-s)</descript
       <description>https://www.acmicpc.net/problem/2154
 풀이:  전체 수를 string타입으로 나열한다. 그 숫자 중 제시된 숫자 n이 맨 처음으로 나오는 인덱스를 출력한다.  코드: 사용언어 : Python 3
 n,s=int(input()),&amp;#34;&amp;#34;for i in range(1,n+1):s+=str(i)print(s.find(str(n))+1)</description>
+    </item>
+    
+    <item>
+      <title>[백준]2624 동전 바꿔주기</title>
+      <link>https://jyukki97.github.io/blog/2018-01-11-2624/</link>
+      <pubDate>Thu, 11 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2018-01-11-2624/</guid>
+      <description>https://www.acmicpc.net/problem/2624
+풀이:   coin[i] : i원의 지폐를 동전으로 교환할 수 있는 경우의 수
+  지폐의 가격 + 동전의 가격 * 동전의 개수를 계속 쌓아간다.
+  코드: #include &amp;lt;iostream&amp;gt;using namespace std;pair&amp;lt;int, int&amp;gt; a[101];int coin[10001] = { 0 };int main(void) {int T, k, n, m;cin &amp;gt;&amp;gt; T &amp;gt;&amp;gt; k;for (int i = 0; i &amp;lt; k; i++) {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;a[i] = make_pair(n, m);}coin[0] = 1;for (int i = 0; i &amp;lt; k; i++)for (int t = T; t &amp;gt; 0 ; t--)for (int y = 1; y &amp;lt;= a[i].</description>
+    </item>
+    
+    <item>
+      <title>[백준]3908 서로 다른 소수의 합</title>
+      <link>https://jyukki97.github.io/blog/2018-01-10-3908/</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2018-01-10-3908/</guid>
+      <description>https://www.acmicpc.net/problem/3908
+풀이:  소수를 찾는다. 소수를 하나씩 추가해가면서 a[n][k]를 찾는다. a[n][k] : 양의 정수 n을 서로 다른 k개의 소수의 합으로 나타낼 수 있는 최대의 경우의 수  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;math.h&amp;gt;#include &amp;lt;string.h&amp;gt;using namespace std;int	T, n, k, a[1122][16] = { 0 };bool isprime[1122];vector&amp;lt;int&amp;gt; b;int prime() {memset(isprime, 1, sizeof(isprime));isprime[0] = isprime[1] = false;for (int i = 2; i &amp;lt; sqrt(1122); i++)if(isprime[i])for (int t = i * i; t &amp;lt; 1122; t += i)isprime[t] = false;for (int i = 2; i &amp;lt; 1122; i++) if (isprime[i]) b.</description>
+    </item>
+    
+    <item>
+      <title>[백준]2228 구간 나누기</title>
+      <link>https://jyukki97.github.io/blog/2017-12-26-2228/</link>
+      <pubDate>Tue, 26 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-26-2228/</guid>
+      <description>https://www.acmicpc.net/problem/2228
+풀이:   dp[n][m] : n개의 숫자를 m개의 구간으로 나눈 최대 합
+  dp[i][t] = dp[i - 1][t] : i번째 수를 포함하지 않는 경우
+  dp[i][t] = max(dp[i][t], (t == 1 ? 0 : dp[y - 1][t - 1]) + a[i] - a[y]) : i번째 수를 포함하는 경우 i번째를 포함하므로 구간을 하나 빼고 그것에 i번째 수를 포함하는 구간을 더한다.
+  max함수를 쓰므로 dp 초기화를 잘해줘야한다.
+  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[101] = { 0 }, dp[101][52] = { 0 };int main(void) {int n, m, temp;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;fill(dp[0] + 1, dp[0] + m + 1, -2147483646);for (int i = 1; i &amp;lt;= n; i++) {cin &amp;gt;&amp;gt; temp;a[i] = a[i - 1] + temp;for (int t = 1; t &amp;lt;= m; t++) {dp[i][t] = dp[i - 1][t];for (int y = i - 1; y / 2 &amp;gt;= t - 1; y--) {dp[i][t] = max(dp[i][t], (t == 1 ?</description>
+    </item>
+    
+    <item>
+      <title>[백준]1793 타일링</title>
+      <link>https://jyukki97.github.io/blog/2017-12-17-1793/</link>
+      <pubDate>Sun, 17 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-17-1793/</guid>
+      <description>https://www.acmicpc.net/problem/1793
+풀이: 11727 2XN 타일링2
+ DP는 링크와 같으므로 링크를 참고 링크의 코드와 다르게 int 보다 큰 값을 출력해야하므로 어려움이 있다. vector를 사용하여 int를 한자리수 씩 계산하는 방법으로 풀었다. 만약 자릿수의 값이 10보다 커지면 다음 자릿수의 값을 그만큼 올려주는 식으로 풀었다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;vector&amp;lt;int&amp;gt; a[251];int main(void) {int	n, temp;int cnt = 3;a[0].push_back(1);a[1].push_back(1);a[2].push_back(3);while(cin &amp;gt;&amp;gt; n){if (a[n].size() == 0) {for (int t = cnt; t &amp;lt; n + 1; t++) {int carry = 0;for (int y = 0; y &amp;lt; a[t - 2].</description>
     </item>
     
     <item>
@@ -1020,17 +1089,6 @@ n,cnt1,cnt2,k1,k2=int(input()),0,0,0,0h={}for i in range(n):h[i]=int(input())
     </item>
     
     <item>
-      <title>1712 손익분기점</title>
-      <link>https://jyukki97.github.io/blog/2018-03-16-1712/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2018-03-16-1712/</guid>
-      <description>https://www.acmicpc.net/problem/1712
-풀이:  고정비용을 노트북 가격에서 생산비인 가변 비용을 뺀 값으로 나눈 몫을 출력한다. 만약 가변비용이 노트북의 가격보다 높다면 -1을 출력한다.  코드: 사용언어 : Python 3
-a,b,c=map(int,input().split())if b&amp;gt;=c:print(&amp;quot;-1&amp;quot;)else:print(a//(c-b)+1)</description>
-    </item>
-    
-    <item>
       <title>1720 타일 코드</title>
       <link>https://jyukki97.github.io/blog/2017-12-23-1720/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1049,16 +1107,6 @@ a,b,c=map(int,input().split())if b&amp;gt;=c:print(&amp;quot;-1&amp;quot;)els
       <description>https://www.acmicpc.net/problem/1789
 풀이:  입력받은 숫자를 N 이라고 할 때 (-1 + (1+8*N)^0.5)/2 에 소수점을 버린 값이 최대 개수이다. n(n+1)/2 &amp;gt;= k n^2+n-2k &amp;gt;= 0 n의 최솟값이다.  코드: 사용언어 : Python 3
 print(int((-1+(1+8*int(input()))**.5)/2))</description>
-    </item>
-    
-    <item>
-      <title>1793 타일링</title>
-      <link>https://jyukki97.github.io/blog/2017-12-17-1793/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2017-12-17-1793/</guid>
-      <description>https://www.acmicpc.net/problem/1793
-풀이:  DP는 출처와 같으므로 출처를 참고 출처와 다르게 int 보다 큰 값을 출력해야하므로 어려움이 있다. vector를 사용하여 int를 한자리수 씩 계산하는 방법으로 풀었다. 만약 자릿수의 값이 10보다 커지면 다음 자릿수의 값을 그만큼 올려주는 식으로 풀었다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;vector&amp;lt;int&amp;gt; a[251];int main(void) {int	n, temp;int cnt = 3;a[0].push_back(1);a[1].push_back(1);a[2].push_back(3);while(cin &amp;gt;&amp;gt; n){if (a[n].size() == 0) {for (int t = cnt; t &amp;lt; n + 1; t++) {int carry = 0;for (int y = 0; y &amp;lt; a[t - 2].</description>
     </item>
     
     <item>
@@ -1090,17 +1138,6 @@ n=int(input())print((n**3-n)//2)</description>
       <guid>https://jyukki97.github.io/blog/2017-12-08-1904/</guid>
       <description>https://www.acmicpc.net/problem/1904
 풀이:  a[i] 는 길이가 i인 모든 이진수열의 개수 a[i] = a[i - 1] + a[i - 2] 주어진 조건에 맞게 15746 으로 나눈 나머지를 출력  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int a[1000001] = { 1,2 };int main(void) {int n;cin &amp;gt;&amp;gt; n;for (int i = 2; i &amp;lt; n; i++) {a[i] = (a[i - 1] % 15746 + a[i - 2] % 15746) % 15746;}cout &amp;lt;&amp;lt; a[n - 1] &amp;lt;&amp;lt; endl;return 0;}</description>
-    </item>
-    
-    <item>
-      <title>1919 애너그램 만들기</title>
-      <link>https://jyukki97.github.io/blog/2018-02-05-1919/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2018-02-05-1919/</guid>
-      <description>https://www.acmicpc.net/problem/1919
-풀이:  a~z까지의 알파벳 중 문자열에 나온 개수를 확인 후 그 차이를 출력한다.  코드: 사용언어 : Python 3
-a,b=input(),input()print(sum(abs(b.count(chr(i))-a.count(chr(i)))for i in range(97,123)))</description>
     </item>
     
     <item>
@@ -1197,20 +1234,6 @@ n=int(input())print((n+1)*(3*n+2)//2%45678)</description>
     </item>
     
     <item>
-      <title>2228 구간 나누기</title>
-      <link>https://jyukki97.github.io/blog/2017-12-26-2228/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2017-12-26-2228/</guid>
-      <description>https://www.acmicpc.net/problem/2228
-풀이:   dp[n][m] : n개의 숫자를 m개의 구간으로 나눈 최대 합
-  dp[i][t] = dp[i - 1][t] : i번째 수를 포함하지 않는 경우
-  dp[i][t] = max(dp[i][t], (t == 1 ? 0 : dp[y - 1][t - 1]) + a[i] - a[y]) : i번째 수를 포함하는 경우 i번째를 포함하므로 구간을 하나 빼고 그것에 i번째 수를 포함하는 구간을 더한다.
-  max함수를 쓰므로 dp 초기화를 잘해줘야한다.
-  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[101] = { 0 }, dp[101][52] = { 0 };int main(void) {int n, m, temp;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;fill(dp[0] + 1, dp[0] + m + 1, -2147483646);for (int i = 1; i &amp;lt;= n; i++) {cin &amp;gt;&amp;gt; temp;a[i] = a[i - 1] + temp;for (int t = 1; t &amp;lt;= m; t++) {dp[i][t] = dp[i - 1][t];for (int y = i - 1; y / 2 &amp;gt;= t - 1; y--) {dp[i][t] = max(dp[i][t], (t == 1 ?</description>
-    </item>
-    
-    <item>
       <title>2240 자두나무</title>
       <link>https://jyukki97.github.io/blog/2019-05-26-2240/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1251,18 +1274,6 @@ https://www.acmicpc.net/problem/2579
       <guid>https://jyukki97.github.io/blog/2017-12-30-2616/</guid>
       <description>https://www.acmicpc.net/problem/2616
 풀이:  a[i][t] : i 번째 까지의 소형 기관차 들이 t번째 객차까지 끌 수 있는 최대 승객의 수 첫 번째 소형기관차부터 앞으로 m칸만큼 객차칸수를 증가시켜가며 최댓값을 구한다. 만약 앞에 값이 더 크다면 앞에값을 선택한다. 객차의 칸이 겹칠 수 없으므로 이번 소형기관차(a[i][t])보다 m보다 작은 객차수를 가지고 있는 이전의 소형기관차(a[i - 1][t - m])를 이번 소형기관창의 t번째 최대 승객 수에 더해준다. a[i][t] = max(a[i][t - 1], sum[t] - sum[t - m] + a[i - 1][t - m];  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, m, sum[50002] = { 0 }, a[4][50002] = { 0 };int main(void) {cin &amp;gt;&amp;gt; n;for (int i = 1; i &amp;lt;= n; i++) {cin &amp;gt;&amp;gt; sum[i];sum[i] += sum[i - 1];}cin &amp;gt;&amp;gt; m;for (int i = 1; i &amp;lt;= 3; i++) {for (int t = i * m; t &amp;lt;= n; t++) {a[i][t] = max(a[i][t - 1], sum[t] - sum[t - m] + a[i - 1][t - m]);}}cout &amp;lt;&amp;lt; a[3][n] &amp;lt;&amp;lt; endl;return 0;}시간 초과 코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[50001];int main(void) {int n, m;cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];}cin &amp;gt;&amp;gt; m;int num = 0;for (int i = 0; i &amp;lt;= n - 3 * m; i++) {for (int t = i + m; t &amp;lt;= n - 2 * m; t++) {for (int y = t + m; y &amp;lt;= n - m; y++) {int cnt = 0;for (int q = 0; q &amp;lt; m; q++) {cnt += a[i + q] + a[t + q] + a[y + q];}num = max(num, cnt);}}}cout &amp;lt;&amp;lt; num &amp;lt;&amp;lt; endl;return 0;}메모리 초과 코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, m;int sum[50002] = { 0 };int small(int a,int b,int c) {if (a + 3 * m &amp;gt; n) return 0;if (b + 2 * m &amp;gt; n) return small(a + 1, a + m + 1, a + 2 * m + 1);if (c + m &amp;gt; n)	return small(a, b + 1, b + m + 1);int num = 0;num += sum[a + m] - sum[a] + sum[b + m] - sum[b] + sum[c + m] - sum[c];return num = max(num, small(a, b, c + 1));}int main(void) {cin &amp;gt;&amp;gt; n;for (int i = 1; i &amp;lt;= n; i++) {cin &amp;gt;&amp;gt; sum[i];sum[i] += sum[i - 1];}cin &amp;gt;&amp;gt; m;cout &amp;lt;&amp;lt; small(0, m, 2 * m) &amp;lt;&amp;lt; endl;return 0;}</description>
-    </item>
-    
-    <item>
-      <title>2624 동전 바꿔주기</title>
-      <link>https://jyukki97.github.io/blog/2018-01-11-2624/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2018-01-11-2624/</guid>
-      <description>https://www.acmicpc.net/problem/2624
-풀이:   coin[i] : i원의 지폐를 동전으로 교환할 수 있는 경우의 수
-  지폐의 가격 + 동전의 가격 * 동전의 개수를 계속 쌓아간다.
-  코드: #include &amp;lt;iostream&amp;gt;using namespace std;pair&amp;lt;int, int&amp;gt; a[101];int coin[10001] = { 0 };int main(void) {int T, k, n, m;cin &amp;gt;&amp;gt; T &amp;gt;&amp;gt; k;for (int i = 0; i &amp;lt; k; i++) {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;a[i] = make_pair(n, m);}coin[0] = 1;for (int i = 0; i &amp;lt; k; i++)for (int t = T; t &amp;gt; 0 ; t--)for (int y = 1; y &amp;lt;= a[i].</description>
     </item>
     
     <item>
@@ -1460,16 +1471,6 @@ n=int(input())print(n*(n-1)*(n-2)*(n-3)//24)</description>
       <guid>https://jyukki97.github.io/blog/2018-03-16-3474/</guid>
       <description>https://www.acmicpc.net/problem/3474
 풀이:  오른쪽 끝에있는 0에 갯수를 알기 위해서는 팩토리얼 안에서 10의 갯수가 얼마나 있는지를 알면된다. 이 때 2의 갯수는 매우 많으므로 팩토리얼 내에서 5가 몇번 곱해지는지를 세면 간단하게 알 수 있다. 주어진 수를 5로 나눈 몫이 5의 갯수이다 그러나 25, 125 등 5가 여러번 들어가는 경우도 있으므로 각각으로 나누어준 값을 더해주어야한다.  코드: 사용언어 : Python 3 {% highlight Python %} for i in range(int(input())): a,b,c=int(input()),5,0 while b&amp;lt;=a: c+=a//b b*=5 print(c) {% endhighlight %}</description>
-    </item>
-    
-    <item>
-      <title>3908 서로 다른 소수의 합</title>
-      <link>https://jyukki97.github.io/blog/2018-01-10-3908/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2018-01-10-3908/</guid>
-      <description>https://www.acmicpc.net/problem/3908
-풀이:  소수를 찾는다. 소수를 하나씩 추가해가면서 a[n][k]를 찾는다. a[n][k] : 양의 정수 n을 서로 다른 k개의 소수의 합으로 나타낼 수 있는 최대의 경우의 수  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;math.h&amp;gt;#include &amp;lt;string.h&amp;gt;using namespace std;int	T, n, k, a[1122][16] = { 0 };bool isprime[1122];vector&amp;lt;int&amp;gt; b;int prime() {memset(isprime, 1, sizeof(isprime));isprime[0] = isprime[1] = false;for (int i = 2; i &amp;lt; sqrt(1122); i++)if(isprime[i])for (int t = i * i; t &amp;lt; 1122; t += i)isprime[t] = false;for (int i = 2; i &amp;lt; 1122; i++) if (isprime[i]) b.</description>
     </item>
     
     <item>

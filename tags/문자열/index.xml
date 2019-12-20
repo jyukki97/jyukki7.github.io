@@ -56,6 +56,17 @@ while 1:a=input()if a==&#39;END&#39;:breakprint(a[::-1])</description>
     </item>
     
     <item>
+      <title>[백준]1919 애너그램 만들기</title>
+      <link>https://jyukki97.github.io/blog/2018-02-05-1919/</link>
+      <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2018-02-05-1919/</guid>
+      <description>https://www.acmicpc.net/problem/1919
+풀이:  a~z까지의 알파벳 중 문자열에 나온 개수를 확인 후 그 차이를 출력한다.  코드: 사용언어 : Python 3
+a,b=input(),input()print(sum(abs(b.count(chr(i))-a.count(chr(i)))for i in range(97,123)))</description>
+    </item>
+    
+    <item>
       <title>[백준]1718 암호</title>
       <link>https://jyukki97.github.io/blog/2017-11-25-1718/</link>
       <pubDate>Sat, 25 Nov 2017 00:00:00 +0000</pubDate>

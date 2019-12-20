@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>큰 수 on 1 Day 1 Problem</title>
+    <link>https://jyukki97.github.io/tags/%ED%81%B0-%EC%88%98/</link>
+    <description>Recent content in 큰 수 on 1 Day 1 Problem</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <lastBuildDate>Sun, 17 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jyukki97.github.io/tags/%ED%81%B0-%EC%88%98/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[백준]1793 타일링</title>
+      <link>https://jyukki97.github.io/blog/2017-12-17-1793/</link>
+      <pubDate>Sun, 17 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-17-1793/</guid>
+      <description>https://www.acmicpc.net/problem/1793
+풀이: 11727 2XN 타일링2
+ DP는 링크와 같으므로 링크를 참고 링크의 코드와 다르게 int 보다 큰 값을 출력해야하므로 어려움이 있다. vector를 사용하여 int를 한자리수 씩 계산하는 방법으로 풀었다. 만약 자릿수의 값이 10보다 커지면 다음 자릿수의 값을 그만큼 올려주는 식으로 풀었다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;vector&amp;lt;int&amp;gt; a[251];int main(void) {int	n, temp;int cnt = 3;a[0].push_back(1);a[1].push_back(1);a[2].push_back(3);while(cin &amp;gt;&amp;gt; n){if (a[n].size() == 0) {for (int t = cnt; t &amp;lt; n + 1; t++) {int carry = 0;for (int y = 0; y &amp;lt; a[t - 2].</description>
+    </item>
+    
+  </channel>
+</rss>
