@@ -63,7 +63,7 @@
       <guid>https://jyukki97.github.io/blog/2019-06-13-11365/</guid>
       <description>https://www.acmicpc.net/problem/11365
 풀이:  문자열을 입력받고, 그 문자열을 뒤집어서 출력한다. 문자열이 END라면 반복을 중지한다.  코드: 사용언어 : Python 3
-while 1:a=input()if a==&#39;END&#39;:breakprint(a[::-1])</description>
+while 1:a=input()if a==&amp;#39;END&amp;#39;:breakprint(a[::-1])</description>
     </item>
     
     <item>

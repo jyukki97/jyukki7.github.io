@@ -121,6 +121,16 @@
     </item>
     
     <item>
+      <title>[백준]11568 민균이의 계략</title>
+      <link>https://jyukki97.github.io/blog/2018-01-02-11568/</link>
+      <pubDate>Tue, 02 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2018-01-02-11568/</guid>
+      <description>https://www.acmicpc.net/problem/11568
+풀이:  11053 가장 긴 증가하는 부분 수열 의 문제와 같으므로 링크를 참고  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;long long a[1001] = { 0 }, b[1001];int main(void) {long long n, temp;cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];b[i] = 1;}for (int i = 0; i &amp;lt; n; i++) {temp = 0;for (int t = 0; t &amp;lt;= i; t++) {if (a[i] &amp;gt; a[i - t])temp = max(b[i - t], temp);}b[i] += temp;}for (int i = 0; i &amp;lt; n; i++) {temp = max(b[i], temp);}cout &amp;lt;&amp;lt; temp &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
       <title>[백준]2228 구간 나누기</title>
       <link>https://jyukki97.github.io/blog/2017-12-26-2228/</link>
       <pubDate>Tue, 26 Dec 2017 00:00:00 +0000</pubDate>
@@ -143,6 +153,36 @@
       <description>https://www.acmicpc.net/problem/1793
 풀이: 11727 2XN 타일링2
  DP는 링크와 같으므로 링크를 참고 링크의 코드와 다르게 int 보다 큰 값을 출력해야하므로 어려움이 있다. vector를 사용하여 int를 한자리수 씩 계산하는 방법으로 풀었다. 만약 자릿수의 값이 10보다 커지면 다음 자릿수의 값을 그만큼 올려주는 식으로 풀었다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;vector&amp;lt;int&amp;gt; a[251];int main(void) {int	n, temp;int cnt = 3;a[0].push_back(1);a[1].push_back(1);a[2].push_back(3);while(cin &amp;gt;&amp;gt; n){if (a[n].size() == 0) {for (int t = cnt; t &amp;lt; n + 1; t++) {int carry = 0;for (int y = 0; y &amp;lt; a[t - 2].</description>
+    </item>
+    
+    <item>
+      <title>[백준]2718 타일 채우기</title>
+      <link>https://jyukki97.github.io/blog/2017-12-16-2718/</link>
+      <pubDate>Sat, 16 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-16-2718/</guid>
+      <description>https://www.acmicpc.net/problem/2718
+풀이:  a[t] 는 4 x t 크기의 타일을 채울 수 있는 경우의 수 a[t] = a[t - 1] + a[t - 2] * 5 + a[t - 3] - a[t - 4];  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[30] = { 1,5,11,36 };int main(void) {int T,n,cnt;cnt = 5;cin &amp;gt;&amp;gt; T;for (int i = 0; i &amp;lt; T; i++) {cin &amp;gt;&amp;gt; n;if (a[n - 1] == 0)for (int t = cnt-1; t &amp;lt; n; t++) {a[t] = a[t - 1] + a[t - 2] * 5 + a[t - 3] - a[t - 4];}cout &amp;lt;&amp;lt; a[n - 1] &amp;lt;&amp;lt; endl;cnt = max(cnt, n);}return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]11053 가장 긴 증가하는 부분 수열</title>
+      <link>https://jyukki97.github.io/blog/2017-12-12-11053/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-12-11053/</guid>
+      <description>https://www.acmicpc.net/problem/11053
+풀이:  1965 상자넣기의 문제와 똑같으므로 링크를 참고  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int main(void) {int n, temp;cin &amp;gt;&amp;gt; n;int a[1001] = { 0 };int b[1001];for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];b[i] = 1;}for (int i = 0; i &amp;lt; n; i++) {temp = 0;for (int t = 0; t &amp;lt;= i; t++) {if (a[i] &amp;gt; a[i - t])temp = max(b[i - t], temp);}b[i] += temp;}for (int i = 0; i &amp;lt; n; i++) {temp = max(b[i], temp);}cout &amp;lt;&amp;lt; temp &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1904 01타일</title>
+      <link>https://jyukki97.github.io/blog/2017-12-08-1904/</link>
+      <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-08-1904/</guid>
+      <description>https://www.acmicpc.net/problem/1904
+풀이:  a[i] 는 길이가 i인 모든 이진수열의 개수 a[i] = a[i - 1] + a[i - 2] 주어진 조건에 맞게 15746 으로 나눈 나머지를 출력  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int a[1000001] = { 1,2 };int main(void) {int n;cin &amp;gt;&amp;gt; n;for (int i = 2; i &amp;lt; n; i++) {a[i] = (a[i - 1] % 15746 + a[i - 2] % 15746) % 15746;}cout &amp;lt;&amp;lt; a[n - 1] &amp;lt;&amp;lt; endl;return 0;}</description>
     </item>
     
     <item>

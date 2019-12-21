@@ -45,6 +45,16 @@
     </item>
     
     <item>
+      <title>[백준]11568 민균이의 계략</title>
+      <link>https://jyukki97.github.io/blog/2018-01-02-11568/</link>
+      <pubDate>Tue, 02 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2018-01-02-11568/</guid>
+      <description>https://www.acmicpc.net/problem/11568
+풀이:  11053 가장 긴 증가하는 부분 수열 의 문제와 같으므로 링크를 참고  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;long long a[1001] = { 0 }, b[1001];int main(void) {long long n, temp;cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];b[i] = 1;}for (int i = 0; i &amp;lt; n; i++) {temp = 0;for (int t = 0; t &amp;lt;= i; t++) {if (a[i] &amp;gt; a[i - t])temp = max(b[i - t], temp);}b[i] += temp;}for (int i = 0; i &amp;lt; n; i++) {temp = max(b[i], temp);}cout &amp;lt;&amp;lt; temp &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
       <title>[백준]1965 상자넣기</title>
       <link>https://jyukki97.github.io/blog/2017-12-01-1965/</link>
       <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
