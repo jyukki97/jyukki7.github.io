@@ -6,7 +6,7 @@
     <description>Recent content in Tags on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Thu, 19 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>algorithm</title>
       <link>https://jyukki97.github.io/tags/algorithm/</link>
-      <pubDate>Thu, 19 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 20 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jyukki97.github.io/tags/algorithm/</guid>
       <description></description>
@@ -23,16 +23,25 @@
     <item>
       <title>C&#43;&#43;</title>
       <link>https://jyukki97.github.io/tags/c&#43;&#43;/</link>
-      <pubDate>Thu, 19 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 20 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jyukki97.github.io/tags/c&#43;&#43;/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Level 1</title>
+      <link>https://jyukki97.github.io/tags/level-1/</link>
+      <pubDate>Fri, 20 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/tags/level-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>문자열</title>
       <link>https://jyukki97.github.io/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/</link>
-      <pubDate>Thu, 19 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 20 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jyukki97.github.io/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/</guid>
       <description></description>
