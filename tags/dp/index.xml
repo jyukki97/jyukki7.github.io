@@ -145,6 +145,16 @@
     </item>
     
     <item>
+      <title>[백준]7579 앱</title>
+      <link>https://jyukki97.github.io/blog/2017-12-21-7579/</link>
+      <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-21-7579/</guid>
+      <description>https://www.acmicpc.net/problem/7579
+풀이:  처음 문제를 풀때는 DP[메모리]로 풀었더니 시간초과가 났다. 그래서 DP[c]로 풀게되었다. 가격이 0이고 메모리가 0인 지점부터 하나하나 더해가면서 만들어나간다. 그 후 가격이 낮은 곳부터 검사하면서 메모리가 M값보다 높아지면 출력한다. iter = a.end(); 를 처음에 iter = a.begin(); 으로 했을 때 출력이 잘못되는 것을 발견하였다. 아마 작은 값부터 더해가는 과정에 겹치는 값이 생겼을 것이라고 본다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;map&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;map&amp;lt;int, int&amp;gt; a;int k[101], c[101];int main(void) {int n, m, size, temp;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;a[0] = 0;for (int i = 0; i &amp;lt; n; i++)cin &amp;gt;&amp;gt; k[i];for (int i = 0; i &amp;lt; n; i++)cin &amp;gt;&amp;gt; c[i];map&amp;lt;int, int&amp;gt;::iterator iter;for (int i = 0; i &amp;lt; n; i++) {size = a.</description>
+    </item>
+    
+    <item>
       <title>[백준]1793 타일링</title>
       <link>https://jyukki97.github.io/blog/2017-12-17-1793/</link>
       <pubDate>Sun, 17 Dec 2017 00:00:00 +0000</pubDate>

@@ -286,6 +286,17 @@ a,b=input(),input()print(sum(abs(b.count(chr(i))-a.count(chr(i)))for i in range
     </item>
     
     <item>
+      <title>[백준]2338 긴자리 계산</title>
+      <link>https://jyukki97.github.io/blog/2018-02-04-2338/</link>
+      <pubDate>Sun, 04 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2018-02-04-2338/</guid>
+      <description>https://www.acmicpc.net/problem/2338
+풀이:  두 수를 입력받는다. 두 수를 더한값, 뺀값, 곱한값을 각각 출력한다.  코드: 사용언어 : Python 3
+a,b=int(input()),int(input())print(a+b,a-b,a*b,sep=&amp;#39;\n&amp;#39;)</description>
+    </item>
+    
+    <item>
       <title>[백준]2154 수 이어 쓰기 3</title>
       <link>https://jyukki97.github.io/blog/2018-02-03-2154/</link>
       <pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
@@ -340,6 +351,16 @@ n,s=int(input()),&amp;#34;&amp;#34;for i in range(1,n+1):s+=str(i)print(s.fin
   dp[i][t] = max(dp[i][t], (t == 1 ? 0 : dp[y - 1][t - 1]) + a[i] - a[y]) : i번째 수를 포함하는 경우 i번째를 포함하므로 구간을 하나 빼고 그것에 i번째 수를 포함하는 구간을 더한다.
   max함수를 쓰므로 dp 초기화를 잘해줘야한다.
   코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[101] = { 0 }, dp[101][52] = { 0 };int main(void) {int n, m, temp;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;fill(dp[0] + 1, dp[0] + m + 1, -2147483646);for (int i = 1; i &amp;lt;= n; i++) {cin &amp;gt;&amp;gt; temp;a[i] = a[i - 1] + temp;for (int t = 1; t &amp;lt;= m; t++) {dp[i][t] = dp[i - 1][t];for (int y = i - 1; y / 2 &amp;gt;= t - 1; y--) {dp[i][t] = max(dp[i][t], (t == 1 ?</description>
+    </item>
+    
+    <item>
+      <title>[백준]7579 앱</title>
+      <link>https://jyukki97.github.io/blog/2017-12-21-7579/</link>
+      <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-21-7579/</guid>
+      <description>https://www.acmicpc.net/problem/7579
+풀이:  처음 문제를 풀때는 DP[메모리]로 풀었더니 시간초과가 났다. 그래서 DP[c]로 풀게되었다. 가격이 0이고 메모리가 0인 지점부터 하나하나 더해가면서 만들어나간다. 그 후 가격이 낮은 곳부터 검사하면서 메모리가 M값보다 높아지면 출력한다. iter = a.end(); 를 처음에 iter = a.begin(); 으로 했을 때 출력이 잘못되는 것을 발견하였다. 아마 작은 값부터 더해가는 과정에 겹치는 값이 생겼을 것이라고 본다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;map&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;map&amp;lt;int, int&amp;gt; a;int k[101], c[101];int main(void) {int n, m, size, temp;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;a[0] = 0;for (int i = 0; i &amp;lt; n; i++)cin &amp;gt;&amp;gt; k[i];for (int i = 0; i &amp;lt; n; i++)cin &amp;gt;&amp;gt; c[i];map&amp;lt;int, int&amp;gt;::iterator iter;for (int i = 0; i &amp;lt; n; i++) {size = a.</description>
     </item>
     
     <item>

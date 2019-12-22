@@ -6,10 +6,21 @@
     <description>Recent content in 큰 수 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sun, 17 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%ED%81%B0-%EC%88%98/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]2338 긴자리 계산</title>
+      <link>https://jyukki97.github.io/blog/2018-02-04-2338/</link>
+      <pubDate>Sun, 04 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2018-02-04-2338/</guid>
+      <description>https://www.acmicpc.net/problem/2338
+풀이:  두 수를 입력받는다. 두 수를 더한값, 뺀값, 곱한값을 각각 출력한다.  코드: 사용언어 : Python 3
+a,b=int(input()),int(input())print(a+b,a-b,a*b,sep=&amp;#39;\n&amp;#39;)</description>
+    </item>
     
     <item>
       <title>[백준]1793 타일링</title>

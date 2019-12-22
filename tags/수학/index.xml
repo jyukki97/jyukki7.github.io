@@ -122,6 +122,17 @@ a,b=input(),input()print(sum(abs(b.count(chr(i))-a.count(chr(i)))for i in range
     </item>
     
     <item>
+      <title>[백준]2338 긴자리 계산</title>
+      <link>https://jyukki97.github.io/blog/2018-02-04-2338/</link>
+      <pubDate>Sun, 04 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2018-02-04-2338/</guid>
+      <description>https://www.acmicpc.net/problem/2338
+풀이:  두 수를 입력받는다. 두 수를 더한값, 뺀값, 곱한값을 각각 출력한다.  코드: 사용언어 : Python 3
+a,b=int(input()),int(input())print(a+b,a-b,a*b,sep=&amp;#39;\n&amp;#39;)</description>
+    </item>
+    
+    <item>
       <title>[백준]2154 수 이어 쓰기 3</title>
       <link>https://jyukki97.github.io/blog/2018-02-03-2154/</link>
       <pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
