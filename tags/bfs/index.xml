@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BFS on 1 Day 1 Problem</title>
+    <link>https://jyukki97.github.io/tags/bfs/</link>
+    <description>Recent content in BFS on 1 Day 1 Problem</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <lastBuildDate>Tue, 05 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jyukki97.github.io/tags/bfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[백준]2957 이진 탐색 트리</title>
+      <link>https://jyukki97.github.io/blog/2017-12-05-2957/</link>
+      <pubDate>Tue, 05 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-05-2957/</guid>
+      <description>https://www.acmicpc.net/problem/2957
+풀이:  트리의 루트에서 부터 왼쪽 오른쪽에 삽입할때 마다 높이를 1씩 증가시켜 준다. cin , cout을 사용할 경우 시간초과가 나므로 scanf, printf 를 사용하도록 하자 출력의 사이즈가 int 사이즈를 넘어가므로 long long 을 사용하자  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;map&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;stdio.h&amp;gt;using namespace std;int main(void) {int n, num;cin &amp;gt;&amp;gt; n;map&amp;lt;int, long long int&amp;gt; a;a[300001] = -1;a[0] = -1;long long temp = 0;for (int i = 0; i &amp;lt; n; i++) {scanf_s(&amp;#34;%d&amp;#34;, &amp;amp;num);a[num] = max((--a.</description>
+    </item>
+    
+  </channel>
+</rss>

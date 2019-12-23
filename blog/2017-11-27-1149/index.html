@@ -1,11 +1,3 @@
-
-
-
-    
-
-
-
-
 <!DOCTYPE HTML>
 
 <html>
@@ -19,25 +11,27 @@
              "@id": "https:\/\/jyukki97.github.io"
         },
         "articleSection" : "blog",
-        "name" : "1149 RGB거리",
-        "headline" : "1149 RGB거리",
-        "description" : "\x2b\x2b\x2b author = \x26ldquo;jyukki\x26rdquo; categories = [\x26ldquo;백준\x26rdquo;] tags = [\x26ldquo;algorithm\x26rdquo;, \x26ldquo;C\x2b\x2b\x26rdquo;, \x26ldquo;DP\x26rdquo;] date = \x26ldquo;2017-11-27\x26rdquo; description = \x26ldquo;algorithm\x26rdquo; featured = \x26quot;\x26rdquo; featuredalt = \x26quot;\x26rdquo; featuredpath = \x26ldquo;date\x26rdquo; linktitle = \x26quot;\x26rdquo; title = \x26ldquo;[백준]1149 RGB거리\x26rdquo; type = \x26ldquo;post\x26rdquo;\n\x2b\x2b\x2b\nhttps:\/\/www.acmicpc.net\/problem\/1149\n풀이:  r,g,b를 각각 b[0], b[1], b[2] 로 둠. r을 선택했다면 이전에서 g,b 중 작은값에 이번에 r값을 더하는 식으로 r,g,b 반복 r,g,b 최종값에서 가장 최소값 출력  코드: #include \x26lt;iostream\x26gt;\r#include \x26lt;algorithm\x26gt;\rusing namespace std;\rint main(void) {\rint n;\rcin \x26gt;\x26gt; n;\rint a[3001];\rint b[3];\rfor (int i = 0; i \x26lt; n*3; i\x2b\x2b) {\rcin \x26gt;\x26gt; a[i];\r}\rfor (int i = 1; i \x26lt; n; i\x2b\x2b) {\rb[0] = a[0];\rb[1] = a[1];\rb[2] = a[2];\ra[0] = min(b[1], b[2]) \x2b a[i * 3];\ra[1] = min(b[0], b[2]) \x2b a[(i * 3) \x2b 1];\ra[2] = min(b[0], b[1]) \x2b a[(i * 3) \x2b 2];\r}\rint temp = min(a[0], a[1]);\rcout \x26lt;\x26lt; min(temp, a[2]) \x26lt;\x26lt; endl;\rreturn 0;\r}\r",
+        "name" : "[백준]1149 RGB거리",
+        "headline" : "[백준]1149 RGB거리",
+        "description" : "algorithm",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
         "publisher": "",
         "accountablePerson" : "",
         "copyrightHolder" : "",
-        "copyrightYear" : "0001",
-        "datePublished": "0001-01-01 00:00:00 \x2b0000 UTC",
-        "dateModified" : "0001-01-01 00:00:00 \x2b0000 UTC",
+        "copyrightYear" : "2017",
+        "datePublished": "2017-11-27 00:00:00 \x2b0000 UTC",
+        "dateModified" : "2017-11-27 00:00:00 \x2b0000 UTC",
         "url" : "https:\/\/jyukki97.github.io\/blog\/2017-11-27-1149\/",
-        "wordCount" : "160",
-        "keywords" : [ "Blog" ]
+        "wordCount" : "122",
+        "keywords" : [ "algorithm","C\x2b\x2b","DP","Blog" ]
     }
     </script>
         
-            <title>1149 RGB거리 - 1 Day 1 Problem</title>
+            
+                <title>[백준]1149 RGB거리</title>
+            
         
 
         <meta charset="utf-8" />
@@ -72,43 +66,36 @@
 
 
         
+            <meta name="author" content="jyukki">
         
-            
-                <meta name="description" content="jyukki&#39;s algorithm blog">
-            
+        
+            <meta name="description" content="algorithm">
         
 
         <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="1149 RGB거리"/>
-<meta name="twitter:description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2017-11-27&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]1149 RGB거리&rdquo; type = &ldquo;post&rdquo;
-&#43;&#43;&#43;
-https://www.acmicpc.net/problem/1149
-풀이:  r,g,b를 각각 b[0], b[1], b[2] 로 둠. r을 선택했다면 이전에서 g,b 중 작은값에 이번에 r값을 더하는 식으로 r,g,b 반복 r,g,b 최종값에서 가장 최소값 출력  코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int main(void) {int n;cin &gt;&gt; n;int a[3001];int b[3];for (int i = 0; i &lt; n*3; i&#43;&#43;) {cin &gt;&gt; a[i];}for (int i = 1; i &lt; n; i&#43;&#43;) {b[0] = a[0];b[1] = a[1];b[2] = a[2];a[0] = min(b[1], b[2]) &#43; a[i * 3];a[1] = min(b[0], b[2]) &#43; a[(i * 3) &#43; 1];a[2] = min(b[0], b[1]) &#43; a[(i * 3) &#43; 2];}int temp = min(a[0], a[1]);cout &lt;&lt; min(temp, a[2]) &lt;&lt; endl;return 0;}"/>
+<meta name="twitter:title" content="[백준]1149 RGB거리"/>
+<meta name="twitter:description" content="algorithm"/>
 
-        <meta property="og:title" content="1149 RGB거리" />
-<meta property="og:description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2017-11-27&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]1149 RGB거리&rdquo; type = &ldquo;post&rdquo;
-&#43;&#43;&#43;
-https://www.acmicpc.net/problem/1149
-풀이:  r,g,b를 각각 b[0], b[1], b[2] 로 둠. r을 선택했다면 이전에서 g,b 중 작은값에 이번에 r값을 더하는 식으로 r,g,b 반복 r,g,b 최종값에서 가장 최소값 출력  코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int main(void) {int n;cin &gt;&gt; n;int a[3001];int b[3];for (int i = 0; i &lt; n*3; i&#43;&#43;) {cin &gt;&gt; a[i];}for (int i = 1; i &lt; n; i&#43;&#43;) {b[0] = a[0];b[1] = a[1];b[2] = a[2];a[0] = min(b[1], b[2]) &#43; a[i * 3];a[1] = min(b[0], b[2]) &#43; a[(i * 3) &#43; 1];a[2] = min(b[0], b[1]) &#43; a[(i * 3) &#43; 2];}int temp = min(a[0], a[1]);cout &lt;&lt; min(temp, a[2]) &lt;&lt; endl;return 0;}" />
+        <meta property="og:title" content="[백준]1149 RGB거리" />
+<meta property="og:description" content="algorithm" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jyukki97.github.io/blog/2017-11-27-1149/" />
-
+<meta property="article:published_time" content="2017-11-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-11-27T00:00:00+00:00" />
 
         <meta property="og:image" content="https://jyukki97.github.io/images/logo.png">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
-        <meta itemprop="name" content="1149 RGB거리">
-<meta itemprop="description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2017-11-27&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]1149 RGB거리&rdquo; type = &ldquo;post&rdquo;
-&#43;&#43;&#43;
-https://www.acmicpc.net/problem/1149
-풀이:  r,g,b를 각각 b[0], b[1], b[2] 로 둠. r을 선택했다면 이전에서 g,b 중 작은값에 이번에 r값을 더하는 식으로 r,g,b 반복 r,g,b 최종값에서 가장 최소값 출력  코드: #include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int main(void) {int n;cin &gt;&gt; n;int a[3001];int b[3];for (int i = 0; i &lt; n*3; i&#43;&#43;) {cin &gt;&gt; a[i];}for (int i = 1; i &lt; n; i&#43;&#43;) {b[0] = a[0];b[1] = a[1];b[2] = a[2];a[0] = min(b[1], b[2]) &#43; a[i * 3];a[1] = min(b[0], b[2]) &#43; a[(i * 3) &#43; 1];a[2] = min(b[0], b[1]) &#43; a[(i * 3) &#43; 2];}int temp = min(a[0], a[1]);cout &lt;&lt; min(temp, a[2]) &lt;&lt; endl;return 0;}">
-
-<meta itemprop="wordCount" content="160">
+        <meta itemprop="name" content="[백준]1149 RGB거리">
+<meta itemprop="description" content="algorithm">
+<meta itemprop="datePublished" content="2017-11-27T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2017-11-27T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="122">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="algorithm,C&#43;&#43;,DP," />
         
 
         
@@ -160,6 +147,7 @@ if (!doNotTrack) {
       <div id="wrapper">
 
     
+    
 <header id="header">
     
       <h1><a href="https://jyukki97.github.io/">blog</a></h1>
@@ -208,6 +196,10 @@ if (!doNotTrack) {
     </nav>
     <nav class="main">
         <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
             
             <li class="search">
                 <a class="fa-search" href="#search">Search</a>
@@ -301,6 +293,78 @@ if (!doNotTrack) {
                     
                 
 
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://jyukki97.github.io/blog/2019-12-22-sumnums/">[프로그래머스]두 정수 사이의 합</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-12-22'>
+                                    December 22, 2019</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki97.github.io/blog/2019-12-22-sumnums/" class="image featured">
+            <img src="https://jyukki97.github.io/title/" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://jyukki97.github.io/blog/2019-12-22-sumdivisor/">[프로그래머스]약수의 합</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2019-12-22'>
+                                    December 22, 2019</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki97.github.io/blog/2019-12-22-sumdivisor/" class="image featured">
+            <img src="https://jyukki97.github.io/title/" alt="">
+        </a>
+    
+
+
+                        </article>
                 
                         <article class="mini-post">
                             <header>
@@ -410,78 +474,6 @@ if (!doNotTrack) {
 
                         </article>
                 
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://jyukki97.github.io/blog/2019-12-20-stoi/">[프로그래머스]문자열을 정수로 바꾸기</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2019-12-20'>
-                                    December 20, 2019</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki97.github.io/blog/2019-12-20-stoi/" class="image featured">
-            <img src="https://jyukki97.github.io/title/" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://jyukki97.github.io/blog/2019-12-19-samesum/">[프로그래머스]같은 숫자는 싫어</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2019-12-19'>
-                                    December 19, 2019</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki97.github.io/blog/2019-12-19-samesum/" class="image featured">
-            <img src="https://jyukki97.github.io/title/" alt="">
-        </a>
-    
-
-
-                        </article>
-                
 
                 
                     <a href=
@@ -497,35 +489,250 @@ if (!doNotTrack) {
         
 </section>
 
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-27-1149%2f&amp;text=%5b%eb%b0%b1%ec%a4%80%5d1149%20RGB%ea%b1%b0%eb%a6%ac&amp;via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-27-1149%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-27-1149%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-27-1149%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1149%20RGB%ea%b1%b0%eb%a6%ac" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-27-1149%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1149%20RGB%ea%b1%b0%eb%a6%ac" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-27-1149%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1149%20RGB%ea%b1%b0%eb%a6%ac" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-27-1149%2f&amp;description=%5b%eb%b0%b1%ec%a4%80%5d1149%20RGB%ea%b1%b0%eb%a6%ac" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by jyukki&amp;body=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-27-1149%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
     
     <div id="main">
+        
+        
         <article class="post">
-            
-            <header>
+  <header>
     <div class="title">
         
-            <h1><a href="https://jyukki97.github.io/blog/2017-11-27-1149/">1149 RGB거리</a></h1>
+            <h1><a href="https://jyukki97.github.io/blog/2017-11-27-1149/">[백준]1149 RGB거리</a></h1>
             
+        
+        
+            <p>algorithm</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2017-11-27'>
+            November 27, 2017</time>
+        <span class="author">jyukki</span>
+        
+            <p>1 minute read</p>
         
         
     </div>
 </header>
 
-            <div id="content">
-                <p>+++
-author = &ldquo;jyukki&rdquo;
-categories = [&ldquo;백준&rdquo;]
-tags = [&ldquo;algorithm&rdquo;, &ldquo;C++&rdquo;, &ldquo;DP&rdquo;]
-date = &ldquo;2017-11-27&rdquo;
-description = &ldquo;algorithm&rdquo;
-featured = &quot;&rdquo;
-featuredalt = &quot;&rdquo;
-featuredpath = &ldquo;date&rdquo;
-linktitle = &quot;&rdquo;
-title = &ldquo;[백준]1149 RGB거리&rdquo;
-type = &ldquo;post&rdquo;</p>
-<p>+++</p>
-<p><a href="https://www.acmicpc.net/problem/1149">https://www.acmicpc.net/problem/1149</a></p>
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-27-1149%2f&amp;text=%5b%eb%b0%b1%ec%a4%80%5d1149%20RGB%ea%b1%b0%eb%a6%ac&amp;via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-27-1149%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-27-1149%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-27-1149%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1149%20RGB%ea%b1%b0%eb%a6%ac" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-27-1149%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1149%20RGB%ea%b1%b0%eb%a6%ac" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-27-1149%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1149%20RGB%ea%b1%b0%eb%a6%ac" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-27-1149%2f&amp;description=%5b%eb%b0%b1%ec%a4%80%5d1149%20RGB%ea%b1%b0%eb%a6%ac" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by jyukki&amp;body=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-27-1149%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki97.github.io/blog/2017-11-27-1149/" class="image featured">
+            <img src="https://jyukki97.github.io/img/2017/11/" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    <p><a href="https://www.acmicpc.net/problem/1149">https://www.acmicpc.net/problem/1149</a></p>
 <h1 id="heading"><strong>풀이:</strong></h1>
 <ol>
 <li>r,g,b를 각각 b[0], b[1], b[2] 로 둠.</li>
@@ -558,8 +765,87 @@ type = &ldquo;post&rdquo;</p>
 	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 }
 </code></pre></div>
-            </div>
-        </article>
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80">백준</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="https://jyukki97.github.io/tags/algorithm">algorithm</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://jyukki97.github.io/tags/c&#43;&#43;">C&#43;&#43;</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://jyukki97.github.io/tags/dp">DP</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jyukki97" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="https://jyukki97.github.io/blog/2017-11-26-11052/"
+                class="button big previous">[백준]11052 붕어빵 판매하기</a></li>
+    
+
+    
+        <li><a href="https://jyukki97.github.io/blog/2017-11-28-9095/"
+                class="button big next">[백준]9095 1, 2, 3 더하기</a></li>
+    
+</ul>
+
+
     </div>
     
 <section id="sidebar">
@@ -693,6 +979,82 @@ type = &ldquo;post&rdquo;</p>
           <article class="mini-post">
             <header>
               <h3>
+                <a href="https://jyukki97.github.io/blog/2019-12-22-sumnums/">[프로그래머스]두 정수 사이의 합</a>
+              </h3>
+              
+              <time class="published" datetime='2019-12-22'>
+                December 22, 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki97.github.io/blog/2019-12-22-sumnums/" class="image featured">
+            <img src="https://jyukki97.github.io/title/" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://jyukki97.github.io/blog/2019-12-22-sumdivisor/">[프로그래머스]약수의 합</a>
+              </h3>
+              
+              <time class="published" datetime='2019-12-22'>
+                December 22, 2019
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki97.github.io/blog/2019-12-22-sumdivisor/" class="image featured">
+            <img src="https://jyukki97.github.io/title/" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
                 <a href="https://jyukki97.github.io/blog/2019-12-21-middlenum/">[프로그래머스]가운데 글자 가져오기</a>
               </h3>
               
@@ -804,82 +1166,6 @@ type = &ldquo;post&rdquo;</p>
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://jyukki97.github.io/blog/2019-12-20-stoi/">[프로그래머스]문자열을 정수로 바꾸기</a>
-              </h3>
-              
-              <time class="published" datetime='2019-12-20'>
-                December 20, 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki97.github.io/blog/2019-12-20-stoi/" class="image featured">
-            <img src="https://jyukki97.github.io/title/" alt="">
-        </a>
-    
-
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://jyukki97.github.io/blog/2019-12-19-samesum/">[프로그래머스]같은 숫자는 싫어</a>
-              </h3>
-              
-              <time class="published" datetime='2019-12-19'>
-                December 19, 2019
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="https://jyukki97.github.io/blog/2019-12-19-samesum/" class="image featured">
-            <img src="https://jyukki97.github.io/title/" alt="">
-        </a>
-    
-
-
-          </article>
-        
       </div>
 
       
@@ -913,7 +1199,7 @@ type = &ldquo;post&rdquo;</p>
             <header>
               
                 <a href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80/">백준</a>
-                <span style="float:right;">63</span>
+                <span style="float:right;">70</span>
               
             </header>
           </article>
@@ -924,7 +1210,7 @@ type = &ldquo;post&rdquo;</p>
             <header>
               
                 <a href="https://jyukki97.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/">프로그래머스</a>
-                <span style="float:right;">13</span>
+                <span style="float:right;">15</span>
               
             </header>
           </article>
