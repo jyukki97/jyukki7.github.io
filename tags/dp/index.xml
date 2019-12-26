@@ -176,6 +176,36 @@
     </item>
     
     <item>
+      <title>[백준]11722 가장 긴 감소하는 부분 수열</title>
+      <link>https://jyukki97.github.io/blog/2017-12-15-11722/</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-15-11722/</guid>
+      <description>https://www.acmicpc.net/problem/11722
+풀이:  11053 가장 긴 증가하는 부분 수열의 문제와 똑같으므로 링크를 참고  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int main(void) {int n, temp;cin &amp;gt;&amp;gt; n;int a[1001] = { 0 };int b[1001];for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];b[i] = 1;}for (int i = 0; i &amp;lt; n; i++) {temp = 0;for (int t = 0; t &amp;lt;= i; t++) {if (a[i] &amp;lt; a[i - t])temp = max(b[i - t], temp);}b[i] += temp;}for (int i = 0; i &amp;lt; n; i++) {temp = max(b[i], temp);}cout &amp;lt;&amp;lt; temp &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]4883 삼각 그래프</title>
+      <link>https://jyukki97.github.io/blog/2017-12-14-4883/</link>
+      <pubDate>Thu, 14 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-14-4883/</guid>
+      <description>https://www.acmicpc.net/problem/4883
+풀이:  N X 3 행렬에서 맨 위 중앙에서 출발하여 맨 아래 중앙까지 가는 경로 중 가장 최소 비용을 찾는 문제 각 i행의 1,2,3번째 열의 각각 최소비용은 i-1 번째 행에서의 최소 비용을 더해준 값이다. 맨 마지막 행의 2번째 열을 출력한다. 0이 출력되면 끝나므로 if문으로 while 문을 빠져나갈 수 있게한다. 하나의 테스트케이스마다 숫자를 출력해야하므로 count 값을 각 케이스마다 ++해준다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[100005][3], b[100005][3];int main(void) {int count = 1;while (true) {int n, temp, temp2;cin &amp;gt;&amp;gt; n;if (n == 0)break;for (int i = 0; i &amp;lt; n; i++) {for (int t = 0; t &amp;lt; 3; t++) {cin &amp;gt;&amp;gt; a[i][t];b[i][t] = a[i][t];}}b[0][2] += b[0][1];b[1][0] += b[0][1];b[1][1] += min(min(b[0][1],b[1][0]), b[0][2]);b[1][2] += min(min(b[1][1], b[0][1]), b[0][2]);for (int i = 2; i &amp;lt; n; i++) {for (int t = 0; t &amp;lt; 3; t++) {if (t == 0)b[i][t] += min(b[i - 1][t], b[i - 1][t + 1]);else if (t == 1)b[i][t] += min(min(b[i - 1][t], b[i - 1][t + 1]), min(b[i - 1][t - 1], b[i][t - 1]));else if (t == 2)b[i][t] += min(min(b[i - 1][t - 1], b[i - 1][t]), b[i][t - 1]);}}cout &amp;lt;&amp;lt; count &amp;lt;&amp;lt; &amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>[백준]10164 격자상의 경로</title>
+      <link>https://jyukki97.github.io/blog/2017-12-13-10164/</link>
+      <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-13-10164/</guid>
+      <description>https://www.acmicpc.net/problem/10164
+풀이:  N X M 행렬에서 K번째 수를 꼭 지나치면서 오른쪽 맨 아래까지 가는 최대 경우의 수 1~K 까지 가는 경우의 수 * K~M*N 까지 가는 경우의 수 DP[i][t] i행 t열로 갈 수 있는 경우의 수 DP[i][t] = DP[i-1][t] + DP[i][t-1]  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int a[16][16] = { 0 };int b[16][16] = { 0 };int main(void) {int n, m, k, q, w, e, r;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m &amp;gt;&amp;gt; k;q = k / m + 1;w = k%m;if (k !</description>
+    </item>
+    
+    <item>
       <title>[백준]11053 가장 긴 증가하는 부분 수열</title>
       <link>https://jyukki97.github.io/blog/2017-12-12-11053/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
@@ -183,6 +213,26 @@
       <guid>https://jyukki97.github.io/blog/2017-12-12-11053/</guid>
       <description>https://www.acmicpc.net/problem/11053
 풀이:  1965 상자넣기의 문제와 똑같으므로 링크를 참고  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int main(void) {int n, temp;cin &amp;gt;&amp;gt; n;int a[1001] = { 0 };int b[1001];for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];b[i] = 1;}for (int i = 0; i &amp;lt; n; i++) {temp = 0;for (int t = 0; t &amp;lt;= i; t++) {if (a[i] &amp;gt; a[i - t])temp = max(b[i - t], temp);}b[i] += temp;}for (int i = 0; i &amp;lt; n; i++) {temp = max(b[i], temp);}cout &amp;lt;&amp;lt; temp &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]11060 점프 점프</title>
+      <link>https://jyukki97.github.io/blog/2017-12-10-11060/</link>
+      <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-10-11060/</guid>
+      <description>https://www.acmicpc.net/problem/11060
+풀이:  cnt[i] 는 i번째 에서의 최소 가짓수 cnt를 모두 최댓값으로 채운 후 a[i] 이하의 값으로 점프할 때 마다 cnt[i + t] 값을 min(cnt[i + t], cnt[i] + 1) 로 해줌으로써 최소 가짓수를 찾는다 만약 도착점의 값이 처음 채운 1001과 같다면 갈 수 없는 경우이므로 -1을 출력한다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[1001], cnt[1001];int main(void) {int n;cin &amp;gt;&amp;gt; n;fill_n(cnt, n, 1001);for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];}cnt[0] = 0;for (int i = 0; i &amp;lt; n; i++) {for (int t = 1; t &amp;lt;= a[i]; t++) {cnt[i + t] = min(cnt[i + t], cnt[i] + 1);}}if (cnt[n - 1] == 1001)cout &amp;lt;&amp;lt; &amp;#34;-1&amp;#34; &amp;lt;&amp;lt; endl;elsecout &amp;lt;&amp;lt; cnt[n - 1] &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]9084 동전</title>
+      <link>https://jyukki97.github.io/blog/2017-12-09-9084/</link>
+      <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-09-9084/</guid>
+      <description>https://www.acmicpc.net/problem/9084
+풀이:  첫번째 동전부터 경우의 수를 더해감.  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int coin[10001] = { 0 };int main(void){int n, a, num;cin &amp;gt;&amp;gt; n;for (int t = 0; t &amp;lt; n; t++) {fill_n(coin, 10000, 0);cin &amp;gt;&amp;gt; a;int *q = new int[a];for (int i = 0; i &amp;lt; a; i++) {cin &amp;gt;&amp;gt; q[i];}cin &amp;gt;&amp;gt; num;for (int i = 0; i &amp;lt;= num; i++) {if (i%q[0] == 0)coin[i]++;}for (int i = 1; i &amp;lt; a; i++) {for (int t = q[i]; t &amp;lt;= num; t++) {coin[t] += coin[t - q[i]];}}cout &amp;lt;&amp;lt; coin[num] &amp;lt;&amp;lt; endl;}return 0;}</description>
     </item>
     
     <item>

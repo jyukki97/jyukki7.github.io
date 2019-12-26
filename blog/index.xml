@@ -6,10 +6,44 @@
     <description>Recent content in Blog on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sun, 22 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[프로그래머스]자연수 뒤집어 배열로 만들기</title>
+      <link>https://jyukki97.github.io/blog/2019-12-25-turnnnum/</link>
+      <pubDate>Wed, 25 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-25-turnnnum/</guid>
+      <description>https://programmers.co.kr
+풀이:  자연수 n을 뒤집어 각 자리 숫자를 원소로 가지는 배열을 리턴한다.  코드: 사용언어 : c++
+#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdbool.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;int* solution(long long n) {// 리턴할 값은 메모리를 동적 할당해주세요. int* answer = (int*)malloc(sizeof(int)*12 + 1);int c = 0;while (n) {answer[c] = n % 10;n /= 10;c++;}return answer;}</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]자릿수 더하기</title>
+      <link>https://jyukki97.github.io/blog/2019-12-24-sumpnum/</link>
+      <pubDate>Tue, 24 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-24-sumpnum/</guid>
+      <description>https://programmers.co.kr
+풀이:  자연수 n의 각 자릿수의 합을 구해서 리턴한다.  코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int solution(int n){int answer = 0;while (n != 0) {answer += n % 10;n /= 10;}return answer;}</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]이상한 문자 만들기</title>
+      <link>https://jyukki97.github.io/blog/2019-12-23-strangestring/</link>
+      <pubDate>Mon, 23 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-23-strangestring/</guid>
+      <description>https://programmers.co.kr
+문제: 문자열 s는 한 개 이상의 단어로 구성되어 있습니다. 각 단어는 하나 이상의 공백문자로 구분되어 있습니다. 각 단어의 짝수번째 알파벳은 대문자로, 홀수번째 알파벳은 소문자로 바꾼 문자열을 리턴하는 함수, solution을 완성하세요.
+풀이:  문자열 전체의 짝/홀수 인덱스가 아니라 각 단어 기준이므로 주의한다. 공백문자가 하나가 아닐 수도 있으므로 주의한다. 공백문자를 기준으로 단어를 나누므로, 공백문자가 나왔을 경우 카운트를 초기화하는 식으로 문자열을 나눈다.  코드: 사용언어 : c++
+#include &amp;lt;string&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;string solution(string s) {int c = 0;for (int i = 0;i &amp;lt; s.</description>
+    </item>
     
     <item>
       <title>[프로그래머스]두 정수 사이의 합</title>
@@ -553,6 +587,36 @@ n,s=int(input()),&amp;#34;&amp;#34;for i in range(1,n+1):s+=str(i)print(s.fin
     </item>
     
     <item>
+      <title>[백준]11722 가장 긴 감소하는 부분 수열</title>
+      <link>https://jyukki97.github.io/blog/2017-12-15-11722/</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-15-11722/</guid>
+      <description>https://www.acmicpc.net/problem/11722
+풀이:  11053 가장 긴 증가하는 부분 수열의 문제와 똑같으므로 링크를 참고  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int main(void) {int n, temp;cin &amp;gt;&amp;gt; n;int a[1001] = { 0 };int b[1001];for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];b[i] = 1;}for (int i = 0; i &amp;lt; n; i++) {temp = 0;for (int t = 0; t &amp;lt;= i; t++) {if (a[i] &amp;lt; a[i - t])temp = max(b[i - t], temp);}b[i] += temp;}for (int i = 0; i &amp;lt; n; i++) {temp = max(b[i], temp);}cout &amp;lt;&amp;lt; temp &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]4883 삼각 그래프</title>
+      <link>https://jyukki97.github.io/blog/2017-12-14-4883/</link>
+      <pubDate>Thu, 14 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-14-4883/</guid>
+      <description>https://www.acmicpc.net/problem/4883
+풀이:  N X 3 행렬에서 맨 위 중앙에서 출발하여 맨 아래 중앙까지 가는 경로 중 가장 최소 비용을 찾는 문제 각 i행의 1,2,3번째 열의 각각 최소비용은 i-1 번째 행에서의 최소 비용을 더해준 값이다. 맨 마지막 행의 2번째 열을 출력한다. 0이 출력되면 끝나므로 if문으로 while 문을 빠져나갈 수 있게한다. 하나의 테스트케이스마다 숫자를 출력해야하므로 count 값을 각 케이스마다 ++해준다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[100005][3], b[100005][3];int main(void) {int count = 1;while (true) {int n, temp, temp2;cin &amp;gt;&amp;gt; n;if (n == 0)break;for (int i = 0; i &amp;lt; n; i++) {for (int t = 0; t &amp;lt; 3; t++) {cin &amp;gt;&amp;gt; a[i][t];b[i][t] = a[i][t];}}b[0][2] += b[0][1];b[1][0] += b[0][1];b[1][1] += min(min(b[0][1],b[1][0]), b[0][2]);b[1][2] += min(min(b[1][1], b[0][1]), b[0][2]);for (int i = 2; i &amp;lt; n; i++) {for (int t = 0; t &amp;lt; 3; t++) {if (t == 0)b[i][t] += min(b[i - 1][t], b[i - 1][t + 1]);else if (t == 1)b[i][t] += min(min(b[i - 1][t], b[i - 1][t + 1]), min(b[i - 1][t - 1], b[i][t - 1]));else if (t == 2)b[i][t] += min(min(b[i - 1][t - 1], b[i - 1][t]), b[i][t - 1]);}}cout &amp;lt;&amp;lt; count &amp;lt;&amp;lt; &amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>[백준]10164 격자상의 경로</title>
+      <link>https://jyukki97.github.io/blog/2017-12-13-10164/</link>
+      <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-13-10164/</guid>
+      <description>https://www.acmicpc.net/problem/10164
+풀이:  N X M 행렬에서 K번째 수를 꼭 지나치면서 오른쪽 맨 아래까지 가는 최대 경우의 수 1~K 까지 가는 경우의 수 * K~M*N 까지 가는 경우의 수 DP[i][t] i행 t열로 갈 수 있는 경우의 수 DP[i][t] = DP[i-1][t] + DP[i][t-1]  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int a[16][16] = { 0 };int b[16][16] = { 0 };int main(void) {int n, m, k, q, w, e, r;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m &amp;gt;&amp;gt; k;q = k / m + 1;w = k%m;if (k !</description>
+    </item>
+    
+    <item>
       <title>[백준]11053 가장 긴 증가하는 부분 수열</title>
       <link>https://jyukki97.github.io/blog/2017-12-12-11053/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
@@ -560,6 +624,36 @@ n,s=int(input()),&amp;#34;&amp;#34;for i in range(1,n+1):s+=str(i)print(s.fin
       <guid>https://jyukki97.github.io/blog/2017-12-12-11053/</guid>
       <description>https://www.acmicpc.net/problem/11053
 풀이:  1965 상자넣기의 문제와 똑같으므로 링크를 참고  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int main(void) {int n, temp;cin &amp;gt;&amp;gt; n;int a[1001] = { 0 };int b[1001];for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];b[i] = 1;}for (int i = 0; i &amp;lt; n; i++) {temp = 0;for (int t = 0; t &amp;lt;= i; t++) {if (a[i] &amp;gt; a[i - t])temp = max(b[i - t], temp);}b[i] += temp;}for (int i = 0; i &amp;lt; n; i++) {temp = max(b[i], temp);}cout &amp;lt;&amp;lt; temp &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]6603 로또</title>
+      <link>https://jyukki97.github.io/blog/2017-12-12-6603/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-12-6603/</guid>
+      <description>https://www.acmicpc.net/problem/6603
+풀이:  N 개의 로또 번호 중 6개를 선택하여 로또를 만드는 프로그램 6개의 번호를 사전순으로 하나씩 선택하면서 출력한다. 출력 사이사이에 빈칸을 만들어주고, 하나의 테스트 케이스가 끝나면 빈 줄을 하나 출력한다. 0이 출력되면 끝나므로 while 문 안에 if문으로 제한을 넣어준다.  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int a[13];int main(void) {while (true) {int n;cin &amp;gt;&amp;gt; n;if (n == 0)break;for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];}int b[6] = { 0,1,2,3,4,5 };while (true) {cout &amp;lt;&amp;lt; a[b[0]] &amp;lt;&amp;lt; &amp;#34;&amp;#34; &amp;lt;&amp;lt; a[b[1]] &amp;lt;&amp;lt; &amp;#34;&amp;#34; &amp;lt;&amp;lt; a[b[2]] &amp;lt;&amp;lt; &amp;#34;&amp;#34; &amp;lt;&amp;lt; a[b[3]] &amp;lt;&amp;lt; &amp;#34;&amp;#34; &amp;lt;&amp;lt; a[b[4]] &amp;lt;&amp;lt; &amp;#34;&amp;#34; &amp;lt;&amp;lt; a[b[5]] &amp;lt;&amp;lt; endl;if (b[0] &amp;gt;= n - 6)break;else if (b[1] &amp;gt;= n - 5) {b[0]++;for (int i = 0; i &amp;lt; 5; i++) {b[i + 1] = b[i] + 1;}}else if (b[2] &amp;gt;= n - 4) {b[1]++;for (int i = 1; i &amp;lt; 5; i++) {b[i + 1] = b[i] + 1;}}else if (b[3] &amp;gt;= n - 3) {b[2]++;for (int i = 2; i &amp;lt; 5; i++) {b[i + 1] = b[i] + 1;}}else if (b[4] &amp;gt;= n - 2) {b[3]++;for (int i = 3; i &amp;lt; 5; i++) {b[i + 1] = b[i] + 1;}}else if (b[5] &amp;gt;= n - 1) {b[4]++;b[5] = b[4] + 1;}elseb[5]++;}cout &amp;lt;&amp;lt; endl;}return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]11060 점프 점프</title>
+      <link>https://jyukki97.github.io/blog/2017-12-10-11060/</link>
+      <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-10-11060/</guid>
+      <description>https://www.acmicpc.net/problem/11060
+풀이:  cnt[i] 는 i번째 에서의 최소 가짓수 cnt를 모두 최댓값으로 채운 후 a[i] 이하의 값으로 점프할 때 마다 cnt[i + t] 값을 min(cnt[i + t], cnt[i] + 1) 로 해줌으로써 최소 가짓수를 찾는다 만약 도착점의 값이 처음 채운 1001과 같다면 갈 수 없는 경우이므로 -1을 출력한다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[1001], cnt[1001];int main(void) {int n;cin &amp;gt;&amp;gt; n;fill_n(cnt, n, 1001);for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];}cnt[0] = 0;for (int i = 0; i &amp;lt; n; i++) {for (int t = 1; t &amp;lt;= a[i]; t++) {cnt[i + t] = min(cnt[i + t], cnt[i] + 1);}}if (cnt[n - 1] == 1001)cout &amp;lt;&amp;lt; &amp;#34;-1&amp;#34; &amp;lt;&amp;lt; endl;elsecout &amp;lt;&amp;lt; cnt[n - 1] &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]9084 동전</title>
+      <link>https://jyukki97.github.io/blog/2017-12-09-9084/</link>
+      <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-09-9084/</guid>
+      <description>https://www.acmicpc.net/problem/9084
+풀이:  첫번째 동전부터 경우의 수를 더해감.  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int coin[10001] = { 0 };int main(void){int n, a, num;cin &amp;gt;&amp;gt; n;for (int t = 0; t &amp;lt; n; t++) {fill_n(coin, 10000, 0);cin &amp;gt;&amp;gt; a;int *q = new int[a];for (int i = 0; i &amp;lt; a; i++) {cin &amp;gt;&amp;gt; q[i];}cin &amp;gt;&amp;gt; num;for (int i = 0; i &amp;lt;= num; i++) {if (i%q[0] == 0)coin[i]++;}for (int i = 1; i &amp;lt; a; i++) {for (int t = q[i]; t &amp;lt;= num; t++) {coin[t] += coin[t - q[i]];}}cout &amp;lt;&amp;lt; coin[num] &amp;lt;&amp;lt; endl;}return 0;}</description>
     </item>
     
     <item>
@@ -957,16 +1051,6 @@ n,m=map(int,input().split())a,b=0,[0]*1000001for i in range(2,int(m**.5)+1):q
     </item>
     
     <item>
-      <title>10164 격자상의 경로</title>
-      <link>https://jyukki97.github.io/blog/2017-12-13-10164/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2017-12-13-10164/</guid>
-      <description>https://www.acmicpc.net/problem/10164
-풀이:  N X M 행렬에서 K번째 수를 꼭 지나치면서 오른쪽 맨 아래까지 가는 최대 경우의 수 1~K 까지 가는 경우의 수 * K~M*N 까지 가는 경우의 수 DP[i][t] i행 t열로 갈 수 있는 경우의 수 DP[i][t] = DP[i-1][t] + DP[i][t-1]  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int a[16][16] = { 0 };int b[16][16] = { 0 };int main(void) {int n, m, k, q, w, e, r;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m &amp;gt;&amp;gt; k;q = k / m + 1;w = k%m;if (k !</description>
-    </item>
-    
-    <item>
       <title>1038 감소하는 수</title>
       <link>https://jyukki97.github.io/blog/2017-12-20-1038/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1084,16 +1168,6 @@ https://www.acmicpc.net/problem/11048
     </item>
     
     <item>
-      <title>11060 점프 점프</title>
-      <link>https://jyukki97.github.io/blog/2017-12-10-11060/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2017-12-10-11060/</guid>
-      <description>https://www.acmicpc.net/problem/11060
-풀이:  cnt[i] 는 i번째 에서의 최소 가짓수 cnt를 모두 최댓값으로 채운 후 a[i] 이하의 값으로 점프할 때 마다 cnt[i + t] 값을 min(cnt[i + t], cnt[i] + 1) 로 해줌으로써 최소 가짓수를 찾는다 만약 도착점의 값이 처음 채운 1001과 같다면 갈 수 없는 경우이므로 -1을 출력한다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[1001], cnt[1001];int main(void) {int n;cin &amp;gt;&amp;gt; n;fill_n(cnt, n, 1001);for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];}cnt[0] = 0;for (int i = 0; i &amp;lt; n; i++) {for (int t = 1; t &amp;lt;= a[i]; t++) {cnt[i + t] = min(cnt[i + t], cnt[i] + 1);}}if (cnt[n - 1] == 1001)cout &amp;lt;&amp;lt; &amp;quot;-1&amp;quot; &amp;lt;&amp;lt; endl;elsecout &amp;lt;&amp;lt; cnt[n - 1] &amp;lt;&amp;lt; endl;return 0;}</description>
-    </item>
-    
-    <item>
       <title>11656 접미사 배열</title>
       <link>https://jyukki97.github.io/blog/2018-02-04-11656/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1102,16 +1176,6 @@ https://www.acmicpc.net/problem/11048
       <description>https://www.acmicpc.net/problem/11656
 풀이:  접미사를 모두 리스트에 넣는다. 리스트를 사전순으로 정렬하고 출력한다.  코드: 사용언어 : Python 3
 n=input()l=[]for i in range(len(n)):l.append(n[i:])l.sort()for i in range(len(n)):print(l[i])</description>
-    </item>
-    
-    <item>
-      <title>11722 가장 긴 감소하는 부분 수열</title>
-      <link>https://jyukki97.github.io/blog/2017-12-15-11722/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2017-12-15-11722/</guid>
-      <description>https://www.acmicpc.net/problem/11722
-풀이:  출처의 문제와 똑같으므로 출처를 참고  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int main(void) {int n, temp;cin &amp;gt;&amp;gt; n;int a[1001] = { 0 };int b[1001];for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];b[i] = 1;}for (int i = 0; i &amp;lt; n; i++) {temp = 0;for (int t = 0; t &amp;lt;= i; t++) {if (a[i] &amp;lt; a[i - t])temp = max(b[i - t], temp);}b[i] += temp;}for (int i = 0; i &amp;lt; n; i++) {temp = max(b[i], temp);}cout &amp;lt;&amp;lt; temp &amp;lt;&amp;lt; endl;return 0;}출처: 11053 가장 긴 증가하는 부분 수열 https://jyukki97.</description>
     </item>
     
     <item>
@@ -1557,16 +1621,6 @@ n=int(input())while True:k=int(input())if k==0:breakif(k%n==0):print(k,&am
     </item>
     
     <item>
-      <title>4883 삼각 그래프</title>
-      <link>https://jyukki97.github.io/blog/2017-12-14-4883/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2017-12-14-4883/</guid>
-      <description>https://www.acmicpc.net/problem/4883
-풀이:  N X 3 행렬에서 맨 위 중앙에서 출발하여 맨 아래 중앙까지 가는 경로 중 가장 최소 비용을 찾는 문제 각 i행의 1,2,3번째 열의 각각 최소비용은 i-1 번째 행에서의 최소 비용을 더해준 값이다. 맨 마지막 행의 2번째 열을 출력한다. 0이 출력되면 끝나므로 if문으로 while 문을 빠져나갈 수 있게한다. 하나의 테스트케이스마다 숫자를 출력해야하므로 count 값을 각 케이스마다 ++해준다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[100005][3], b[100005][3];int main(void) {int count = 1;while (true) {int n, temp, temp2;cin &amp;gt;&amp;gt; n;if (n == 0)break;for (int i = 0; i &amp;lt; n; i++) {for (int t = 0; t &amp;lt; 3; t++) {cin &amp;gt;&amp;gt; a[i][t];b[i][t] = a[i][t];}}b[0][2] += b[0][1];b[1][0] += b[0][1];b[1][1] += min(min(b[0][1],b[1][0]), b[0][2]);b[1][2] += min(min(b[1][1], b[0][1]), b[0][2]);for (int i = 2; i &amp;lt; n; i++) {for (int t = 0; t &amp;lt; 3; t++) {if (t == 0)b[i][t] += min(b[i - 1][t], b[i - 1][t + 1]);else if (t == 1)b[i][t] += min(min(b[i - 1][t], b[i - 1][t + 1]), min(b[i - 1][t - 1], b[i][t - 1]));else if (t == 2)b[i][t] += min(min(b[i - 1][t - 1], b[i - 1][t]), b[i][t - 1]);}}cout &amp;lt;&amp;lt; count &amp;lt;&amp;lt; &amp;quot;.</description>
-    </item>
-    
-    <item>
       <title>5218 알파벳 거리</title>
       <link>https://jyukki97.github.io/blog/2018-02-04-5218/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1575,26 +1629,6 @@ n=int(input())while True:k=int(input())if k==0:breakif(k%n==0):print(k,&am
       <description>https://www.acmicpc.net/problem/5218
 풀이:  알파벳 거리를 출력 만약 음수라면 26을 더한다.  코드: 사용언어 : Python 3
 n=int(input())for i in range(n):a,b=map(str,input().split())print(&amp;quot;Distances:&amp;quot;,end=&#39; &#39;)for t in range(len(a)):if(ord(a[t])&amp;gt;ord(b[t])):print(ord(b[t])-ord(a[t])+26,end=&#39; &#39;)else:print(ord(b[t])-ord(a[t]),end=&#39; &#39;)print()</description>
-    </item>
-    
-    <item>
-      <title>6603 로또</title>
-      <link>https://jyukki97.github.io/blog/2017-12-12-6603/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2017-12-12-6603/</guid>
-      <description>https://www.acmicpc.net/problem/6603
-풀이:  N 개의 로또 번호 중 6개를 선택하여 로또를 만드는 프로그램 6개의 번호를 사전순으로 하나씩 선택하면서 출력한다. 출력 사이사이에 빈칸을 만들어주고, 하나의 테스트 케이스가 끝나면 빈 줄을 하나 출력한다. 0이 출력되면 끝나므로 while 문 안에 if문으로 제한을 넣어준다.  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int a[13];int main(void) {while (true) {int n;cin &amp;gt;&amp;gt; n;if (n == 0)break;for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];}int b[6] = { 0,1,2,3,4,5 };while (true) {cout &amp;lt;&amp;lt; a[b[0]] &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; a[b[1]] &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; a[b[2]] &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; a[b[3]] &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; a[b[4]] &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; a[b[5]] &amp;lt;&amp;lt; endl;if (b[0] &amp;gt;= n - 6)break;else if (b[1] &amp;gt;= n - 5) {b[0]++;for (int i = 0; i &amp;lt; 5; i++) {b[i + 1] = b[i] + 1;}}else if (b[2] &amp;gt;= n - 4) {b[1]++;for (int i = 1; i &amp;lt; 5; i++) {b[i + 1] = b[i] + 1;}}else if (b[3] &amp;gt;= n - 3) {b[2]++;for (int i = 2; i &amp;lt; 5; i++) {b[i + 1] = b[i] + 1;}}else if (b[4] &amp;gt;= n - 2) {b[3]++;for (int i = 3; i &amp;lt; 5; i++) {b[i + 1] = b[i] + 1;}}else if (b[5] &amp;gt;= n - 1) {b[4]++;b[5] = b[4] + 1;}elseb[5]++;}cout &amp;lt;&amp;lt; endl;}return 0;}</description>
-    </item>
-    
-    <item>
-      <title>9084 동전</title>
-      <link>https://jyukki97.github.io/blog/2017-12-09-9084/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2017-12-09-9084/</guid>
-      <description>https://www.acmicpc.net/problem/9084
-풀이:  첫번째 동전부터 경우의 수를 더해감.  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int coin[10001] = { 0 };int main(void){int n, a, num;cin &amp;gt;&amp;gt; n;for (int t = 0; t &amp;lt; n; t++) {fill_n(coin, 10000, 0);cin &amp;gt;&amp;gt; a;int *q = new int[a];for (int i = 0; i &amp;lt; a; i++) {cin &amp;gt;&amp;gt; q[i];}cin &amp;gt;&amp;gt; num;for (int i = 0; i &amp;lt;= num; i++) {if (i%q[0] == 0)coin[i]++;}for (int i = 1; i &amp;lt; a; i++) {for (int t = q[i]; t &amp;lt;= num; t++) {coin[t] += coin[t - q[i]];}}cout &amp;lt;&amp;lt; coin[num] &amp;lt;&amp;lt; endl;}return 0;}</description>
     </item>
     
     <item>

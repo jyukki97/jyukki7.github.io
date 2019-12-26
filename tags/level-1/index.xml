@@ -6,10 +6,44 @@
     <description>Recent content in Level 1 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sun, 22 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/level-1/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[프로그래머스]자연수 뒤집어 배열로 만들기</title>
+      <link>https://jyukki97.github.io/blog/2019-12-25-turnnnum/</link>
+      <pubDate>Wed, 25 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-25-turnnnum/</guid>
+      <description>https://programmers.co.kr
+풀이:  자연수 n을 뒤집어 각 자리 숫자를 원소로 가지는 배열을 리턴한다.  코드: 사용언어 : c++
+#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdbool.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;int* solution(long long n) {// 리턴할 값은 메모리를 동적 할당해주세요. int* answer = (int*)malloc(sizeof(int)*12 + 1);int c = 0;while (n) {answer[c] = n % 10;n /= 10;c++;}return answer;}</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]자릿수 더하기</title>
+      <link>https://jyukki97.github.io/blog/2019-12-24-sumpnum/</link>
+      <pubDate>Tue, 24 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-24-sumpnum/</guid>
+      <description>https://programmers.co.kr
+풀이:  자연수 n의 각 자릿수의 합을 구해서 리턴한다.  코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int solution(int n){int answer = 0;while (n != 0) {answer += n % 10;n /= 10;}return answer;}</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]이상한 문자 만들기</title>
+      <link>https://jyukki97.github.io/blog/2019-12-23-strangestring/</link>
+      <pubDate>Mon, 23 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-23-strangestring/</guid>
+      <description>https://programmers.co.kr
+문제: 문자열 s는 한 개 이상의 단어로 구성되어 있습니다. 각 단어는 하나 이상의 공백문자로 구분되어 있습니다. 각 단어의 짝수번째 알파벳은 대문자로, 홀수번째 알파벳은 소문자로 바꾼 문자열을 리턴하는 함수, solution을 완성하세요.
+풀이:  문자열 전체의 짝/홀수 인덱스가 아니라 각 단어 기준이므로 주의한다. 공백문자가 하나가 아닐 수도 있으므로 주의한다. 공백문자를 기준으로 단어를 나누므로, 공백문자가 나왔을 경우 카운트를 초기화하는 식으로 문자열을 나눈다.  코드: 사용언어 : c++
+#include &amp;lt;string&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;string solution(string s) {int c = 0;for (int i = 0;i &amp;lt; s.</description>
+    </item>
     
     <item>
       <title>[프로그래머스]두 정수 사이의 합</title>
