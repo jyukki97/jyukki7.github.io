@@ -24,6 +24,29 @@
     </item>
     
     <item>
+      <title>[프로그래머스]다리를 지나는 트럭</title>
+      <link>https://jyukki97.github.io/blog/2019-12-26-bridgetruck/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-26-bridgetruck/</guid>
+      <description>https://programmers.co.kr
+문제: 트럭 여러 대가 강을 가로지르는 일 차선 다리를 정해진 순으로 건너려 합니다. 모든 트럭이 다리를 건너려면 최소 몇 초가 걸리는지 알아내야 합니다. 트럭은 1초에 1만큼 움직이며, 다리 길이는 bridge_length이고 다리는 무게 weight까지 견딥니다. ※ 트럭이 다리에 완전히 오르지 않은 경우, 이 트럭의 무게는 고려하지 않습니다.
+예를 들어, 길이가 2이고 10kg 무게를 견디는 다리가 있습니다. 무게가 [7, 4, 5, 6]kg인 트럭이 순서대로 최단 시간 안에 다리를 건너려면 다음과 같이 건너야 합니다.</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]스킬트리</title>
+      <link>https://jyukki97.github.io/blog/2019-12-26-skilltree/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-26-skilltree/</guid>
+      <description>https://programmers.co.kr
+문제: 선행 스킬이란 어떤 스킬을 배우기 전에 먼저 배워야 하는 스킬을 뜻합니다.
+예를 들어 선행 스킬 순서가 스파크 → 라이트닝 볼트 → 썬더일때, 썬더를 배우려면 먼저 라이트닝 볼트를 배워야 하고, 라이트닝 볼트를 배우려면 먼저 스파크를 배워야 합니다.
+위 순서에 없는 다른 스킬(힐링 등)은 순서에 상관없이 배울 수 있습니다. 따라서 스파크 → 힐링 → 라이트닝 볼트 → 썬더와 같은 스킬트리는 가능하지만, 썬더 → 스파크나 라이트닝 볼트 → 스파크 → 힐링 → 썬더와 같은 스킬트리는 불가능합니다.</description>
+    </item>
+    
+    <item>
       <title>[프로그래머스]자연수 뒤집어 배열로 만들기</title>
       <link>https://jyukki97.github.io/blog/2019-12-25-turnnnum/</link>
       <pubDate>Wed, 25 Dec 2019 00:00:00 +0000</pubDate>
