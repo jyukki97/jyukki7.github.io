@@ -6,10 +6,44 @@
     <description>Recent content in algorithm on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Thu, 26 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[프로그래머스]멀쩡한 사각형</title>
+      <link>https://jyukki97.github.io/blog/2019-12-27-intactractangle/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-27-intactractangle/</guid>
+      <description>https://programmers.co.kr
+문제: 가로 길이가 Wcm, 세로 길이가 Hcm인 직사각형 종이가 있습니다. 종이에는 가로, 세로 방향과 평행하게 격자 형태로 선이 그어져 있으며, 모든 격자칸은 1cm x 1cm 크기입니다. 이 종이를 격자 선을 따라 1cm × 1cm의 정사각형으로 잘라 사용할 예정이었는데, 누군가가 이 종이를 대각선 꼭지점 2개를 잇는 방향으로 잘라 놓았습니다. 그러므로 현재 직사각형 종이는 크기가 같은 직각삼각형 2개로 나누어진 상태입니다. 새로운 종이를 구할 수 없는 상태이기 때문에, 이 종이에서 원래 종이의 가로, 세로 방향과 평행하게 1cm × 1cm로 잘라 사용할 수 있는 만큼만 사용하기로 하였습니다.</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]주식가격</title>
+      <link>https://jyukki97.github.io/blog/2019-12-27-stockprice/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-27-stockprice/</guid>
+      <description>https://programmers.co.kr
+문제: 초 단위로 기록된 주식가격이 담긴 배열 prices가 매개변수로 주어질 때, 가격이 떨어지지 않은 기간은 몇 초인지를 return 하도록 solution 함수를 완성하세요.
+풀이: 초 단위로 시간을 흘러가게 한 후 주식가격이 떨어지면 그 시간을 기록하여 answer에 저장한다.
+코드: 사용언어 : c++
+#include &amp;lt;string&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;vector&amp;lt;int&amp;gt; solution(vector&amp;lt;int&amp;gt; prices) {vector&amp;lt;int&amp;gt; answer;for (int i = 0;i &amp;lt; prices.size();i++) {answer.push_back(0);for (int t = i + 1;t &amp;lt; prices.</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]프린터</title>
+      <link>https://jyukki97.github.io/blog/2019-12-27-printer/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-27-printer/</guid>
+      <description>https://programmers.co.kr
+문제: 일반적인 프린터는 인쇄 요청이 들어온 순서대로 인쇄합니다. 그렇기 때문에 중요한 문서가 나중에 인쇄될 수 있습니다. 이런 문제를 보완하기 위해 중요도가 높은 문서를 먼저 인쇄하는 프린터를 개발했습니다. 이 새롭게 개발한 프린터는 아래와 같은 방식으로 인쇄 작업을 수행합니다.
+1. 인쇄 대기목록의 가장 앞에 있는 문서(J)를 대기목록에서 꺼냅니다.2. 나머지 인쇄 대기목록에서 J보다 중요도가 높은 문서가 한 개라도 존재하면 J를 대기목록의 가장 마지막에 넣습니다.3. 그렇지 않으면 J를 인쇄합니다.예를 들어, 4개의 문서(A, B, C, D)가 순서대로 인쇄 대기목록에 있고 중요도가 2 1 3 2 라면 C D A B 순으로 인쇄하게 됩니다.</description>
+    </item>
     
     <item>
       <title>[프로그래머스]기능개발</title>
