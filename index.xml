@@ -6,10 +6,35 @@
     <description>Recent content on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sat, 28 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 29 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[프로그래머스]숫자 야구</title>
+      <link>https://jyukki97.github.io/blog/2019-12-29-numbaseball/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-29-numbaseball/</guid>
+      <description>https://programmers.co.kr
+문제: 숫자 야구 게임이란 2명이 서로가 생각한 숫자를 맞추는 게임입니다. 게임해보기
+각자 서로 다른 1~9까지 3자리 임의의 숫자를 정한 뒤 서로에게 3자리의 숫자를 불러서 결과를 확인합니다. 그리고 그 결과를 토대로 상대가 정한 숫자를 예상한 뒤 맞힙니다.
+* 숫자는 맞지만, 위치가 틀렸을 때는 볼* 숫자와 위치가 모두 맞을 때는 스트라이크* 숫자와 위치가 모두 틀렸을 때는 아웃예를 들어, 아래의 경우가 있으면
+A : 123B : 1스트라이크 1볼.A : 356B : 1스트라이크 0볼.</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]위장</title>
+      <link>https://jyukki97.github.io/blog/2019-12-29-camouflage/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-29-camouflage/</guid>
+      <description>https://programmers.co.kr
+문제: 스파이들은 매일 다른 옷을 조합하여 입어 자신을 위장합니다.
+예를 들어 스파이가 가진 옷이 아래와 같고 오늘 스파이가 동그란 안경, 긴 코트, 파란색 티셔츠를 입었다면 다음날은 청바지를 추가로 입거나 동그란 안경 대신 검정 선글라스를 착용하거나 해야 합니다.
+   종류 이름     얼굴 동그란 안경, 검정 선글라스   상의 파란색 티셔츠   하의 청바지   겉옷 긴 코트    스파이가 가진 의상들이 담긴 2차원 배열 clothes가 주어질 때 서로 다른 옷의 조합의 수를 return 하도록 solution 함수를 작성해주세요.</description>
+    </item>
     
     <item>
       <title>[프로그래머스]전화번호 목록</title>
