@@ -6,10 +6,70 @@
     <description>Recent content in algorithm on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sun, 29 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[프로그래머스]가장 큰 정사각형 찾기</title>
+      <link>https://jyukki97.github.io/blog/2019-12-30-findbigestractangle/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-30-findbigestractangle/</guid>
+      <description>https://programmers.co.kr
+문제: 1와 0로 채워진 표(board)가 있습니다. 표 1칸은 1 x 1 의 정사각형으로 이루어져 있습니다. 표에서 1로 이루어진 가장 큰 정사각형을 찾아 넓이를 return 하는 solution 함수를 완성해 주세요. (단, 정사각형이란 축에 평행한 정사각형을 말합니다.)
+예를 들어
+   1 2 3 4     0 1 1 1   1 1 1 1   1 1 1 1   0 0 1 0    가 있다면 가장 큰 정사각형은</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]올바른 괄호</title>
+      <link>https://jyukki97.github.io/blog/2019-12-30-correctpare/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-30-correctpare/</guid>
+      <description>https://programmers.co.kr
+문제: 괄호가 바르게 짝지어졌다는 것은 &amp;lsquo;(&amp;rsquo; 문자로 열렸으면 반드시 짝지어서 &amp;lsquo;)&amp;rsquo; 문자로 닫혀야 한다는 뜻입니다. 예를 들어
+ ()() 또는 (())() 는 올바른 괄호입니다. )()( 또는 (()( 는 올바르지 않은 괄호입니다.  &amp;lsquo;(&amp;rsquo; 또는 &amp;lsquo;)&amp;rsquo; 로만 이루어진 문자열 s가 주어졌을 때, 문자열 s가 올바른 괄호이면 true를 return 하고, 올바르지 않은 괄호이면 false를 return 하는 solution 함수를 완성해 주세요.
+풀이: 스택이 비었거나 &amp;lsquo;(&amp;rsquo; 가 나온다면 스택에 push()
+둘 다 아니면서 스택에 맨 위값이 &amp;lsquo;(&amp;rsquo; 라면 pop()</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]카펫</title>
+      <link>https://jyukki97.github.io/blog/2019-12-30-carpet/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-30-carpet/</guid>
+      <description>https://programmers.co.kr
+문제: Leo는 카펫을 사러 갔다가 아래 그림과 같이 중앙에는 빨간색으로 칠해져 있고 모서리는 갈색으로 칠해져 있는 격자 모양 카펫을 봤습니다.
+Leo는 집으로 돌아와서 아까 본 카펫의 빨간색과 갈색으로 색칠된 격자의 개수는 기억했지만, 전체 카펫의 크기는 기억하지 못했습니다.
+Leo가 본 카펫에서 갈색 격자의 수 brown, 빨간색 격자의 수 red가 매개변수로 주어질 때 카펫의 가로, 세로 크기를 순서대로 배열에 담아 return 하도록 solution 함수를 작성해주세요.
+풀이: 완전탐색 brown + red 인 사각형을 만족하는 모든 가로 * 세로 중에서 red를 만족하는 가로, 세로값을 찾는다.</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]타겟 넘버</title>
+      <link>https://jyukki97.github.io/blog/2019-12-30-findbigestrectangle/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-30-findbigestrectangle/</guid>
+      <description>https://programmers.co.kr
+문제: n개의 음이 아닌 정수가 있습니다. 이 수를 적절히 더하거나 빼서 타겟 넘버를 만들려고 합니다. 예를 들어 [1, 1, 1, 1, 1]로 숫자 3을 만들려면 다음 다섯 방법을 쓸 수 있습니다.
+-1+1+1+1+1 = 3+1-1+1+1+1 = 3+1+1-1+1+1 = 3+1+1+1-1+1 = 3+1+1+1+1-1 = 3사용할 수 있는 숫자가 담긴 배열 numbers, 타겟 넘버 target이 매개변수로 주어질 때 숫자를 적절히 더하고 빼서 타겟 넘버를 만드는 방법의 수를 return 하도록 solution 함수를 작성해주세요.</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]타겟 넘버</title>
+      <link>https://jyukki97.github.io/blog/2019-12-30-targetnum/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-30-targetnum/</guid>
+      <description>https://programmers.co.kr
+문제: n개의 음이 아닌 정수가 있습니다. 이 수를 적절히 더하거나 빼서 타겟 넘버를 만들려고 합니다. 예를 들어 [1, 1, 1, 1, 1]로 숫자 3을 만들려면 다음 다섯 방법을 쓸 수 있습니다.
+-1+1+1+1+1 = 3+1-1+1+1+1 = 3+1+1-1+1+1 = 3+1+1+1-1+1 = 3+1+1+1+1-1 = 3사용할 수 있는 숫자가 담긴 배열 numbers, 타겟 넘버 target이 매개변수로 주어질 때 숫자를 적절히 더하고 빼서 타겟 넘버를 만드는 방법의 수를 return 하도록 solution 함수를 작성해주세요.</description>
+    </item>
     
     <item>
       <title>[프로그래머스]숫자 야구</title>
