@@ -6,10 +6,35 @@
     <description>Recent content in DP on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Mon, 30 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/dp/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[프로그래머스]땅따먹기</title>
+      <link>https://jyukki97.github.io/blog/2019-12-31-ttangttameokgi/</link>
+      <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-31-ttangttameokgi/</guid>
+      <description>https://programmers.co.kr
+문제: 땅따먹기 게임을 하려고 합니다. 땅따먹기 게임의 땅(land)은 총 N행 4열로 이루어져 있고, 모든 칸에는 점수가 쓰여 있습니다. 1행부터 땅을 밟으며 한 행씩 내려올 때, 각 행의 4칸 중 한 칸만 밟으면서 내려와야 합니다. 단, 땅따먹기 게임에는 한 행씩 내려올 때, 같은 열을 연속해서 밟을 수 없는 특수 규칙이 있습니다.
+예를 들면,
+| 1 | 2 | 3 | 5 |
+| 5 | 6 | 7 | 8 |</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]피보나치 수</title>
+      <link>https://jyukki97.github.io/blog/2019-12-31-fibonaccinum/</link>
+      <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-12-31-fibonaccinum/</guid>
+      <description>https://programmers.co.kr
+문제: 피보나치 수는 F(0) = 0, F(1) = 1일 때, 1 이상의 n에 대하여 F(n) = F(n-1) + F(n-2) 가 적용되는 수 입니다.
+예를들어
+ F(2) = F(0) + F(1) = 0 + 1 = 1 F(3) = F(1) + F(2) = 1 + 1 = 2 F(4) = F(2) + F(3) = 1 + 2 = 3 F(5) = F(3) + F(4) = 2 + 3 = 5  와 같이 이어집니다.</description>
+    </item>
     
     <item>
       <title>[프로그래머스]가장 큰 정사각형 찾기</title>
@@ -130,6 +155,16 @@
       <guid>https://jyukki97.github.io/blog/2018-01-10-3908/</guid>
       <description>https://www.acmicpc.net/problem/3908
 풀이:  소수를 찾는다. 소수를 하나씩 추가해가면서 a[n][k]를 찾는다. a[n][k] : 양의 정수 n을 서로 다른 k개의 소수의 합으로 나타낼 수 있는 최대의 경우의 수  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;math.h&amp;gt;#include &amp;lt;string.h&amp;gt;using namespace std;int	T, n, k, a[1122][16] = { 0 };bool isprime[1122];vector&amp;lt;int&amp;gt; b;int prime() {memset(isprime, 1, sizeof(isprime));isprime[0] = isprime[1] = false;for (int i = 2; i &amp;lt; sqrt(1122); i++)if(isprime[i])for (int t = i * i; t &amp;lt; 1122; t += i)isprime[t] = false;for (int i = 2; i &amp;lt; 1122; i++) if (isprime[i]) b.</description>
+    </item>
+    
+    <item>
+      <title>[백준]2748 피보나치 수 2</title>
+      <link>https://jyukki97.github.io/blog/2018-01-05-2748/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2018-01-05-2748/</guid>
+      <description>https://www.acmicpc.net/problem/2748
+풀이:  a[i % 3] : n번째 피보나치 수 a[i % 3] = a[(i - 1) % 3] + a[(i - 2) % 3];  코드: #include &amp;lt;iostream&amp;gt;using namespace std;long long a[3] = { 0,1 }, n;int main() {cin &amp;gt;&amp;gt; n;for (int i = 2; i &amp;lt;= n; i++)a[i % 3] = a[(i - 1) % 3] + a[(i - 2) % 3];cout &amp;lt;&amp;lt; a[n % 3] &amp;lt;&amp;lt; endl;}</description>
     </item>
     
     <item>
@@ -435,6 +470,16 @@
       <guid>https://jyukki97.github.io/blog/2017-11-29-2156/</guid>
       <description>https://www.acmicpc.net/problem/2156
 풀이:  b[i][0] 은 i번째를 골랐을 때, i-1번째를 안고른 경우의 수 b[i][1] 은 i번째를 골랐을 때, i-1번째를 고른 경우의 수 b[i][2] 은 i번째를 골랐을 때, i-2번째를 안고른 경우의 수  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int main(void) {int n;cin &amp;gt;&amp;gt; n;int a[10001];for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a[i];}int b[10001][3] = { a[0],a[0],a[0],a[1],a[0] + a[1],a[1],0 };int temp;for (int i = 2; i &amp;lt; n; i++) {for (int t = 0; t &amp;lt; 3; t++) {if (t == 0) {temp = max(b[i - 2][0], b[i - 2][1]);b[i][t] = max(temp, b[i - 2][2]) + a[i];}if (t == 1)b[i][t] = max(b[i - 1][0], b[i - 1][2]) + a[i];if (t == 2)b[i][t] = b[i - 3][1] + a[i];}}temp = max(b[n - 1][0], b[n - 2][1]);temp = max(temp, b[n - 1][1]);cout &amp;lt;&amp;lt; max(temp, b[n - 1][2]) &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1003 피보나치 함수</title>
+      <link>https://jyukki97.github.io/blog/2017-11-28-1003/</link>
+      <pubDate>Tue, 28 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-11-28-1003/</guid>
+      <description>https://www.acmicpc.net/problem/1003
+풀이:  0이 쓰이면 카운트 0을 ++ 1이 쓰이면 카운트 1을 ++  코드: #include &amp;lt;iostream&amp;gt;	// 재귀를 이용using namespace std;int cnt[2] = { 0 };int fibonacci(int n) {if (n == 0) {cnt[0]++;return 0;}else if (n == 1) {cnt[1]++;return 1;}elsereturn fibonacci(n-1) + fibonacci(n-2);}int main(void) {int T,n;cin &amp;gt;&amp;gt; T;for (int i = 0; i &amp;lt; T; i++) {cin &amp;gt;&amp;gt; n;cnt[0] = 0;cnt[1] = 0;fibonacci(n);cout &amp;lt;&amp;lt; cnt[0] &amp;lt;&amp;lt; &amp;#34;&amp;#34; &amp;lt;&amp;lt; cnt[1] &amp;lt;&amp;lt; endl;}return 0;}}#include &amp;lt;iostream&amp;gt;	// 포문 이용using namespace std;int main(void) {int T, n;int a[41] = { 0 };int b[41] = { 0 };cin &amp;gt;&amp;gt; T;for (int i = 0; i &amp;lt; T; i++) {cin &amp;gt;&amp;gt; n;a[0] = 1;a[1] = 0;b[0] = 0;b[1] = 1;for (int t = 2; t &amp;lt;= n; t++) {a[t] = a[t - 1] + a[t - 2];b[t] = b[t - 1] + b[t - 2];}cout &amp;lt;&amp;lt; a[n] &amp;lt;&amp;lt; &amp;#34;&amp;#34; &amp;lt;&amp;lt; b[n] &amp;lt;&amp;lt; endl;}}</description>
     </item>
     
     <item>

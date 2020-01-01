@@ -1,11 +1,3 @@
-
-
-
-    
-
-
-
-
 <!DOCTYPE HTML>
 
 <html>
@@ -19,25 +11,27 @@
              "@id": "https:\/\/jyukki97.github.io"
         },
         "articleSection" : "blog",
-        "name" : "1003 피보나치 함수",
-        "headline" : "1003 피보나치 함수",
-        "description" : "\x2b\x2b\x2b author = \x26ldquo;jyukki\x26rdquo; categories = [\x26ldquo;백준\x26rdquo;] tags = [\x26ldquo;algorithm\x26rdquo;, \x26ldquo;C\x2b\x2b\x26rdquo;, \x26ldquo;DP\x26rdquo;] date = \x26ldquo;2017-11-28\x26rdquo; description = \x26ldquo;algorithm\x26rdquo; featured = \x26quot;\x26rdquo; featuredalt = \x26quot;\x26rdquo; featuredpath = \x26ldquo;date\x26rdquo; linktitle = \x26quot;\x26rdquo; title = \x26ldquo;[백준]1003 피보나치 함수\x26rdquo; type = \x26ldquo;post\x26rdquo;\n\x2b\x2b\x2b https:\/\/www.acmicpc.net\/problem\/1003\n풀이:  0이 쓰이면 카운트 0을 \x2b\x2b 1이 쓰이면 카운트 1을 \x2b\x2b  코드: #include \x26lt;iostream\x26gt;\t\/\/ 재귀를 이용\rusing namespace std;\rint cnt[2] = { 0 };\rint fibonacci(int n) {\rif (n == 0) {\rcnt[0]\x2b\x2b;\rreturn 0;\r}\relse if (n == 1) {\rcnt[1]\x2b\x2b;\rreturn 1;\r}\relse\rreturn fibonacci(n-1) \x2b fibonacci(n-2);\r}\rint main(void) {\rint T,n;\rcin \x26gt;\x26gt; T;\rfor (int i = 0; i \x26lt; T; i\x2b\x2b) {\rcin \x26gt;\x26gt; n;\rcnt[0] = 0;\rcnt[1] = 0;\rfibonacci(n);\rcout \x26lt;\x26lt; cnt[0] \x26lt;\x26lt; \x26#34;\x26#34; \x26lt;\x26lt; cnt[1] \x26lt;\x26lt; endl;\r}\rreturn 0;\r}\r}\r#include \x26lt;iostream\x26gt;\t\/\/ 포문 이용\rusing namespace std;\rint main(void) {\rint T, n;\rint a[41] = { 0 };\rint b[41] = { 0 };\rcin \x26gt;\x26gt; T;\rfor (int i = 0; i \x26lt; T; i\x2b\x2b) {\rcin \x26gt;\x26gt; n;\ra[0] = 1;\ra[1] = 0;\rb[0] = 0;\rb[1] = 1;\rfor (int t = 2; t \x26lt;= n; t\x2b\x2b) {\ra[t] = a[t - 1] \x2b a[t - 2];\rb[t] = b[t - 1] \x2b b[t - 2];\r}\rcout \x26lt;\x26lt; a[n] \x26lt;\x26lt; \x26#34;\x26#34; \x26lt;\x26lt; b[n] \x26lt;\x26lt; endl;\r}\r}\r",
+        "name" : "[백준]1003 피보나치 함수",
+        "headline" : "[백준]1003 피보나치 함수",
+        "description" : "algorithm",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
         "publisher": "",
         "accountablePerson" : "",
         "copyrightHolder" : "",
-        "copyrightYear" : "0001",
-        "datePublished": "0001-01-01 00:00:00 \x2b0000 UTC",
-        "dateModified" : "0001-01-01 00:00:00 \x2b0000 UTC",
+        "copyrightYear" : "2017",
+        "datePublished": "2017-11-28 00:00:00 \x2b0000 UTC",
+        "dateModified" : "2017-11-28 00:00:00 \x2b0000 UTC",
         "url" : "https:\/\/jyukki97.github.io\/blog\/2017-11-28-1003\/",
-        "wordCount" : "231",
-        "keywords" : [ "Blog" ]
+        "wordCount" : "192",
+        "keywords" : [ "algorithm","C\x2b\x2b","DP","Blog" ]
     }
     </script>
         
-            <title>1003 피보나치 함수 - 1 Day 1 Problem</title>
+            
+                <title>[백준]1003 피보나치 함수</title>
+            
         
 
         <meta charset="utf-8" />
@@ -72,40 +66,36 @@
 
 
         
+            <meta name="author" content="jyukki">
         
-            
-                <meta name="description" content="jyukki&#39;s algorithm blog">
-            
+        
+            <meta name="description" content="algorithm">
         
 
         <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="1003 피보나치 함수"/>
-<meta name="twitter:description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2017-11-28&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]1003 피보나치 함수&rdquo; type = &ldquo;post&rdquo;
-&#43;&#43;&#43; https://www.acmicpc.net/problem/1003
-풀이:  0이 쓰이면 카운트 0을 &#43;&#43; 1이 쓰이면 카운트 1을 &#43;&#43;  코드: #include &lt;iostream&gt;	// 재귀를 이용using namespace std;int cnt[2] = { 0 };int fibonacci(int n) {if (n == 0) {cnt[0]&#43;&#43;;return 0;}else if (n == 1) {cnt[1]&#43;&#43;;return 1;}elsereturn fibonacci(n-1) &#43; fibonacci(n-2);}int main(void) {int T,n;cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;cnt[0] = 0;cnt[1] = 0;fibonacci(n);cout &lt;&lt; cnt[0] &lt;&lt; &#34;&#34; &lt;&lt; cnt[1] &lt;&lt; endl;}return 0;}}#include &lt;iostream&gt;	// 포문 이용using namespace std;int main(void) {int T, n;int a[41] = { 0 };int b[41] = { 0 };cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;a[0] = 1;a[1] = 0;b[0] = 0;b[1] = 1;for (int t = 2; t &lt;= n; t&#43;&#43;) {a[t] = a[t - 1] &#43; a[t - 2];b[t] = b[t - 1] &#43; b[t - 2];}cout &lt;&lt; a[n] &lt;&lt; &#34;&#34; &lt;&lt; b[n] &lt;&lt; endl;}}"/>
+<meta name="twitter:title" content="[백준]1003 피보나치 함수"/>
+<meta name="twitter:description" content="algorithm"/>
 
-        <meta property="og:title" content="1003 피보나치 함수" />
-<meta property="og:description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2017-11-28&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]1003 피보나치 함수&rdquo; type = &ldquo;post&rdquo;
-&#43;&#43;&#43; https://www.acmicpc.net/problem/1003
-풀이:  0이 쓰이면 카운트 0을 &#43;&#43; 1이 쓰이면 카운트 1을 &#43;&#43;  코드: #include &lt;iostream&gt;	// 재귀를 이용using namespace std;int cnt[2] = { 0 };int fibonacci(int n) {if (n == 0) {cnt[0]&#43;&#43;;return 0;}else if (n == 1) {cnt[1]&#43;&#43;;return 1;}elsereturn fibonacci(n-1) &#43; fibonacci(n-2);}int main(void) {int T,n;cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;cnt[0] = 0;cnt[1] = 0;fibonacci(n);cout &lt;&lt; cnt[0] &lt;&lt; &#34;&#34; &lt;&lt; cnt[1] &lt;&lt; endl;}return 0;}}#include &lt;iostream&gt;	// 포문 이용using namespace std;int main(void) {int T, n;int a[41] = { 0 };int b[41] = { 0 };cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;a[0] = 1;a[1] = 0;b[0] = 0;b[1] = 1;for (int t = 2; t &lt;= n; t&#43;&#43;) {a[t] = a[t - 1] &#43; a[t - 2];b[t] = b[t - 1] &#43; b[t - 2];}cout &lt;&lt; a[n] &lt;&lt; &#34;&#34; &lt;&lt; b[n] &lt;&lt; endl;}}" />
+        <meta property="og:title" content="[백준]1003 피보나치 함수" />
+<meta property="og:description" content="algorithm" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jyukki97.github.io/blog/2017-11-28-1003/" />
-
+<meta property="article:published_time" content="2017-11-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-11-28T00:00:00+00:00" />
 
         <meta property="og:image" content="https://jyukki97.github.io/images/logo.png">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
-        <meta itemprop="name" content="1003 피보나치 함수">
-<meta itemprop="description" content="&#43;&#43;&#43; author = &ldquo;jyukki&rdquo; categories = [&ldquo;백준&rdquo;] tags = [&ldquo;algorithm&rdquo;, &ldquo;C&#43;&#43;&rdquo;, &ldquo;DP&rdquo;] date = &ldquo;2017-11-28&rdquo; description = &ldquo;algorithm&rdquo; featured = &quot;&rdquo; featuredalt = &quot;&rdquo; featuredpath = &ldquo;date&rdquo; linktitle = &quot;&rdquo; title = &ldquo;[백준]1003 피보나치 함수&rdquo; type = &ldquo;post&rdquo;
-&#43;&#43;&#43; https://www.acmicpc.net/problem/1003
-풀이:  0이 쓰이면 카운트 0을 &#43;&#43; 1이 쓰이면 카운트 1을 &#43;&#43;  코드: #include &lt;iostream&gt;	// 재귀를 이용using namespace std;int cnt[2] = { 0 };int fibonacci(int n) {if (n == 0) {cnt[0]&#43;&#43;;return 0;}else if (n == 1) {cnt[1]&#43;&#43;;return 1;}elsereturn fibonacci(n-1) &#43; fibonacci(n-2);}int main(void) {int T,n;cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;cnt[0] = 0;cnt[1] = 0;fibonacci(n);cout &lt;&lt; cnt[0] &lt;&lt; &#34;&#34; &lt;&lt; cnt[1] &lt;&lt; endl;}return 0;}}#include &lt;iostream&gt;	// 포문 이용using namespace std;int main(void) {int T, n;int a[41] = { 0 };int b[41] = { 0 };cin &gt;&gt; T;for (int i = 0; i &lt; T; i&#43;&#43;) {cin &gt;&gt; n;a[0] = 1;a[1] = 0;b[0] = 0;b[1] = 1;for (int t = 2; t &lt;= n; t&#43;&#43;) {a[t] = a[t - 1] &#43; a[t - 2];b[t] = b[t - 1] &#43; b[t - 2];}cout &lt;&lt; a[n] &lt;&lt; &#34;&#34; &lt;&lt; b[n] &lt;&lt; endl;}}">
-
-<meta itemprop="wordCount" content="231">
-
+        <meta itemprop="name" content="[백준]1003 피보나치 함수">
+<meta itemprop="description" content="algorithm">
+<meta itemprop="datePublished" content="2017-11-28T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2017-11-28T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="192">
 
 
-<meta itemprop="keywords" content="" />
+
+<meta itemprop="keywords" content="algorithm,C&#43;&#43;,DP," />
         
 
         
@@ -157,6 +147,7 @@ if (!doNotTrack) {
       <div id="wrapper">
 
     
+    
 <header id="header">
     
       <h1><a href="https://jyukki97.github.io/">blog</a></h1>
@@ -205,6 +196,10 @@ if (!doNotTrack) {
     </nav>
     <nav class="main">
         <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
             
             <li class="search">
                 <a class="fa-search" href="#search">Search</a>
@@ -301,11 +296,11 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="https://jyukki97.github.io/blog/2019-12-30-findbigestractangle/">[프로그래머스]가장 큰 정사각형 찾기</a></h3>
+                                <h3><a href="https://jyukki97.github.io/blog/2019-12-31-nlcm/">[프로그래머스]N개의 최소공배수</a></h3>
                                 
                                 <time class="published" datetime=
-                                    '2019-12-30'>
-                                    December 30, 2019</time>
+                                    '2019-12-31'>
+                                    December 31, 2019</time>
                             </header>
                             
 
@@ -313,11 +308,11 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="https://jyukki97.github.io/blog/2019-12-30-correctpare/">[프로그래머스]올바른 괄호</a></h3>
+                                <h3><a href="https://jyukki97.github.io/blog/2019-12-31-ttangttameokgi/">[프로그래머스]땅따먹기</a></h3>
                                 
                                 <time class="published" datetime=
-                                    '2019-12-30'>
-                                    December 30, 2019</time>
+                                    '2019-12-31'>
+                                    December 31, 2019</time>
                             </header>
                             
 
@@ -325,11 +320,11 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="https://jyukki97.github.io/blog/2019-12-30-carpet/">[프로그래머스]카펫</a></h3>
+                                <h3><a href="https://jyukki97.github.io/blog/2019-12-31-numexpression/">[프로그래머스]숫자의 표현</a></h3>
                                 
                                 <time class="published" datetime=
-                                    '2019-12-30'>
-                                    December 30, 2019</time>
+                                    '2019-12-31'>
+                                    December 31, 2019</time>
                             </header>
                             
 
@@ -337,11 +332,11 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="https://jyukki97.github.io/blog/2019-12-30-findbigestrectangle/">[프로그래머스]타겟 넘버</a></h3>
+                                <h3><a href="https://jyukki97.github.io/blog/2019-12-31-removemating/">[프로그래머스]짝지어 제거하기</a></h3>
                                 
                                 <time class="published" datetime=
-                                    '2019-12-30'>
-                                    December 30, 2019</time>
+                                    '2019-12-31'>
+                                    December 31, 2019</time>
                             </header>
                             
 
@@ -349,11 +344,11 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="https://jyukki97.github.io/blog/2019-12-30-targetnum/">[프로그래머스]타겟 넘버</a></h3>
+                                <h3><a href="https://jyukki97.github.io/blog/2019-12-31-gcdandlcm/">[프로그래머스]최대공약수와 최소공배수</a></h3>
                                 
                                 <time class="published" datetime=
-                                    '2019-12-30'>
-                                    December 30, 2019</time>
+                                    '2019-12-31'>
+                                    December 31, 2019</time>
                             </header>
                             
 
@@ -374,35 +369,223 @@ if (!doNotTrack) {
         
 </section>
 
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-28-1003%2f&amp;text=%5b%eb%b0%b1%ec%a4%80%5d1003%20%ed%94%bc%eb%b3%b4%eb%82%98%ec%b9%98%20%ed%95%a8%ec%88%98&amp;via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-28-1003%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-28-1003%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-28-1003%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1003%20%ed%94%bc%eb%b3%b4%eb%82%98%ec%b9%98%20%ed%95%a8%ec%88%98" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-28-1003%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1003%20%ed%94%bc%eb%b3%b4%eb%82%98%ec%b9%98%20%ed%95%a8%ec%88%98" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-28-1003%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1003%20%ed%94%bc%eb%b3%b4%eb%82%98%ec%b9%98%20%ed%95%a8%ec%88%98" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-28-1003%2f&amp;description=%5b%eb%b0%b1%ec%a4%80%5d1003%20%ed%94%bc%eb%b3%b4%eb%82%98%ec%b9%98%20%ed%95%a8%ec%88%98" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by jyukki&amp;body=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-28-1003%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
     
     <div id="main">
+        
+        
         <article class="post">
-            
-            <header>
+  <header>
     <div class="title">
         
-            <h1><a href="https://jyukki97.github.io/blog/2017-11-28-1003/">1003 피보나치 함수</a></h1>
+            <h1><a href="https://jyukki97.github.io/blog/2017-11-28-1003/">[백준]1003 피보나치 함수</a></h1>
             
+        
+        
+            <p>algorithm</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2017-11-28'>
+            November 28, 2017</time>
+        <span class="author">jyukki</span>
+        
+            <p>1 minute read</p>
         
         
     </div>
 </header>
 
-            <div id="content">
-                <p>+++
-author = &ldquo;jyukki&rdquo;
-categories = [&ldquo;백준&rdquo;]
-tags = [&ldquo;algorithm&rdquo;, &ldquo;C++&rdquo;, &ldquo;DP&rdquo;]
-date = &ldquo;2017-11-28&rdquo;
-description = &ldquo;algorithm&rdquo;
-featured = &quot;&rdquo;
-featuredalt = &quot;&rdquo;
-featuredpath = &ldquo;date&rdquo;
-linktitle = &quot;&rdquo;
-title = &ldquo;[백준]1003 피보나치 함수&rdquo;
-type = &ldquo;post&rdquo;</p>
-<p>+++
-<a href="https://www.acmicpc.net/problem/1003">https://www.acmicpc.net/problem/1003</a></p>
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-28-1003%2f&amp;text=%5b%eb%b0%b1%ec%a4%80%5d1003%20%ed%94%bc%eb%b3%b4%eb%82%98%ec%b9%98%20%ed%95%a8%ec%88%98&amp;via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-28-1003%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-28-1003%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-28-1003%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1003%20%ed%94%bc%eb%b3%b4%eb%82%98%ec%b9%98%20%ed%95%a8%ec%88%98" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-28-1003%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1003%20%ed%94%bc%eb%b3%b4%eb%82%98%ec%b9%98%20%ed%95%a8%ec%88%98" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-28-1003%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d1003%20%ed%94%bc%eb%b3%b4%eb%82%98%ec%b9%98%20%ed%95%a8%ec%88%98" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-28-1003%2f&amp;description=%5b%eb%b0%b1%ec%a4%80%5d1003%20%ed%94%bc%eb%b3%b4%eb%82%98%ec%b9%98%20%ed%95%a8%ec%88%98" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by jyukki&amp;body=https%3a%2f%2fjyukki97.github.io%2fblog%2f2017-11-28-1003%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+
+  <div id="content">
+    <p><a href="https://www.acmicpc.net/problem/1003">https://www.acmicpc.net/problem/1003</a></p>
 <h1 id="heading"><strong>풀이:</strong></h1>
 <ol>
 <li>0이 쓰이면 카운트 0을 ++</li>
@@ -460,8 +643,87 @@ type = &ldquo;post&rdquo;</p>
 	}
 }
 </code></pre></div>
-            </div>
-        </article>
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80">백준</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="https://jyukki97.github.io/tags/algorithm">algorithm</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://jyukki97.github.io/tags/c&#43;&#43;">C&#43;&#43;</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://jyukki97.github.io/tags/dp">DP</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jyukki97" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="https://jyukki97.github.io/blog/2017-11-28-11726/"
+                class="button big previous">[백준]11726 2×n 타일링</a></li>
+    
+
+    
+        <li><a href="https://jyukki97.github.io/blog/2017-11-29-2156/"
+                class="button big next">[백준]2156 포도주 시식</a></li>
+    
+</ul>
+
+
     </div>
     
 <section id="sidebar">
@@ -595,11 +857,11 @@ type = &ldquo;post&rdquo;</p>
           <article class="mini-post">
             <header>
               <h3>
-                <a href="https://jyukki97.github.io/blog/2019-12-30-findbigestractangle/">[프로그래머스]가장 큰 정사각형 찾기</a>
+                <a href="https://jyukki97.github.io/blog/2019-12-31-nlcm/">[프로그래머스]N개의 최소공배수</a>
               </h3>
               
-              <time class="published" datetime='2019-12-30'>
-                December 30, 2019
+              <time class="published" datetime='2019-12-31'>
+                December 31, 2019
               </time>
             </header>
             
@@ -609,11 +871,11 @@ type = &ldquo;post&rdquo;</p>
           <article class="mini-post">
             <header>
               <h3>
-                <a href="https://jyukki97.github.io/blog/2019-12-30-correctpare/">[프로그래머스]올바른 괄호</a>
+                <a href="https://jyukki97.github.io/blog/2019-12-31-ttangttameokgi/">[프로그래머스]땅따먹기</a>
               </h3>
               
-              <time class="published" datetime='2019-12-30'>
-                December 30, 2019
+              <time class="published" datetime='2019-12-31'>
+                December 31, 2019
               </time>
             </header>
             
@@ -623,11 +885,11 @@ type = &ldquo;post&rdquo;</p>
           <article class="mini-post">
             <header>
               <h3>
-                <a href="https://jyukki97.github.io/blog/2019-12-30-carpet/">[프로그래머스]카펫</a>
+                <a href="https://jyukki97.github.io/blog/2019-12-31-numexpression/">[프로그래머스]숫자의 표현</a>
               </h3>
               
-              <time class="published" datetime='2019-12-30'>
-                December 30, 2019
+              <time class="published" datetime='2019-12-31'>
+                December 31, 2019
               </time>
             </header>
             
@@ -637,11 +899,11 @@ type = &ldquo;post&rdquo;</p>
           <article class="mini-post">
             <header>
               <h3>
-                <a href="https://jyukki97.github.io/blog/2019-12-30-findbigestrectangle/">[프로그래머스]타겟 넘버</a>
+                <a href="https://jyukki97.github.io/blog/2019-12-31-removemating/">[프로그래머스]짝지어 제거하기</a>
               </h3>
               
-              <time class="published" datetime='2019-12-30'>
-                December 30, 2019
+              <time class="published" datetime='2019-12-31'>
+                December 31, 2019
               </time>
             </header>
             
@@ -651,11 +913,11 @@ type = &ldquo;post&rdquo;</p>
           <article class="mini-post">
             <header>
               <h3>
-                <a href="https://jyukki97.github.io/blog/2019-12-30-targetnum/">[프로그래머스]타겟 넘버</a>
+                <a href="https://jyukki97.github.io/blog/2019-12-31-gcdandlcm/">[프로그래머스]최대공약수와 최소공배수</a>
               </h3>
               
-              <time class="published" datetime='2019-12-30'>
-                December 30, 2019
+              <time class="published" datetime='2019-12-31'>
+                December 31, 2019
               </time>
             </header>
             
@@ -695,7 +957,7 @@ type = &ldquo;post&rdquo;</p>
             <header>
               
                 <a href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80/">백준</a>
-                <span style="float:right;">76</span>
+                <span style="float:right;">78</span>
               
             </header>
           </article>
@@ -706,7 +968,7 @@ type = &ldquo;post&rdquo;</p>
             <header>
               
                 <a href="https://jyukki97.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/">프로그래머스</a>
-                <span style="float:right;">33</span>
+                <span style="float:right;">40</span>
               
             </header>
           </article>
