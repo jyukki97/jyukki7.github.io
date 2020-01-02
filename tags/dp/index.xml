@@ -6,17 +6,17 @@
     <description>Recent content in DP on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Tue, 31 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/dp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[프로그래머스]땅따먹기</title>
-      <link>https://jyukki97.github.io/blog/2019-12-31-ttangttameokgi/</link>
-      <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
+      <link>https://jyukki97.github.io/blog/2020-01-01-ttangttameokgi/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://jyukki97.github.io/blog/2019-12-31-ttangttameokgi/</guid>
+      <guid>https://jyukki97.github.io/blog/2020-01-01-ttangttameokgi/</guid>
       <description>https://programmers.co.kr
 문제: 땅따먹기 게임을 하려고 합니다. 땅따먹기 게임의 땅(land)은 총 N행 4열로 이루어져 있고, 모든 칸에는 점수가 쓰여 있습니다. 1행부터 땅을 밟으며 한 행씩 내려올 때, 각 행의 4칸 중 한 칸만 밟으면서 내려와야 합니다. 단, 땅따먹기 게임에는 한 행씩 내려올 때, 같은 열을 연속해서 밟을 수 없는 특수 규칙이 있습니다.
 예를 들면,

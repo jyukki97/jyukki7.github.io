@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learn on 1 Day 1 Problem</title>
+    <link>https://jyukki97.github.io/categories/learn/</link>
+    <description>Recent content in Learn on 1 Day 1 Problem</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <lastBuildDate>Thu, 02 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jyukki97.github.io/categories/learn/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[C&#43;&#43;]대소문자, 숫자 구분함수 </title>
+      <link>https://jyukki97.github.io/learn/2020-01-02-distinguishstring/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/learn/2020-01-02-distinguishstring/</guid>
+      <description>숫자판단, 문자판단, 대소문자 판단 ( isalpha, isupper, islower, isdigit, toupper, tolower )
+isalpha - 알파벳 문자 판별 int isalpha(int c);c가 알파벳 문자인지 아닌지 판별해준다. int형인 이유는 아스키코드를 판별하기 떄문!!
+단, 사용 할 때 알파벳을 직접 넣어줘도 된다.
+int isalpha(97);int isalpha(&amp;#39;a&amp;#39;);밑에 &amp;lsquo;a&amp;rsquo; 가 아스키코드로 97이므로 결국 두 문장은 같은 문장이다.
+return은 타입이 int형 이기에 알파벳이 아니라면 0 을 알파벳이라면 0이아닌 정수를 리턴한다.
+  비쥬얼 스튜디오 기준
+​	알파벳이 아닐경우 - 0</description>
+    </item>
+    
+  </channel>
+</rss>
