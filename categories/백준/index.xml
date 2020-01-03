@@ -374,6 +374,36 @@ n,s=int(input()),&amp;#34;&amp;#34;for i in range(1,n+1):s+=str(i)print(s.fin
     </item>
     
     <item>
+      <title>[백준]1038 감소하는 수</title>
+      <link>https://jyukki97.github.io/blog/2017-12-20-1038/</link>
+      <pubDate>Wed, 20 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-20-1038/</guid>
+      <description>https://www.acmicpc.net/problem/1038
+풀이:  10, 321 등 감소하는 수를 찾는 문제 감소하는 수를 하나씩 만들어 가면서 카운트를 증가시킨다. 카운트의 값이 제시된 N값과 일치하면 출력한다. 제시된 N값이 9876543210의 위치인 1022 보다 크다면 -1을 출력한다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;vector&amp;lt;int&amp;gt; a;int main(void) {int n;int cnt = 11;cin &amp;gt;&amp;gt; n;if (n &amp;lt; 11) {cout &amp;lt;&amp;lt; n &amp;lt;&amp;lt; endl;}else if (n &amp;gt; 1022)cout &amp;lt;&amp;lt; &amp;#34;-1&amp;#34; &amp;lt;&amp;lt; endl;else {a.</description>
+    </item>
+    
+    <item>
+      <title>[백준]2629 양팔저울</title>
+      <link>https://jyukki97.github.io/blog/2017-12-19-2629/</link>
+      <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-19-2629/</guid>
+      <description>https://www.acmicpc.net/problem/2629
+풀이:  양팔저울에 추를 매달아 구할 수 있는 무게를 알아내는 문제 양팔저울에 한 곳에 놓았을 때, 양쪽에 서로 따로 놓았을 때 두 가지의 경우가 있다. 이 때 같이놓으면 + 따로 놓은것은 -로 놓고 배열에 저장한다. 구슬의 무게에 맞는 배열의 값이 1이면 구할 수 있고, 1이 아닌경우 구할 수 없는 것으로 취급한다.  코드: #include &amp;lt;iostream&amp;gt;#include &amp;lt;map&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;map&amp;lt;int, int&amp;gt; a;vector&amp;lt;int&amp;gt; b;int main(void) {int n, temp, k, size;cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; temp;map&amp;lt;int, int&amp;gt;::iterator iter;size = a.</description>
+    </item>
+    
+    <item>
+      <title>[백준]2698 인접한 비트의 개수</title>
+      <link>https://jyukki97.github.io/blog/2017-12-18-2698/</link>
+      <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-18-2698/</guid>
+      <description>https://www.acmicpc.net/problem/2698
+풀이:  a[n][k][0] : 크기가 n이고 인접비트의 수가 k이며, 끝에 비트가 0인 수 a[n][k][1] : 크기가 n이고 인접비트의 수가 k이며, 끝에 비트가 1인 수 a[n][k][0] = a[n - 1][k][0] + a[n - 1][k][1] a[n][k][1] = a[n - 1][k][0] + a[n - 1][k - 1][1]  코드: #include &amp;lt;iostream&amp;gt;using namespace std;int a[102][102][2] = { 0 };int main(void) {int T, n, k;int cnt = 2;cin &amp;gt;&amp;gt; T;a[1][0][1] = 1; a[1][0][0] = 1;for (int i = 0; i &amp;lt; T; i++) {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; k;for (int t = cnt; t &amp;lt; n + 1; t++) {for (int y = 0; y &amp;lt; t; y++) {a[t][y][0] = a[t - 1][y][0] + a[t - 1][y][1];a[t][y][1] = a[t - 1][y][0] + a[t - 1][y - 1][1];}}cout &amp;lt;&amp;lt; a[n][k][0] + a[n][k][1] &amp;lt;&amp;lt; endl;cnt = n;}return 0;}</description>
+    </item>
+    
+    <item>
       <title>[백준]1793 타일링</title>
       <link>https://jyukki97.github.io/blog/2017-12-17-1793/</link>
       <pubDate>Sun, 17 Dec 2017 00:00:00 +0000</pubDate>
@@ -815,6 +845,16 @@ n,s=int(input()),&amp;#34;&amp;#34;for i in range(1,n+1):s+=str(i)print(s.fin
       <description>https://www.acmicpc.net/problem/1475
 풀이:  방번호를 string에 저장 string 첫번째 자릿수부터 숫자를 확인 숫자에 맞는 배열에 ++ 배열에서 가장 큰 숫자를 가지고 있는 값을 출력  코드: 사용언어 : c++
 #include &amp;lt;iostream&amp;gt;#include &amp;lt;string&amp;gt;using namespace std;int main(void) {string a;int b[10] = { 0 };cin &amp;gt;&amp;gt; a;for (int i = 0; i &amp;lt; a.length(); i++) {if (((int)a[i] - 48) == 6 &amp;amp;&amp;amp; b[6] &amp;gt; b[9])b[9] ++;else if (((int)a[i] - 48) == 9 &amp;amp;&amp;amp; b[6] &amp;lt; b[9])b[6] ++;elseb[(int)a[i] - 48]++;}int count = 0;for (int i = 0; i &amp;lt; 10; i++) {if (b[i] &amp;gt; count)count = b[i];}cout &amp;lt;&amp;lt; count &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]9507 Generations of Tribbles</title>
+      <link>https://jyukki97.github.io/blog/2017-12-18-9507/</link>
+      <pubDate>Mon, 20 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2017-12-18-9507/</guid>
+      <description>https://www.acmicpc.net/problem/9507
+풀이:  문제에 DP가 주어져 있으므로 그대로 하면된다. 다만 큰 수가 나오므로 long long을 써야할 것이다.  코드: #include &amp;lt;iostream&amp;gt;using namespace std;long long a[70] = {1,1,2,4,0};int main(void) {int T,n;int cnt = 4;cin &amp;gt;&amp;gt; T;for (int i = 0; i &amp;lt; T; i++) {cin &amp;gt;&amp;gt; n;for (int t = cnt; t &amp;lt; n + 1; t++) {a[t] = a[t - 1] + a[t - 2] + a[t - 3] + a[t - 4];}cout &amp;lt;&amp;lt; a[n] &amp;lt;&amp;lt; endl;cnt = n + 1;}return 0;}</description>
     </item>
     
     <item>
