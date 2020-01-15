@@ -6,10 +6,34 @@
     <description>Recent content in Level 1 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/level-1/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[프로그래머스]문자열 내림차순으로 배치하기</title>
+      <link>https://jyukki97.github.io/blog/2020-01-14-stringdescendingsort/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-01-14-stringdescendingsort/</guid>
+      <description>https://programmers.co.kr
+문제: 문자열 s에 나타나는 문자를 큰것부터 작은 순으로 정렬해 새로운 문자열을 리턴하는 함수, solution을 완성해주세요. s는 영문 대소문자로만 구성되어 있으며, 대문자는 소문자보다 작은 것으로 간주합니다.
+풀이: 주어진 문자열을 내림차순으로 정렬한다.
+코드: 사용언어 : c++
+#include &amp;lt;string&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;string solution(string s) {sort(s.begin(), s.end(), greater&amp;lt;char&amp;gt;());return s;}</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]모의고사</title>
+      <link>https://jyukki97.github.io/blog/2020-01-13-mocktest/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-01-13-mocktest/</guid>
+      <description>https://programmers.co.kr
+문제: 수포자는 수학을 포기한 사람의 준말입니다. 수포자 삼인방은 모의고사에 수학 문제를 전부 찍으려 합니다. 수포자는 1번 문제부터 마지막 문제까지 다음과 같이 찍습니다.
+1번 수포자가 찍는 방식: 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, &amp;hellip; 2번 수포자가 찍는 방식: 2, 1, 2, 3, 2, 4, 2, 5, 2, 1, 2, 3, 2, 4, 2, 5, &amp;hellip; 3번 수포자가 찍는 방식: 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, &amp;hellip;</description>
+    </item>
     
     <item>
       <title>[프로그래머스]x만큼 간격이 있는 n개의 숫자</title>
