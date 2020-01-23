@@ -6,10 +6,37 @@
     <description>Recent content in 프로그래머스 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Tue, 21 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[프로그래머스]H-index</title>
+      <link>https://jyukki97.github.io/blog/2020-01-23-h-index/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-01-23-h-index/</guid>
+      <description>https://programmers.co.kr
+문제: H-Index는 과학자의 생산성과 영향력을 나타내는 지표입니다. 어느 과학자의 H-Index를 나타내는 값인 h를 구하려고 합니다. 위키백과1에 따르면, H-Index는 다음과 같이 구합니다.
+어떤 과학자가 발표한 논문 n편 중, h번 이상 인용된 논문이 h편 이상이고 나머지 논문이 h번 이하 인용되었다면 h가 이 과학자의 H-Index입니다.
+어떤 과학자가 발표한 논문의 인용 횟수를 담은 배열 citations가 매개변수로 주어질 때, 이 과학자의 H-Index를 return 하도록 solution 함수를 작성해주세요.
+풀이: 논문 n편을 정렬한다.
+1번째 논문이 1보다 크다면 H-index는 1이 된다.</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]행렬의 덧셈</title>
+      <link>https://jyukki97.github.io/blog/2020-01-22-matrixsum/</link>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-01-22-matrixsum/</guid>
+      <description>https://programmers.co.kr
+문제: 행렬의 덧셈은 행과 열의 크기가 같은 두 행렬의 같은 행, 같은 열의 값을 서로 더한 결과가 됩니다. 2개의 행렬 arr1과 arr2를 입력받아, 행렬 덧셈의 결과를 반환하는 함수, solution을 완성해주세요.
+풀이: 각 행렬의 같은 행 같은 열을 더한 행렬을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;string&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; solution(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; arr1, vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; arr2) {for (int i = 0; i &amp;lt; arr1.size(); i++)for(int t = 0; t &amp;lt; arr1[i].</description>
+    </item>
     
     <item>
       <title>[프로그래머스]폰켓몬</title>
