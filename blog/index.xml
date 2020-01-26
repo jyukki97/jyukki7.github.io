@@ -6,10 +6,53 @@
     <description>Recent content in Blog on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[프로그래머스]제일 작은 수 제거하기</title>
+      <link>https://jyukki97.github.io/blog/2020-01-26-removeminnum/</link>
+      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-01-26-removeminnum/</guid>
+      <description>https://programmers.co.kr
+문제: 정수를 저장한 배열, arr 에서 가장 작은 수를 제거한 배열을 리턴하는 함수, solution을 완성해주세요. 단, 리턴하려는 배열이 빈 배열인 경우엔 배열에 -1을 채워 리턴하세요. 예를들어 arr이 [4,3,2,1]인 경우는 [4,3,2]를 리턴 하고, [10]면 [-1]을 리턴 합니다.
+풀이: arr에서 제일 작은 수를 찾아 삭제한다.
+만약 arr이 비었다면 -1을 넣는다.
+코드: 사용언어 : c++
+#include &amp;lt;string&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;vector&amp;lt;int&amp;gt; solution(vector&amp;lt;int&amp;gt; arr) {int min = arr[0], c = 0;for(int i = 1; i &amp;lt; arr.</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]직사각형 별찍기</title>
+      <link>https://jyukki97.github.io/blog/2020-01-25-ractanglestar/</link>
+      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-01-25-ractanglestar/</guid>
+      <description>https://programmers.co.kr
+문제: 이 문제에는 표준 입력으로 두 개의 정수 n과 m이 주어집니다. 별(*) 문자를 이용해 가로의 길이가 n, 세로의 길이가 m인 직사각형 형태를 출력해보세요.
+풀이: n번 별을 찍는다. 개행한다.
+그것을 m번 반복한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int main(void) {int a, b;cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b;for (int i = 0; i &amp;lt; b; i++){for (int t = 0; t &amp;lt; a; t++){cout &amp;lt;&amp;lt; &amp;#39;*&amp;#39;;} cout &amp;lt;&amp;lt; endl;}return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]정수 내림차순으로 배치하기</title>
+      <link>https://jyukki97.github.io/blog/2020-01-24-integersort/</link>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-01-24-integersort/</guid>
+      <description>https://programmers.co.kr
+문제: 함수 solution은 정수 n을 매개변수로 입력받습니다. n의 각 자릿수를 큰것부터 작은 순으로 정렬한 새로운 정수를 리턴해주세요. 예를들어 n이 118372면 873211을 리턴하면 됩니다.
+풀이: 정수 n을 string 에 담는다.
+담아진 string 을 내림차순으로 정렬한다.
+string을 long long 값으로 변환후 리턴한다.
+코드: 사용언어 : c++
+#include &amp;lt;string&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;long long solution(long long n) {string a = to_string(n);sort(a.begin(), a.end(), greater&amp;lt;char&amp;gt;());return stoull(a);}</description>
+    </item>
     
     <item>
       <title>[프로그래머스]H-index</title>
