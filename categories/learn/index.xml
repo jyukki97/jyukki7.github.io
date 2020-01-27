@@ -6,10 +6,24 @@
     <description>Recent content in Learn on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Thu, 02 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/categories/learn/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[C&#43;&#43;]문자열 분리 </title>
+      <link>https://jyukki97.github.io/learn/2020-01-27-stringstream/</link>
+      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/learn/2020-01-27-stringstream/</guid>
+      <description>문자열 분리 ( stringstream, strtok )
+stringstream - 공백을 기준으로 분리 stringstream s_stream(string a);s_stream에 a에 있는 문장을 공백을 기준으로 분리해서 넣는다.
+#include &amp;lt;sstream&amp;gt;사용하기 위해서는 sstream을 include해서 사용하자.
+string a = &amp;#34;a b c d&amp;#34;;stringstream s_stream(a);string c;while(s_stream &amp;gt;&amp;gt; c){cout &amp;lt;&amp;lt; c &amp;lt;&amp;lt; endl;}출력 :
+abcdstrtok - 주어진 문자를 기준으로 분리 strtok(char* a, char* b);a를 b를 기준으로 분리한다.
+이때, b는 한 단어가 아닌 문장이어도 성립한다.</description>
+    </item>
     
     <item>
       <title>[C&#43;&#43;]대소문자, 숫자 구분함수 </title>
