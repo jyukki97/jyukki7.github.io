@@ -6,10 +6,21 @@
     <description>Recent content in Learn on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/learn/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[C&#43;&#43;]순열 </title>
+      <link>https://jyukki97.github.io/learn/2020-01-28-next_permutation/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/learn/2020-01-28-next_permutation/</guid>
+      <description>순열 ( next_permutation )
+#include&amp;lt;iostream&amp;gt;#include&amp;lt;string&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace std;int main() { string str = &amp;#34;123&amp;#34;; sort(str.begin(), str.end());do {for (int i = 1; i &amp;lt;= str.size(); ++i) {int n = stoi(str.substr(0, i));cout &amp;lt;&amp;lt; n &amp;lt;&amp;lt; endl; } }while (next_permutation(str.begin(), str.end())); return 0;}출력 :
+112123113132221213223231331312332321</description>
+    </item>
     
     <item>
       <title>[C&#43;&#43;]문자열 분리 </title>
