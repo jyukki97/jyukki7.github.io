@@ -6,10 +6,53 @@
     <description>Recent content in C&#43;&#43; on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Wed, 29 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[프로그래머스]가장 큰 수</title>
+      <link>https://jyukki97.github.io/blog/2020-02-01-biggestnum/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-01-biggestnum/</guid>
+      <description>https://programmers.co.kr
+문제: 0 또는 양의 정수가 주어졌을 때, 정수를 이어 붙여 만들 수 있는 가장 큰 수를 알아내 주세요.
+예를 들어, 주어진 정수가 [6, 10, 2]라면 [6102, 6210, 1062, 1026, 2610, 2106]를 만들 수 있고, 이중 가장 큰 수는 6210입니다.
+0 또는 양의 정수가 담긴 배열 numbers가 매개변수로 주어질 때, 순서를 재배치하여 만들 수 있는 가장 큰 수를 문자열로 바꾸어 return 하도록 solution 함수를 작성해주세요.
+풀이: int 배열을 string으로 바꿔서 정렬한다.</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]소수 찾기</title>
+      <link>https://jyukki97.github.io/blog/2020-01-31-findprimnum/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-01-31-findprimnum/</guid>
+      <description>https://programmers.co.kr
+문제: 한자리 숫자가 적힌 종이 조각이 흩어져있습니다. 흩어진 종이 조각을 붙여 소수를 몇 개 만들 수 있는지 알아내려 합니다.
+각 종이 조각에 적힌 숫자가 적힌 문자열 numbers가 주어졌을 때, 종이 조각으로 만들 수 있는 소수가 몇 개인지 return 하도록 solution 함수를 완성해주세요.
+풀이: 문자열 numbers로 만들 수 있는 모든 순열을 set에 넣는다. (중복된 숫자를 거르기 위함)
+set에 들어있는 수들을 모두 순회하여 소수라면 answer값을 +1 해준다.
+(맨 처음에 sort를 하지않을 경우 실패가 뜨는데 왜 그런지는 잘 모르겠다.</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]오픈 채팅방</title>
+      <link>https://jyukki97.github.io/blog/2020-01-30-openchating/</link>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-01-30-openchating/</guid>
+      <description>https://programmers.co.kr
+문제: 카카오톡 오픈채팅방에서는 친구가 아닌 사람들과 대화를 할 수 있는데, 본래 닉네임이 아닌 가상의 닉네임을 사용하여 채팅방에 들어갈 수 있다.
+신입사원인 김크루는 카카오톡 오픈 채팅방을 개설한 사람을 위해, 다양한 사람들이 들어오고, 나가는 것을 지켜볼 수 있는 관리자창을 만들기로 했다. 채팅방에 누군가 들어오면 다음 메시지가 출력된다.
+[닉네임]님이 들어왔습니다.
+채팅방에서 누군가 나가면 다음 메시지가 출력된다.
+[닉네임]님이 나갔습니다.
+채팅방에서 닉네임을 변경하는 방법은 다음과 같이 두 가지이다.
+ 채팅방을 나간 후, 새로운 닉네임으로 다시 들어간다.</description>
+    </item>
     
     <item>
       <title>[C&#43;&#43;]정렬</title>
@@ -1770,6 +1813,17 @@ n,s=int(input()),&amp;#34;&amp;#34;for i in range(1,n+1):s+=str(i)print(s.fin
       <description>https://www.acmicpc.net/problem/1475
 풀이:  방번호를 string에 저장 string 첫번째 자릿수부터 숫자를 확인 숫자에 맞는 배열에 ++ 배열에서 가장 큰 숫자를 가지고 있는 값을 출력  코드: 사용언어 : c++
 #include &amp;lt;iostream&amp;gt;#include &amp;lt;string&amp;gt;using namespace std;int main(void) {string a;int b[10] = { 0 };cin &amp;gt;&amp;gt; a;for (int i = 0; i &amp;lt; a.length(); i++) {if (((int)a[i] - 48) == 6 &amp;amp;&amp;amp; b[6] &amp;gt; b[9])b[9] ++;else if (((int)a[i] - 48) == 9 &amp;amp;&amp;amp; b[6] &amp;lt; b[9])b[6] ++;elseb[(int)a[i] - 48]++;}int count = 0;for (int i = 0; i &amp;lt; 10; i++) {if (b[i] &amp;gt; count)count = b[i];}cout &amp;lt;&amp;lt; count &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2098 외판원 순회</title>
+      <link>https://jyukki97.github.io/blog/2019-06-01-2098/</link>
+      <pubDate>Mon, 20 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2019-06-01-2098/</guid>
+      <description>https://www.acmicpc.net/problem/2098
+풀이:  dp[a][b]를 현제 위치가 a이고, 이때까지 방문한 도시들의 목록이 b인 여행비용의 최솟값이라고 한다. 방문한 도시들을 쉽게 나타내기 위해 비트마스크를 사용하였다. 최솟값을 구하는 문제이므로 r을 최대한 큰 수로 두고 min함수를 이용한다. 도시의 비용이 0인 경우 방문할 수 없으므로 제외시킨다. 방문 횟수가 많아 시간초과가 날 수 있으므로 메모이제이션을 한다. 순회 문제이기 때문에 시작위치는 상관없으므로 실행시간을 늘리지 않도록 주의한다.  코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int w[17][17],d[17][100000], n;int T(int a, int b) {if ((1 &amp;lt;&amp;lt; n) - 1 == b &amp;amp;&amp;amp; w[a][0] !</description>
     </item>
     
     <item>

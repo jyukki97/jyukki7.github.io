@@ -1,11 +1,3 @@
-
-
-
-    
-
-
-
-
 <!DOCTYPE HTML>
 
 <html>
@@ -19,25 +11,27 @@
              "@id": "https:\/\/jyukki97.github.io"
         },
         "articleSection" : "blog",
-        "name" : "2098 외판원 순회",
-        "headline" : "2098 외판원 순회",
-        "description" : "https:\/\/www.acmicpc.net\/problem\/2098\n풀이:  dp[a][b]를 현제 위치가 a이고, 이때까지 방문한 도시들의 목록이 b인 여행비용의 최솟값이라고 한다. 방문한 도시들을 쉽게 나타내기 위해 비트마스크를 사용하였다. 최솟값을 구하는 문제이므로 r을 최대한 큰 수로 두고 min함수를 이용한다. 도시의 비용이 0인 경우 방문할 수 없으므로 제외시킨다. 방문 횟수가 많아 시간초과가 날 수 있으므로 메모이제이션을 한다. 순회 문제이기 때문에 시작위치는 상관없으므로 실행시간을 늘리지 않도록 주의한다.  코드: 사용언어 : c\x2b\x2b {% highlight c\x2b\x2b %} #include #include using namespace std; int w[17][17],d[17][100000], n; int T(int a, int b) { if ((1 \x26laquo; n) - 1 == b \x26amp;\x26amp; w[a][0] !",
+        "name" : "[백준]2098 외판원 순회",
+        "headline" : "[백준]2098 외판원 순회",
+        "description" : "algorithm",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
         "publisher": "",
         "accountablePerson" : "",
         "copyrightHolder" : "",
-        "copyrightYear" : "0001",
-        "datePublished": "0001-01-01 00:00:00 \x2b0000 UTC",
-        "dateModified" : "0001-01-01 00:00:00 \x2b0000 UTC",
+        "copyrightYear" : "2017",
+        "datePublished": "2017-11-20 00:00:00 \x2b0000 UTC",
+        "dateModified" : "2017-11-20 00:00:00 \x2b0000 UTC",
         "url" : "https:\/\/jyukki97.github.io\/blog\/2019-06-01-2098\/",
-        "wordCount" : "180",
-        "keywords" : [ "Blog" ]
+        "wordCount" : "175",
+        "keywords" : [ "algorithm","C\x2b\x2b","외판원 순회","Blog" ]
     }
     </script>
         
-            <title>2098 외판원 순회 - 1 Day 1 Problem</title>
+            
+                <title>[백준]2098 외판원 순회</title>
+            
         
 
         <meta charset="utf-8" />
@@ -72,37 +66,36 @@
 
 
         
+            <meta name="author" content="jyukki">
         
-            
-                <meta name="description" content="jyukki&#39;s algorithm blog">
-            
+        
+            <meta name="description" content="algorithm">
         
 
         <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="2098 외판원 순회"/>
-<meta name="twitter:description" content="https://www.acmicpc.net/problem/2098
-풀이:  dp[a][b]를 현제 위치가 a이고, 이때까지 방문한 도시들의 목록이 b인 여행비용의 최솟값이라고 한다. 방문한 도시들을 쉽게 나타내기 위해 비트마스크를 사용하였다. 최솟값을 구하는 문제이므로 r을 최대한 큰 수로 두고 min함수를 이용한다. 도시의 비용이 0인 경우 방문할 수 없으므로 제외시킨다. 방문 횟수가 많아 시간초과가 날 수 있으므로 메모이제이션을 한다. 순회 문제이기 때문에 시작위치는 상관없으므로 실행시간을 늘리지 않도록 주의한다.  코드: 사용언어 : c&#43;&#43; {% highlight c&#43;&#43; %} #include #include using namespace std; int w[17][17],d[17][100000], n; int T(int a, int b) { if ((1 &laquo; n) - 1 == b &amp;&amp; w[a][0] !"/>
+<meta name="twitter:title" content="[백준]2098 외판원 순회"/>
+<meta name="twitter:description" content="algorithm"/>
 
-        <meta property="og:title" content="2098 외판원 순회" />
-<meta property="og:description" content="https://www.acmicpc.net/problem/2098
-풀이:  dp[a][b]를 현제 위치가 a이고, 이때까지 방문한 도시들의 목록이 b인 여행비용의 최솟값이라고 한다. 방문한 도시들을 쉽게 나타내기 위해 비트마스크를 사용하였다. 최솟값을 구하는 문제이므로 r을 최대한 큰 수로 두고 min함수를 이용한다. 도시의 비용이 0인 경우 방문할 수 없으므로 제외시킨다. 방문 횟수가 많아 시간초과가 날 수 있으므로 메모이제이션을 한다. 순회 문제이기 때문에 시작위치는 상관없으므로 실행시간을 늘리지 않도록 주의한다.  코드: 사용언어 : c&#43;&#43; {% highlight c&#43;&#43; %} #include #include using namespace std; int w[17][17],d[17][100000], n; int T(int a, int b) { if ((1 &laquo; n) - 1 == b &amp;&amp; w[a][0] !" />
+        <meta property="og:title" content="[백준]2098 외판원 순회" />
+<meta property="og:description" content="algorithm" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jyukki97.github.io/blog/2019-06-01-2098/" />
-
+<meta property="article:published_time" content="2017-11-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-11-20T00:00:00+00:00" />
 
         <meta property="og:image" content="https://jyukki97.github.io/images/logo.png">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
-        <meta itemprop="name" content="2098 외판원 순회">
-<meta itemprop="description" content="https://www.acmicpc.net/problem/2098
-풀이:  dp[a][b]를 현제 위치가 a이고, 이때까지 방문한 도시들의 목록이 b인 여행비용의 최솟값이라고 한다. 방문한 도시들을 쉽게 나타내기 위해 비트마스크를 사용하였다. 최솟값을 구하는 문제이므로 r을 최대한 큰 수로 두고 min함수를 이용한다. 도시의 비용이 0인 경우 방문할 수 없으므로 제외시킨다. 방문 횟수가 많아 시간초과가 날 수 있으므로 메모이제이션을 한다. 순회 문제이기 때문에 시작위치는 상관없으므로 실행시간을 늘리지 않도록 주의한다.  코드: 사용언어 : c&#43;&#43; {% highlight c&#43;&#43; %} #include #include using namespace std; int w[17][17],d[17][100000], n; int T(int a, int b) { if ((1 &laquo; n) - 1 == b &amp;&amp; w[a][0] !">
+        <meta itemprop="name" content="[백준]2098 외판원 순회">
+<meta itemprop="description" content="algorithm">
+<meta itemprop="datePublished" content="2017-11-20T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2017-11-20T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="175">
 
-<meta itemprop="wordCount" content="180">
 
 
-
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="algorithm,C&#43;&#43;,외판원 순회," />
         
 
         
@@ -154,6 +147,7 @@ if (!doNotTrack) {
       <div id="wrapper">
 
     
+    
 <header id="header">
     
       <h1><a href="https://jyukki97.github.io/">blog</a></h1>
@@ -202,6 +196,10 @@ if (!doNotTrack) {
     </nav>
     <nav class="main">
         <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
             
             <li class="search">
                 <a class="fa-search" href="#search">Search</a>
@@ -298,6 +296,42 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="https://jyukki97.github.io/blog/2020-02-01-biggestnum/">[프로그래머스]가장 큰 수</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-02-01'>
+                                    February 1, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://jyukki97.github.io/blog/2020-01-31-findprimnum/">[프로그래머스]소수 찾기</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-01-31'>
+                                    January 31, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://jyukki97.github.io/blog/2020-01-30-openchating/">[프로그래머스]오픈 채팅방</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-01-30'>
+                                    January 30, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="https://jyukki97.github.io/learn/2020-01-29-sort/">[C&#43;&#43;]정렬</a></h3>
                                 
                                 <time class="published" datetime=
@@ -320,42 +354,6 @@ if (!doNotTrack) {
 
                         </article>
                 
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://jyukki97.github.io/learn/2020-01-28-next_permutation/">[C&#43;&#43;]순열 </a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2020-01-28'>
-                                    January 28, 2020</time>
-                            </header>
-                            
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://jyukki97.github.io/blog/2020-01-28-matrixmultiplication/">[프로그래머스]행렬의 곱셈</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2020-01-28'>
-                                    January 28, 2020</time>
-                            </header>
-                            
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://jyukki97.github.io/learn/2020-01-27-stringstream/">[C&#43;&#43;]문자열 분리 </a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2020-01-27'>
-                                    January 27, 2020</time>
-                            </header>
-                            
-
-                        </article>
-                
 
                 
                     <a href=
@@ -371,23 +369,251 @@ if (!doNotTrack) {
         
 </section>
 
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-06-01-2098%2f&amp;text=%5b%eb%b0%b1%ec%a4%80%5d2098%20%ec%99%b8%ed%8c%90%ec%9b%90%20%ec%88%9c%ed%9a%8c&amp;via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-06-01-2098%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-06-01-2098%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-06-01-2098%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d2098%20%ec%99%b8%ed%8c%90%ec%9b%90%20%ec%88%9c%ed%9a%8c" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-06-01-2098%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d2098%20%ec%99%b8%ed%8c%90%ec%9b%90%20%ec%88%9c%ed%9a%8c" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-06-01-2098%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d2098%20%ec%99%b8%ed%8c%90%ec%9b%90%20%ec%88%9c%ed%9a%8c" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-06-01-2098%2f&amp;description=%5b%eb%b0%b1%ec%a4%80%5d2098%20%ec%99%b8%ed%8c%90%ec%9b%90%20%ec%88%9c%ed%9a%8c" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by jyukki&amp;body=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-06-01-2098%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
     
     <div id="main">
+        
+        
         <article class="post">
-            
-            <header>
+  <header>
     <div class="title">
         
-            <h1><a href="https://jyukki97.github.io/blog/2019-06-01-2098/">2098 외판원 순회</a></h1>
+            <h1><a href="https://jyukki97.github.io/blog/2019-06-01-2098/">[백준]2098 외판원 순회</a></h1>
             
+        
+        
+            <p>algorithm</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2017-11-20'>
+            November 20, 2017</time>
+        <span class="author">jyukki</span>
+        
+            <p>1 minute read</p>
         
         
     </div>
 </header>
 
-            <div id="content">
-                <p><a href="http://www.acmicpc.net/problem/2098">https://www.acmicpc.net/problem/2098</a></p>
-<h4 id="heading"><strong>풀이:</strong></h4>
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-06-01-2098%2f&amp;text=%5b%eb%b0%b1%ec%a4%80%5d2098%20%ec%99%b8%ed%8c%90%ec%9b%90%20%ec%88%9c%ed%9a%8c&amp;via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-06-01-2098%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-06-01-2098%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-06-01-2098%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d2098%20%ec%99%b8%ed%8c%90%ec%9b%90%20%ec%88%9c%ed%9a%8c" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-06-01-2098%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d2098%20%ec%99%b8%ed%8c%90%ec%9b%90%20%ec%88%9c%ed%9a%8c" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-06-01-2098%2f&amp;title=%5b%eb%b0%b1%ec%a4%80%5d2098%20%ec%99%b8%ed%8c%90%ec%9b%90%20%ec%88%9c%ed%9a%8c" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-06-01-2098%2f&amp;description=%5b%eb%b0%b1%ec%a4%80%5d2098%20%ec%99%b8%ed%8c%90%ec%9b%90%20%ec%88%9c%ed%9a%8c" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by jyukki&amp;body=https%3a%2f%2fjyukki97.github.io%2fblog%2f2019-06-01-2098%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://jyukki97.github.io/blog/2019-06-01-2098/" class="image featured">
+            <img src="https://jyukki97.github.io/img/2017/11/" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    <p><a href="http://www.acmicpc.net/problem/2098">https://www.acmicpc.net/problem/2098</a></p>
+<h1 id="heading"><strong>풀이:</strong></h1>
 <ol>
 <li>dp[a][b]를 현제 위치가 a이고, 이때까지 방문한 도시들의 목록이 b인 여행비용의 최솟값이라고 한다.</li>
 <li>방문한 도시들을 쉽게 나타내기 위해 비트마스크를 사용하였다.</li>
@@ -396,37 +622,114 @@ if (!doNotTrack) {
 <li>방문 횟수가 많아 시간초과가 날 수 있으므로 메모이제이션을 한다.</li>
 <li>순회 문제이기 때문에 시작위치는 상관없으므로 실행시간을 늘리지 않도록 주의한다.</li>
 </ol>
-<h4 id="heading-1"><strong>코드:</strong></h4>
-<p>사용언어 : c++
-{% highlight c++ %}
-#include <!-- raw HTML omitted -->
-#include <!-- raw HTML omitted -->
-using namespace std;
-int w[17][17],d[17][100000], n;
-int T(int a, int b) {
-if ((1 &laquo; n) - 1 == b &amp;&amp; w[a][0] != 0)
-return w[a][0];
-int &amp;r = d[a][b];
-if (r &gt; 0)
-return r;
-r = 100000000;
-for (int i = 0; i &lt; n; i++)
-if (w[a][i] != 0 &amp;&amp; (b &amp; (1 &laquo; i)) == 0)
-r = min(r, w[a][i] + T(i, b | (1 &laquo; i)));
-return r;
+<h1 id="heading-1"><strong>코드:</strong></h1>
+<p>사용언어 : c++</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;algorithm&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#66d9ef">int</span> w[<span style="color:#ae81ff">17</span>][<span style="color:#ae81ff">17</span>],d[<span style="color:#ae81ff">17</span>][<span style="color:#ae81ff">100000</span>], n;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">T</span>(<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b) {
+	<span style="color:#66d9ef">if</span> ((<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> n) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> b <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> w[a][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>)
+		<span style="color:#66d9ef">return</span> w[a][<span style="color:#ae81ff">0</span>];
+	<span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>r <span style="color:#f92672">=</span> d[a][b];
+	<span style="color:#66d9ef">if</span> (r <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>)
+		<span style="color:#66d9ef">return</span> r;
+	r <span style="color:#f92672">=</span> <span style="color:#ae81ff">100000000</span>;
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">+</span><span style="color:#f92672">+</span>)
+		<span style="color:#66d9ef">if</span> (w[a][i] <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> (b <span style="color:#f92672">&amp;</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> i)) <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>)
+			r <span style="color:#f92672">=</span> min(r, w[a][i] <span style="color:#f92672">+</span> T(i, b <span style="color:#f92672">|</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> i)));
+	<span style="color:#66d9ef">return</span> r;
 }
-int main(void) {
-cin &raquo; n;
-for (int i = 0; i &lt; n; i++)
-for (int t = 0; t &lt; n; t++)
-cin &raquo; w[i][t];
-cout &laquo; T(0, 1) &laquo; endl;
-return 0;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>) {
+	cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> n;
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">+</span><span style="color:#f92672">+</span>)
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> t <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; t <span style="color:#f92672">&lt;</span> n; t<span style="color:#f92672">+</span><span style="color:#f92672">+</span>)
+			cin <span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> w[i][t];
+	cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> T(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>) <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> endl;
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 }
-{% endhighlight %}</p>
+</code></pre></div>
+  </div>
 
-            </div>
-        </article>
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80">백준</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="https://jyukki97.github.io/tags/algorithm">algorithm</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://jyukki97.github.io/tags/c&#43;&#43;">C&#43;&#43;</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://jyukki97.github.io/tags/%EC%99%B8%ED%8C%90%EC%9B%90-%EC%88%9C%ED%9A%8C">외판원 순회</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jyukki97" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="https://jyukki97.github.io/blog/2017-12-18-9507/"
+                class="button big previous">[백준]9507 Generations of Tribbles</a></li>
+    
+
+    
+        <li><a href="https://jyukki97.github.io/blog/2017-11-20-1475/"
+                class="button big next">[백준]1475 방번호</a></li>
+    
+</ul>
+
+
     </div>
     
 <section id="sidebar">
@@ -560,6 +863,48 @@ return 0;
           <article class="mini-post">
             <header>
               <h3>
+                <a href="https://jyukki97.github.io/blog/2020-02-01-biggestnum/">[프로그래머스]가장 큰 수</a>
+              </h3>
+              
+              <time class="published" datetime='2020-02-01'>
+                February 1, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://jyukki97.github.io/blog/2020-01-31-findprimnum/">[프로그래머스]소수 찾기</a>
+              </h3>
+              
+              <time class="published" datetime='2020-01-31'>
+                January 31, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://jyukki97.github.io/blog/2020-01-30-openchating/">[프로그래머스]오픈 채팅방</a>
+              </h3>
+              
+              <time class="published" datetime='2020-01-30'>
+                January 30, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
                 <a href="https://jyukki97.github.io/learn/2020-01-29-sort/">[C&#43;&#43;]정렬</a>
               </h3>
               
@@ -579,48 +924,6 @@ return 0;
               
               <time class="published" datetime='2020-01-29'>
                 January 29, 2020
-              </time>
-            </header>
-            
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://jyukki97.github.io/learn/2020-01-28-next_permutation/">[C&#43;&#43;]순열 </a>
-              </h3>
-              
-              <time class="published" datetime='2020-01-28'>
-                January 28, 2020
-              </time>
-            </header>
-            
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://jyukki97.github.io/blog/2020-01-28-matrixmultiplication/">[프로그래머스]행렬의 곱셈</a>
-              </h3>
-              
-              <time class="published" datetime='2020-01-28'>
-                January 28, 2020
-              </time>
-            </header>
-            
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://jyukki97.github.io/learn/2020-01-27-stringstream/">[C&#43;&#43;]문자열 분리 </a>
-              </h3>
-              
-              <time class="published" datetime='2020-01-27'>
-                January 27, 2020
               </time>
             </header>
             
@@ -660,7 +963,7 @@ return 0;
             <header>
               
                 <a href="https://jyukki97.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/">프로그래머스</a>
-                <span style="float:right;">84</span>
+                <span style="float:right;">87</span>
               
             </header>
           </article>
@@ -671,7 +974,7 @@ return 0;
             <header>
               
                 <a href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80/">백준</a>
-                <span style="float:right;">82</span>
+                <span style="float:right;">83</span>
               
             </header>
           </article>
