@@ -6,10 +6,37 @@
     <description>Recent content in 문자열 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Thu, 02 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[프로그래머스]문자열 내 마음대로 정렬하기</title>
+      <link>https://jyukki97.github.io/blog/2020-02-10-stringsort/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-10-stringsort/</guid>
+      <description>https://programmers.co.kr
+문제: 문자열로 구성된 리스트 strings와, 정수 n이 주어졌을 때, 각 문자열의 인덱스 n번째 글자를 기준으로 오름차순 정렬하려 합니다. 예를 들어 strings가 [sun, bed, car]이고 n이 1이면 각 단어의 인덱스 1의 문자 u, e, a로 strings를 정렬합니다.
+풀이: n번째 글자를 기준으로 오름차순 정렬을 한다.
+코드: 사용언어 : c++
+#include &amp;lt;string&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;vector&amp;lt;string&amp;gt; solution(vector&amp;lt;string&amp;gt; strings, int n) {vector&amp;lt;string&amp;gt; answer;for (int i = 0; i &amp;lt; strings.</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;]transform</title>
+      <link>https://jyukki97.github.io/learn/2020-02-07-transform/</link>
+      <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/learn/2020-02-07-transform/</guid>
+      <description>transform
+#include&amp;lt;algorithm&amp;gt;사용하기 위해서는 algorithm을 include해준다.
+기본적인 사용법은 이렇게된다.
+transform(a.begin(), a.end(), a.begin(), fuc());// transform(시작주소, 끝 주소, 저장할 곳의 시작 주소, 함수);ex)
+배열 a의 모든 값을 3씩 증가시키기
+#include &amp;lt;iostream&amp;gt; #include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt; using namespace std; int func(int n) { return n + 3;} int main() {vector&amp;lt;int&amp;gt; a;for(int i = 0; i &amp;lt; 5; i++)a.push_back(i);transform(a.begin(), a.end(), a.begin(), func);for(int i : a)cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; endl;return 0;}출력)</description>
+    </item>
     
     <item>
       <title>[프로그래머스]JadenCase 문자열 만들기</title>

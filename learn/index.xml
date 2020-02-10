@@ -6,10 +6,24 @@
     <description>Recent content in Learn on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Wed, 29 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/learn/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[C&#43;&#43;]transform</title>
+      <link>https://jyukki97.github.io/learn/2020-02-07-transform/</link>
+      <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/learn/2020-02-07-transform/</guid>
+      <description>transform
+#include&amp;lt;algorithm&amp;gt;사용하기 위해서는 algorithm을 include해준다.
+기본적인 사용법은 이렇게된다.
+transform(a.begin(), a.end(), a.begin(), fuc());// transform(시작주소, 끝 주소, 저장할 곳의 시작 주소, 함수);ex)
+배열 a의 모든 값을 3씩 증가시키기
+#include &amp;lt;iostream&amp;gt; #include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt; using namespace std; int func(int n) { return n + 3;} int main() {vector&amp;lt;int&amp;gt; a;for(int i = 0; i &amp;lt; 5; i++)a.push_back(i);transform(a.begin(), a.end(), a.begin(), func);for(int i : a)cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; endl;return 0;}출력)</description>
+    </item>
     
     <item>
       <title>[C&#43;&#43;]정렬</title>
