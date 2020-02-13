@@ -6,10 +6,21 @@
     <description>Recent content in Level 1 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/level-1/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[프로그래머스]다트 게임</title>
+      <link>https://jyukki97.github.io/blog/2020-02-11-dartgame/</link>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-11-dartgame/</guid>
+      <description>https://programmers.co.kr
+문제: 카카오톡 게임별의 하반기 신규 서비스로 다트 게임을 출시하기로 했다. 다트 게임은 다트판에 다트를 세 차례 던져 그 점수의 합계로 실력을 겨루는 게임으로, 모두가 간단히 즐길 수 있다. 갓 입사한 무지는 코딩 실력을 인정받아 게임의 핵심 부분인 점수 계산 로직을 맡게 되었다. 다트 게임의 점수 계산 로직은 아래와 같다.
+ 다트 게임은 총 3번의 기회로 구성된다. 각 기회마다 얻을 수 있는 점수는 0점에서 10점까지이다. 점수와 함께 Single(S), Double(D), Triple(T) 영역이 존재하고 각 영역 당첨 시 점수에서 1제곱, 2제곱, 3제곱 (점수1 , 점수2 , 점수3 )으로 계산된다.</description>
+    </item>
     
     <item>
       <title>[프로그래머스]문자열 내 마음대로 정렬하기</title>
