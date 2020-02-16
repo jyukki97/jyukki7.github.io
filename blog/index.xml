@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>[백준]11729 하노이 탑 이동 순서</title>
+      <link>https://jyukki97.github.io/blog/2020-02-18-11729/</link>
+      <pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-18-11729/</guid>
+      <description>https://www.acmicpc.net/problem/11729
+풀이: https://jyukki97.github.io/blog/2020-02-18-towerofhanoi/ 를 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;void h(int n, int a, int b, int c) {if (!n) return;else {h(n - 1, a, c, b);printf(&amp;#34;%d %d\n&amp;#34;, a, b);h(n - 1, c, b, a);}}int main() { int n, a = 1;cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++)a *= 2;cout &amp;lt;&amp;lt; a - 1 &amp;lt;&amp;lt; endl;h(n, 1, 3, 2);return 0;}</description>
+    </item>
+    
+    <item>
       <title>[프로그래머스]입국심사</title>
       <link>https://jyukki97.github.io/blog/2020-02-16-immigration/</link>
       <pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate>
@@ -2117,19 +2129,6 @@ n,s=int(input()),&amp;#34;&amp;#34;for i in range(1,n+1):s+=str(i)print(s.fin
       
       <guid>https://jyukki97.github.io/blog/2017-11-19-start/</guid>
       <description>안녕하세요.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jyukki97.github.io/blog/2020-02-18-11729/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/blog/2020-02-18-11729/</guid>
-      <description>+++ author = &amp;ldquo;jyukki&amp;rdquo; categories = [&amp;ldquo;백준&amp;rdquo;] tags = [&amp;ldquo;algorithm&amp;rdquo;, &amp;ldquo;C++&amp;rdquo;, &amp;ldquo;분할 정복&amp;rdquo;] date = &amp;ldquo;2020-02-16&amp;rdquo; description = &amp;ldquo;algorithm&amp;rdquo; featured = &amp;quot;&amp;rdquo; featuredalt = &amp;quot;&amp;rdquo; featuredpath = &amp;quot;&amp;rdquo; linktitle = &amp;quot;&amp;rdquo; title = &amp;ldquo;[백준]11729 하노이 탑 이동 순서&amp;rdquo; type = &amp;ldquo;post&amp;rdquo;
-+++ https://www.acmicpc.net/problem/11729
-풀이: https://jyukki97.github.io/blog/2020-02-18-towerofhanoi/ 를 참고
-코드: 사용언어 : c++
-#include &amp;lt;iostream&amp;gt;using namespace std;void h(int n, int a, int b, int c) {if (!n) return;else {h(n - 1, a, c, b);printf(&amp;#34;%d %d\n&amp;#34;, a, b);h(n - 1, c, b, a);}}int main() { int n, a = 1;cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++)a *= 2;cout &amp;lt;&amp;lt; a - 1 &amp;lt;&amp;lt; endl;h(n, 1, 3, 2);return 0;}</description>
     </item>
     
     <item>
