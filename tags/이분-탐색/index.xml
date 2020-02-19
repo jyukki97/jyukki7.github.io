@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>이분 탐색 on 1 Day 1 Problem</title>
+    <link>https://jyukki97.github.io/tags/%EC%9D%B4%EB%B6%84-%ED%83%90%EC%83%89/</link>
+    <description>Recent content in 이분 탐색 on 1 Day 1 Problem</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <lastBuildDate>Wed, 19 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jyukki97.github.io/tags/%EC%9D%B4%EB%B6%84-%ED%83%90%EC%83%89/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[C&#43;&#43;]lower_bound, upper_bound</title>
+      <link>https://jyukki97.github.io/learn/2020-02-19-bound/</link>
+      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/learn/2020-02-19-bound/</guid>
+      <description>lower_bound, upper_bound
+- 기본적으로 두개 모두 &amp;ldquo;이진 탐색(Binary Serch)&amp;rdquo; 기반의 탐색방법 - lower_bound lower_bound(arr, arr + n, key);- key 값의 가장 낮은 위치를 찾는다. - key 값이 없다면 key 값보다 큰 가장 작은 정수의 위치를 반환한다. - 반환값이 &amp;ldquo;iterator&amp;rdquo; 이다. - upper_bound upper_bound(arr, arr + n, key);- key 값을 초과하는 가장 첫번째 원소의 위치. - 반환값이 &amp;ldquo;iterator&amp;rdquo; 이다. </description>
+    </item>
+    
+  </channel>
+</rss>
