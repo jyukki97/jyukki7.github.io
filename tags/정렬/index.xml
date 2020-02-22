@@ -6,10 +6,24 @@
     <description>Recent content in 정렬 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sat, 01 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EC%A0%95%EB%A0%AC/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]1181 체스판 다시 칠하기</title>
+      <link>https://jyukki97.github.io/blog/2020-02-22-1181/</link>
+      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-22-1181/</guid>
+      <description>https://www.acmicpc.net/problem/1181
+풀이: 배열에 들어있는 string을 길이 순서로 정렬 후
+길이가 같다면, 사전순으로 정렬한다.
+이 때, 중복된 문자가 있다면, 제거한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;set&amp;gt;#include &amp;lt;string&amp;gt;using namespace std;bool com(string a, string b) {if (a.size() == b.size())return a &amp;lt; b;return a.size() &amp;lt; b.size();}int main() { int n;cin &amp;gt;&amp;gt; n;string s;set&amp;lt;string, decltype(&amp;amp;com)&amp;gt; a(&amp;amp;com);for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; s;a.</description>
+    </item>
     
     <item>
       <title>[프로그래머스]가장 큰 수</title>
