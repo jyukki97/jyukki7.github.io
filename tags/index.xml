@@ -6,7 +6,7 @@
     <description>Recent content in Tags on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sat, 22 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>algorithm</title>
       <link>https://jyukki97.github.io/tags/algorithm/</link>
-      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://jyukki97.github.io/tags/algorithm/</guid>
       <description></description>
@@ -23,9 +23,27 @@
     <item>
       <title>C&#43;&#43;</title>
       <link>https://jyukki97.github.io/tags/c&#43;&#43;/</link>
-      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://jyukki97.github.io/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Level 3</title>
+      <link>https://jyukki97.github.io/tags/level-3/</link>
+      <pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/tags/level-3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>백트래킹</title>
+      <link>https://jyukki97.github.io/tags/%EB%B0%B1%ED%8A%B8%EB%9E%98%ED%82%B9/</link>
+      <pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/tags/%EB%B0%B1%ED%8A%B8%EB%9E%98%ED%82%B9/</guid>
       <description></description>
     </item>
     
@@ -62,15 +80,6 @@
       <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://jyukki97.github.io/tags/%EC%9D%B4%EB%B6%84-%ED%83%90%EC%83%89/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Level 3</title>
-      <link>https://jyukki97.github.io/tags/level-3/</link>
-      <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://jyukki97.github.io/tags/level-3/</guid>
       <description></description>
     </item>
     

@@ -6,13 +6,39 @@
     <description>Recent content in algorithm on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sat, 22 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>[백준]1181 체스판 다시 칠하기</title>
+      <title>[백준]9663 N-Queen</title>
+      <link>https://jyukki97.github.io/blog/2020-02-23-9663/</link>
+      <pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-23-9663/</guid>
+      <description>https://www.acmicpc.net/problem/9663
+풀이: https://jyukki97.github.io/blog/2020-02-23-nqueen/ 을 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;bool visit[16][16];int n, sum = 0;bool po(int a, int b) {for (int i = 1; i &amp;lt;= a || i &amp;lt;= b; i++) {if ((a - i &amp;gt;= 0 &amp;amp;&amp;amp; b - i &amp;gt;= 0 &amp;amp;&amp;amp; visit[a - i][b - i]) ||(a - i &amp;gt;= 0 &amp;amp;&amp;amp; b + i &amp;lt; n &amp;amp;&amp;amp; visit[a - i][b + i]) ||(a - i &amp;gt;= 0 &amp;amp;&amp;amp; visit[a - i][b]))	return false;}return true;}void nq(int a) {for (int i = 0; i &amp;lt; n; i++) {if (po(a, i)) {if (a == n - 1)	sum++;else {visit[a][i] = true;nq(a + 1);visit[a][i] = false;}}}}int main() {cin &amp;gt;&amp;gt; n;nq(0);cout &amp;lt;&amp;lt; sum &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]N-Queen</title>
+      <link>https://jyukki97.github.io/blog/2020-02-23-nqueen/</link>
+      <pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-23-nqueen/</guid>
+      <description>https://programmers.co.kr
+문제: 가로, 세로 길이가 n인 정사각형으로된 체스판이 있습니다. 체스판 위의 n개의 퀸이 서로를 공격할 수 없도록 배치하고 싶습니다.
+예를 들어서 n이 4인경우 다음과 같이 퀸을 배치하면 n개의 퀸은 서로를 한번에 공격 할 수 없습니다.
+체스판의 가로 세로의 세로의 길이 n이 매개변수로 주어질 때, n개의 퀸이 조건에 만족 하도록 배치할 수 있는 방법의 수를 return하는 solution함수를 완성해주세요.
+풀이: 첫번째 줄부터 n번째 줄까지 퀸을 하나 씩 놓을 수 있다.
+i번째 줄에 0 ~ n까지 퀸을 놓는다고 할 때,</description>
+    </item>
+    
+    <item>
+      <title>[백준]1181 단어 정렬</title>
       <link>https://jyukki97.github.io/blog/2020-02-22-1181/</link>
       <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
       
