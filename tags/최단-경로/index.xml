@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>최단 경로 on 1 Day 1 Problem</title>
+    <link>https://jyukki97.github.io/tags/%EC%B5%9C%EB%8B%A8-%EA%B2%BD%EB%A1%9C/</link>
+    <description>Recent content in 최단 경로 on 1 Day 1 Problem</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jyukki97.github.io/tags/%EC%B5%9C%EB%8B%A8-%EA%B2%BD%EB%A1%9C/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[C&#43;&#43;]다익스트라 알고리즘(Dijkstra Algorithm)</title>
+      <link>https://jyukki97.github.io/learn/2020-02-24-dijkstra/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/learn/2020-02-24-dijkstra/</guid>
+      <description>다익스트라 알고리즘(Dijkstra Algorithm)
+특정 노드에서부터 모든 노드로 가는 최단 경로를 구하는 알고리즘. 가중치가 음수인 간선이 없는 경우에만 사용할 수 있다. </description>
+    </item>
+    
+  </channel>
+</rss>

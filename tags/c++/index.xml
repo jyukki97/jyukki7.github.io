@@ -6,10 +6,172 @@
     <description>Recent content in C&#43;&#43; on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sun, 23 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[C&#43;&#43;]다익스트라 알고리즘(Dijkstra Algorithm)</title>
+      <link>https://jyukki97.github.io/learn/2020-02-24-dijkstra/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/learn/2020-02-24-dijkstra/</guid>
+      <description>다익스트라 알고리즘(Dijkstra Algorithm)
+특정 노드에서부터 모든 노드로 가는 최단 경로를 구하는 알고리즘. 가중치가 음수인 간선이 없는 경우에만 사용할 수 있다. </description>
+    </item>
+    
+    <item>
+      <title>[백준]11054 가장 긴 바이토닉 부분 수열</title>
+      <link>https://jyukki97.github.io/blog/2020-02-24-11054/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-24-11054/</guid>
+      <description>https://www.acmicpc.net/problem/11054
+풀이: b[i] = i 위치 왼쪽에 있는 값들 중 m[i] 보다 작은 수들의 최대 갯수
+s[i] = i 위치 오른쪽에 있는 값들 중 m[i] 보다 작은 수들의 최대 갯수
+가장 긴 수열의 길이 = 모든 i 에 대해 (b[i] + s[i] + 1) 의 최댓값
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, m[1001], b[1001], s[1001], ma = 0;int main() {cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++)cin &amp;gt;&amp;gt; m[i];for (int i = n - 2; i &amp;gt;= 0; i--)for (int t = n - 1; t &amp;gt; i; t--)if (m[i] &amp;gt; m[t])s[i] = max(s[i], s[t] + 1);for (int i = 0; i &amp;lt; n; i++) {for (int t = 0; t &amp;lt; i; t++)if (m[i] &amp;gt; m[t])b[i] = max(b[i], b[t] + 1);ma = max(ma, b[i] + s[i] + 1);}cout &amp;lt;&amp;lt; ma &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]12865 평범한 배낭</title>
+      <link>https://jyukki97.github.io/blog/2020-02-24-12865/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-24-12865/</guid>
+      <description>https://www.acmicpc.net/problem/12865
+풀이: DP[i] : i 무게일 때, 배낭에 넣을 수 있는 물건의 가치의 최댓값
+DP[i + w] = max(DP[i + w], DP[i] + v)
+무게가 i + w 일 때, 최댓값은 이전에 있었던 i + w 일때의 값과, i 에 있는 값에 w 무게 물건의 가치인 v를 더한 값 중 최댓값이다.
+(DP를 DP[2][100001] 처럼 두개로 나누어 놓은 이유는 물건의 갯수가 1개씩이기 때문에 물건 중복을 피하기위해 나누어놓았다.)
+ex) 무게가 4이고, 가치가 5일때, DP[4] = 5 가 되지만, DP[8] = DP[4] + 5 가 되어 10이 되는 불상사가 일어날 수 있기 때문에, 두개로 나누어 놓앗다.</description>
+    </item>
+    
+    <item>
+      <title>[백준]14888 연산자 끼워넣기</title>
+      <link>https://jyukki97.github.io/blog/2020-02-24-14888/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-24-14888/</guid>
+      <description>https://www.acmicpc.net/problem/14888
+풀이: 각 숫자를 순서대로 배열에 넣어놓는다.
++, -, *, / 를 갯수만큼 각 숫자사이의 끼워넣어 식을 만든다.
+만들 식의 값들을 배열에 저장해놓는다.
+배열에 들어있는 수 중 최댓값, 최솟값을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, num[101], op[4];vector&amp;lt;int&amp;gt; sumn;void o(int a, int b) {if (a == n - 1) {sumn.push_back(b);return;}if (op[0] &amp;gt; 0) {op[0]--;o(a + 1, b + num[a + 1]);op[0]++;}if (op[1] &amp;gt; 0) {op[1]--;o(a + 1, b - num[a + 1]);op[1]++;}if (op[2] &amp;gt; 0) {op[2]--;o(a + 1, b * num[a + 1]);op[2]++;}if (op[3] &amp;gt; 0) {op[3]--;o(a + 1, b / num[a + 1]);op[3]++;}}int main() {cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++)cin &amp;gt;&amp;gt; num[i];cin &amp;gt;&amp;gt; op[0] &amp;gt;&amp;gt; op[1] &amp;gt;&amp;gt; op[2] &amp;gt;&amp;gt; op[3];o(0, num[0]);sort(sumn.</description>
+    </item>
+    
+    <item>
+      <title>[백준]14889 스타트와 링크</title>
+      <link>https://jyukki97.github.io/blog/2020-02-24-14889/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-24-14889/</guid>
+      <description>https://www.acmicpc.net/problem/14889
+풀이: n / 2 명의 스타트 팀과 n / 2 팀의 링크팀을 만든다.
+스타트팀만 만든다면, 자동적으로 남는 사람들은 링크팀이된다.
+구하는 팀에 1은 무조건 들어가도록한다. (1을 포함한 팀을 전부 구한다면, 1을 포함하지 않는 팀은 상대팀에 모두 있기 때문에)
+스타트팀의 모든 Sij 값의 합과 링크팀의 모든 Sij 값의 합의 차이를 구한다.
+구한 차이들 중 가장 작은 값을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, m[21][21], mn = 100000, start, link;bool s[21];void st(int a, int b) {if (a == n / 2) {start = 0;link = 0;for (int i = 0; i &amp;lt; n; i++)if (s[i]) {for (int t = i + 1; t &amp;lt; n; t++)if (s[t])start += m[i][t] + m[t][i];}elsefor (int t = i + 1; t &amp;lt; n; t++)if (!</description>
+    </item>
+    
+    <item>
+      <title>[백준]1541 잃어버린 괄호</title>
+      <link>https://jyukki97.github.io/blog/2020-02-24-1541/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-24-1541/</guid>
+      <description>https://www.acmicpc.net/problem/1541
+풀이: 문자열을 하나씩 확인한다.
++ 라면, 괄호를 치지않는다.
+- 라면, 괄호를 친다.
+즉, -가 나오면 시작괄호를 치고, 다음 -가 나오면, 끝나는 괄호가 된다.
+ex) 45 + 55 - 65 + 45 - 67 + 67
+= 45 + 55 - (65 + 45) - (67 + 67)
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;string&amp;gt;using namespace std;int main() {string s;vector&amp;lt;int&amp;gt; a;int n = 0;cin &amp;gt;&amp;gt; s;a.</description>
+    </item>
+    
+    <item>
+      <title>[백준]1676 팩도리얼 0의 개수</title>
+      <link>https://jyukki97.github.io/blog/2020-02-24-1676/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-24-1676/</guid>
+      <description>https://www.acmicpc.net/problem/1676
+풀이: 뒤에서 0이 나오려면 팩토리얼을 곱할때, 5 가 곱해져야한다.
+즉, 5의 배수가 지나간다면, 팩토리얼의 갯수가 1씩 늘어날 것이다.
+팩토리얼을 만드는 동안 5가 몇번 곱해지는지 계산한다면, 0의 갯수를 구할 수 있다.
+(이 문제는 N의 제한이 500 까지이기 때문에, 팩토리얼을 전체 계산해서 구하기는 힘들다.)
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int main() {int n, m = 0;cin &amp;gt;&amp;gt; n;while (n) {n /= 5;m += n;}cout &amp;lt;&amp;lt; m &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1931 회의실배정</title>
+      <link>https://jyukki97.github.io/blog/2020-02-24-1931/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-24-1931/</guid>
+      <description>https://www.acmicpc.net/problem/1931
+풀이: 회의 정보를 배열에 저장한다.
+저장된 배열을 끝나는 시간을 기준으로 정렬한다. (끝나는 시간이 같다면, 시작하는 시간을 기준으로 정렬)
+배열을 처음부터 순회해간다.
+저장된 끝값보다 현재 시작시간이 더 크다면, 끝값을 현재 끝나는 시간으로 바꾸고 사용할 수 있는 회의 수를 +1 해준다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, ma = 0, e = -1;int main() {cin &amp;gt;&amp;gt; n;vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; v(n);for (int i = 0; i &amp;lt; n; i++)cin &amp;gt;&amp;gt; v[i].</description>
+    </item>
+    
+    <item>
+      <title>[백준]2565 전깃줄</title>
+      <link>https://jyukki97.github.io/blog/2020-02-24-2565/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-24-2565/</guid>
+      <description>https://www.acmicpc.net/problem/2565
+풀이: c[i] = i 위치 이전 값 중 겹치는 것이 없는 갯수의 최대
+연결된 전깃줄 A와 전깃줄 B 를 배열에 저장한다.
+저장된 배열을 전깃줄 A를 기준으로 정렬한다.
+첫번째 원소부터, 이전 원소 중 전깃줄 B가 더 작은 값 중 c[i] 의 최댓값 + 1을 저장한다.
+max값에 c[i]의 최댓값 + 1 중 최댓값을 저장한다.
+n - max값을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, a, b, c[101], ma = 0;vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; v;int main() {cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b;v.</description>
+    </item>
+    
+    <item>
+      <title>[백준]5430 AC</title>
+      <link>https://jyukki97.github.io/blog/2020-02-24-5430/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-24-5430/</guid>
+      <description>https://www.acmicpc.net/problem/5430
+풀이: 배열안에 들어있는 원소를
+R이 나오면 뒤집고,
+D가 나오면 맨 앞 숫자를 버린다.
+만약 D가 나왔는데, 배열이 비어있다면, error 를 출력한다.
+시간초과에 주의하자 : cout &amp;raquo; printf, cin &amp;raquo; scanf
+특히 strlen을 주의하자 시간을 많이잡아먹는다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;string.h&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int main() {int T, n, m;cin &amp;gt;&amp;gt; T;while (T--) {deque&amp;lt;int&amp;gt; a;char p[100001], s[300001], *tok;bool b = true, l = true;scanf(&amp;#34;%s %d %s&amp;#34;, &amp;amp;p, &amp;amp;n, &amp;amp;s);if (n) {tok = strtok(s, &amp;#34;[,]&amp;#34;);do {a.</description>
+    </item>
+    
+    <item>
+      <title>[백준]9375 패션왕 신해빈</title>
+      <link>https://jyukki97.github.io/blog/2020-02-24-9375/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-24-9375/</guid>
+      <description>https://www.acmicpc.net/problem/9375
+풀이: 프로그래머스]위장 을 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;string&amp;gt;#include &amp;lt;map&amp;gt;using namespace std;int main() {int n, m, ma;cin &amp;gt;&amp;gt; n;while (n--) {ma = 1;cin &amp;gt;&amp;gt; m;string s;map&amp;lt;string, int&amp;gt; a;for (int i = 0; i &amp;lt; m; i++) {cin &amp;gt;&amp;gt; s &amp;gt;&amp;gt; s;a[s]++;}for (auto i = a.begin(); i != a.end(); i++)ma *= i-&amp;gt;second + 1;cout &amp;lt;&amp;lt; ma - 1 &amp;lt;&amp;lt; endl;}return 0;}</description>
+    </item>
     
     <item>
       <title>[백준]9663 N-Queen</title>
@@ -88,7 +250,7 @@ n의 자릿수 * 9를 뺀 수부터 시작하는 이유는 생성자가 n + (n�
       
       <guid>https://jyukki97.github.io/learn/2020-02-19-bound/</guid>
       <description>lower_bound, upper_bound
-- 기본적으로 두개 모두 &amp;ldquo;이진 탐색(Binary Serch)&amp;rdquo; 기반의 탐색방법 - lower_bound lower_bound(arr, arr + n, key);- key 값의 가장 낮은 위치를 찾는다. - key 값이 없다면 key 값보다 큰 가장 작은 정수의 위치를 반환한다. - 반환값이 &amp;ldquo;iterator&amp;rdquo; 이다. - upper_bound upper_bound(arr, arr + n, key);- key 값을 초과하는 가장 첫번째 원소의 위치. - 반환값이 &amp;ldquo;iterator&amp;rdquo; 이다. </description>
+- 기본적으로 두개 모두 &amp;ldquo;이진 탐색(Binary Serch)&amp;rdquo; 기반의 탐색방법 lower_bound lower_bound(arr, arr + n, key);- key 값의 가장 낮은 위치를 찾는다. - key 값이 없다면 key 값보다 큰 가장 작은 정수의 위치를 반환한다. - 반환값이 &amp;ldquo;iterator&amp;rdquo; 이다. upper_bound upper_bound(arr, arr + n, key);- key 값을 초과하는 가장 첫번째 원소의 위치. - 반환값이 &amp;ldquo;iterator&amp;rdquo; 이다. </description>
     </item>
     
     <item>

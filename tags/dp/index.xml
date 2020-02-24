@@ -6,10 +6,55 @@
     <description>Recent content in DP on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Fri, 07 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/dp/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]11054 가장 긴 바이토닉 부분 수열</title>
+      <link>https://jyukki97.github.io/blog/2020-02-24-11054/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-24-11054/</guid>
+      <description>https://www.acmicpc.net/problem/11054
+풀이: b[i] = i 위치 왼쪽에 있는 값들 중 m[i] 보다 작은 수들의 최대 갯수
+s[i] = i 위치 오른쪽에 있는 값들 중 m[i] 보다 작은 수들의 최대 갯수
+가장 긴 수열의 길이 = 모든 i 에 대해 (b[i] + s[i] + 1) 의 최댓값
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, m[1001], b[1001], s[1001], ma = 0;int main() {cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++)cin &amp;gt;&amp;gt; m[i];for (int i = n - 2; i &amp;gt;= 0; i--)for (int t = n - 1; t &amp;gt; i; t--)if (m[i] &amp;gt; m[t])s[i] = max(s[i], s[t] + 1);for (int i = 0; i &amp;lt; n; i++) {for (int t = 0; t &amp;lt; i; t++)if (m[i] &amp;gt; m[t])b[i] = max(b[i], b[t] + 1);ma = max(ma, b[i] + s[i] + 1);}cout &amp;lt;&amp;lt; ma &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]12865 평범한 배낭</title>
+      <link>https://jyukki97.github.io/blog/2020-02-24-12865/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-24-12865/</guid>
+      <description>https://www.acmicpc.net/problem/12865
+풀이: DP[i] : i 무게일 때, 배낭에 넣을 수 있는 물건의 가치의 최댓값
+DP[i + w] = max(DP[i + w], DP[i] + v)
+무게가 i + w 일 때, 최댓값은 이전에 있었던 i + w 일때의 값과, i 에 있는 값에 w 무게 물건의 가치인 v를 더한 값 중 최댓값이다.
+(DP를 DP[2][100001] 처럼 두개로 나누어 놓은 이유는 물건의 갯수가 1개씩이기 때문에 물건 중복을 피하기위해 나누어놓았다.)
+ex) 무게가 4이고, 가치가 5일때, DP[4] = 5 가 되지만, DP[8] = DP[4] + 5 가 되어 10이 되는 불상사가 일어날 수 있기 때문에, 두개로 나누어 놓앗다.</description>
+    </item>
+    
+    <item>
+      <title>[백준]2565 전깃줄</title>
+      <link>https://jyukki97.github.io/blog/2020-02-24-2565/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-24-2565/</guid>
+      <description>https://www.acmicpc.net/problem/2565
+풀이: c[i] = i 위치 이전 값 중 겹치는 것이 없는 갯수의 최대
+연결된 전깃줄 A와 전깃줄 B 를 배열에 저장한다.
+저장된 배열을 전깃줄 A를 기준으로 정렬한다.
+첫번째 원소부터, 이전 원소 중 전깃줄 B가 더 작은 값 중 c[i] 의 최댓값 + 1을 저장한다.
+max값에 c[i]의 최댓값 + 1 중 최댓값을 저장한다.
+n - max값을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, a, b, c[101], ma = 0;vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; v;int main() {cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++) {cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b;v.</description>
+    </item>
     
     <item>
       <title>[프로그래머스]카드 게임</title>

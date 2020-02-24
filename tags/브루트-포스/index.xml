@@ -6,10 +6,41 @@
     <description>Recent content in 브루트 포스 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Fri, 21 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EB%B8%8C%EB%A3%A8%ED%8A%B8-%ED%8F%AC%EC%8A%A4/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]14888 연산자 끼워넣기</title>
+      <link>https://jyukki97.github.io/blog/2020-02-24-14888/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-24-14888/</guid>
+      <description>https://www.acmicpc.net/problem/14888
+풀이: 각 숫자를 순서대로 배열에 넣어놓는다.
++, -, *, / 를 갯수만큼 각 숫자사이의 끼워넣어 식을 만든다.
+만들 식의 값들을 배열에 저장해놓는다.
+배열에 들어있는 수 중 최댓값, 최솟값을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, num[101], op[4];vector&amp;lt;int&amp;gt; sumn;void o(int a, int b) {if (a == n - 1) {sumn.push_back(b);return;}if (op[0] &amp;gt; 0) {op[0]--;o(a + 1, b + num[a + 1]);op[0]++;}if (op[1] &amp;gt; 0) {op[1]--;o(a + 1, b - num[a + 1]);op[1]++;}if (op[2] &amp;gt; 0) {op[2]--;o(a + 1, b * num[a + 1]);op[2]++;}if (op[3] &amp;gt; 0) {op[3]--;o(a + 1, b / num[a + 1]);op[3]++;}}int main() {cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++)cin &amp;gt;&amp;gt; num[i];cin &amp;gt;&amp;gt; op[0] &amp;gt;&amp;gt; op[1] &amp;gt;&amp;gt; op[2] &amp;gt;&amp;gt; op[3];o(0, num[0]);sort(sumn.</description>
+    </item>
+    
+    <item>
+      <title>[백준]14889 스타트와 링크</title>
+      <link>https://jyukki97.github.io/blog/2020-02-24-14889/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-24-14889/</guid>
+      <description>https://www.acmicpc.net/problem/14889
+풀이: n / 2 명의 스타트 팀과 n / 2 팀의 링크팀을 만든다.
+스타트팀만 만든다면, 자동적으로 남는 사람들은 링크팀이된다.
+구하는 팀에 1은 무조건 들어가도록한다. (1을 포함한 팀을 전부 구한다면, 1을 포함하지 않는 팀은 상대팀에 모두 있기 때문에)
+스타트팀의 모든 Sij 값의 합과 링크팀의 모든 Sij 값의 합의 차이를 구한다.
+구한 차이들 중 가장 작은 값을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, m[21][21], mn = 100000, start, link;bool s[21];void st(int a, int b) {if (a == n / 2) {start = 0;link = 0;for (int i = 0; i &amp;lt; n; i++)if (s[i]) {for (int t = i + 1; t &amp;lt; n; t++)if (s[t])start += m[i][t] + m[t][i];}elsefor (int t = i + 1; t &amp;lt; n; t++)if (!</description>
+    </item>
     
     <item>
       <title>[백준]1018 체스판 다시 칠하기</title>

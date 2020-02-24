@@ -18,7 +18,7 @@
       
       <guid>https://jyukki97.github.io/learn/2020-02-19-bound/</guid>
       <description>lower_bound, upper_bound
-- 기본적으로 두개 모두 &amp;ldquo;이진 탐색(Binary Serch)&amp;rdquo; 기반의 탐색방법 - lower_bound lower_bound(arr, arr + n, key);- key 값의 가장 낮은 위치를 찾는다. - key 값이 없다면 key 값보다 큰 가장 작은 정수의 위치를 반환한다. - 반환값이 &amp;ldquo;iterator&amp;rdquo; 이다. - upper_bound upper_bound(arr, arr + n, key);- key 값을 초과하는 가장 첫번째 원소의 위치. - 반환값이 &amp;ldquo;iterator&amp;rdquo; 이다. </description>
+- 기본적으로 두개 모두 &amp;ldquo;이진 탐색(Binary Serch)&amp;rdquo; 기반의 탐색방법 lower_bound lower_bound(arr, arr + n, key);- key 값의 가장 낮은 위치를 찾는다. - key 값이 없다면 key 값보다 큰 가장 작은 정수의 위치를 반환한다. - 반환값이 &amp;ldquo;iterator&amp;rdquo; 이다. upper_bound upper_bound(arr, arr + n, key);- key 값을 초과하는 가장 첫번째 원소의 위치. - 반환값이 &amp;ldquo;iterator&amp;rdquo; 이다. </description>
     </item>
     
   </channel>

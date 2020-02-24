@@ -6,10 +6,20 @@
     <description>Recent content in Learn on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Wed, 19 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/categories/learn/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[C&#43;&#43;]다익스트라 알고리즘(Dijkstra Algorithm)</title>
+      <link>https://jyukki97.github.io/learn/2020-02-24-dijkstra/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/learn/2020-02-24-dijkstra/</guid>
+      <description>다익스트라 알고리즘(Dijkstra Algorithm)
+특정 노드에서부터 모든 노드로 가는 최단 경로를 구하는 알고리즘. 가중치가 음수인 간선이 없는 경우에만 사용할 수 있다. </description>
+    </item>
     
     <item>
       <title>[C&#43;&#43;]lower_bound, upper_bound</title>
@@ -18,7 +28,7 @@
       
       <guid>https://jyukki97.github.io/learn/2020-02-19-bound/</guid>
       <description>lower_bound, upper_bound
-- 기본적으로 두개 모두 &amp;ldquo;이진 탐색(Binary Serch)&amp;rdquo; 기반의 탐색방법 - lower_bound lower_bound(arr, arr + n, key);- key 값의 가장 낮은 위치를 찾는다. - key 값이 없다면 key 값보다 큰 가장 작은 정수의 위치를 반환한다. - 반환값이 &amp;ldquo;iterator&amp;rdquo; 이다. - upper_bound upper_bound(arr, arr + n, key);- key 값을 초과하는 가장 첫번째 원소의 위치. - 반환값이 &amp;ldquo;iterator&amp;rdquo; 이다. </description>
+- 기본적으로 두개 모두 &amp;ldquo;이진 탐색(Binary Serch)&amp;rdquo; 기반의 탐색방법 lower_bound lower_bound(arr, arr + n, key);- key 값의 가장 낮은 위치를 찾는다. - key 값이 없다면 key 값보다 큰 가장 작은 정수의 위치를 반환한다. - 반환값이 &amp;ldquo;iterator&amp;rdquo; 이다. upper_bound upper_bound(arr, arr + n, key);- key 값을 초과하는 가장 첫번째 원소의 위치. - 반환값이 &amp;ldquo;iterator&amp;rdquo; 이다. </description>
     </item>
     
     <item>
