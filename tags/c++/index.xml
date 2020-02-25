@@ -6,10 +6,74 @@
     <description>Recent content in C&#43;&#43; on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[C&#43;&#43;]벨만-포드 알고리즘(Bellman-Ford Algorithm)</title>
+      <link>https://jyukki97.github.io/learn/2020-02-25-bellmanford/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/learn/2020-02-25-bellmanford/</guid>
+      <description>벨만-포드 알고리즘(Bellman-Ford Algorithm) 특정 노드에서부터 모든 노드로 가는 최단 경로를 구하는 알고리즘. 그래프에 &amp;ldquo;음수 사이클&amp;quot;이 있는 경우 찾아낼 수 있음. 시간복잡도는 O(nm) 음수 사이클 음수 사이클이 있는지 판단하기 위해서는 n번의 라운드를 추가로 진행해 주면된다. 만약, n번째 라운드에서도 감소하는 경우가 있다면, 음수 사이클이 있다고 판단할 수 있다. 코드 for (i = 0; i &amp;lt;= V; i++)d.push_back(INF);d[x] = 0;for(int i = 1; i &amp;lt;= n - 1; i++)for(auto t : edge(a,b,c)) // a 에서 b로 가는 간선, 가중치 c  d[b] = min(d[b], d[a] + c);</description>
+    </item>
+    
+    <item>
+      <title>[백준]1780 종이의 개수</title>
+      <link>https://jyukki97.github.io/blog/2020-02-25-1780/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-25-1780/</guid>
+      <description>https://www.acmicpc.net/problem/1780
+풀이: [백준]2630 색종이 만들기 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, c[2200][2200], W = 0, B = 0, D = 0;void se(int x, int y, int a) {bool w = true, b = true, d = true;for (int i = 0; i &amp;lt; a; i++)for (int t = 0; t &amp;lt; a; t++)if (!w &amp;amp;&amp;amp; !b &amp;amp;&amp;amp; !d) break;else if (c[x + i][y + t] == -1) {w = false;b = false;}else if (c[x + i][y + t]) {w = false;d = false;}else {d = false;b = false;}W += 1 &amp;amp; w;B += 1 &amp;amp; b;D += 1 &amp;amp; d;if (!</description>
+    </item>
+    
+    <item>
+      <title>[백준]1992 쿼드트리</title>
+      <link>https://jyukki97.github.io/blog/2020-02-25-1992/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-25-1992/</guid>
+      <description>https://www.acmicpc.net/problem/1992
+풀이: [백준]2630 색종이 만들기 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;string&amp;gt;using namespace std;int n;string s, c[65];void se(int x, int y, int a) {if (x &amp;gt;= n || y &amp;gt;= n || !a)	return;bool w = true, b = true;for (int i = 0; i &amp;lt; a; i++)for (int t = 0; t &amp;lt; a; t++)if (!w &amp;amp;&amp;amp; !b) break;else if (c[x + i][y + t] == &amp;#39;1&amp;#39;)	w = false;else b = false;if (w)	s += &amp;#39;0&amp;#39;;else if (b) s += &amp;#39;1&amp;#39;;else{s += &amp;#39;(&amp;#39;;a /= 2;se(x, y, a);se(x, y + a, a);se(x + a, y, a);se(x + a, y + a, a);s += &amp;#39;)&amp;#39;;}}int main() {cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++)cin &amp;gt;&amp;gt; c[i];se(0, 0, n);cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2630 색종이 만들기</title>
+      <link>https://jyukki97.github.io/blog/2020-02-25-2630/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-25-2630/</guid>
+      <description>https://www.acmicpc.net/problem/2630
+풀이: n을 2로 나누어 가며 1로 이루어진 곳인지 0으로 이루어진 곳인지 판단한다.
+0으로 이루어져있다면 W를 +1 , 1로 이루어져있다면 B를 +1 해준다.
+하얀색 색종이와 파란색 색종이의 갯수를 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, c[129][129], W = 0, B = 0;void se(int x, int y, int a) {if (x &amp;gt;= n || y &amp;gt;= n || !a)	return;bool w = true, b = true;for (int i = 0; i &amp;lt; a; i++)for (int t = 0; t &amp;lt; a; t++)if (!</description>
+    </item>
+    
+    <item>
+      <title>[백준]6549 히스토그램에서 가장 큰 직사각형</title>
+      <link>https://jyukki97.github.io/blog/2020-02-25-6549/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-25-6549/</guid>
+      <description>https://www.acmicpc.net/problem/6549
+풀이: 값을 하나씩 받아온다.
+현재 값보다 스택에 있는 값이 더 크다면,
+max(현재 max값, 스택의 탑값 * (스택의 탑 바로 전 값의 위치와 현재 위치의 차이)) 을 수행하고, 현재 탑에 있는 값을 pop한다.
+스택에 모든 값이 현재 있는 값보다 작거나 같다면, 스택에 현재 값을 push한다.
+모든 값을 받았다면, 스택이 빌 때까지
+max(현재 max값, 스택의 탑값 * (스택의 탑 바로 전 값의 위치와 전체 히스토그램의 길이의 차이))
+를 수행한다.
+히스토그램의 길이가 0일경우 반복을 중지한다.</description>
+    </item>
     
     <item>
       <title>[C&#43;&#43;]다익스트라 알고리즘(Dijkstra Algorithm)</title>
@@ -17,8 +81,7 @@
       <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://jyukki97.github.io/learn/2020-02-24-dijkstra/</guid>
-      <description>다익스트라 알고리즘(Dijkstra Algorithm)
-특정 노드에서부터 모든 노드로 가는 최단 경로를 구하는 알고리즘. 가중치가 음수인 간선이 없는 경우에만 사용할 수 있다. </description>
+      <description>다익스트라 알고리즘(Dijkstra Algorithm) 특정 노드에서부터 모든 노드로 가는 최단 경로를 구하는 알고리즘. 가중치가 음수인 간선이 없는 경우에만 사용할 수 있다. 시간복잡도 : O(n + mlog m) (n : 노드의 개수, m : 간선의 갯수) 코드 for (i = 0; i &amp;lt;= V; i++)d.push_back(INF);d[k] = 0;p.push({ 0, k });while (!p.empty()) {w = p.top().second;p.pop();if (b[w])	continue;b[w] = true;for (auto t : a[w]) {u = t.</description>
     </item>
     
     <item>
