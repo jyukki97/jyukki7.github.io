@@ -6,10 +6,20 @@
     <description>Recent content in Learn on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/categories/learn/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[C&#43;&#43;]플로이드 와샬 알고리즘(Floyd-Warshall Algorithm)</title>
+      <link>https://jyukki97.github.io/learn/2020-02-25-floydwarshall/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/learn/2020-02-25-floydwarshall/</guid>
+      <description>플로이드 와샬 알고리즘(Floyd-Warshall Algorithm)
+플로이드 와샬 알고리즘(Floyd-Warshall Algorithm) 특정 노드에서부터 모든 노드로 가는 최단 경로를 구하는 알고리즘. 그래프에 &amp;ldquo;음수 사이클&amp;quot;이 있는 경우 찾아낼 수 있음. 시간복잡도는 O(nm) 음수 사이클 음수 사이클이 있는지 판단하기 위해서는 n번의 라운드를 추가로 진행해 주면된다. 만약, n번째 라운드에서도 감소하는 경우가 있다면, 음수 사이클이 있다고 판단할 수 있다. 코드 for (i = 0; i &amp;lt;= V; i++)d.push_back(INF);d[x] = 0;for(int i = 1; i &amp;lt;= n - 1; i++)for(auto t : edge(a,b,c)) // a 에서 b로 가는 간선, 가중치 c  d[b] = min(d[b], d[a] + c);</description>
+    </item>
     
     <item>
       <title>[C&#43;&#43;]벨만-포드 알고리즘(Bellman-Ford Algorithm)</title>
@@ -17,7 +27,8 @@
       <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://jyukki97.github.io/learn/2020-02-25-bellmanford/</guid>
-      <description>벨만-포드 알고리즘(Bellman-Ford Algorithm) 특정 노드에서부터 모든 노드로 가는 최단 경로를 구하는 알고리즘. 그래프에 &amp;ldquo;음수 사이클&amp;quot;이 있는 경우 찾아낼 수 있음. 시간복잡도는 O(nm) 음수 사이클 음수 사이클이 있는지 판단하기 위해서는 n번의 라운드를 추가로 진행해 주면된다. 만약, n번째 라운드에서도 감소하는 경우가 있다면, 음수 사이클이 있다고 판단할 수 있다. 코드 for (i = 0; i &amp;lt;= V; i++)d.push_back(INF);d[x] = 0;for(int i = 1; i &amp;lt;= n - 1; i++)for(auto t : edge(a,b,c)) // a 에서 b로 가는 간선, 가중치 c  d[b] = min(d[b], d[a] + c);</description>
+      <description>벨만-포드 알고리즘(Bellman-Ford Algorithm)
+벨만-포드 알고리즘(Bellman-Ford Algorithm) 특정 노드에서부터 모든 노드로 가는 최단 경로를 구하는 알고리즘. 그래프에 &amp;ldquo;음수 사이클&amp;quot;이 있는 경우 찾아낼 수 있음. 시간복잡도는 O(nm) 음수 사이클 음수 사이클이 있는지 판단하기 위해서는 n번의 라운드를 추가로 진행해 주면된다. 만약, n번째 라운드에서도 감소하는 경우가 있다면, 음수 사이클이 있다고 판단할 수 있다. 코드 for (i = 0; i &amp;lt;= V; i++)d.push_back(INF);d[x] = 0;for(int i = 1; i &amp;lt;= n - 1; i++)for(auto t : edge(a,b,c)) // a 에서 b로 가는 간선, 가중치 c  d[b] = min(d[b], d[a] + c);</description>
     </item>
     
     <item>
@@ -26,7 +37,8 @@
       <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://jyukki97.github.io/learn/2020-02-24-dijkstra/</guid>
-      <description>다익스트라 알고리즘(Dijkstra Algorithm) 특정 노드에서부터 모든 노드로 가는 최단 경로를 구하는 알고리즘. 가중치가 음수인 간선이 없는 경우에만 사용할 수 있다. 시간복잡도 : O(n + mlog m) (n : 노드의 개수, m : 간선의 갯수) 코드 for (i = 0; i &amp;lt;= V; i++)d.push_back(INF);d[k] = 0;p.push({ 0, k });while (!p.empty()) {w = p.top().second;p.pop();if (b[w])	continue;b[w] = true;for (auto t : a[w]) {u = t.</description>
+      <description>다익스트라 알고리즘(Dijkstra Algorithm)
+다익스트라 알고리즘(Dijkstra Algorithm) 특정 노드에서부터 모든 노드로 가는 최단 경로를 구하는 알고리즘. 가중치가 음수인 간선이 없는 경우에만 사용할 수 있다. 시간복잡도 : O(n + mlog m) (n : 노드의 개수, m : 간선의 갯수) 코드 for (i = 0; i &amp;lt;= V; i++)d.push_back(INF);d[k] = 0;p.push({ 0, k });while (!p.empty()) {w = p.top().second;p.pop();if (b[w])	continue;b[w] = true;for (auto t : a[w]) {u = t.</description>
     </item>
     
     <item>

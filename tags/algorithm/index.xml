@@ -6,10 +6,232 @@
     <description>Recent content in algorithm on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]10942 팰린드롬?</title>
+      <link>https://jyukki97.github.io/blog/2020-02-27-10942/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-27-10942/</guid>
+      <description>https://www.acmicpc.net/problem/10942
+풀이: DP[i][t] : i 번쨰 수 부터 t 번째 까지 수가 팰린드롬을 이룬다면 1, 아니라면 0
+a[i] == a[t] 라면,
+DP[i][t] = DP[i + 1][t - 1]
+a[i] != a[t] 라면,
+DP[i][t] = 0
+테스트 케이스가 많아 시간초과가 날 수 있으므로 메모이제이션을 하자! 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;string.h&amp;gt;using namespace std;int m, n, q, w, a[2002], dp[2002][2002];int p(int x, int y) {if (dp[x][y] !</description>
+    </item>
+    
+    <item>
+      <title>[백준]1260 DFS와 BFS</title>
+      <link>https://jyukki97.github.io/blog/2020-02-27-1260/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-27-1260/</guid>
+      <description>https://www.acmicpc.net/problem/1260
+풀이: DFS 와 BFS를 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;queue&amp;gt;#include &amp;lt;string.h&amp;gt;using namespace std;int n, m, v, q, w, a[1002][1002] = {};bool b[1002];void dfs(int x) {b[x] = true;cout &amp;lt;&amp;lt; x &amp;lt;&amp;lt; &amp;#34;&amp;#34;;for (int i = 1; i &amp;lt;= n; i++)if (a[x][i] &amp;amp;&amp;amp; !b[i])	dfs(i);}int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m &amp;gt;&amp;gt; v;for (int i = 0; i &amp;lt; m; i++) {cin &amp;gt;&amp;gt; q &amp;gt;&amp;gt; w;a[q][w] = 1;a[w][q] = 1;}dfs(v);cout &amp;lt;&amp;lt; endl;memset(b, 0, n + 1);queue&amp;lt;int&amp;gt; c;c.</description>
+    </item>
+    
+    <item>
+      <title>[백준]1520 내리막 길</title>
+      <link>https://jyukki97.github.io/blog/2020-02-27-1520/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-27-1520/</guid>
+      <description>https://www.acmicpc.net/problem/1520
+풀이: DP[i][t] : (1,1) ~ (i, t) 까지 내리막으로 갈 수 있는 경우의 수
+현재 값에서 왼쪽, 오른쪽, 위, 아래 값이 각각 현재 값보다 크다면,
+DP[현재] += DP[왼쪽, 오른쪽, 위, 아래] 로 구할 수 있다.
+시간초과가 날 수 있으므로 메모이제이션을 하자! 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;string.h&amp;gt;using namespace std;int m, n, a[502][502], dp[502][502];int r(int x, int y) {if (dp[x][y] != -1)	return dp[x][y];dp[x][y] = 0;if (a[x][y] &amp;lt; a[x - 1][y])dp[x][y] += r(x - 1, y);if (a[x][y] &amp;lt; a[x + 1][y])dp[x][y] += r(x + 1, y);if (a[x][y] &amp;lt; a[x][y + 1])dp[x][y] += r(x, y + 1);if (a[x][y] &amp;lt; a[x][y - 1])dp[x][y] += r(x, y - 1);return dp[x][y];}int main() {cin &amp;gt;&amp;gt; m &amp;gt;&amp;gt; n;for (int i = 1; i &amp;lt;= m; i++)for (int t = 1; t &amp;lt;= n; t++)cin &amp;gt;&amp;gt; a[i][t];memset(dp, -1, sizeof(dp));dp[1][1] = 1;cout &amp;lt;&amp;lt; r(m, n) &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2618 경찰차</title>
+      <link>https://jyukki97.github.io/blog/2020-02-27-2618/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-27-2618/</guid>
+      <description>https://www.acmicpc.net/problem/2618
+풀이: DP[i][t] : 첫번째 경찰차가 i 번째 사건을, 두번째 경찰차가 t 번째 사건을 처리했을 때, 이동하는 거리의 합의 최소값
+i 와 t 의 차이가 1 이라면,
+DP[i][t] = DP[i][0 ~ t - 1] (t 번째와 0 ~ t - 1 번째 사이의 거리)까지의 최소값
+1이 아니라면,
+DP[i][t] = DP[i][t - 1] + (t 번째와 t - 1 번째 사이의 거리)
+을 통해 최솟값을 구할 수 있다.
+최솟값을 구한 후, 최솟값을 구한 경로를 역순으로 추적하여, 맡겨진 경찰차의 번호를 구한다.</description>
+    </item>
+    
+    <item>
+      <title>[백준]2667 단지번호붙이기</title>
+      <link>https://jyukki97.github.io/blog/2020-02-27-2667/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-27-2667/</guid>
+      <description>https://www.acmicpc.net/problem/2667
+풀이: 전체를 순회한다.
+만약 집이있는 곳 ( 배열에 1인 곳 ) 을 찾았다면, 연결된 모든 단지를 찾아 단지 크기를 배열에 저장한다.
+순회가 끝났다면, 배열의 사이즈 (총 단지수) 를 출력한다.
+그 후 단지내 집의 수를 오름차순으로 정렬하여 출력하여야하므로
+배열을 정렬한 후 배열의 원소를 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;string&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n;bool b[26][26];vector&amp;lt;string&amp;gt; a;vector&amp;lt;int&amp;gt; c;void num(int x, int y) {b[x][y] = true;c.</description>
+    </item>
+    
+    <item>
+      <title>[백준]10816 숫자 카드2</title>
+      <link>https://jyukki97.github.io/blog/2020-02-26-10816/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-26-10816/</guid>
+      <description>https://www.acmicpc.net/problem/10816
+풀이: 배열에 숫자 카드들을 넣는다.
+배열을 정렬한다.
+몇 개 가지고 있는지 구해야 할 카드를 k 라고 할 때,
+k가 최초로 나오는 위치 = lower_bound,
+k보다 큰 값이 최초로 나오는 위치 = upper_bound
+로 구할 수 있다.
+즉 upper_bound - lower_bound를 실행한다면 답을 구할 수 있다.
+cout과 cin 을 쓰면 시간초과가 나므로 주의하자. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, m, k, a[500001];int main() {scanf(&amp;#34;%d&amp;#34;, &amp;amp;n);for (int i = 0; i &amp;lt; n; i++)scanf(&amp;#34;%d&amp;#34;, &amp;amp;a[i]);sort(a, a + n);scanf(&amp;#34;%d&amp;#34;, &amp;amp;m);for (int i = 0; i &amp;lt; m; i++) {scanf(&amp;#34;%d&amp;#34;, &amp;amp;k);auto l = lower_bound(a, a + n, k);auto r = upper_bound(a, a + n, k);printf(&amp;#34;%d &amp;#34;, r - l);}printf(&amp;#34;\n&amp;#34;);return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]11049 행렬 곱셈 순서</title>
+      <link>https://jyukki97.github.io/blog/2020-02-26-11049/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-26-11049/</guid>
+      <description>https://www.acmicpc.net/problem/11049
+풀이: DP[i][t] : i ~ t 까지의 행렬을 곱하는데 필요한 곱셈 연산 횟수의 최솟값
+dp[x][y] = min(dp[x][y], f(x, i) + f(i + 1, y) + a[x] * b[i] * b[y])
+x ~ i 까지의 행렬 곱셈 + (i + 1) ~ y 까지의 행렬 곱셈 + 그 둘의 곱셈
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;long long n, a[502], b[502], dp[502][502] = {};long long f(int x, int y) {if (x == y || dp[x][y])	return dp[x][y];dp[x][y] = f(x, x) + f(x + 1, y) + a[x] * b[x] * b[y];for (int i = x + 1; i &amp;lt; y; i++)dp[x][y] = min(dp[x][y], f(x, i) + f(i + 1, y) + a[x] * b[i] * b[y]);return dp[x][y];}int main() {cin &amp;gt;&amp;gt; n;for (int i = 1; i &amp;lt;= n; i++)cin &amp;gt;&amp;gt; a[i] &amp;gt;&amp;gt; b[i];cout &amp;lt;&amp;lt; f(1, n) &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]11066 파일 합치기</title>
+      <link>https://jyukki97.github.io/blog/2020-02-26-11066/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-26-11066/</guid>
+      <description>https://www.acmicpc.net/problem/11066
+풀이: dp[i][t] = i 장 부터 t 장까지 수록한 파일을 합쳤을 때, 필요한 최소비용
+sum[i] = 1 ~ i 까지의 파일 크기의 합
+dp[i][t] = min(dp[i][t], dp[i][i] ~ dp[i][t - 1] + dp[i + 1][t] ~ dp[t][t]) 로 구할 수 있다.
+겹치는 숫자들이 있으므로,
+dp를 구할 때 마다, dp[i][t] += sum[t] - sum[i - 1] 을 해주어야 한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int T, n, a[502], dp[502][502] = {}, sum[502];int f(int a, int b) {if (dp[a][b] !</description>
+    </item>
+    
+    <item>
+      <title>[백준]11286 절댓값 힘</title>
+      <link>https://jyukki97.github.io/blog/2020-02-26-11286/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-26-11286/</guid>
+      <description>https://www.acmicpc.net/problem/11286
+풀이: 0이 나온다면, 배열에 있는 값중 절댓값이 가장 작은 값을 출력한다.(절댓값이 같다면, 가장 작은 값을 출력한다.) 그 값을 배열에서 제외시킨다.
+만약 배열이 비어있다면, 0을 출력한다.
+0이 아닌 다른 숫자가 나온다면, 그 값을 배열에 넣는다.
+cout, cin 을 사용하면, 시간초과가 나므로 주의하자. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int n, i, m;bool com(int a, int b) {if (abs(a) == abs(b))return a &amp;gt; b;return abs(a) &amp;gt; abs(b);}int main() {priority_queue&amp;lt;int, vector&amp;lt;int&amp;gt;, decltype(&amp;amp;com)&amp;gt; a(&amp;amp;com);scanf(&amp;#34;%d&amp;#34;, &amp;amp;n);for (i = 0; i &amp;lt; n; i++) {scanf(&amp;#34;%d&amp;#34;, &amp;amp;m);if (!</description>
+    </item>
+    
+    <item>
+      <title>[백준]1654 랜선 자르기</title>
+      <link>https://jyukki97.github.io/blog/2020-02-26-1654/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-26-1654/</guid>
+      <description>https://www.acmicpc.net/problem/1654
+풀이: 배열을 받아온다.
+배열의 들어있는 랜선의 길이 중 최댓값이
+만들 수 있는 최대 길이의 랜선이므로 최댓값을 설정한다.
+최솟값은 1로 설정한다.
+최댓값과 최솟값의 중간값을 m이라고 하자.
+모든 배열의 원소를 m으로 나눈 몫을 모두 더한다.
+더한 값이 필요한 랜선의 갯수보다 작다면, m값이 너무 크다는 것이므로 최댓값을 m - 1 로 바꿔준다.
+더한 값이 필요한 랜선의 갯수보다 크거나 같다면, 만들 수 있다는 것이므로 답에 저장해 놓는다.
+이때, 랜선의 최대 길이를 찾아야 하므로, 랜선의 갯수와 같다고 바로 끝내지 말고 위로 가면서 최댓값을 찾아야한다.</description>
+    </item>
+    
+    <item>
+      <title>[백준]1655 가운데를 말해요</title>
+      <link>https://jyukki97.github.io/blog/2020-02-26-1655/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-26-1655/</guid>
+      <description>https://www.acmicpc.net/problem/1655
+풀이: 하나씩 숫자를 받아온다.
+첫번째 숫자를 mid 라고 할 때,
+현재 숫자가 mid보다 크거나 같다면, 배열 r 에 작다면, 배열 l 에 저장한다.
+mid를 배열 r 에 넣고, 배열 l 의 값 중 가장 큰 값으로 바꾼다.
+만약, 배열 r과 l의 사이즈 차이가 2이상 난다면, mid값을 조정해준다.
+cout, cin 을 사용하면, 시간초과가 나므로 주의하자. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int n, m, mid;int main() {priority_queue&amp;lt;int, vector&amp;lt;int&amp;gt;, greater&amp;lt;int&amp;gt;&amp;gt; r;priority_queue&amp;lt;int&amp;gt; l;scanf(&amp;#34;%d %d&amp;#34;, &amp;amp;n, &amp;amp;mid);printf(&amp;#34;%d\n&amp;#34;, mid);while (--n) {scanf(&amp;#34;%d&amp;#34;, &amp;amp;m);m &amp;lt; mid ?</description>
+    </item>
+    
+    <item>
+      <title>[백준]2110 공유기 설치</title>
+      <link>https://jyukki97.github.io/blog/2020-02-26-2110/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-26-2110/</guid>
+      <description>https://www.acmicpc.net/problem/2110
+풀이: [백준]1654 랜선 자르기 참고
+최대 거리를 설정하고,
+그 거리를 기준으로 공유기를 설치할 수 있는지 확인하고,
+이분탐색으로 최대 거리를 조절해 나간다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;long long n, k, i, a[200001], sum, m, l = 1, r, c = 0, d;int main() {cin &amp;gt;&amp;gt; k &amp;gt;&amp;gt; n;for (i = 0; i &amp;lt; k; i++)cin &amp;gt;&amp;gt; a[i];sort(a, a + k);r = a[k - 1];while (l &amp;lt;= r) {sum = 1;m = (r + l) / 2;d = a[0];for (i = 1; i &amp;lt; k; i++)if (d + m &amp;lt;= a[i]) {d = a[i];sum++;}if (sum &amp;lt; n)	r = m - 1;else {c = max(c, m);l = m + 1;}}cout &amp;lt;&amp;lt; c &amp;lt;&amp;lt; endl;return 0;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2805 나무 자르기</title>
+      <link>https://jyukki97.github.io/blog/2020-02-26-2805/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-26-2805/</guid>
+      <description>https://www.acmicpc.net/problem/2805
+풀이: [백준]1654 랜선 자르기 참고
+m값이 배열의 값보다 작은데 a[i] - m을 할 경우 -값이 나오므로 주의하자. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;long long n, k, i, a[1000001], sum, m, l = 1, r = 0, c = 0;int main() {cin &amp;gt;&amp;gt; k &amp;gt;&amp;gt; n;for (i = 0; i &amp;lt; k; i++) {cin &amp;gt;&amp;gt; a[i];r = max(r, a[i]);}while (l &amp;lt;= r) {sum = 0;m = (r + l) / 2;for (i = 0; i &amp;lt; k; i++)sum += a[i] &amp;lt; m ?</description>
+    </item>
+    
+    <item>
+      <title>[백준]k번째 수</title>
+      <link>https://jyukki97.github.io/blog/2020-02-26-1300/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-26-1300/</guid>
+      <description>https://www.acmicpc.net/problem/1300
+풀이: [백준]1654 랜선 자르기 참고
+현재 숫자의 순서가 k를 넘어간다면,
+오른쪽 탐색을, 아니라면 왼쪽으로 탐색한다.
+int형 사이즈를 넘어가니 long long으로 바꿔주자. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;long long n, k, i, sum, m, l = 1, r, c;int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; k;r = n * n;c = r;while (l &amp;lt;= r) {sum = 0;m = (r + l) / 2;for (i = 1; i &amp;lt;= n; i++)sum += min(n, m / i);if (sum &amp;lt; k)	l = m + 1;else {c = min(c, m);r = m - 1;}}cout &amp;lt;&amp;lt; c &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;;}</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]최적의 행렬 곱셈</title>
+      <link>https://jyukki97.github.io/blog/2020-02-26-matrix/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-26-matrix/</guid>
+      <description>https://programmers.co.kr
+문제: 크기가 a by b인 행렬과 크기가 b by c 인 행렬이 있을 때, 두 행렬을 곱하기 위해서는 총 a x b x c 번 곱셈해야합니다. 예를 들어서 크기가 5 by 3인 행렬과 크기가 3 by 2인 행렬을 곱할때는 총 5 x 3 x 2 = 30번의 곱하기 연산을 해야 합니다.
+행렬이 2개일 때는 연산 횟수가 일정 하지만, 행렬의 개수가 3개 이상일 때는 연산의 순서에 따라서 곱하기 연산의 횟수가 바뀔 수 있습니다.</description>
+    </item>
     
     <item>
       <title>[백준]1780 종이의 개수</title>

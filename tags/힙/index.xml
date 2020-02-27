@@ -6,10 +6,40 @@
     <description>Recent content in 힙 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%ED%9E%99/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]11286 절댓값 힘</title>
+      <link>https://jyukki97.github.io/blog/2020-02-26-11286/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-26-11286/</guid>
+      <description>https://www.acmicpc.net/problem/11286
+풀이: 0이 나온다면, 배열에 있는 값중 절댓값이 가장 작은 값을 출력한다.(절댓값이 같다면, 가장 작은 값을 출력한다.) 그 값을 배열에서 제외시킨다.
+만약 배열이 비어있다면, 0을 출력한다.
+0이 아닌 다른 숫자가 나온다면, 그 값을 배열에 넣는다.
+cout, cin 을 사용하면, 시간초과가 나므로 주의하자. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int n, i, m;bool com(int a, int b) {if (abs(a) == abs(b))return a &amp;gt; b;return abs(a) &amp;gt; abs(b);}int main() {priority_queue&amp;lt;int, vector&amp;lt;int&amp;gt;, decltype(&amp;amp;com)&amp;gt; a(&amp;amp;com);scanf(&amp;#34;%d&amp;#34;, &amp;amp;n);for (i = 0; i &amp;lt; n; i++) {scanf(&amp;#34;%d&amp;#34;, &amp;amp;m);if (!</description>
+    </item>
+    
+    <item>
+      <title>[백준]1655 가운데를 말해요</title>
+      <link>https://jyukki97.github.io/blog/2020-02-26-1655/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-26-1655/</guid>
+      <description>https://www.acmicpc.net/problem/1655
+풀이: 하나씩 숫자를 받아온다.
+첫번째 숫자를 mid 라고 할 때,
+현재 숫자가 mid보다 크거나 같다면, 배열 r 에 작다면, 배열 l 에 저장한다.
+mid를 배열 r 에 넣고, 배열 l 의 값 중 가장 큰 값으로 바꾼다.
+만약, 배열 r과 l의 사이즈 차이가 2이상 난다면, mid값을 조정해준다.
+cout, cin 을 사용하면, 시간초과가 나므로 주의하자. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int n, m, mid;int main() {priority_queue&amp;lt;int, vector&amp;lt;int&amp;gt;, greater&amp;lt;int&amp;gt;&amp;gt; r;priority_queue&amp;lt;int&amp;gt; l;scanf(&amp;#34;%d %d&amp;#34;, &amp;amp;n, &amp;amp;mid);printf(&amp;#34;%d\n&amp;#34;, mid);while (--n) {scanf(&amp;#34;%d&amp;#34;, &amp;amp;m);m &amp;lt; mid ?</description>
+    </item>
     
     <item>
       <title>[프로그래머스]라면공장</title>
