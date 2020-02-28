@@ -6,10 +6,30 @@
     <description>Recent content in Learn on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/learn/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[C&#43;&#43;]비트연산자</title>
+      <link>https://jyukki97.github.io/learn/2020-02-28-bitoperator/</link>
+      <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/learn/2020-02-28-bitoperator/</guid>
+      <description>비트연산자
+비트연산자 DP문제를 푸는데 있어, 연산속도를 빠르게 하기 위해 사용 &amp;laquo; , &amp;raquo; 시프트 연산자. 비트의 자리를 옮겨줌 ex)
+1 &amp;laquo; 3
+ 1000
+ NOT - ( ~ ) 0 은 1로 1은 0으로 반대로 바꿔준다. ex)
+0000000
+ 1111111
+ AND - ( &amp;amp; ) 둘 다 1 일때만 1, 아니면 0 ex)
+1100110
+&amp;amp; 1011001
+ 1000110
+ OR - ( | ) 둘 중 하나라도 1이라면 1, 아니면 0 ex)</description>
+    </item>
     
     <item>
       <title>[C&#43;&#43;]플로이드-와샬 알고리즘(Floyd-Warshall Algorithm)</title>

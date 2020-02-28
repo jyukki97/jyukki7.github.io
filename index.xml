@@ -6,10 +6,68 @@
     <description>Recent content on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[C&#43;&#43;]비트연산자</title>
+      <link>https://jyukki97.github.io/learn/2020-02-28-bitoperator/</link>
+      <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/learn/2020-02-28-bitoperator/</guid>
+      <description>비트연산자
+비트연산자 DP문제를 푸는데 있어, 연산속도를 빠르게 하기 위해 사용 &amp;laquo; , &amp;raquo; 시프트 연산자. 비트의 자리를 옮겨줌 ex)
+1 &amp;laquo; 3
+ 1000
+ NOT - ( ~ ) 0 은 1로 1은 0으로 반대로 바꿔준다. ex)
+0000000
+ 1111111
+ AND - ( &amp;amp; ) 둘 다 1 일때만 1, 아니면 0 ex)
+1100110
+&amp;amp; 1011001
+ 1000110
+ OR - ( | ) 둘 중 하나라도 1이라면 1, 아니면 0 ex)</description>
+    </item>
+    
+    <item>
+      <title>[백준]1012 유기농 배추</title>
+      <link>https://jyukki97.github.io/blog/2020-02-28-1012/</link>
+      <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-28-1012/</guid>
+      <description>https://www.acmicpc.net/problem/1012
+풀이: [백준]2667 단지번호붙이기 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;string.h&amp;gt;using namespace std;int n, T, m, k, q, w, sum, a[52][52];bool b[52][52];void num(int x, int y) {b[x][y] = true;if (x + 1 &amp;lt; n &amp;amp;&amp;amp; a[x + 1][y] &amp;amp;&amp;amp; !b[x + 1][y])num(x + 1, y);if (y + 1 &amp;lt; m &amp;amp;&amp;amp; a[x][y + 1] &amp;amp;&amp;amp; !b[x][y + 1])num(x, y + 1);if (x - 1 &amp;gt;= 0 &amp;amp;&amp;amp; a[x - 1][y] &amp;amp;&amp;amp; !</description>
+    </item>
+    
+    <item>
+      <title>[백준]2178 미로 탐색</title>
+      <link>https://jyukki97.github.io/blog/2020-02-28-2178/</link>
+      <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-28-2178/</guid>
+      <description>https://www.acmicpc.net/problem/2178
+풀이: 이동횟수가 i 일때,
+이동횟수가 i - 1 인 값들에서 왼쪽, 오른쪽, 위, 아래 중 값이 1이고, 방문한적 없는 곳을 찾아 좌표를 큐에 넣는다.
+만약 현재 좌표가 도착위치라면, 이동횟수 i를 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int n, m, k, q, w;vector&amp;lt;string&amp;gt; a;queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; dp2;bool b[102][102];int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;a.resize(n);for (int i = 0; i &amp;lt; n; i++)cin &amp;gt;&amp;gt; a[i];dp2.</description>
+    </item>
+    
+    <item>
+      <title>[백준]7576 토마토</title>
+      <link>https://jyukki97.github.io/blog/2020-02-28-7576/</link>
+      <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-28-7576/</guid>
+      <description>https://www.acmicpc.net/problem/7576
+풀이: [백준]2178 미로 탐색 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int n, m, k, q, w, a[1002][1002];queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; dp2;int main() {cin &amp;gt;&amp;gt; m &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n; i++)for (int t = 0; t &amp;lt; m; t++) {cin &amp;gt;&amp;gt; a[i][t];if (a[i][t] == 1)	dp2.push({ i,t });}for (int i = 0;; i++) {queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; dp1;while (!</description>
+    </item>
     
     <item>
       <title>[C&#43;&#43;]플로이드-와샬 알고리즘(Floyd-Warshall Algorithm)</title>
