@@ -6,10 +6,204 @@
     <description>Recent content in C&#43;&#43; on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Fri, 28 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]1057 토너먼트</title>
+      <link>https://jyukki97.github.io/blog/2020-03-04-1057/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-04-1057/</guid>
+      <description>https://www.acmicpc.net/problem/1057
+풀이: ​	1	2
+​	1	2	3	4
+1	2	3	4	5	6	7	8
+현재 번호가 i 라고 할 때,
+위로 갈 수록 배정받는 번호는 (i + 1) / 2 가 된다.
+즉, 김지민과 임한수의 번호가 x, y 라고 할 때,
+( x + 1 ) / 2 == ( y + 1 ) / 2
+가 되는 순간이 둘이 대결하는 순간이다.
+토너먼트가 끝날 때까지 둘이 대결하지 않는 경우는 없으므로 -1 출력은 하지않는다.</description>
+    </item>
+    
+    <item>
+      <title>[백준]1074 집합</title>
+      <link>https://jyukki97.github.io/blog/2020-03-04-1074/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-04-1074/</guid>
+      <description>https://www.acmicpc.net/problem/1074
+풀이: 배열의 크기를 점차 줄여가면서,
+위에 방문할 수 있는 배열의 크기를 계산하여, 더해가면서 구한다.
+ex)
+3 7 7
+8 * 8 배열에서
+왼쪽위, 오른쪽 위, 왼쪽 아래 4 * 4 배열은 필요없으니까 48 만큼 뺀 후,
+오른쪽 아래 배열로만 4 * 4 배열로 줄여서 다시 만든다.
+그렇다면, ( 7, 7 ) 은 ( 3, 3 )이 되어야 하므로 (7 % 4, 7 % 4) 가 된다.
+배열의 크기가 0이 될때까지 반복한다.</description>
+    </item>
+    
+    <item>
+      <title>[백준]11723 집합</title>
+      <link>https://jyukki97.github.io/blog/2020-03-04-11723/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-04-11723/</guid>
+      <description>https://www.acmicpc.net/problem/11723
+풀이: [C++]비트연산자 참고
+add : or 연산을 통해 값을 추가한다.
+remove : 값이 있는지 확인 후 있다면, xor 연산으로 삭제한다.
+check : 값이 있는지 and 연산으로 확인 후 있다면 1, 없다면 0을 출력한다.
+toggle : 값이 있다면 삭제하고, 없다면 추가한다.
+all : 비트값을 (2^20) - 1 로 바꿔주어, 1 ~ 20 까지 채워놓는다.
+empty : 비트값을 0으로 바꿔주어, 공집합으로 만들어놓는다.
+시간제한이있으므로 비트마스크를 통해 연산하도록한다. cin, cout 을 사용할 경우 시간초과가 나므로 주의하자.</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]예상 대진표</title>
+      <link>https://jyukki97.github.io/blog/2020-03-04-listofmatches/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-04-listofmatches/</guid>
+      <description>https://programmers.co.kr
+문제: △△ 게임대회가 개최되었습니다. 이 대회는 N명이 참가하고, 토너먼트 형식으로 진행됩니다. N명의 참가자는 각각 1부터 N번을 차례대로 배정받습니다. 그리고, 1번↔2번, 3번↔4번, &amp;hellip; , N-1번↔N번의 참가자끼리 게임을 진행합니다. 각 게임에서 이긴 사람은 다음 라운드에 진출할 수 있습니다. 이때, 다음 라운드에 진출할 참가자의 번호는 다시 1번부터 N/2번을 차례대로 배정받습니다. 만약 1번↔2번 끼리 겨루는 게임에서 2번이 승리했다면 다음 라운드에서 1번을 부여받고, 3번↔4번에서 겨루는 게임에서 3번이 승리했다면 다음 라운드에서 2번을 부여받게 됩니다. 게임은 최종 한 명이 남을 때까지 진행됩니다.</description>
+    </item>
+    
+    <item>
+      <title>[백준]11404 웜홀</title>
+      <link>https://jyukki97.github.io/blog/2020-03-03-11404/</link>
+      <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-03-11404/</guid>
+      <description>https://www.acmicpc.net/problem/11404
+풀이: [C++]플로이드-와샬 알고리즘(Bellman-Ford Algorithm) 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int	n, m, i, a1, a2, a3, a[102][102];int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;fill(a[0], a[0] + 10404, 987654321);for (i = 0; i &amp;lt; m; i++) {cin &amp;gt;&amp;gt; a1 &amp;gt;&amp;gt; a2 &amp;gt;&amp;gt; a3;a[a1][a2] = min(a[a1][a2], a3);}for (i = 1; i &amp;lt;= n; i++) for (int t = 1; t &amp;lt;= n; t++)for (int y = 1; y &amp;lt;= n; y++)if (t == y) a[t][y] = 0;else	a[t][y] = min(a[t][y], a[t][i] + a[i][y]);for (i = 1; i &amp;lt;= n; i++) {for (int t = 1; t &amp;lt;= n; t++)if (a[i][t] == 987654321)	cout &amp;lt;&amp;lt; &amp;#34;0 &amp;#34;;else	cout &amp;lt;&amp;lt; a[i][t] &amp;lt;&amp;lt; &amp;#34;&amp;#34;;cout &amp;lt;&amp;lt; endl;}}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1865 웜홀</title>
+      <link>https://jyukki97.github.io/blog/2020-03-03-1865/</link>
+      <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-03-1865/</guid>
+      <description>https://www.acmicpc.net/problem/1865
+풀이: [C++]벨만-포드 알고리즘(Bellman-Ford Algorithm) 참고
+벨만-포드 알고리즘으로 모든 정점을 순환 한 뒤, 음수 사이클이 있는지 판단 후 있다면, &amp;ldquo;YES&amp;rdquo; 를 없다면 &amp;ldquo;NO&amp;quot;를 출력한다. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;int	T, n, m, k, i, d[502], a1, a2, a3;int main() {cin &amp;gt;&amp;gt; T;while (T--) {bool b = true;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m &amp;gt;&amp;gt; k;vector&amp;lt;pair&amp;lt;pair&amp;lt;int, int&amp;gt;, int&amp;gt;&amp;gt; a;for (i = 0; i &amp;lt; m; i++) {cin &amp;gt;&amp;gt; a1 &amp;gt;&amp;gt; a2 &amp;gt;&amp;gt; a3;a.</description>
+    </item>
+    
+    <item>
+      <title>[백준]11657 타임머신</title>
+      <link>https://jyukki97.github.io/blog/2020-03-02-11657/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-02-11657/</guid>
+      <description>https://www.acmicpc.net/problem/11657
+풀이: [C++]벨만-포드 알고리즘(Bellman-Ford Algorithm) 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;#define INF 987654321int	n, m, i, d[502], a1, a2, a3;pair&amp;lt;pair&amp;lt;int, int&amp;gt;, int&amp;gt; a[6002];int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;for (i = 0; i &amp;lt; m; i++)cin &amp;gt;&amp;gt; a[i].first.first &amp;gt;&amp;gt; a[i].first.second &amp;gt;&amp;gt; a[i].second;fill(d, d + n + 1, INF);d[1] = 0;for (i = 1; i &amp;lt;= n; i++)for (auto t : a)if (d[t.</description>
+    </item>
+    
+    <item>
+      <title>[백준]9370 미확인 도착지</title>
+      <link>https://jyukki97.github.io/blog/2020-03-02-9370/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-02-9370/</guid>
+      <description>https://www.acmicpc.net/problem/9370
+풀이: [C++]다익스트라 알고리즘(Dijkstra Algorithm) 참고
+s -&amp;gt; g -&amp;gt; h -&amp;gt; x
+s -&amp;gt; h -&amp;gt; g -&amp;gt; x
+두 가지 경로가 있는데, 둘 중 하나라도 최단 경로일 경우 x를 배열에 저장한다.
+저장된 x를 오름차순으로 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int T, n, m, t, u, v, w, i, s, g, h, v1, v2, a1, c, d[2002];bool b[2002];priority_queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; p;priority_queue&amp;lt;int, vector&amp;lt;int&amp;gt;, greater&amp;lt;int&amp;gt;&amp;gt; q;int main() {cin &amp;gt;&amp;gt; T;while (T--) {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m &amp;gt;&amp;gt; t;vector&amp;lt;vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;gt; a(n + 1);cin &amp;gt;&amp;gt; s &amp;gt;&amp;gt; g &amp;gt;&amp;gt; h;for (i = 0; i &amp;lt; m; i++) {cin &amp;gt;&amp;gt; u &amp;gt;&amp;gt; v &amp;gt;&amp;gt; w;a[u].</description>
+    </item>
+    
+    <item>
+      <title>[백준]1504 최단 경로</title>
+      <link>https://jyukki97.github.io/blog/2020-03-01-1504/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-01-1504/</guid>
+      <description>https://www.acmicpc.net/problem/1504
+풀이: [C++]다익스트라 알고리즘(Dijkstra Algorithm) 참고
+지나야 하는 두 개의 정점을 v1, v2 라고 할때,
+1 ~ v1 ~ v2 ~ N
+1 ~ v2 ~ v1 ~ N
+으로 나눠서 풀어본다.
+1~v1, v2 과 v1 ~ v2 과 v1, v2 ~ N 을 다익스트라 알고리즘으로 각각 구하여 더한값이
+최소인 값을 구한다. 만약 경로가 없다면 -1을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int V, E, u, v, w, i, d[805], v1, v2, a1, a2;priority_queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; p;bool b[805];int main() {cin &amp;gt;&amp;gt; V &amp;gt;&amp;gt; E;vector&amp;lt;vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;gt;a(V + 1);for (i = 0; i &amp;lt; E; i++) {cin &amp;gt;&amp;gt; u &amp;gt;&amp;gt; v &amp;gt;&amp;gt; w;a[u].</description>
+    </item>
+    
+    <item>
+      <title>[백준]1753 최단 경로</title>
+      <link>https://jyukki97.github.io/blog/2020-03-01-1753/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-01-1753/</guid>
+      <description>https://www.acmicpc.net/problem/1753
+풀이: [C++]다익스트라 알고리즘(Dijkstra Algorithm) 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int V, E, k, u, v, w, i;vector&amp;lt;int&amp;gt; d;priority_queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; p;bool b[20002];int main() {cin &amp;gt;&amp;gt; V &amp;gt;&amp;gt; E &amp;gt;&amp;gt; k;vector&amp;lt;vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;gt;a(V + 1);for (i = 0; i &amp;lt;= V; i++)d.push_back(987654321);for (i = 0; i &amp;lt; E; i++) {cin &amp;gt;&amp;gt; u &amp;gt;&amp;gt; v &amp;gt;&amp;gt; w;a[u].</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]가장 먼 노드</title>
+      <link>https://jyukki97.github.io/blog/2020-03-01-furthestnode/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-01-furthestnode/</guid>
+      <description>https://programmers.co.kr
+문제: n개의 노드가 있는 그래프가 있습니다. 각 노드는 1부터 n까지 번호가 적혀있습니다. 1번 노드에서 가장 멀리 떨어진 노드의 갯수를 구하려고 합니다. 가장 멀리 떨어진 노드란 최단경로로 이동했을 때 간선의 개수가 가장 많은 노드들을 의미합니다.
+노드의 개수 n, 간선에 대한 정보가 담긴 2차원 배열 vertex가 매개변수로 주어질 때, 1번 노드로부터 가장 멀리 떨어진 노드가 몇 개인지를 return 하도록 solution 함수를 작성해주세요.
+풀이: 현재 위치를 i 라고 하자.
+이때까지 방문을 한적이 없고, i와의 거리가 1차이나는 노드를 배열에 저장한 후 visit을 true로 바꿔준다.</description>
+    </item>
+    
+    <item>
+      <title>[백준]1697 숨바꼭질</title>
+      <link>https://jyukki97.github.io/blog/2020-02-29-1697/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-29-1697/</guid>
+      <description>https://www.acmicpc.net/problem/1697
+풀이: 현재 위치를 x라고 할 때, x + 1, x - 1, x * 2 위치를 BFS 를 통해 하나씩 찾아간다.
+동생의 위치와 같아진다면 몇번 이동했는지 출력한다.
+x + 1 은 동생의 위치보다 커질 필요가없으므로 동생의 위치보다 작을때만 이동한다. x * 2 는 동생의 위치 + 1 보다 크다면 (x - 2) * 2 를 하는 것이 이득이므로 제외한다. 현재 위치는 0보다 작아질 수 없으므로 제외한다. 이미 한번 방문한 위치는 다시 방문할 필요없으므로 제외시킨다.</description>
+    </item>
+    
+    <item>
+      <title>[백준]2206 벽 부수고 이동하기</title>
+      <link>https://jyukki97.github.io/blog/2020-02-29-2206/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-29-2206/</guid>
+      <description>https://www.acmicpc.net/problem/2206
+풀이: [백준]2178 미로 탐색 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int n, m, k = -1, q, w, e, dps;vector&amp;lt;string&amp;gt; a;queue&amp;lt;pair&amp;lt;int, pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;gt; dp;bool b[2][1002][1002];int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;a.resize(n);for (int i = 0; i &amp;lt; n; i++)cin &amp;gt;&amp;gt; a[i];dp.push({ 1, { 0,0 } });for (int i = 1; i &amp;lt; n * m + 1; i++) {dps = dp.</description>
+    </item>
+    
+    <item>
+      <title>[백준]7569 토마토</title>
+      <link>https://jyukki97.github.io/blog/2020-02-29-7569/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-29-7569/</guid>
+      <description>https://www.acmicpc.net/problem/7569
+풀이: [백준]7576 토마토 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int n, m, h, k, q, w, e, a[102][102][102];queue&amp;lt;pair&amp;lt;int, pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;gt; dp2;int main() {cin &amp;gt;&amp;gt; m &amp;gt;&amp;gt; n &amp;gt;&amp;gt; h;for (int y = 0; y &amp;lt; h; y++)for (int i = 0; i &amp;lt; n; i++)for (int t = 0; t &amp;lt; m; t++) {cin &amp;gt;&amp;gt; a[y][i][t];if (a[y][i][t] == 1)	dp2.</description>
+    </item>
     
     <item>
       <title>[C&#43;&#43;]비트연산자</title>

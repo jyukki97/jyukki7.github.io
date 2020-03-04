@@ -6,10 +6,22 @@
     <description>Recent content in DFS on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Fri, 28 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/dfs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]7569 토마토</title>
+      <link>https://jyukki97.github.io/blog/2020-02-29-7569/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-02-29-7569/</guid>
+      <description>https://www.acmicpc.net/problem/7569
+풀이: [백준]7576 토마토 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int n, m, h, k, q, w, e, a[102][102][102];queue&amp;lt;pair&amp;lt;int, pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;gt; dp2;int main() {cin &amp;gt;&amp;gt; m &amp;gt;&amp;gt; n &amp;gt;&amp;gt; h;for (int y = 0; y &amp;lt; h; y++)for (int i = 0; i &amp;lt; n; i++)for (int t = 0; t &amp;lt; m; t++) {cin &amp;gt;&amp;gt; a[y][i][t];if (a[y][i][t] == 1)	dp2.</description>
+    </item>
     
     <item>
       <title>[백준]1012 유기농 배추</title>

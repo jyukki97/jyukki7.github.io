@@ -6,10 +6,92 @@
     <description>Recent content in 최단 경로 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EC%B5%9C%EB%8B%A8-%EA%B2%BD%EB%A1%9C/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]11404 웜홀</title>
+      <link>https://jyukki97.github.io/blog/2020-03-03-11404/</link>
+      <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-03-11404/</guid>
+      <description>https://www.acmicpc.net/problem/11404
+풀이: [C++]플로이드-와샬 알고리즘(Bellman-Ford Algorithm) 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int	n, m, i, a1, a2, a3, a[102][102];int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;fill(a[0], a[0] + 10404, 987654321);for (i = 0; i &amp;lt; m; i++) {cin &amp;gt;&amp;gt; a1 &amp;gt;&amp;gt; a2 &amp;gt;&amp;gt; a3;a[a1][a2] = min(a[a1][a2], a3);}for (i = 1; i &amp;lt;= n; i++) for (int t = 1; t &amp;lt;= n; t++)for (int y = 1; y &amp;lt;= n; y++)if (t == y) a[t][y] = 0;else	a[t][y] = min(a[t][y], a[t][i] + a[i][y]);for (i = 1; i &amp;lt;= n; i++) {for (int t = 1; t &amp;lt;= n; t++)if (a[i][t] == 987654321)	cout &amp;lt;&amp;lt; &amp;#34;0 &amp;#34;;else	cout &amp;lt;&amp;lt; a[i][t] &amp;lt;&amp;lt; &amp;#34;&amp;#34;;cout &amp;lt;&amp;lt; endl;}}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1865 웜홀</title>
+      <link>https://jyukki97.github.io/blog/2020-03-03-1865/</link>
+      <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-03-1865/</guid>
+      <description>https://www.acmicpc.net/problem/1865
+풀이: [C++]벨만-포드 알고리즘(Bellman-Ford Algorithm) 참고
+벨만-포드 알고리즘으로 모든 정점을 순환 한 뒤, 음수 사이클이 있는지 판단 후 있다면, &amp;ldquo;YES&amp;rdquo; 를 없다면 &amp;ldquo;NO&amp;quot;를 출력한다. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;int	T, n, m, k, i, d[502], a1, a2, a3;int main() {cin &amp;gt;&amp;gt; T;while (T--) {bool b = true;cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m &amp;gt;&amp;gt; k;vector&amp;lt;pair&amp;lt;pair&amp;lt;int, int&amp;gt;, int&amp;gt;&amp;gt; a;for (i = 0; i &amp;lt; m; i++) {cin &amp;gt;&amp;gt; a1 &amp;gt;&amp;gt; a2 &amp;gt;&amp;gt; a3;a.</description>
+    </item>
+    
+    <item>
+      <title>[백준]11657 타임머신</title>
+      <link>https://jyukki97.github.io/blog/2020-03-02-11657/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-02-11657/</guid>
+      <description>https://www.acmicpc.net/problem/11657
+풀이: [C++]벨만-포드 알고리즘(Bellman-Ford Algorithm) 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;#define INF 987654321int	n, m, i, d[502], a1, a2, a3;pair&amp;lt;pair&amp;lt;int, int&amp;gt;, int&amp;gt; a[6002];int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;for (i = 0; i &amp;lt; m; i++)cin &amp;gt;&amp;gt; a[i].first.first &amp;gt;&amp;gt; a[i].first.second &amp;gt;&amp;gt; a[i].second;fill(d, d + n + 1, INF);d[1] = 0;for (i = 1; i &amp;lt;= n; i++)for (auto t : a)if (d[t.</description>
+    </item>
+    
+    <item>
+      <title>[백준]9370 미확인 도착지</title>
+      <link>https://jyukki97.github.io/blog/2020-03-02-9370/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-02-9370/</guid>
+      <description>https://www.acmicpc.net/problem/9370
+풀이: [C++]다익스트라 알고리즘(Dijkstra Algorithm) 참고
+s -&amp;gt; g -&amp;gt; h -&amp;gt; x
+s -&amp;gt; h -&amp;gt; g -&amp;gt; x
+두 가지 경로가 있는데, 둘 중 하나라도 최단 경로일 경우 x를 배열에 저장한다.
+저장된 x를 오름차순으로 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int T, n, m, t, u, v, w, i, s, g, h, v1, v2, a1, c, d[2002];bool b[2002];priority_queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; p;priority_queue&amp;lt;int, vector&amp;lt;int&amp;gt;, greater&amp;lt;int&amp;gt;&amp;gt; q;int main() {cin &amp;gt;&amp;gt; T;while (T--) {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m &amp;gt;&amp;gt; t;vector&amp;lt;vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;gt; a(n + 1);cin &amp;gt;&amp;gt; s &amp;gt;&amp;gt; g &amp;gt;&amp;gt; h;for (i = 0; i &amp;lt; m; i++) {cin &amp;gt;&amp;gt; u &amp;gt;&amp;gt; v &amp;gt;&amp;gt; w;a[u].</description>
+    </item>
+    
+    <item>
+      <title>[백준]1504 최단 경로</title>
+      <link>https://jyukki97.github.io/blog/2020-03-01-1504/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-01-1504/</guid>
+      <description>https://www.acmicpc.net/problem/1504
+풀이: [C++]다익스트라 알고리즘(Dijkstra Algorithm) 참고
+지나야 하는 두 개의 정점을 v1, v2 라고 할때,
+1 ~ v1 ~ v2 ~ N
+1 ~ v2 ~ v1 ~ N
+으로 나눠서 풀어본다.
+1~v1, v2 과 v1 ~ v2 과 v1, v2 ~ N 을 다익스트라 알고리즘으로 각각 구하여 더한값이
+최소인 값을 구한다. 만약 경로가 없다면 -1을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int V, E, u, v, w, i, d[805], v1, v2, a1, a2;priority_queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; p;bool b[805];int main() {cin &amp;gt;&amp;gt; V &amp;gt;&amp;gt; E;vector&amp;lt;vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;gt;a(V + 1);for (i = 0; i &amp;lt; E; i++) {cin &amp;gt;&amp;gt; u &amp;gt;&amp;gt; v &amp;gt;&amp;gt; w;a[u].</description>
+    </item>
+    
+    <item>
+      <title>[백준]1753 최단 경로</title>
+      <link>https://jyukki97.github.io/blog/2020-03-01-1753/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-01-1753/</guid>
+      <description>https://www.acmicpc.net/problem/1753
+풀이: [C++]다익스트라 알고리즘(Dijkstra Algorithm) 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int V, E, k, u, v, w, i;vector&amp;lt;int&amp;gt; d;priority_queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; p;bool b[20002];int main() {cin &amp;gt;&amp;gt; V &amp;gt;&amp;gt; E &amp;gt;&amp;gt; k;vector&amp;lt;vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;gt;a(V + 1);for (i = 0; i &amp;lt;= V; i++)d.push_back(987654321);for (i = 0; i &amp;lt; E; i++) {cin &amp;gt;&amp;gt; u &amp;gt;&amp;gt; v &amp;gt;&amp;gt; w;a[u].</description>
+    </item>
     
     <item>
       <title>[C&#43;&#43;]플로이드-와샬 알고리즘(Floyd-Warshall Algorithm)</title>
