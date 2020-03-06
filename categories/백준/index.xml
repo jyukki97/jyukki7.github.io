@@ -6,10 +6,133 @@
     <description>Recent content in 백준 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Wed, 04 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]1015 수열 정렬</title>
+      <link>https://jyukki97.github.io/blog/2020-03-06-1015/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-06-1015/</guid>
+      <description>https://www.acmicpc.net/problem/1015
+풀이: 배열 A를 정렬한 배열을 배열 B라고 하자.
+현재 위치가 i 일 때, A[i] 값이 배열 B의 어디에 위치해 있는지 찾아서 출력한다.
+ex)
+A
+2 3 1
+B
+1 2 3
+답:
+1 2 0
+수의 중복이 있을 수 있으므로 주의하자. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int N, a[52], b[52], d[52], c;int main(void) {cin &amp;gt;&amp;gt; N;for (int i = 0; i &amp;lt; N; i++) {cin &amp;gt;&amp;gt; a[i];b[i] = a[i];}sort(a, a + N);for (int i = 0; i &amp;lt; N; i++) {c = lower_bound(a, a + N, b[i]) - a;while (d[c])	c++;cout &amp;lt;&amp;lt; c &amp;lt;&amp;lt; &amp;#34;&amp;#34;;d[c] = 1;}cout &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1024 수열의 합</title>
+      <link>https://jyukki97.github.io/blog/2020-03-06-1024/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-06-1024/</guid>
+      <description>https://www.acmicpc.net/problem/1024
+풀이: 길이가 적어도 L인 수열은 다음과 같이 나타낼 수 있다.
+n	n + 1	n + 2	...	n + L - 2	n + L - 1즉, 길이가 L인 수열들의 합은
+L * n + Σ k (k = 1 ~ L - 1) = N
+( N - Σ k (k = 1 ~ L - 1) ) % L == 0
+인 L을 찾는다면, 답을 구할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>[백준]1051 숫자 정사각형</title>
+      <link>https://jyukki97.github.io/blog/2020-03-06-1051/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-06-1051/</guid>
+      <description>https://www.acmicpc.net/problem/1051
+풀이: N, M 중 더 작은 값이 정사각형의 한 변의 길이의 최댓값이 된다.
+최댓값을 1씩 줄여 가면서, 만들 수 있는 정사각형이 있는지 확인한다.
+만들 수 있다면, 반복을 중지하고, 변을 제곱한 넓이를 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;int N, M, b, c = 1;int main(void) {cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M;vector&amp;lt;string&amp;gt; a(N);for (int i = 0; i &amp;lt; N; i++)cin &amp;gt;&amp;gt; a[i];b = N &amp;gt; M ?</description>
+    </item>
+    
+    <item>
+      <title>[백준]1062 가르침</title>
+      <link>https://jyukki97.github.io/blog/2020-03-06-1062/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-06-1062/</guid>
+      <description>https://www.acmicpc.net/problem/1062
+풀이: a ~ z 중에 K개의 글자를 배웠을 떄,
+N개의 단어 중 몇개의 단어를 읽을 수 있는지 구한 후 그것들 중 최댓값을 출력한다.
+a, c, i, n, t 다섯개의 글자는 무조건 들어가므로 넣고 시작하자. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int N, K, b, c = 0, d, f;vector&amp;lt;string&amp;gt; a;void T(int x, int y) {if (y == K) {d = 0;for (int i = 0; i &amp;lt; N; i++) {f = 1;for (char s : a[i])	if (!</description>
+    </item>
+    
+    <item>
+      <title>[백준]1080 행렬</title>
+      <link>https://jyukki97.github.io/blog/2020-03-06-1080/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-06-1080/</guid>
+      <description>https://www.acmicpc.net/problem/1080
+풀이: (0, 0) 부터 하나씩 비교해 나간다.
+만약 A 와 B 의 숫자가 다르다면, 현재 위치부터 3 * 3 전체를 반전시킨다.
+반전 시켰다면, 뒤집은 횟수를 +1 해준다.
+순환이 끝난 후 행렬 A 와 B 가 다르다면 -1을 같다면 뒤집은 횟수를 출력해준다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;int N, M, c = 0, i, t, u, y;int main() {cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M;vector&amp;lt;string&amp;gt; a(N), b(N);for (i = 0; i &amp;lt; N; i++)cin &amp;gt;&amp;gt; a[i];for (i = 0; i &amp;lt; N; i++)cin &amp;gt;&amp;gt; b[i];for (i = 0; i &amp;lt; N - 2; i++)for (t = 0; t &amp;lt; M - 2; t++)if (a[i][t] !</description>
+    </item>
+    
+    <item>
+      <title>[백준]1005 ACM Craft</title>
+      <link>https://jyukki97.github.io/blog/2020-03-05-1005/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-05-1005/</guid>
+      <description>https://www.acmicpc.net/problem/1005
+풀이: b[i] : i 건물을 짓는데 드는 최소시간
+b[i] = max(b[i 건물을 짓는데 필요한 건물들])
+-&amp;gt; 바로 전 단계의 건물 중 건설시간이 오래 걸리는 것을 짓는다면, 그 시간동안 다른 건물은 다 지을 수 있기 떄문에, max값만 생각한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int T, N, K, q, e, w, a[1002], m, n, b[1002];vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; v;int A(int x) {if (b[x] !</description>
+    </item>
+    
+    <item>
+      <title>[백준]1049 기타줄</title>
+      <link>https://jyukki97.github.io/blog/2020-03-05-1049/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-05-1049/</guid>
+      <description>https://www.acmicpc.net/problem/1049
+풀이: 여러 브랜드 중 6줄 패키지 가격의 최솟값과 낱개 가격의 최솟값을 저장해 놓는다.
+낱개 * 6 보다 패키지 가격이 더 높다면, 패키지로 살 이유가 없으므로 낱개 가격을 출력한다.
+필요한 줄의 갯수가 6개 이하라면, 낱개 가격과 패키지 가격 중 낮은 가격을 출력한다.
+둘 다 아니라면, (전체를 패키지로 사는 것) 과 (6개로 나눠지는 만큼 패키지로 사고 나머지는 낱개로 사는 것) 둘 중 낮은 가격을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int N, M, q, w, a = 1001, b = 1001, dp[102] = { 0 };int main(void) {cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M;for (int i = 0; i &amp;lt; M; i++) {cin &amp;gt;&amp;gt; q &amp;gt;&amp;gt; w;a = min(a, q);b = min(b, w);}for (int i = 1; i &amp;lt;= N; i++) {dp[i] = (((i - 1) / 6) + 1) * a;dp[i] = min(dp[i], dp[i - 1] + b);}cout &amp;lt;&amp;lt; dp[N] &amp;lt;&amp;lt; endl;}코드: 사용언어 : c++</description>
+    </item>
+    
+    <item>
+      <title>[백준]1068 트리</title>
+      <link>https://jyukki97.github.io/blog/2020-03-05-1068/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-05-1068/</guid>
+      <description>https://www.acmicpc.net/problem/1068
+풀이: v[i] : i의 자식 노드들이 들어있다.
+삭제 해야하는 노드가 w 라면,
+w를 큐에 푸쉬한다.
+w의 자식노드를 큐에 푸쉬한 후 w를 삭제한다.
+자식노드가 없어질 때까지 반복한다.
+v[ 0 ~ N - 1 ] 까지 모두 순환한다.
+노드가 현제 존재하며, 자식노드가 없다면, 리프 노드이므로 +1 해준다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;queue&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;int N, a;bool b[52], c;int main(void) {cin &amp;gt;&amp;gt; N;vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; v(N);queue&amp;lt;int&amp;gt; q;for (int i = 0; i &amp;lt; N; i++) {cin &amp;gt;&amp;gt; a;if(a !</description>
+    </item>
     
     <item>
       <title>[백준]1057 토너먼트</title>

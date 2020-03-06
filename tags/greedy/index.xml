@@ -6,10 +6,40 @@
     <description>Recent content in greedy on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/greedy/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]1080 행렬</title>
+      <link>https://jyukki97.github.io/blog/2020-03-06-1080/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-06-1080/</guid>
+      <description>https://www.acmicpc.net/problem/1080
+풀이: (0, 0) 부터 하나씩 비교해 나간다.
+만약 A 와 B 의 숫자가 다르다면, 현재 위치부터 3 * 3 전체를 반전시킨다.
+반전 시켰다면, 뒤집은 횟수를 +1 해준다.
+순환이 끝난 후 행렬 A 와 B 가 다르다면 -1을 같다면 뒤집은 횟수를 출력해준다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;int N, M, c = 0, i, t, u, y;int main() {cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M;vector&amp;lt;string&amp;gt; a(N), b(N);for (i = 0; i &amp;lt; N; i++)cin &amp;gt;&amp;gt; a[i];for (i = 0; i &amp;lt; N; i++)cin &amp;gt;&amp;gt; b[i];for (i = 0; i &amp;lt; N - 2; i++)for (t = 0; t &amp;lt; M - 2; t++)if (a[i][t] !</description>
+    </item>
+    
+    <item>
+      <title>[백준]1049 기타줄</title>
+      <link>https://jyukki97.github.io/blog/2020-03-05-1049/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-05-1049/</guid>
+      <description>https://www.acmicpc.net/problem/1049
+풀이: 여러 브랜드 중 6줄 패키지 가격의 최솟값과 낱개 가격의 최솟값을 저장해 놓는다.
+낱개 * 6 보다 패키지 가격이 더 높다면, 패키지로 살 이유가 없으므로 낱개 가격을 출력한다.
+필요한 줄의 갯수가 6개 이하라면, 낱개 가격과 패키지 가격 중 낮은 가격을 출력한다.
+둘 다 아니라면, (전체를 패키지로 사는 것) 과 (6개로 나눠지는 만큼 패키지로 사고 나머지는 낱개로 사는 것) 둘 중 낮은 가격을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int N, M, q, w, a = 1001, b = 1001, dp[102] = { 0 };int main(void) {cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M;for (int i = 0; i &amp;lt; M; i++) {cin &amp;gt;&amp;gt; q &amp;gt;&amp;gt; w;a = min(a, q);b = min(b, w);}for (int i = 1; i &amp;lt;= N; i++) {dp[i] = (((i - 1) / 6) + 1) * a;dp[i] = min(dp[i], dp[i - 1] + b);}cout &amp;lt;&amp;lt; dp[N] &amp;lt;&amp;lt; endl;}코드: 사용언어 : c++</description>
+    </item>
     
     <item>
       <title>[백준]1541 잃어버린 괄호</title>

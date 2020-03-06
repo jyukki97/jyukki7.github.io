@@ -6,10 +6,23 @@
     <description>Recent content in 문자열 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]1062 가르침</title>
+      <link>https://jyukki97.github.io/blog/2020-03-06-1062/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-06-1062/</guid>
+      <description>https://www.acmicpc.net/problem/1062
+풀이: a ~ z 중에 K개의 글자를 배웠을 떄,
+N개의 단어 중 몇개의 단어를 읽을 수 있는지 구한 후 그것들 중 최댓값을 출력한다.
+a, c, i, n, t 다섯개의 글자는 무조건 들어가므로 넣고 시작하자. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int N, K, b, c = 0, d, f;vector&amp;lt;string&amp;gt; a;void T(int x, int y) {if (y == K) {d = 0;for (int i = 0; i &amp;lt; N; i++) {f = 1;for (char s : a[i])	if (!</description>
+    </item>
     
     <item>
       <title>[프로그래머스]문자열 내 마음대로 정렬하기</title>
