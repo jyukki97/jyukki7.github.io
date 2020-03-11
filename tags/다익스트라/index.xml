@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>다익스트라 on 1 Day 1 Problem</title>
+    <link>https://jyukki97.github.io/tags/%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC/</link>
+    <description>Recent content in 다익스트라 on 1 Day 1 Problem</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <lastBuildDate>Mon, 09 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jyukki97.github.io/tags/%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[백준]1238 파티</title>
+      <link>https://jyukki97.github.io/blog/2020-03-09-1238/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-09-1238/</guid>
+      <description>https://www.acmicpc.net/problem/1238
+풀이: [C++]다익스트라 알고리즘(Dijkstra Algorithm) 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;queue&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int V, E, k, u, v, w, i, t, d1[1002], d2[1002], b[1002], s = 0;int main() {cin &amp;gt;&amp;gt; V &amp;gt;&amp;gt; E &amp;gt;&amp;gt; k;priority_queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; p;vector&amp;lt;vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;gt;a(V + 1);for (i = 0; i &amp;lt; E; i++) {cin &amp;gt;&amp;gt; u &amp;gt;&amp;gt; v &amp;gt;&amp;gt; w;a[u].push_back({ v,w });}fill(d2, d2 + V + 1, 987654321);d2[k] = 0;p.</description>
+    </item>
+    
+    <item>
+      <title>[백준]1261 알고스팟</title>
+      <link>https://jyukki97.github.io/blog/2020-03-08-1261/</link>
+      <pubDate>Sun, 08 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-08-1261/</guid>
+      <description>https://www.acmicpc.net/problem/1261
+풀이: [C++]다익스트라 알고리즘(Dijkstra Algorithm) 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;queue&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int N, M, b[102][102], q, w, e, dp[102][102];int main() {cin &amp;gt;&amp;gt; M &amp;gt;&amp;gt; N;fill(dp[0], dp[0] + 10201, 987654321);vector&amp;lt;string&amp;gt; v(N);priority_queue&amp;lt;pair&amp;lt;int, pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;gt; p;p.push({ 0,{0,0} });dp[0][0] = 0;for (int i = 0; i &amp;lt; N; i++)	cin &amp;gt;&amp;gt; v[i];while (!p.empty()) {q = p.</description>
+    </item>
+    
+  </channel>
+</rss>

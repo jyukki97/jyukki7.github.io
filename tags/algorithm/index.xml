@@ -6,10 +6,160 @@
     <description>Recent content in algorithm on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]1225 이상한 곱셈</title>
+      <link>https://jyukki97.github.io/blog/2020-03-11-1225/</link>
+      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-11-1225/</guid>
+      <description>https://www.acmicpc.net/problem/1225
+풀이: 123 * 45
+-&amp;gt; 1*4 + 1*5 + 2*4 + 2*5 + 3*4 + 3*4
+-&amp;gt; 1(4 + 5) + 2(4 + 5) + 3(4 + 5)
+-&amp;gt; (1 + 2 + 3)(4 + 5)
+즉, (왼쪽 숫자의 각 자릿수의 합) * (오른쪽 숫자의 각 자릿수의 합) 이다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;long long q = 0, w = 0, i;int main() {string a, b;cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b;for (i = 0; i &amp;lt; a.</description>
+    </item>
+    
+    <item>
+      <title>[백준]1373 2진수 8진수</title>
+      <link>https://jyukki97.github.io/blog/2020-03-11-1373/</link>
+      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-11-1373/</guid>
+      <description>https://www.acmicpc.net/problem/1373
+풀이: 2진수를 8진수로 변환하여 출력.
+변환하는 방법은
+11001100(2) 일때,
+뒤에서 부터 3자리로 끊어서 생각한다.
+011 001 100
+-&amp;gt; 3	1	4
+주어진 수의 &amp;lsquo;길이&amp;rsquo; 가 1,000,000 까지 갈 수 있으므로 주의하자.
+(수가 1,000,000 이 아니다. 수의 길이 이므로 엄청나게 큰 수가 들어온다.)
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;string&amp;gt;using namespace std;int b, c, i, t;int main() {string s, a;cin &amp;gt;&amp;gt; s;for (i = s.</description>
+    </item>
+    
+    <item>
+      <title>[백준]1389 케빈 베이컨의 6단계 법칙</title>
+      <link>https://jyukki97.github.io/blog/2020-03-10-1389/</link>
+      <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-10-1389/</guid>
+      <description>https://www.acmicpc.net/problem/1389
+풀이: [C++]플로이드-와샬 알고리즘(Floyd-Warshall Algorithm) 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int N, M, q, w, d[102][102], a, s = 987654321, c, i, t, y;int main() {cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M;for (i = 0; i &amp;lt; M; i++) {cin &amp;gt;&amp;gt; q &amp;gt;&amp;gt; w;d[q][w] = 1;d[w][q] = 1;}for (i = 1; i &amp;lt;= N; i++)for (t = 1; t &amp;lt;= N; t++)if (i !</description>
+    </item>
+    
+    <item>
+      <title>[백준]1238 파티</title>
+      <link>https://jyukki97.github.io/blog/2020-03-09-1238/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-09-1238/</guid>
+      <description>https://www.acmicpc.net/problem/1238
+풀이: [C++]다익스트라 알고리즘(Dijkstra Algorithm) 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;queue&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int V, E, k, u, v, w, i, t, d1[1002], d2[1002], b[1002], s = 0;int main() {cin &amp;gt;&amp;gt; V &amp;gt;&amp;gt; E &amp;gt;&amp;gt; k;priority_queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; p;vector&amp;lt;vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;gt;a(V + 1);for (i = 0; i &amp;lt; E; i++) {cin &amp;gt;&amp;gt; u &amp;gt;&amp;gt; v &amp;gt;&amp;gt; w;a[u].push_back({ v,w });}fill(d2, d2 + V + 1, 987654321);d2[k] = 0;p.</description>
+    </item>
+    
+    <item>
+      <title>[백준]1261 알고스팟</title>
+      <link>https://jyukki97.github.io/blog/2020-03-08-1261/</link>
+      <pubDate>Sun, 08 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-08-1261/</guid>
+      <description>https://www.acmicpc.net/problem/1261
+풀이: [C++]다익스트라 알고리즘(Dijkstra Algorithm) 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;queue&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int N, M, b[102][102], q, w, e, dp[102][102];int main() {cin &amp;gt;&amp;gt; M &amp;gt;&amp;gt; N;fill(dp[0], dp[0] + 10201, 987654321);vector&amp;lt;string&amp;gt; v(N);priority_queue&amp;lt;pair&amp;lt;int, pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;gt; p;p.push({ 0,{0,0} });dp[0][0] = 0;for (int i = 0; i &amp;lt; N; i++)	cin &amp;gt;&amp;gt; v[i];while (!p.empty()) {q = p.</description>
+    </item>
+    
+    <item>
+      <title>[백준]1120 문자열</title>
+      <link>https://jyukki97.github.io/blog/2020-03-07-1120/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-07-1120/</guid>
+      <description>https://www.acmicpc.net/problem/1120
+풀이: a 와 b의 (0번째 ~ a의 길이) 의 차이의 개수
+a 와 b의 (1번째 ~ a의 길이) 의 차이의 개수
+.
+.
+.
+a 와 b의 ()(b의 길이 - a의 길이)번째 ~ a의 길이) 의 차이의 개수
+중 가장 작은것을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int main() {int c = 51;string a, b;cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b;for (int i = 0; i &amp;lt;= b.</description>
+    </item>
+    
+    <item>
+      <title>[백준]1158 요세푸스 문제</title>
+      <link>https://jyukki97.github.io/blog/2020-03-07-1158/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-07-1158/</guid>
+      <description>https://www.acmicpc.net/problem/1158
+풀이: K번째 사람을 출력한다.
+K번째 사람을 배열에서 삭제한다.
+삭제한 지점을 기준으로 K번째 사람을 출력한다.
+반복한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;int N, K, c;int main() {cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; K;vector&amp;lt;int&amp;gt; a;for (int i = 1; i &amp;lt;= N; i++)	a.push_back(i);c = K - 1;cout &amp;lt;&amp;lt; &amp;#34;&amp;lt;&amp;#34;;while (a.size() != 1) {if (c &amp;gt;= a.size())	c %= a.</description>
+    </item>
+    
+    <item>
+      <title>[백준]1159 농구 경기</title>
+      <link>https://jyukki97.github.io/blog/2020-03-07-1159/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-07-1159/</guid>
+      <description>https://www.acmicpc.net/problem/1159
+풀이: 각 선수의 성의 첫글자를 확인한다.
+a ~ z 까지의 배열 에서 첫글자에 해당하는 배열을 +1 해준다.
+a~ z 까지 확인한다.
+5명 이상인 글자는 출력한다.
+만약, 출력한 글자가 없다면, &amp;ldquo;PREDAJA&amp;rdquo; 를 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int N, a[26], b = 0, i = 26;int main() {cin &amp;gt;&amp;gt; N;while(N--) {string s;cin &amp;gt;&amp;gt; s;a[122 - s[0]]++;}while(i--)if (a[i] &amp;gt; 4) {b = 1;cout &amp;lt;&amp;lt; char(122 - i);}if (!</description>
+    </item>
+    
+    <item>
+      <title>[백준]1182 부분수열의 합</title>
+      <link>https://jyukki97.github.io/blog/2020-03-07-1182/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-07-1182/</guid>
+      <description>https://www.acmicpc.net/problem/1182
+풀이: N개의 정수로 이루어진 수열을 a라고 했을 때,
+a의 부분수열을 모두 탐색하여 그 합이 S가 되는 갯수를 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int N, S, a[22], s = 0;void B(int x, int y) {if (x &amp;gt; -1 &amp;amp;&amp;amp; y == S)	s++;while(++x &amp;lt; N)	B(x, y + a[x]);}int main() {cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; S;for (int i = 0; i &amp;lt; N; i++)	cin &amp;gt;&amp;gt; a[i];B(-1, 0);cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1197 최소 스패닝 트리</title>
+      <link>https://jyukki97.github.io/blog/2020-03-07-1197/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-07-1197/</guid>
+      <description>https://www.acmicpc.net/problem/1197
+풀이: 배열 v를 현재 만들어진 트리에 들어있는 노드들의 집합 이라고 하자.
+시작할 때 배열 v에 1 하나만 넣고 시작한다.
+배열 v를 모두 순회하여 현재 트리에서 뻗어갈 수 있고, 가중치가 가장 작은 간선을 찾는다.
+간선을 연결 한 후 연결된 노드를 배열 v에 저장한다.
+배열 v에 모든 정점이 들어올때까지 반복한다.
+트리에 모든 가중치를 더해 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;queue&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;typedef pair&amp;lt;int, int&amp;gt; P;int N, E, q, w, e, b[10002] = { 1,1 };vector&amp;lt;priority_queue&amp;lt;P, vector&amp;lt;P&amp;gt;, greater&amp;lt;P&amp;gt;&amp;gt;&amp;gt; a;int main() {cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; E;a.</description>
+    </item>
     
     <item>
       <title>[백준]1015 수열 정렬</title>

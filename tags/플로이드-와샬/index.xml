@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>플로이드-와샬 on 1 Day 1 Problem</title>
+    <link>https://jyukki97.github.io/tags/%ED%94%8C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%99%80%EC%83%AC/</link>
+    <description>Recent content in 플로이드-와샬 on 1 Day 1 Problem</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <lastBuildDate>Tue, 10 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jyukki97.github.io/tags/%ED%94%8C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%99%80%EC%83%AC/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[백준]1389 케빈 베이컨의 6단계 법칙</title>
+      <link>https://jyukki97.github.io/blog/2020-03-10-1389/</link>
+      <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-10-1389/</guid>
+      <description>https://www.acmicpc.net/problem/1389
+풀이: [C++]플로이드-와샬 알고리즘(Floyd-Warshall Algorithm) 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int N, M, q, w, d[102][102], a, s = 987654321, c, i, t, y;int main() {cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M;for (i = 0; i &amp;lt; M; i++) {cin &amp;gt;&amp;gt; q &amp;gt;&amp;gt; w;d[q][w] = 1;d[w][q] = 1;}for (i = 1; i &amp;lt;= N; i++)for (t = 1; t &amp;lt;= N; t++)if (i !</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,28 @@
     <description>Recent content in greedy on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/greedy/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]1120 문자열</title>
+      <link>https://jyukki97.github.io/blog/2020-03-07-1120/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-07-1120/</guid>
+      <description>https://www.acmicpc.net/problem/1120
+풀이: a 와 b의 (0번째 ~ a의 길이) 의 차이의 개수
+a 와 b의 (1번째 ~ a의 길이) 의 차이의 개수
+.
+.
+.
+a 와 b의 ()(b의 길이 - a의 길이)번째 ~ a의 길이) 의 차이의 개수
+중 가장 작은것을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int main() {int c = 51;string a, b;cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b;for (int i = 0; i &amp;lt;= b.</description>
+    </item>
     
     <item>
       <title>[백준]1080 행렬</title>
