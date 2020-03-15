@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>구현 on 1 Day 1 Problem</title>
+    <link>https://jyukki97.github.io/tags/%EA%B5%AC%ED%98%84/</link>
+    <description>Recent content in 구현 on 1 Day 1 Problem</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <lastBuildDate>Sat, 14 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jyukki97.github.io/tags/%EA%B5%AC%ED%98%84/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[백준]10797 10부제</title>
+      <link>https://jyukki97.github.io/blog/2020-03-14-10797/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-14-10797/</guid>
+      <description>https://www.acmicpc.net/problem/10797
+풀이: 날짜의 일의 자리 숫자와 자동차의 일의 자리 숫자가 같다면 차량의 대수를 +1 해준다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, m, i, s = 0;int main() {cin &amp;gt;&amp;gt; n;for (i = 0; i &amp;lt; 5; i++) {cin &amp;gt;&amp;gt; m;if (n == m)	s++;}cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2003 수들의 합 2</title>
+      <link>https://jyukki97.github.io/blog/2020-03-14-2003/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-14-2003/</guid>
+      <description>https://www.acmicpc.net/problem/2003
+풀이: A[i] 부터 A[j] 까지 하나씩 더해가는 값을 s라고 하자.
+만약, s가 m과 같다면, 경우의 수를 +1 해준다.
+만약, s가 m보다 크다면, i를 1 더해주고, 다시 반복한다.
+i가 n이 될때까지 반복 후 경우의 수를 출력해준다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, m, i, t, a[10002], s, c = 0;int main() {scanf(&amp;#34;%d%d&amp;#34;,&amp;amp;n,&amp;amp;m);for (i = 0; i &amp;lt; n; i++)	scanf(&amp;#34;%d&amp;#34;,&amp;amp;a[i]);for (i = 0; i &amp;lt; n; i++) {s = 0;for (t = i; t &amp;lt; n; t++) {s += a[t];if (s == m) c++;if (s &amp;gt;= m)	break;}}printf(&amp;#34;%d\n&amp;#34;,c);}</description>
+    </item>
+    
+    <item>
+      <title>[백준]5543 상근날드</title>
+      <link>https://jyukki97.github.io/blog/2020-03-12-5543/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-12-5543/</guid>
+      <description>https://www.acmicpc.net/problem/5543
+풀이: 햅버거 중 가장 싼 것 + 음료 중 가장 싼 것 - 50원
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int a,b,c,d,e;int main() {cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b &amp;gt;&amp;gt; c &amp;gt;&amp;gt; d &amp;gt;&amp;gt; e;a = a &amp;lt; b ? a : b;a = a &amp;lt; c ? a : c;d = d &amp;lt; e ? d : e;cout &amp;lt;&amp;lt; a + d - 50 &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+  </channel>
+</rss>

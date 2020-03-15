@@ -6,10 +6,22 @@
     <description>Recent content in 순열 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Tue, 28 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EC%88%9C%EC%97%B4/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]10974 모든 순열</title>
+      <link>https://jyukki97.github.io/blog/2020-03-14-10974/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-14-10974/</guid>
+      <description>https://www.acmicpc.net/problem/10974
+풀이: [C++]순열  참고
+cin, cout 은 시간초과가 날 수 있으므로 주의하자. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, i; vector&amp;lt;int&amp;gt; v;int main() {scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);for (i = 1; i &amp;lt;= n; i++) v.push_back(i);do {for (int i : v) printf(&amp;#34;%d &amp;#34;,i);printf(&amp;#34;\n&amp;#34;);} while (next_permutation(v.begin(), v.end()));}</description>
+    </item>
     
     <item>
       <title>[C&#43;&#43;]순열 </title>

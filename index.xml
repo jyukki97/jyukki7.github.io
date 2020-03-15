@@ -6,10 +6,285 @@
     <description>Recent content on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Wed, 11 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]10824 네 수</title>
+      <link>https://jyukki97.github.io/blog/2020-03-15-10824/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-15-10824/</guid>
+      <description>https://www.acmicpc.net/problem/10824
+풀이: A, B, C, D 를 각각 string으로 받아 붙힌 후
+숫자로 변환하여 더해 출력한다.
+stoi 는 int형식으로 각각 1,000,000 까지 가능 한 두 수를 붙힌다면 넘어가므로 stoll을 사용하자. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;string&amp;gt;using namespace std;string a,b,c,d;int main() {cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b &amp;gt;&amp;gt; c &amp;gt;&amp;gt; d;cout &amp;lt;&amp;lt; stoll(a + b) + stoll(c + d) &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2644 촌수계산</title>
+      <link>https://jyukki97.github.io/blog/2020-03-15-2644/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-15-2644/</guid>
+      <description>https://www.acmicpc.net/problem/2644
+풀이: [C++]다익스트라 알고리즘(Dijkstra Algorithm) 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;queue&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;int n, k, e, q, w, m, d[102], b[102];int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; k &amp;gt;&amp;gt; e &amp;gt;&amp;gt; m;vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; a(n + 1);priority_queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; p;while(m--) {cin &amp;gt;&amp;gt; q &amp;gt;&amp;gt; w;a[q].push_back(w), a[w].push_back(q);}fill(d, d + n + 1, 101);d[k] = 0;p.push({ 0, k });while (!</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;]위상 정렬(Topological Sort)</title>
+      <link>https://jyukki97.github.io/learn/2020-03-14-topologicalsort/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/learn/2020-03-14-topologicalsort/</guid>
+      <description>위상 정렬(Topological Sort)
+위상 정렬 방향 그래프의 노드에 대해 순서를 매겨 정렬하는 방법 정렬 후에 각 노드에 대해 순서가 위배되지 않아야한다. 사이클이 있다면 불가능하다. 들어오는 간선이 없는 노드를 삭제하면서, 정렬한다. </description>
+    </item>
+    
+    <item>
+      <title>[백준]10797 10부제</title>
+      <link>https://jyukki97.github.io/blog/2020-03-14-10797/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-14-10797/</guid>
+      <description>https://www.acmicpc.net/problem/10797
+풀이: 날짜의 일의 자리 숫자와 자동차의 일의 자리 숫자가 같다면 차량의 대수를 +1 해준다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, m, i, s = 0;int main() {cin &amp;gt;&amp;gt; n;for (i = 0; i &amp;lt; 5; i++) {cin &amp;gt;&amp;gt; m;if (n == m)	s++;}cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]10815 숫자 카드</title>
+      <link>https://jyukki97.github.io/blog/2020-03-14-10815/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-14-10815/</guid>
+      <description>https://www.acmicpc.net/problem/10815
+풀이: [C++]lower_bound, upper_bound 참고
+cin, cout 은 시간초과가 날 수 있으므로 주의하자. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, m, i, k, a[500002];int main() {cin &amp;gt;&amp;gt; n;for (i = 0; i &amp;lt; n; i++)	cin &amp;gt;&amp;gt; a[i];sort(a, a + n);cin &amp;gt;&amp;gt; m;while (m--) {cin &amp;gt;&amp;gt; k;if (*lower_bound(a, a + n, k) == k)	cout &amp;lt;&amp;lt; &amp;#34;1 &amp;#34;;else	cout &amp;lt;&amp;lt; &amp;#34;0 &amp;#34;;}cout &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]10974 모든 순열</title>
+      <link>https://jyukki97.github.io/blog/2020-03-14-10974/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-14-10974/</guid>
+      <description>https://www.acmicpc.net/problem/10974
+풀이: [C++]순열  참고
+cin, cout 은 시간초과가 날 수 있으므로 주의하자. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, i; vector&amp;lt;int&amp;gt; v;int main() {scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);for (i = 1; i &amp;lt;= n; i++) v.push_back(i);do {for (int i : v) printf(&amp;#34;%d &amp;#34;,i);printf(&amp;#34;\n&amp;#34;);} while (next_permutation(v.begin(), v.end()));}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1916 최소비용 구하기</title>
+      <link>https://jyukki97.github.io/blog/2020-03-14-1916/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-14-1916/</guid>
+      <description>https://www.acmicpc.net/problem/1916
+풀이: [C++]다익스트라 알고리즘(Dijkstra Algorithm) 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int n, m, u, d[1002], s, e, c, b[1002];int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;priority_queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; p;vector&amp;lt;vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;gt; a(n + 1);while (m--) {cin &amp;gt;&amp;gt; s &amp;gt;&amp;gt; e &amp;gt;&amp;gt; c;a[s].push_back({ e,c });}cin &amp;gt;&amp;gt; s &amp;gt;&amp;gt; e;fill(d, d + n + 1, 987654321);d[s] = 0;p.</description>
+    </item>
+    
+    <item>
+      <title>[백준]2003 수들의 합 2</title>
+      <link>https://jyukki97.github.io/blog/2020-03-14-2003/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-14-2003/</guid>
+      <description>https://www.acmicpc.net/problem/2003
+풀이: A[i] 부터 A[j] 까지 하나씩 더해가는 값을 s라고 하자.
+만약, s가 m과 같다면, 경우의 수를 +1 해준다.
+만약, s가 m보다 크다면, i를 1 더해주고, 다시 반복한다.
+i가 n이 될때까지 반복 후 경우의 수를 출력해준다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, m, i, t, a[10002], s, c = 0;int main() {scanf(&amp;#34;%d%d&amp;#34;,&amp;amp;n,&amp;amp;m);for (i = 0; i &amp;lt; n; i++)	scanf(&amp;#34;%d&amp;#34;,&amp;amp;a[i]);for (i = 0; i &amp;lt; n; i++) {s = 0;for (t = i; t &amp;lt; n; t++) {s += a[t];if (s == m) c++;if (s &amp;gt;= m)	break;}}printf(&amp;#34;%d\n&amp;#34;,c);}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2446 별 찍기 - 9</title>
+      <link>https://jyukki97.github.io/blog/2020-03-14-2446/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-14-2446/</guid>
+      <description>https://www.acmicpc.net/problem/2446
+풀이: [백준]2442 별찍기 - 5 에 나온 삼각형을 방향을 반대로 2번 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n;int main() {cin &amp;gt;&amp;gt; n;for (int i = 0; i &amp;lt; n - 1; i++) {for (int t = 0; t &amp;lt; i; t++) cout &amp;lt;&amp;lt; &amp;#34;&amp;#34;;for (int t = 1; t &amp;lt; (n -i) * 2; t++) cout &amp;lt;&amp;lt; &amp;#34;*&amp;#34;;cout &amp;lt;&amp;lt; endl;}for (int i = 0; i &amp;lt; n; i++) {for (int t = 1; t &amp;lt; n - i; t++) cout &amp;lt;&amp;lt; &amp;#34;&amp;#34;;for (int t = 0; t &amp;lt; i * 2 + 1; t++) cout &amp;lt;&amp;lt; &amp;#34;*&amp;#34;;cout &amp;lt;&amp;lt; endl;}}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2583 영역 구하기</title>
+      <link>https://jyukki97.github.io/blog/2020-03-14-2583/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-14-2583/</guid>
+      <description>https://www.acmicpc.net/problem/2583
+풀이: 직사각형이 들어있는 곳을 1,
+없는곳을 0으로 해놓은 배열을 만든다.
+배열을 순회하며, 현재 값이 0 이라면, 영역의 개수를 +1 해주고,
+연결된 모든 영역을 순회하여 1로 바꿔주고, 영역의 넓이를 배열에 저장한다.
+배열의 모든 숫자가 1이라면,
+영역의 개수를 출력하고,
+각 영역의 넓이를 오름차순으로 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, m, k, i, t, a[102][102], x1, x2, yl, y2, s = 0, b[5002];void A(int x, int y) {a[x][y] = 1, b[s - 1]++;if (x &amp;gt; 0 &amp;amp;&amp;amp; !</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스]카카오프렌즈 컬러링북</title>
+      <link>https://jyukki97.github.io/blog/2020-03-14-coloringbook/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-14-coloringbook/</guid>
+      <description>https://programmers.co.kr
+문제: 카카오 프렌즈 컬러링북 출판사의 편집자인 어피치는 네오에게 컬러링북에 들어갈 원화를 그려달라고 부탁하여 여러 장의 그림을 받았다. 여러 장의 그림을 난이도 순으로 컬러링북에 넣고 싶었던 어피치는 영역이 많으면 색칠하기가 까다로워 어려워진다는 사실을 발견하고 그림의 난이도를 영역의 수로 정의하였다. (영역이란 상하좌우로 연결된 같은 색상의 공간을 의미한다.)
+그림에 몇 개의 영역이 있는지와 가장 큰 영역의 넓이는 얼마인지 계산하는 프로그램을 작성해보자.
+위의 그림은 총 12개 영역으로 이루어져 있으며, 가장 넓은 영역은 어피치의 얼굴면으로 넓이는 120이다.</description>
+    </item>
+    
+    <item>
+      <title>[백준]10799 쇠막대기</title>
+      <link>https://jyukki97.github.io/blog/2020-03-13-10799/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-13-10799/</guid>
+      <description>https://www.acmicpc.net/problem/10799
+풀이: [프로그래머스]쇠막대기 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;stack&amp;gt;using namespace std;int n, i, b = 0; stack&amp;lt;char&amp;gt; a;	string s;int main() {cin &amp;gt;&amp;gt; s;for (i = 0; i &amp;lt; s.size() - 1; i++)if (s[i] == &amp;#39;(&amp;#39;)if (s[i + 1] == &amp;#39;)&amp;#39;)	b += a.size(), i++;else a.push(s[i]);else	a.pop(), b++;cout &amp;lt;&amp;lt; b + 1 &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]11403 경로 찾기</title>
+      <link>https://jyukki97.github.io/blog/2020-03-13-11403/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-13-11403/</guid>
+      <description>https://www.acmicpc.net/problem/11403
+풀이: [C++]플로이드-와샬 알고리즘(Floyd-Warshall Algorithm) 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#define F(i,n)for(int i=0;i&amp;lt;n;i++)using namespace std;int n, a[102][102];int main() {cin &amp;gt;&amp;gt; n;F(i, n)	F(t, n)	cin &amp;gt;&amp;gt; a[i][t];F(u, 2) F(i, n)	F(t, n)	F(y, n) if(!a[i][t]) a[i][t] = a[i][y] &amp;amp; a[y][t];F(i, n) {F(t, n) cout &amp;lt;&amp;lt; a[i][t] &amp;lt;&amp;lt; &amp;#34;&amp;#34;;cout &amp;lt;&amp;lt; endl;}}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2468 안전 영역</title>
+      <link>https://jyukki97.github.io/blog/2020-03-13-2468/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-13-2468/</guid>
+      <description>https://www.acmicpc.net/problem/2468
+풀이: 물의 높이가 h 일 때,
+지역의 높이가 h보다 작거나 같다면 잠겨있는 지역이라고 한다.
+모든 지역을 순회하며,
+현재 지역이 잠겨있지 않다면, 방문 표시를 해두고,
+왼쪽, 오른쪽, 위, 아래 에 잠겨있지 않은 곳을 순회하며 방문표시를 한다.
+연결된 모든 곳을 방문했다면, 안전한 영역을 +1 해준다.
+물의 높이를 0 ~ (지역 중 최대 높이) 까지 순회한 후
+안전한 영역의 최대치를 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#define F(i,n)for(int i=0;i&amp;lt;n;i++)using namespace std;int n, m = 0, a[102][102], b[102][102], s, r = 0;void A(int x, int y) {b[x][y] = 0;if (x &amp;gt; 0 &amp;amp;&amp;amp; b[x - 1][y])	A(x - 1, y);if (y &amp;gt; 0 &amp;amp;&amp;amp; b[x][y - 1])	A(x, y - 1);if (x + 1 &amp;lt; n &amp;amp;&amp;amp; b[x + 1][y])	A(x + 1, y);if (y + 1 &amp;lt; n &amp;amp;&amp;amp; b[x][y + 1])	A(x, y + 1);}int main() {cin &amp;gt;&amp;gt; n;F(i,n)F(t,n){cin &amp;gt;&amp;gt; a[i][t];m = m &amp;lt; a[i][t] ?</description>
+    </item>
+    
+    <item>
+      <title>[백준]11724 연결 요소의 개수</title>
+      <link>https://jyukki97.github.io/blog/2020-03-12-11724/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-12-11724/</guid>
+      <description>https://www.acmicpc.net/problem/11724
+풀이: 방문하지 않은 정점과 연결된 모든 정점을 방문표시하고, 요소의 개수를 +1 해준다.
+더이상 방문할 정점이 없을때까지 반복한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;int n, m, i, t, c = 0, b[1002];vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; a;void T(int x) {if (b[x]) return;b[x] = 1;for (int o : a[x])	T(o);}int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;a.resize(n + 1);while (m--) {cin &amp;gt;&amp;gt; i &amp;gt;&amp;gt; t;a[i].</description>
+    </item>
+    
+    <item>
+      <title>[백준]13458 시험 감독</title>
+      <link>https://jyukki97.github.io/blog/2020-03-12-13458/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-12-13458/</guid>
+      <description>https://www.acmicpc.net/problem/13458
+풀이: 각 시험장에 총감독관 1명씩이 꼭 들어간다.
+즉 각 시험장에 있는 응시자의 수에서 총감독관이 감시할 수 있는 응시자의 수 B를 빼준다.
+빼준 값에서 부감독관이 감시할 수 있는 응시자의 수 C를 나눈 값을 올림해 준다면,
+부감독관의 수가 나온다.
+감독관들의 수를 모두 더한값을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;math.h&amp;gt;using namespace std;long long n, i, b, c, a[1000002], s = 0;int main() {cin &amp;gt;&amp;gt; n;for (i = 0; i &amp;lt; n; i++)	cin &amp;gt;&amp;gt; a[i];cin &amp;gt;&amp;gt; b &amp;gt;&amp;gt; c;for (i = 0; i &amp;lt; n; i++) {a[i] -= b;if (a[i] &amp;gt; 0)	s += ceil((double)a[i] / c);s++;}cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2309 일곱 난쟁이</title>
+      <link>https://jyukki97.github.io/blog/2020-03-12-2309/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-12-2309/</guid>
+      <description>https://www.acmicpc.net/problem/2309
+풀이: 아홉 난쟁이의 키의 합을 S라고 하자.
+아홉 난쟁이 중 랜덤으로 뽑은 두 명의 키의 합을 T라고 하자.
+S - T = 100 이라면
+뽑은 두 난쟁이를 제외하고 오름차순으로 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[9], i, t, s = 0;int main() {for (i = 0; i &amp;lt; 9; i++) {cin &amp;gt;&amp;gt; a[i];s += a[i];}sort(a, a + 9);for (i = 0; i &amp;lt; 9; i++) {for (t = i + 1; t &amp;lt; 9; t++)	if (s - a[i] - a[t] == 100)	break;if (s - a[i] - a[t] == 100)	break;}for (s = 0; s &amp;lt; 9; s++)	if (s !</description>
+    </item>
+    
+    <item>
+      <title>[백준]2442 별 찍기 - 5</title>
+      <link>https://jyukki97.github.io/blog/2020-03-12-2442/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-12-2442/</guid>
+      <description>https://www.acmicpc.net/problem/2442
+풀이: 1 번째 줄부터 차례대로
+1개
+3개
+5개
+.
+.
+.
+i * 2 - 1 개
+의 별을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, i, t;int main() {cin &amp;gt;&amp;gt; n;for (i = 1; i &amp;lt;= n; i++) {for (t = 0; t &amp;lt; n - i; t++)	cout &amp;lt;&amp;lt; &amp;#34;&amp;#34;;for (t = 0; t &amp;lt; 2 * i - 1; t++) cout &amp;lt;&amp;lt; &amp;#34;*&amp;#34;;cout &amp;lt;&amp;lt; endl;}}</description>
+    </item>
+    
+    <item>
+      <title>[백준]4963 섬의 개수</title>
+      <link>https://jyukki97.github.io/blog/2020-03-12-4963/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-12-4963/</guid>
+      <description>https://www.acmicpc.net/problem/4963
+풀이: 모든 지도를 순회한다.
+만약 지도의 한 부분이 땅이라면,
+연결된 모든 땅을 바다로 바꾼 후 섬의 개수를 +1 해준다.
+지도의 모든 부분이 바다로 바뀔때까지 반복한다.
+섬의 개수를 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, m, i, t, a[52][52], c;void I(int x, int y) {a[x][y] = 0;if (x &amp;gt; 0 &amp;amp;&amp;amp; y &amp;gt; 0 &amp;amp;&amp;amp; a[x - 1][y - 1]) I(x - 1, y - 1);if (x &amp;gt; 0 &amp;amp;&amp;amp; a[x - 1][y]) I(x - 1, y);if (x &amp;gt; 0 &amp;amp;&amp;amp; y + 1 &amp;lt; n &amp;amp;&amp;amp; a[x - 1][y + 1]) I(x - 1, y + 1);if (y &amp;gt; 0 &amp;amp;&amp;amp; a[x][y - 1]) I(x, y - 1);if (y + 1 &amp;lt; n &amp;amp;&amp;amp; a[x][y + 1]) I(x, y + 1);if (x + 1 &amp;lt; m &amp;amp;&amp;amp; y &amp;gt; 0 &amp;amp;&amp;amp; a[x + 1][y - 1]) I(x + 1, y - 1);if (x + 1 &amp;lt; m &amp;amp;&amp;amp; a[x + 1][y]) I(x + 1, y);if (x + 1 &amp;lt; m &amp;amp;&amp;amp; y + 1 &amp;lt; n &amp;amp;&amp;amp; a[x + 1][y + 1]) I(x + 1, y + 1);}int main() {while (1) {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;c = 0;if (!</description>
+    </item>
+    
+    <item>
+      <title>[백준]5543 상근날드</title>
+      <link>https://jyukki97.github.io/blog/2020-03-12-5543/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-12-5543/</guid>
+      <description>https://www.acmicpc.net/problem/5543
+풀이: 햅버거 중 가장 싼 것 + 음료 중 가장 싼 것 - 50원
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int a,b,c,d,e;int main() {cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b &amp;gt;&amp;gt; c &amp;gt;&amp;gt; d &amp;gt;&amp;gt; e;a = a &amp;lt; b ? a : b;a = a &amp;lt; c ? a : c;d = d &amp;lt; e ? d : e;cout &amp;lt;&amp;lt; a + d - 50 &amp;lt;&amp;lt; endl;}</description>
+    </item>
     
     <item>
       <title>[백준]1225 이상한 곱셈</title>

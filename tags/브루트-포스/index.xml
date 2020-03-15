@@ -6,10 +6,25 @@
     <description>Recent content in 브루트 포스 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sat, 07 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EB%B8%8C%EB%A3%A8%ED%8A%B8-%ED%8F%AC%EC%8A%A4/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]2309 일곱 난쟁이</title>
+      <link>https://jyukki97.github.io/blog/2020-03-12-2309/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-12-2309/</guid>
+      <description>https://www.acmicpc.net/problem/2309
+풀이: 아홉 난쟁이의 키의 합을 S라고 하자.
+아홉 난쟁이 중 랜덤으로 뽑은 두 명의 키의 합을 T라고 하자.
+S - T = 100 이라면
+뽑은 두 난쟁이를 제외하고 오름차순으로 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int a[9], i, t, s = 0;int main() {for (i = 0; i &amp;lt; 9; i++) {cin &amp;gt;&amp;gt; a[i];s += a[i];}sort(a, a + 9);for (i = 0; i &amp;lt; 9; i++) {for (t = i + 1; t &amp;lt; 9; t++)	if (s - a[i] - a[t] == 100)	break;if (s - a[i] - a[t] == 100)	break;}for (s = 0; s &amp;lt; 9; s++)	if (s !</description>
+    </item>
     
     <item>
       <title>[백준]1120 문자열</title>
