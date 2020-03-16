@@ -6,10 +6,25 @@
     <description>Recent content in 위상 정렬 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sat, 14 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EC%9C%84%EC%83%81-%EC%A0%95%EB%A0%AC/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]2252 줄 세우기</title>
+      <link>https://jyukki97.github.io/blog/2020-03-16-2252/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-16-2252/</guid>
+      <description>https://www.acmicpc.net/problem/2252
+풀이: b[i] : i 보다 작은 사람들의 수
+b[i] 가 0인 i를 맨 앞에 세운다.
+i보다 큰 학생들을 t라고 할 때, b[t] 값을 각각 -1 해준다.
+모든 학생들을 세울때까지 반복한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;int n, m, i, q, w, b[32002], c[32002];int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; a(n + 1);vector&amp;lt;int&amp;gt; v;for (i = 0; i &amp;lt; m; i++) {cin &amp;gt;&amp;gt; q &amp;gt;&amp;gt; w;a[q].</description>
+    </item>
     
     <item>
       <title>[C&#43;&#43;]위상 정렬(Topological Sort)</title>

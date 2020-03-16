@@ -6,10 +6,22 @@
     <description>Recent content in 최소 스패닝 트리 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sat, 07 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EC%B5%9C%EC%86%8C-%EC%8A%A4%ED%8C%A8%EB%8B%9D-%ED%8A%B8%EB%A6%AC/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]1922 네트워크 연결</title>
+      <link>https://jyukki97.github.io/blog/2020-03-16-1922/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-16-1922/</guid>
+      <description>https://www.acmicpc.net/problem/1922
+풀이: [백준]1197 최소 스패닝 트리 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;queue&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;typedef pair&amp;lt;int, int&amp;gt; P;int N, E, q, w, e, b[1002] = { 1,1 };int main() {cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; E;vector&amp;lt;priority_queue&amp;lt;P, vector&amp;lt;P&amp;gt;, greater&amp;lt;P&amp;gt;&amp;gt;&amp;gt; a(N + 1);vector&amp;lt;int&amp;gt; v = { 1 };for (int i = 0; i &amp;lt; E; i++) {cin &amp;gt;&amp;gt; q &amp;gt;&amp;gt; w &amp;gt;&amp;gt; e;a[q].</description>
+    </item>
     
     <item>
       <title>[백준]1197 최소 스패닝 트리</title>

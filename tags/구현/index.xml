@@ -6,10 +6,23 @@
     <description>Recent content in 구현 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sat, 14 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EA%B5%AC%ED%98%84/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]5597 과제 안 내신 분..?</title>
+      <link>https://jyukki97.github.io/blog/2020-03-16-5597/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-16-5597/</guid>
+      <description>https://www.acmicpc.net/problem/5597
+풀이: 과제를 낸 28 명을 기록한다.
+30 명 중 기록이 안돼어있는 학생 2명을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int a[31], i = 28, b;int main() {while (i--) {cin &amp;gt;&amp;gt; b;a[b] = 1;}for (i = 1; i &amp;lt;= 30; i++)	if (!a[i])	cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; endl;}</description>
+    </item>
     
     <item>
       <title>[백준]10797 10부제</title>

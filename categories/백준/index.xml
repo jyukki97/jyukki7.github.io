@@ -6,10 +6,176 @@
     <description>Recent content in 백준 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]10820 문자열 분석</title>
+      <link>https://jyukki97.github.io/blog/2020-03-16-10820/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-16-10820/</guid>
+      <description>https://www.acmicpc.net/problem/10820
+풀이: [C++]대소문자, 숫자 구분함수  참고
+따로 종료 조건이 없으므로 EOF 처리를 해주자. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;string&amp;gt;using namespace std;int main() {string s;while (getline(cin, s)) {int a = 0, b = 0, c = 0, d = 0;for (char i : s)if (islower(i)) a++;else if (isupper(i)) b++;else if (isdigit(i)) c++;else d++;printf(&amp;#34;%d %d %d %d\n&amp;#34;, a, b, c, d);}}</description>
+    </item>
+    
+    <item>
+      <title>[백준]10988 팰린드롬인지 확인하기</title>
+      <link>https://jyukki97.github.io/blog/2020-03-16-10988/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-16-10988/</guid>
+      <description>https://www.acmicpc.net/problem/10988
+풀이: 팰린드롬 : 기러기, 토마토 등 뒤집어도 같은단어 주어진 단어가 팰린드롬이라면 1, 아니라면 0을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int main() {string a; bool b = true;cin &amp;gt;&amp;gt; a;for (int i = 0; i &amp;lt; a.size() / 2; i++)	if (a[i] != a[a.size() - i - 1]) b = false;if (b)	cout &amp;lt;&amp;lt; &amp;#34;1&amp;#34; &amp;lt;&amp;lt; endl;else cout &amp;lt;&amp;lt; &amp;#34;0&amp;#34; &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]10991 별 찍기 - 16</title>
+      <link>https://jyukki97.github.io/blog/2020-03-16-10991/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-16-10991/</guid>
+      <description>https://www.acmicpc.net/problem/10991
+풀이: N개의 줄에 N개의 글자를 출력한다.
+첫 줄에는 N-1개의 &amp;quot; &amp;ldquo;와 1개의 &amp;ldquo;* &amp;ldquo;을
+두 번째 줄에는 N-2개의 &amp;quot; &amp;ldquo;와 2개의 &amp;ldquo;* &amp;ldquo;을
+.
+.
+.
+i번째 줄에는 N-i개의 &amp;quot; &amp;ldquo;와 i개의 &amp;ldquo;* &amp;ldquo;을
+출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int N, i, t;int main() {cin &amp;gt;&amp;gt; N;for (i = 0; i &amp;lt; N; i++) {for (t = 1; t &amp;lt; N - i; t++)	cout &amp;lt;&amp;lt; &amp;#34;&amp;#34;;for (; t &amp;lt;= N; t++) cout &amp;lt;&amp;lt; &amp;#34;* &amp;#34;;cout &amp;lt;&amp;lt; endl;}}</description>
+    </item>
+    
+    <item>
+      <title>[백준]10992 별 찍기 - 17</title>
+      <link>https://jyukki97.github.io/blog/2020-03-16-10992/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-16-10992/</guid>
+      <description>https://www.acmicpc.net/problem/10992
+풀이: 첫줄에 1개, 마지막줄에 2 * N - 1개
+i번째 줄에는 N - i 칸 띄고, &amp;ldquo;&amp;rdquo; 한개, 2 * i - 1 칸 띄고, &amp;ldquo;&amp;rdquo; 한개
+출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int N, i, t;int main() {cin &amp;gt;&amp;gt; N;for (i = 0; i &amp;lt; N; i++) {for (t = 1; t &amp;lt; N - i; t++)	cout &amp;lt;&amp;lt; &amp;#34;&amp;#34;;cout &amp;lt;&amp;lt; &amp;#34;*&amp;#34;;for (t = 0; t &amp;lt; 2 * i - 1; t++) printf(&amp;#34;%s&amp;#34;, i == N - 1 ?</description>
+    </item>
+    
+    <item>
+      <title>[백준]11659 구간 합 구하기</title>
+      <link>https://jyukki97.github.io/blog/2020-03-16-11659/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-16-11659/</guid>
+      <description>https://www.acmicpc.net/problem/11659
+풀이: a[i] : 1 ~ i 까지의 구간 합
+i ~ j 까지의 구간 합 = 1 ~ j 까지의 구간 합 - 1 ~ i - 1 까지의 구간 합
+cin, cout 은 시간초과가 나므로 주의하자. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int N, M, q, w, i, a[100002];int main() {scanf(&amp;#34;%d%d&amp;#34;,&amp;amp;N,&amp;amp;M);for (i = 1; i &amp;lt;= N; i++){scanf(&amp;#34;%d&amp;#34;,&amp;amp;q);a[i] = a[i - 1] + q;}	while (M--) {scanf(&amp;#34;%d%d&amp;#34;,&amp;amp;q,&amp;amp;w);printf(&amp;#34;%d\n&amp;#34;, a[w] - a[q - 1]);}}</description>
+    </item>
+    
+    <item>
+      <title>[백준]11728 배열 합치기</title>
+      <link>https://jyukki97.github.io/blog/2020-03-16-11728/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-16-11728/</guid>
+      <description>https://www.acmicpc.net/problem/11728
+풀이: n + m 만큼의 숫자를 받아온다.
+받아온 숫자를 정렬하여 출력한다.
+cin, cout 은 시간초과가 나므로 주의하자. 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;queue&amp;gt;using namespace std;int n, m;int main() {scanf(&amp;#34;%d%d&amp;#34;,&amp;amp;n,&amp;amp;m);n += m;priority_queue&amp;lt;int, vector&amp;lt;int&amp;gt;, greater&amp;lt;int&amp;gt;&amp;gt; a;while (n--) {scanf(&amp;#34;%d&amp;#34;,&amp;amp;m);a.push(m);}while (!a.empty())	printf(&amp;#34;%d &amp;#34;,a.top()), a.pop();printf(&amp;#34;\n&amp;#34;);}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1915 가장 큰 정사각형</title>
+      <link>https://jyukki97.github.io/blog/2020-03-16-1915/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-16-1915/</guid>
+      <description>https://www.acmicpc.net/problem/1915
+풀이: b[i][t] : i , t 가 오른쪽 아래 꼭짓점인 정사각형의 한 변의 길이
+i, t가 0이라면, 정사각형을 만들 수 없으므로 0
+i, t 의 수가 1이라면,
+b[i][t] = (b[i - 1][t], b[i][t - 1], b[i - 1][t - 1] 의 최솟값) + 1
+넓이 이므로 b[i][t] 중 가장 큰 값을 제곱하여 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, m, i, t, a, b[1002][1002], s = 0;int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;for (i = 0; i &amp;lt; n; i++)	for (t = 0; t &amp;lt; m; t++) {scanf_s(&amp;#34;%1d&amp;#34;,&amp;amp;a);if (a) {if (i &amp;amp;&amp;amp; t) {b[i][t] = b[i - 1][t] &amp;gt; b[i][t - 1] ?</description>
+    </item>
+    
+    <item>
+      <title>[백준]1922 네트워크 연결</title>
+      <link>https://jyukki97.github.io/blog/2020-03-16-1922/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-16-1922/</guid>
+      <description>https://www.acmicpc.net/problem/1922
+풀이: [백준]1197 최소 스패닝 트리 참고
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;queue&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;typedef pair&amp;lt;int, int&amp;gt; P;int N, E, q, w, e, b[1002] = { 1,1 };int main() {cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; E;vector&amp;lt;priority_queue&amp;lt;P, vector&amp;lt;P&amp;gt;, greater&amp;lt;P&amp;gt;&amp;gt;&amp;gt; a(N + 1);vector&amp;lt;int&amp;gt; v = { 1 };for (int i = 0; i &amp;lt; E; i++) {cin &amp;gt;&amp;gt; q &amp;gt;&amp;gt; w &amp;gt;&amp;gt; e;a[q].</description>
+    </item>
+    
+    <item>
+      <title>[백준]2252 줄 세우기</title>
+      <link>https://jyukki97.github.io/blog/2020-03-16-2252/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-16-2252/</guid>
+      <description>https://www.acmicpc.net/problem/2252
+풀이: b[i] : i 보다 작은 사람들의 수
+b[i] 가 0인 i를 맨 앞에 세운다.
+i보다 큰 학생들을 t라고 할 때, b[t] 값을 각각 -1 해준다.
+모든 학생들을 세울때까지 반복한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;int n, m, i, q, w, b[32002], c[32002];int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; a(n + 1);vector&amp;lt;int&amp;gt; v;for (i = 0; i &amp;lt; m; i++) {cin &amp;gt;&amp;gt; q &amp;gt;&amp;gt; w;a[q].</description>
+    </item>
+    
+    <item>
+      <title>[백준]2420 사파리월드</title>
+      <link>https://jyukki97.github.io/blog/2020-03-16-2420/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-16-2420/</guid>
+      <description>https://www.acmicpc.net/problem/2420
+풀이: 두 유명도의 차이를 절댓값으로 출력한다.
+두 도메인의 크기가 매우 크므로 long long 으로 받자. long long 형으로 받았으므로 abs 가 아닌 llabs를 쓰자 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;long long a, b;int main() {cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b;cout &amp;lt;&amp;lt; llabs(a - b) &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2530 인공지능 시계</title>
+      <link>https://jyukki97.github.io/blog/2020-03-16-2530/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-16-2530/</guid>
+      <description>https://www.acmicpc.net/problem/2530
+풀이: 요리에 필요한 시간 D를 초에 더한다.
+초 C를 60으로 나눈 몫을 분에 더한다.	초는 나눈 나머지가 된다.
+분 B를 60으로 나눈 몫을 시에 더하다.	분은 나눈 나머지가 된다.
+시를 24로 나눈 나머지로 바꾼다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int a, b, c, d;int main() {cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b &amp;gt;&amp;gt; c &amp;gt;&amp;gt; d;c += d, b += c / 60, c %= 60, a += b / 60, b %= 60, a %= 24;printf(&amp;#34;%d %d %d&amp;#34;, a, b, c);}</description>
+    </item>
+    
+    <item>
+      <title>[백준]5597 과제 안 내신 분..?</title>
+      <link>https://jyukki97.github.io/blog/2020-03-16-5597/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-16-5597/</guid>
+      <description>https://www.acmicpc.net/problem/5597
+풀이: 과제를 낸 28 명을 기록한다.
+30 명 중 기록이 안돼어있는 학생 2명을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int a[31], i = 28, b;int main() {while (i--) {cin &amp;gt;&amp;gt; b;a[b] = 1;}for (i = 1; i &amp;lt;= 30; i++)	if (!a[i])	cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; endl;}</description>
+    </item>
     
     <item>
       <title>[백준]10824 네 수</title>
