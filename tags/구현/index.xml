@@ -6,10 +6,38 @@
     <description>Recent content in 구현 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EA%B5%AC%ED%98%84/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]10707 수도요금</title>
+      <link>https://jyukki97.github.io/blog/2020-03-17-10707/</link>
+      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-17-10707/</guid>
+      <description>https://www.acmicpc.net/problem/10707
+풀이: X사의 1리터당 요금 * 한 달간의 수도의 양
+Y사의 기본요금 + (Y사의 1리터당 추가요금 * (한 달간의 수도의 양 - 기본요금이 되는 사용량의 상한))
+둘 중 더 싼 금액을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int a, b, c, d ,p;int main() {cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b &amp;gt;&amp;gt; c &amp;gt;&amp;gt; d &amp;gt;&amp;gt; p;a *= p, b += p &amp;lt; c ? 0 : (p - c) * d;printf(&amp;#34;%d\n&amp;#34;, a &amp;lt; b ?</description>
+    </item>
+    
+    <item>
+      <title>[백준]5063 TGN</title>
+      <link>https://jyukki97.github.io/blog/2020-03-17-5063/</link>
+      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-17-5063/</guid>
+      <description>https://www.acmicpc.net/problem/5063
+풀이: 광고를 했을 때의 수익 - 광고 비용 이 광고를 했을 떄 얻을 수 있는 순이익이다.
+즉, 광고를 하지않았을 때의 수익과 광고를 했을 때 얻을 수 있는 순 이익을 비교하여,
+해야 하면 &amp;ldquo;advertise&amp;rdquo;, 하지 않아야 하면 &amp;ldquo;do not advertise&amp;rdquo;, 광고를 해도 수익이 차이가 없다면 &amp;ldquo;does not matter&amp;quot;를 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int T, k, n, m;int main() {cin &amp;gt;&amp;gt; T;while (T--) {cin &amp;gt;&amp;gt; k &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;n -= m;if (k == n)	cout &amp;lt;&amp;lt; &amp;#34;does not matter&amp;#34; &amp;lt;&amp;lt; endl;else if (k &amp;lt; n) cout &amp;lt;&amp;lt; &amp;#34;advertise&amp;#34; &amp;lt;&amp;lt; endl;else cout &amp;lt;&amp;lt; &amp;#34;do not advertise&amp;#34; &amp;lt;&amp;lt; endl;}}</description>
+    </item>
     
     <item>
       <title>[백준]5597 과제 안 내신 분..?</title>
