@@ -6,10 +6,22 @@
     <description>Recent content in 문자열 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Wed, 18 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]5598 카이사르 암호</title>
+      <link>https://jyukki97.github.io/blog/2020-03-19-5598/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-19-5598/</guid>
+      <description>https://www.acmicpc.net/problem/5598
+풀이: 입력받은 카이사르 단어를 원래 단어로 고친 걸 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int main() {string s;cin &amp;gt;&amp;gt; s;for (char c : s) printf(&amp;#34;%c&amp;#34;, c &amp;lt; 68 ? c + 23 : c - 3);cout &amp;lt;&amp;lt; endl;}</description>
+    </item>
     
     <item>
       <title>[백준]2864 5와 6의 차이</title>

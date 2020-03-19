@@ -6,10 +6,22 @@
     <description>Recent content in 위상 정렬 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EC%9C%84%EC%83%81-%EC%A0%95%EB%A0%AC/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]1516 게임 개발</title>
+      <link>https://jyukki97.github.io/blog/2020-03-19-1516/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-19-1516/</guid>
+      <description>https://www.acmicpc.net/problem/1516
+풀이: [백준]1005 ACM Craft 참고
+코드: 사용언어 : c++
+#include&amp;lt;iostream&amp;gt;#include&amp;lt;vector&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace std;int N, i, q, a[502], b[502];vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;v;int A(int x) { if (b[x])	return b[x]; for (int t : v[x])	b[x] = max(b[x], A(t));b[x] += a[x]; return b[x]; }int main() {cin &amp;gt;&amp;gt; N; v.resize(N + 1);for (i = 1; i &amp;lt;= N; i++) { cin &amp;gt;&amp;gt; a[i] &amp;gt;&amp;gt; q; while (q !</description>
+    </item>
     
     <item>
       <title>[백준]2252 줄 세우기</title>

@@ -6,10 +6,95 @@
     <description>Recent content in 백준 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Wed, 18 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/categories/%EB%B0%B1%EC%A4%80/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]10867 중복 빼고 정렬하기</title>
+      <link>https://jyukki97.github.io/blog/2020-03-19-10867/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-19-10867/</guid>
+      <description>https://www.acmicpc.net/problem/10867
+풀이: N개의 정수를 중복을 제외하고 오름차순으로 정렬하여 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;set&amp;gt;using namespace std;int main() {int n, a; set&amp;lt;int&amp;gt; s;cin &amp;gt;&amp;gt; n;while (n--) {cin &amp;gt;&amp;gt; a; s.insert(a);}for (auto i : s)	cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;#34;&amp;#34;;cout &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1516 게임 개발</title>
+      <link>https://jyukki97.github.io/blog/2020-03-19-1516/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-19-1516/</guid>
+      <description>https://www.acmicpc.net/problem/1516
+풀이: [백준]1005 ACM Craft 참고
+코드: 사용언어 : c++
+#include&amp;lt;iostream&amp;gt;#include&amp;lt;vector&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace std;int N, i, q, a[502], b[502];vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;v;int A(int x) { if (b[x])	return b[x]; for (int t : v[x])	b[x] = max(b[x], A(t));b[x] += a[x]; return b[x]; }int main() {cin &amp;gt;&amp;gt; N; v.resize(N + 1);for (i = 1; i &amp;lt;= N; i++) { cin &amp;gt;&amp;gt; a[i] &amp;gt;&amp;gt; q; while (q !</description>
+    </item>
+    
+    <item>
+      <title>[백준]4101 크냐?</title>
+      <link>https://jyukki97.github.io/blog/2020-03-19-4101/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-19-4101/</guid>
+      <description>https://www.acmicpc.net/problem/4101
+풀이: 첫 번째 수가 두 번째 수보다 크면 Yes를, 아니면 No를 한 줄에 하나씩 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int a, b;int main() {while (1) {cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b;if (!a &amp;amp;&amp;amp; !b)break;printf(&amp;#34;%s\n&amp;#34;, a &amp;gt; b ? &amp;#34;Yes&amp;#34; : &amp;#34;No&amp;#34;);}}</description>
+    </item>
+    
+    <item>
+      <title>[백준]4999 아!</title>
+      <link>https://jyukki97.github.io/blog/2020-03-19-4999/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-19-4999/</guid>
+      <description>https://www.acmicpc.net/problem/4999
+풀이: 의사가 듣기 원하는 소리의 길이가 재환이가 가장 길게 낼 수 있는 소리보다 크다면,
+&amp;ldquo;no&amp;quot;를 아니라면 &amp;ldquo;go&amp;rdquo; 를 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int main() {string a, b;cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b;printf(&amp;#34;%s\n&amp;#34;, a.size() &amp;lt; b.size() ? &amp;#34;no&amp;#34; : &amp;#34;go&amp;#34;);}</description>
+    </item>
+    
+    <item>
+      <title>[백준]5598 카이사르 암호</title>
+      <link>https://jyukki97.github.io/blog/2020-03-19-5598/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-19-5598/</guid>
+      <description>https://www.acmicpc.net/problem/5598
+풀이: 입력받은 카이사르 단어를 원래 단어로 고친 걸 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int main() {string s;cin &amp;gt;&amp;gt; s;for (char c : s) printf(&amp;#34;%c&amp;#34;, c &amp;lt; 68 ? c + 23 : c - 3);cout &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]9316 Hello Judge</title>
+      <link>https://jyukki97.github.io/blog/2020-03-19-9316/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-19-9316/</guid>
+      <description>https://www.acmicpc.net/problem/9316
+풀이: 한 줄에 하나의 Hello World, Judge i! 를 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int main() {int a;cin &amp;gt;&amp;gt; a;for (int i = 1; i &amp;lt;= a; i++)printf(&amp;#34;Hello World, Judge %d!\n&amp;#34;, i);}</description>
+    </item>
+    
+    <item>
+      <title>[백준]9325 얼마?</title>
+      <link>https://jyukki97.github.io/blog/2020-03-19-9325/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-19-9325/</guid>
+      <description>https://www.acmicpc.net/problem/9325
+풀이: 각 케이스 마다 자동차의 가격에 옵션의 가격을 더하여 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int main() {int T, n, a, b, c;cin &amp;gt;&amp;gt; T;while (T--) {cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; n;while (n--) { cin &amp;gt;&amp;gt; b &amp;gt;&amp;gt; c; a += b * c; }cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;}}</description>
+    </item>
     
     <item>
       <title>[백준]2864 5와 6의 차이</title>
