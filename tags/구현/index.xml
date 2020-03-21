@@ -6,10 +6,23 @@
     <description>Recent content in 구현 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Tue, 17 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EA%B5%AC%ED%98%84/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]2822 점수 계산</title>
+      <link>https://jyukki97.github.io/blog/2020-03-21-2822/</link>
+      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-21-2822/</guid>
+      <description>https://www.acmicpc.net/problem/2822
+풀이: 첫째 줄에 참가자의 총점을 출력한다.
+둘째 줄에는 어떤 문제가 최종 점수에 포함되는지를 공백으로 구분하여 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;int n, m, k, s = 0;int main() {vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt;a;for (int i = 1; i &amp;lt; 9; i++) {cin &amp;gt;&amp;gt; n;if (i &amp;gt;= 6) {m = 151;for (int t = 0; t &amp;lt; 5; t++) if (a[t].</description>
+    </item>
     
     <item>
       <title>[백준]10707 수도요금</title>

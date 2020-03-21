@@ -6,10 +6,84 @@
     <description>Recent content in algorithm on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Thu, 19 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]10807 개수 세기</title>
+      <link>https://jyukki97.github.io/blog/2020-03-21-10807/</link>
+      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-21-10807/</guid>
+      <description>https://www.acmicpc.net/problem/10807
+풀이: 입력으로 주어진 N개의 정수 중에 v가 몇 개인지 출력한다.
+코드: 사용언어 : c
+n,m,a[202];main(){scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);while(n--){scanf(&amp;#34;%d&amp;#34;,&amp;amp;m);a[m+100]++;}scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);printf(&amp;#34;%d\n&amp;#34;,a[n+100]);}</description>
+    </item>
+    
+    <item>
+      <title>[백준]11576 Base Conversion</title>
+      <link>https://jyukki97.github.io/blog/2020-03-21-11576/</link>
+      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-21-11576/</guid>
+      <description>https://www.acmicpc.net/problem/11576
+풀이: A진법으로 나타낸 수를 10진법으로 바꾼 후 바꾼 10진법 수를 다시 B진법으로 바꿔 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;int a, b, m, n, s; vector&amp;lt;int&amp;gt; v;int main() {cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b &amp;gt;&amp;gt; m;while (m--) {cin &amp;gt;&amp;gt; n;s = s * a + n;}while (s) v.push_back(s % b), s /= b;for (m = v.size() - 1; m &amp;gt;= 0; m--) cout &amp;lt;&amp;lt; v[m] &amp;lt;&amp;lt; &amp;#34;&amp;#34;;cout &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2506 점수 계산</title>
+      <link>https://jyukki97.github.io/blog/2020-03-21-2506/</link>
+      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-21-2506/</guid>
+      <description>https://www.acmicpc.net/problem/2506
+풀이: 연속으로 맞춘다면 추가 점수가 있게 하여 총점을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, s, c = 0, a;int main() {cin &amp;gt;&amp;gt; n;while (n--) {cin &amp;gt;&amp;gt; a;if (a) s += a + c, c++;else c = 0;}cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2822 점수 계산</title>
+      <link>https://jyukki97.github.io/blog/2020-03-21-2822/</link>
+      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-21-2822/</guid>
+      <description>https://www.acmicpc.net/problem/2822
+풀이: 첫째 줄에 참가자의 총점을 출력한다.
+둘째 줄에는 어떤 문제가 최종 점수에 포함되는지를 공백으로 구분하여 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std;int n, m, k, s = 0;int main() {vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt;a;for (int i = 1; i &amp;lt; 9; i++) {cin &amp;gt;&amp;gt; n;if (i &amp;gt;= 6) {m = 151;for (int t = 0; t &amp;lt; 5; t++) if (a[t].</description>
+    </item>
+    
+    <item>
+      <title>[백준]1547 공</title>
+      <link>https://jyukki97.github.io/blog/2020-03-20-1547/</link>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-20-1547/</guid>
+      <description>https://www.acmicpc.net/problem/1547
+풀이: 주어진 입력에 따라 컵의 위치를 바꾼다.
+입력이 끝난 후 공이 들어있는 컵의 번호를 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, x, y, a[4] = { 0,1 };int main() {cin &amp;gt;&amp;gt; n;while (n--) {cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y;swap(a[x], a[y]);}for (int i = 1; i &amp;lt; 4; i++)	if (a[i])	cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2501 약수 구하기</title>
+      <link>https://jyukki97.github.io/blog/2020-03-20-2501/</link>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-20-2501/</guid>
+      <description>https://www.acmicpc.net/problem/2501
+풀이: n의 약수들 중 k번째로 작은 수를 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, k, i, c = 0;int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; k;for (i = 1; i &amp;lt;= n; i++)if (!(n % i)) {k--;if (!k) {c = i;break;}}cout &amp;lt;&amp;lt; c &amp;lt;&amp;lt; endl;}</description>
+    </item>
     
     <item>
       <title>[백준]10867 중복 빼고 정렬하기</title>
