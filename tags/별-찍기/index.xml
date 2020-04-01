@@ -6,10 +6,34 @@
     <description>Recent content in 별 찍기 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EB%B3%84-%EC%B0%8D%EA%B8%B0/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]10996 별 찍기 - 21</title>
+      <link>https://jyukki97.github.io/blog/2020-03-23-10996/</link>
+      <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-23-10996/</guid>
+      <description>https://www.acmicpc.net/problem/10996
+풀이: 지그제그로 n번 별을 찍는다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, i, t;int main() {cin &amp;gt;&amp;gt; n;for (i = 0; i &amp;lt; n * 2; i++) {	for (t = 0; t &amp;lt; n / 2 + (i % 2 ? 0 : n % 2); t++)	printf(&amp;#34;%s&amp;#34;, i % 2 ? &amp;#34;*&amp;#34; : &amp;#34;* &amp;#34;);cout &amp;lt;&amp;lt; endl;}}</description>
+    </item>
+    
+    <item>
+      <title>[백준]2523 별 찍기 - 13</title>
+      <link>https://jyukki97.github.io/blog/2020-03-23-2523/</link>
+      <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-23-2523/</guid>
+      <description>https://www.acmicpc.net/problem/2523
+풀이: 증가하는 순서로 별을찍다가 n+1 번쨰 줄부터 감소하는 순서로 별을 찍는다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, i, t;int main() {cin &amp;gt;&amp;gt; n;for (i = 0; i &amp;lt; n; i++) {	for (t = 0; t &amp;lt;= i; t++)	cout &amp;lt;&amp;lt; &amp;#34;*&amp;#34;;cout &amp;lt;&amp;lt; endl;}while (n--) {for (t = 0; t &amp;lt; n; t++)	cout &amp;lt;&amp;lt; &amp;#34;*&amp;#34;;cout &amp;lt;&amp;lt; endl;}}</description>
+    </item>
     
     <item>
       <title>[백준]10991 별 찍기 - 16</title>

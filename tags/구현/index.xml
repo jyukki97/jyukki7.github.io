@@ -6,10 +6,36 @@
     <description>Recent content in 구현 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sat, 21 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 29 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EA%B5%AC%ED%98%84/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]10708 크리스마스 파티</title>
+      <link>https://jyukki97.github.io/blog/2020-03-29-10708/</link>
+      <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-29-10708/</guid>
+      <description>https://www.acmicpc.net/problem/10708
+풀이: 게임을 진행한다.
+적은 대상이 타겟이라면 적은 사람을 +1 타겟이 아니라면 타겟인 사람을 +1 해준다.
+게임 이 끝난 후 각각의 친구들이 얻은 합계 점수를 각각 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, m, i, t, c, a[102], b[102];int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;for (; i &amp;lt; m; i++) cin &amp;gt;&amp;gt; a[i];for (i = 0; i &amp;lt; m; i++)for (t = 0; t &amp;lt; n; b[c==a[i]?</description>
+    </item>
+    
+    <item>
+      <title>[백준]5533 유니크</title>
+      <link>https://jyukki97.github.io/blog/2020-03-26-5533/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-26-5533/</guid>
+      <description>https://www.acmicpc.net/problem/5533
+풀이: 각 플레이어가 3번의 게임에서 얻은 총 점수를 입력으로 주어진 순서대로 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, a[201][3], i, t, b[3][101], s;int main() {cin &amp;gt;&amp;gt; n;for (i = 0; i &amp;lt; n; i++) for (t = 0; t &amp;lt; 3; b[t][a[i][t++]]++) cin &amp;gt;&amp;gt; a[i][t];for (i = 0; i &amp;lt; n; i++, s = 0) {for (t = 0; t &amp;lt; 3; t++) s += b[t][a[i][t]] &amp;gt; 1 ?</description>
+    </item>
     
     <item>
       <title>[백준]2822 점수 계산</title>

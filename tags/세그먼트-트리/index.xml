@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>세그먼트 트리 on 1 Day 1 Problem</title>
+    <link>https://jyukki97.github.io/tags/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8-%ED%8A%B8%EB%A6%AC/</link>
+    <description>Recent content in 세그먼트 트리 on 1 Day 1 Problem</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jyukki97.github.io/tags/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8-%ED%8A%B8%EB%A6%AC/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[백준]11505 구간 곱 구하기</title>
+      <link>https://jyukki97.github.io/blog/2020-03-22-11505/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-22-11505/</guid>
+      <description>https://www.acmicpc.net/problem/11505
+풀이: [백준]2042 구간 합 구하기 참고
+cin, cout 은 시간초과가 나므로 주의 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;math.h&amp;gt;using namespace std;#define ll long longll n, m, k, a, b, c; vector&amp;lt;ll&amp;gt; T;ll update(int node, int idx, ll val, int x, int y) {if (idx &amp;lt; x || idx &amp;gt; y) return T[node];if (x == y) return T[node] = val;return T[node] = (update(node * 2, idx, val, x, (x + y) / 2) * update(node * 2 + 1, idx, val, (x + y) / 2 + 1, y)) % 1000000007;}ll mul(int node, int x, int y, int s, int e) {if (e &amp;lt; x || s &amp;gt; y)	return 1;if (s &amp;lt;= x &amp;amp;&amp;amp; e &amp;gt;= y)	return T[node];return (mul(node * 2, x, (x + y) / 2, s, e)* mul(node * 2 + 1, (x + y) / 2 + 1, y, s, e)) % 1000000007;}int main() {scanf(&amp;#34;%d%d%d&amp;#34;,&amp;amp;n,&amp;amp;m,&amp;amp;k);T.</description>
+    </item>
+    
+    <item>
+      <title>[백준]2042 구간 합 구하기</title>
+      <link>https://jyukki97.github.io/blog/2020-03-22-2042/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-22-2042/</guid>
+      <description>https://www.acmicpc.net/problem/2042
+풀이: https://www.acmicpc.net/blog/view/9 참고
+크기가 2 ^ (log2(n) + 1) 인 트리를 하나 만든다.
+N개의 값을 트리에 모두 저장한다.
+a 가 1 이라면, b번째 값을 c로 수정한다.
+a 가 2 라면, 2 ~ 5 까지의 모든 수의 합을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;math.h&amp;gt;using namespace std;#define ll long longll n, m, k, a, b, c; vector&amp;lt;ll&amp;gt; T;ll update(int node, int idx, ll val, int x, int y) {if (idx &amp;lt; x || idx &amp;gt; y) return T[node];if (x == y) return T[node] = val;return T[node] = update(node * 2, idx, val, x, (x + y) / 2) + update(node * 2 + 1, idx, val, (x + y) / 2 + 1, y);}ll sum(int node, int x, int y, int s, int e) {if (e &amp;lt; x || s &amp;gt; y)	return 0;if (s &amp;lt;= x &amp;amp;&amp;amp; e &amp;gt;= y)	return T[node];return sum(node * 2, x, (x + y) / 2, s, e) + sum(node * 2 + 1, (x + y) / 2 + 1, y, s, e);}int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m &amp;gt;&amp;gt; k;T.</description>
+    </item>
+    
+    <item>
+      <title>[백준]2357 최솟값과 최댓값</title>
+      <link>https://jyukki97.github.io/blog/2020-03-22-2357/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-03-22-2357/</guid>
+      <description>https://www.acmicpc.net/problem/2357
+풀이: [백준]2042 구간 합 구하기 참고
+cin, cout 은 시간초과가 나므로 주의 코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;math.h&amp;gt;using namespace std;#define ll long longll n, m, a, b; vector&amp;lt;ll&amp;gt; T, Y;void update(int node, int idx, ll val, int x, int y) {if (idx &amp;lt; x || idx &amp;gt; y) return;T[node] = T[node] &amp;gt; val ? T[node] : val;Y[node] = Y[node] &amp;gt; val ?</description>
+    </item>
+    
+  </channel>
+</rss>
