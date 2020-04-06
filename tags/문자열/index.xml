@@ -6,10 +6,26 @@
     <description>Recent content in 문자열 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Thu, 19 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]11586 지영 공주님의 마법 거울</title>
+      <link>https://jyukki97.github.io/blog/2020-04-04-11586/</link>
+      <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-04-11586/</guid>
+      <description>https://www.acmicpc.net/problem/11586
+풀이: 문자열을
+k가 1일 경우 그대로
+k가 2일 경우 좌우 반전
+k가 3일 경우 상하 반전
+으로 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, i, t, k; string s[101];int main() {cin &amp;gt;&amp;gt; n;for (; i &amp;lt; n; i++) cin &amp;gt;&amp;gt; s[i];cin &amp;gt;&amp;gt; k;if (k == 1)for (i = 0; i &amp;lt; n; i++)cout &amp;lt;&amp;lt; s[i] &amp;lt;&amp;lt; endl;else if (k == 2)for (i = 0; i &amp;lt; n; i++,printf(&amp;#34;\n&amp;#34;))for (t = n - 1; t &amp;gt;= 0; t--)cout &amp;lt;&amp;lt; s[i][t];elsefor (i = n - 1; i &amp;gt;= 0; i--)cout &amp;lt;&amp;lt; s[i] &amp;lt;&amp;lt; endl;}</description>
+    </item>
     
     <item>
       <title>[백준]5598 카이사르 암호</title>

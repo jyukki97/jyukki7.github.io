@@ -6,15 +6,73 @@
     <description>Recent content in Blog on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Wed, 01 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>[백준]2083 럭비 클럽</title>
+      <link>https://jyukki97.github.io/blog/2020-04-06-2083/</link>
+      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-06-2083/</guid>
+      <description>https://www.acmicpc.net/problem/2083
+풀이: 나이가 17세보다 많거나, 몸무게가 80kg 이상이면, &amp;lsquo;Senior&amp;rsquo;
+아니라면 &amp;lsquo;Junior&#39;를 출력한다.
+코드: 사용언어 : c
+char c[11];main(a,b){for(;scanf(&amp;#34;%s%d%d&amp;#34;,c,&amp;amp;a,&amp;amp;b)*a;)printf(&amp;#34;%s %s\n&amp;#34;,c,a&amp;gt;17||b&amp;gt;=80?&amp;#34;Senior&amp;#34;:&amp;#34;Junior&amp;#34;);}</description>
+    </item>
+    
+    <item>
+      <title>[백준]13909 창문 닫기</title>
+      <link>https://jyukki97.github.io/blog/2020-04-05-13909/</link>
+      <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-05-13909/</guid>
+      <description>https://www.acmicpc.net/problem/13909
+풀이: n 까지의 창문들 중 열려있는 창문들은 제곱수 이다.
+즉 n까지의 창문들 중 제곱수의 갯수를 찾아 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, i;int main() {cin &amp;gt;&amp;gt; n;while (i * i &amp;lt;= n) i++;cout &amp;lt;&amp;lt; i - 1 &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]11586 지영 공주님의 마법 거울</title>
+      <link>https://jyukki97.github.io/blog/2020-04-04-11586/</link>
+      <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-04-11586/</guid>
+      <description>https://www.acmicpc.net/problem/11586
+풀이: 문자열을
+k가 1일 경우 그대로
+k가 2일 경우 좌우 반전
+k가 3일 경우 상하 반전
+으로 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, i, t, k; string s[101];int main() {cin &amp;gt;&amp;gt; n;for (; i &amp;lt; n; i++) cin &amp;gt;&amp;gt; s[i];cin &amp;gt;&amp;gt; k;if (k == 1)for (i = 0; i &amp;lt; n; i++)cout &amp;lt;&amp;lt; s[i] &amp;lt;&amp;lt; endl;else if (k == 2)for (i = 0; i &amp;lt; n; i++,printf(&amp;#34;\n&amp;#34;))for (t = n - 1; t &amp;gt;= 0; t--)cout &amp;lt;&amp;lt; s[i][t];elsefor (i = n - 1; i &amp;gt;= 0; i--)cout &amp;lt;&amp;lt; s[i] &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]11509 풍선 맞추기</title>
+      <link>https://jyukki97.github.io/blog/2020-04-03-11509/</link>
+      <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-03-11509/</guid>
+      <description>https://www.acmicpc.net/problem/11509
+풀이: 풍선의 높이를 확인한다.
+현재 풍선의 높이가 H(i) 라고 하자.
+H(i) + 1 인 풍선이 현재 풍선 앞에 나타난적이 있다면, H(i) + 1 높이의 풍선을 -1 해준다.
+나타난적이 없다면, 화살을 새로 써야 하므로 화살의 갯수를 +1 해준다.
+화살의 갯수를 출력한다.
+코드: 사용언어 : c
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, i, a, b[1000005], c;int main() {cin &amp;gt;&amp;gt; n;for (i = 0; i &amp;lt; n; i++, b[a]++, b[a + 1] ?</description>
+    </item>
+    
+    <item>
       <title>[백준]10474 분수좋아해?</title>
       <link>https://jyukki97.github.io/blog/2020-04-02-10474/</link>
-      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://jyukki97.github.io/blog/2020-04-02-10474/</guid>
       <description>https://www.acmicpc.net/problem/10474
