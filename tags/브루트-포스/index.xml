@@ -6,10 +6,26 @@
     <description>Recent content in 브루트 포스 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sat, 28 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EB%B8%8C%EB%A3%A8%ED%8A%B8-%ED%8F%AC%EC%8A%A4/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]1213 팰린드롬 만들기</title>
+      <link>https://jyukki97.github.io/blog/2020-04-13-1213/</link>
+      <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-13-1213/</guid>
+      <description>https://www.acmicpc.net/problem/1213
+풀이: 주어진 문자열에서 알파벳이 각각 몇개 들어있는지 저장한다.
+A~Z 까지 갯수를 확인한 후
+앞뒤로 하나씩 넣는다.
+홀수개인 알파벳이 2개 이상 이라면, 문자열을 만들 수 없으므로 &amp;ldquo;I&#39;m Sorry Hansoo&amp;quot;를 출력한다.
+문자열의 길이가 홀수라면, 가운데에 1개남은 글자를 넣어준다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int i, c = -1, f, t, b[26]; string s;int main() {cin &amp;gt;&amp;gt; s;for (; i &amp;lt; s.size(); i++) b[s[i] - 65]++;for (i = 0; !</description>
+    </item>
     
     <item>
       <title>[백준]2503 숫자 야구</title>

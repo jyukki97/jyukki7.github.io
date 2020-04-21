@@ -6,10 +6,29 @@
     <description>Recent content in 수학 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Wed, 18 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EC%88%98%ED%95%99/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]1334 다음 팰린드롬 수</title>
+      <link>https://jyukki97.github.io/blog/2020-04-12-1334/</link>
+      <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-12-1334/</guid>
+      <description>https://www.acmicpc.net/problem/1334
+풀이: 문자열 S를 받아온다.
+S의 길이를 N이라고 하자.
+S의 오른쪽 절반의 값을 왼쪽 절반의 값으로 덮어쓰자.
+그렇게 만들어진 문자열을 A라고 하자.
+A는 이미 펠린드롬 수 인데, 이 수가 S보다 크다면 A를 그대로 출력한다.
+만약 S보다 작다면,
+가운데 수를 1씩 증가시킨다.
+가운데 수가 9가 됐다면, 0으로 바꾸고 오른쪽, 왼쪽 수를 1씩 증가시킨다.
+더 커질 때까지 반복한 후 A를 출력한다.
+만약 S가 9로만 이루어진 수라면, 맨 앞수를 1로 바꾸고 그 것을 제외한 모든수를 0으로 바꾼 후 1을 추가한 후 출력한다.</description>
+    </item>
     
     <item>
       <title>[백준]2864 5와 6의 차이</title>

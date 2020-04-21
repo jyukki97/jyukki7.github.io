@@ -6,10 +6,46 @@
     <description>Recent content in DP on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/dp/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]1102 발전소</title>
+      <link>https://jyukki97.github.io/blog/2020-04-17-1102/</link>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-17-1102/</guid>
+      <description>https://www.acmicpc.net/problem/1102
+풀이: 발전소의 현재 상태를 2진수로 표현한다.
+ex) YNN -&amp;gt; 100
+l : 발전소의 현재 상태를 2진수로 표현한 값
+z : 발전소가 현재 켜져있는 갯수
+z가 p보다 크거나 같아진다면 반복을 종료한다.
+d[x] : x상태인 발전소를 만드는데 필요한 비용
+d[x] = min(d[x], B(x | (1&amp;laquo;y), z + 1) + a[u][y])
+현재 발전소의 상태에서 안켜진 부분을 키되, 가장 적은 비용으로 킨 후 z를 + 1 한다.
+p값이 0이라면 발전소를 킬 필요가 없으므로 0을 출력</description>
+    </item>
+    
+    <item>
+      <title>[백준]1254 팰린드롬 만들기</title>
+      <link>https://jyukki97.github.io/blog/2020-04-14-1254/</link>
+      <pubDate>Tue, 14 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-14-1254/</guid>
+      <description>https://www.acmicpc.net/problem/1254
+풀이: 기준점 i를 잡는다. (초기 i값은 문자열 S의 중간 지점)
+기준점 i와 i - 1을 기준으로 짝수 팰린드롬을 만들 수 있는지 확인한다.
+만들 수 없다면,
+기준점 i를 기준으로 홀수 팰린드롬을 만들 수 있는지 확인한다.
+만들 수 없다면,
+기준점 i를 +1 해준다.
+짝수 팰린드롬을 만들 수 있다면, 2 * ( i - 1 ) 을 출력한다.
+홀수 팰린드롬을 만들 수 있다면, 2 * i - 1 을 출력한다.
+코드: 사용언어 : c++</description>
+    </item>
     
     <item>
       <title>[백준]1915 가장 큰 정사각형</title>
