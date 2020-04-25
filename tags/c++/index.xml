@@ -6,10 +6,41 @@
     <description>Recent content in C&#43;&#43; on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sat, 18 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]16637 괄호 추가하기</title>
+      <link>https://jyukki97.github.io/blog/2020-04-20-16637/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-20-16637/</guid>
+      <description>https://www.acmicpc.net/problem/16637
+풀이: 순서대로 사칙연산을 진행한다.
+이 때, 현재 숫자만 계산하는 것, 현재 숫자 (연산자) 다음 숫자 를 계산하는 것 두 가지로 나누어 생각한다.
+현재 숫자만 계산하는 것은, 이전에 계산했던 숫자 (연산자) 현재 숫자
+두번째 경우는, 이전에 계산했던 숫자 (연산자) ( 현재 숫자 (연산자) 다음 숫자 )
+이렇게 두 가지 경우로 모든 구간을 연산하여 완전탐색을 돌린다.
+정답의 범위가 -2^31 ~ 2^31 이므로 최댓값의 초기값을 0으로 하지않도록 주의하자.
+코드: 사용언어 : c++</description>
+    </item>
+    
+    <item>
+      <title>[백준]11382 꼬마 정민</title>
+      <link>https://jyukki97.github.io/blog/2020-04-19-11382/</link>
+      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-19-11382/</guid>
+      <description>https://www.acmicpc.net/problem/11382
+풀이: A, B, C 를 각각 문자열로 변환한다.
+변환된 문자열을 한자리씩 더한다.
+만약 각 자릿수의 숫자가 10이 넘어간다면 다음 자릿수에 올림을 해준다.
+더해진 문자열을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int main() {string a, b, c, d;cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b &amp;gt;&amp;gt; c;int m = max(a.size(), max(b.size(), c.size())), s = 0;for (int i = 1; i &amp;lt;= m; i++) {if (a.</description>
+    </item>
     
     <item>
       <title>[백준]3056 007</title>
