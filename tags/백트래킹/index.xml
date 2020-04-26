@@ -6,10 +6,44 @@
     <description>Recent content in 백트래킹 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Sun, 23 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%EB%B0%B1%ED%8A%B8%EB%9E%98%ED%82%B9/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]17265 나의 인생에는 수학과 함께</title>
+      <link>https://jyukki97.github.io/blog/2020-04-23-17265/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-23-17265/</guid>
+      <description>https://www.acmicpc.net/problem/17265
+풀이: 최단 거리이므로 오른쪽과 아래쪽으로만 이동한다.
+현재 위치가 연산자라면,
+이전까지 연산해왔던 값을 x라고 하자
+연잔자를 ㅁ 라고 하고,
+다음 이동할 곳의 숫자를 y라고 하자.
+현재 위치의 연산자를 이용하여 x ㅁ y 를 연산한 후 다음 숫자로 이동한다.
+현재 위치가 숫자라면, 현재 위치가 학교인지 판단 후
+학교가 아니라면 오른쪽 또는 아래로 이동한다.
+학교라면 현재까지 연산해왔던 값이 지금 저장해 놓은 최댓값보다 크다면 교체한다.
+또한 현재까지 연산해왔던 값이 지금 저장해 놓은 최솟값보다 작다면 교체한다.</description>
+    </item>
+    
+    <item>
+      <title>[백준]1759 암호 만들기</title>
+      <link>https://jyukki97.github.io/blog/2020-04-22-1759/</link>
+      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-22-1759/</guid>
+      <description>https://www.acmicpc.net/problem/1759
+풀이: C개의 문자들을 사전순으로 정렬한다.
+정렬된 문자열을 L개만큼 출력한다.
+단, 최소 한 개의 모음과 두개의 자음이 있어야한다.
+증가하는 순서로 있어야한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, m, i, b[20]; char c[20], d[20];void P(int x, int z) {if (x == n) {int y = 0, t = 0, r = 0;for (; y &amp;lt; x; y++)if (d[y] == &amp;#39;a&amp;#39; || d[y] == &amp;#39;e&amp;#39; || d[y] == &amp;#39;i&amp;#39; || d[y] == &amp;#39;o&amp;#39; || d[y] == &amp;#39;u&amp;#39;)	t++;else r++;if(t &amp;amp;&amp;amp; r&amp;gt;1)	cout &amp;lt;&amp;lt; d &amp;lt;&amp;lt; endl;return;}for (int y = z; y &amp;lt; m; y++)	if (!</description>
+    </item>
     
     <item>
       <title>[백준]9663 N-Queen</title>
