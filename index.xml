@@ -6,10 +6,81 @@
     <description>Recent content on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Thu, 23 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]1388 바닥 장식</title>
+      <link>https://jyukki97.github.io/blog/2020-04-27-1388/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-27-1388/</guid>
+      <description>https://www.acmicpc.net/problem/1388
+풀이: 같은 행에 연속된 &amp;lsquo;-&amp;rsquo; 이 몇 쌍이 있는지 센다.
+같은 방식으로
+같은 열에 연속된 &amp;lsquo;|&amp;rsquo; 이 몇 쌍이 있는지 센다.
+두 수를 더하여 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, m, i, t, c; string s[105];int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;for (; i &amp;lt; n; i++)	cin &amp;gt;&amp;gt; s[i];for (i = 0; i &amp;lt; n; i++)for (t = 0; t &amp;lt; m; t++) {if (s[i][t] == &amp;#39;-&amp;#39;)if (t == m - 1 || s[i][t + 1] == &amp;#39;|&amp;#39;)c++;if (s[i][t] == &amp;#39;|&amp;#39;)if (i == n - 1 || s[i + 1][t] == &amp;#39;-&amp;#39;)c++;}cout &amp;lt;&amp;lt; c &amp;lt;&amp;lt; endl;}</description>
+    </item>
+    
+    <item>
+      <title>[백준]1356 유진수</title>
+      <link>https://jyukki97.github.io/blog/2020-04-26-1356/</link>
+      <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-26-1356/</guid>
+      <description>https://www.acmicpc.net/problem/1356
+풀이: 1의 자릿수 == 10의 자릿수*&amp;hellip;*n자릿수
+1의 자릿수 * 10의 자릿수 == 100의 자릿수 *&amp;hellip;*n자릿수
+.
+.
+.
+1의 자릿수*&amp;hellip;*n-1자릿수 == n 자릿수
+중 앞의 값과 뒤의 값이 같은 것이 하나라도 있다면, YES를
+하나도 없다면 NO를 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n = 1, m = 1, i, t, f; string s;int main() {cin &amp;gt;&amp;gt; s;for (i = 1; i &amp;lt; s.</description>
+    </item>
+    
+    <item>
+      <title>[백준]1268 임시 반장 정하기</title>
+      <link>https://jyukki97.github.io/blog/2020-04-25-1268/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-25-1268/</guid>
+      <description>https://www.acmicpc.net/problem/1268
+풀이: 현재 상태에서 제일 많은 학생수를 S, 그 학생수를 가진 학생을 C라고 하자.
+1번 학생이 몇 명의 학생과 같은 반을 했었는지를 저장하고,
+그 값이 S보다 많다면 S를 교체하고 C에 1을 저장한다.
+.
+.
+.
+n번 학생이 몇 명의 학생과 같은 반을 했었는지를 저장하고,
+그 값이 S보다 많다면 S를 교체하고 C에 n을 저장한다.
+전체를 다 탐색 한 후 C를 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, i, t, y, d, s, c, a[1005][5], b[1005][1005];int main() {cin &amp;gt;&amp;gt; n;for (; i &amp;lt; n; i++) for (t = 0; t &amp;lt; 5; t++) cin &amp;gt;&amp;gt; a[i][t];for (i = 0; i &amp;lt; n; i++, d = 0) {for (t = 0; t &amp;lt; 5; t++)for (y = 0; y &amp;lt; n; y++)if (a[i][t] == a[y][t])d += !</description>
+    </item>
+    
+    <item>
+      <title>[백준]1236 성 지키기</title>
+      <link>https://jyukki97.github.io/blog/2020-04-24-1236/</link>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-24-1236/</guid>
+      <description>https://www.acmicpc.net/problem/1236
+풀이: 각 행에 경비병이 있는지 없는지 탐색한다.
+경비병이 없는 행의 갯수를 Sn이라고 하자.
+각 열에 경비병이 있는지 없는지 탐색한다.
+경비병이 없는 열의 갯수를 Sm이라고 하자.
+각 행과 열에는 경비병이 1명씩은 있어야 하므로
+Sn과 Sm 중 최댓값을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, m, i, t, a[55], b[55], q, w; char c;int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;for (; i &amp;lt; n; i++)for (t = 0; t &amp;lt; m; t++) {cin &amp;gt;&amp;gt; c;if (c == &amp;#39;X&amp;#39;)	q+=!</description>
+    </item>
     
     <item>
       <title>[백준]17265 나의 인생에는 수학과 함께</title>

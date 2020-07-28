@@ -6,10 +6,27 @@
     <description>Recent content in 탐색 on 1 Day 1 Problem</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr-ko</language>
-    <lastBuildDate>Tue, 21 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jyukki97.github.io/tags/%ED%83%90%EC%83%89/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[백준]1236 성 지키기</title>
+      <link>https://jyukki97.github.io/blog/2020-04-24-1236/</link>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jyukki97.github.io/blog/2020-04-24-1236/</guid>
+      <description>https://www.acmicpc.net/problem/1236
+풀이: 각 행에 경비병이 있는지 없는지 탐색한다.
+경비병이 없는 행의 갯수를 Sn이라고 하자.
+각 열에 경비병이 있는지 없는지 탐색한다.
+경비병이 없는 열의 갯수를 Sm이라고 하자.
+각 행과 열에는 경비병이 1명씩은 있어야 하므로
+Sn과 Sm 중 최댓값을 출력한다.
+코드: 사용언어 : c++
+#include &amp;lt;iostream&amp;gt;using namespace std;int n, m, i, t, a[55], b[55], q, w; char c;int main() {cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;for (; i &amp;lt; n; i++)for (t = 0; t &amp;lt; m; t++) {cin &amp;gt;&amp;gt; c;if (c == &amp;#39;X&amp;#39;)	q+=!</description>
+    </item>
     
     <item>
       <title>[sw]사다리</title>
